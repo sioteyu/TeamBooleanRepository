@@ -1,18 +1,3 @@
-/*!
-
- =========================================================
- * Coming Sssoon Page - v1.3.2
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/coming-sssoon-page
- * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/coming-sssoon-page/blob/master/LICENSE.md)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- */
-
 body{
 
 }
@@ -700,8 +685,18 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 }
 
 .blur{
-  opacity:0;
+    -webkit-filter: blur(5px); -moz-filter: blur(5px);
+    -o-filter: blur(5px); -ms-filter: blur(8px);
+    filter: url(#blur); filter: blur(5px);
+    -webkit-transition: 2s -webkit-filter linear;
+    transform: scale(1.02);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
+
+.deblur{ -webkit-filter: blur(0px); -moz-filter: blur(0px); -o-filter: blur(0px); -ms-filter: blur(0px); }
 
 .logo-container{
     left: 50px;
