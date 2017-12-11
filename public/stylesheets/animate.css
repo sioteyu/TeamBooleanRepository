@@ -1507,20 +1507,24 @@
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
+    z-index: 2;
   }
 
   to {
     opacity: 0;
+    z-index: 0;
   }
 }
 
 @keyframes fadeOut {
   from {
     opacity: 1;
+    z-index: 2;
   }
 
   to {
     opacity: 0;
+    z-index: 0;
   }
 }
 
