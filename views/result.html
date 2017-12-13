@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  	<link rel="stylesheet" href="../public/stylesheets/result.css">
+    <link href='https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.css' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" href="../public/stylesheets/loading.css">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/stylesheets/jquery.flipster.min.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="overlay">
+      <!--<p id="name">Bookhub is loading...</p>-->
+      <div class="centre">
+        <div class="loader"></div>
+      </div>
+    </div>
+
+    <div id="container">
+  <div id="sideMenu">
+    <div id="sideMenuFixed"></div>
+    <div id="sidecontent">
+      <p style="font-family: 'Grand Hotel',cursive;
+      font-size: 35px;">
+          Book Hub
+      </p>
+
+    <ul class="menu">
+      <li>Main</li>
+      <li>Search</li>
+      <li>Reports <span class="notification">8</span></li>
+      <li>Groups</li>
+    </ul>
+
+    <ul class="menu">
+      <li>Account</li>
+      <li>Activity</li>
+      <li>Messages <span class="notification">4</span></li>
+      <li>Favorites</li>
+    </ul>
+
+    <ul class="menu">
+      <li>Categories</li>
+      <li>Popular <span class="colorIcon red"></span></li>
+      <li>Oldest <span class="colorIcon orange"></span></li>
+      <li>Latest <span class="colorIcon green"></span></li>
+    </ul>
+    <!--<div class="addCategory"><span class="plus">+</span> Add Category</div>-->
+    </div>
+  </div>
+  <div id="content">
+    <div id="titleBar">
+      <!--<h2>Dashboard</h2>-->
+      <div id="profilePic">
+        <a href="https://codepen.io/Varo" target="_blank"><img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/174537/profile/profile-80_9.jpg" /></a>
+      </div>
+      <div class="options">
+        <a href="https://codepen.io/Varo" target="_blank"><div class="username">Alviz Matthew</div></a>
+        <hr>
+        <a href="#" class="option"><i class="fa fa-wrench"></i>Settings</a>
+        <a href="#" class="option"><i class="fa fa-suitcase"></i>Account Info</a>
+        <a href="#" class="option"><i class="fa fa-book"></i>Upload Books</a>
+        <a href="#" class="pro"><span>Upgrade to </span> PRO</a>
+        <a href="#" class="logout">Log out <i class="fa fa-sign-out"></i></a>
+      </div>
+      <span class="controls activeControl">Weekly</span>
+      <span class="controls">Monthly</span>
+    </div>
+
+    <div class="mainChart">
+      <div class="my-flipster">
+        <ul>
+          <li><img src="../public/images/text1.gif" height="300px" width="250px"></li>
+          <li><img src="../public/images/text2.gif" height="300px" width="250px"></li>
+          <li><img src="../public/images/text3.gif" height="300px" width="250px"></li>
+          <li><img src="../public/images/text4.gif" height="300px" width="250px"></li>
+          <li><img src="../public/images/text5.gif" height="300px" width="250px"></li>
+
+          <!--<li><img src="http://widget.editis.com/Books/omnibus/9782258078086/gf/25807808_000_CV_000.png" height="300px" width="200px"/></li>
+          <li><img src="http://widget.editis.com/Books/omnibus/9782258078093/gf/25807809_000_CV_000.png" height="300px" width="200px"/></li>
+          <li><img src="https://t1.gstatic.com/images?q=tbn:ANd9GcQSe1tgzH4zgzd3ED_AAgB89LLBv2c2mBq1N9Q2adZfNmKolW-r" height="300px" width="200px"/></li>
+          <li><img src="https://t2.gstatic.com/images?q=tbn:ANd9GcReHzNSPMK0dAqiqSTfS6Zq34XeD6Pj2rVSw1jVC_X6Q8PAjXCV" height="300px" width="200px"/></li>
+          <li><img src="https://t1.gstatic.com/images?q=tbn:ANd9GcQOAH83CKpZ7OylLJ-_zWNEmK9WY8LrFcdjcCZ2xnFjCz9yW_-D" height="300px" width="200px"/></li>
+          <li><img src="https://t2.gstatic.com/images?q=tbn:ANd9GcRLaAr4o6_pUZYFjHCvhHvQ-u6jhO3KOzPSJVoEJkxvrbdXjob8" height="300px" width="200px"/></li>
+          <li><img src="http://ecx.images-amazon.com/images/I/51WhbqOzRRL._SX326_BO1,204,203,200_.jpg" height="300px" width="200px"/></li>-->
+        </ul>
+      </div>
+
+      <!--<h2>Total Sales</h2>-->
+
+      <div class="clearFix"></div>
+
+      <!--<div id="totalSales">
+        <div class="col">
+          <div id="creditSales" class="progressBar"></div>
+          <h3>$36,059</h3>
+          <span class="progressTitle">Credit Sales</span>
+        </div>
+        <div class="col">
+          <div id="channelSales" class="progressBar"></div>
+          <h3>$24,834</h3>
+          <span class="progressTitle">Channel Sales</span>
+        </div>
+        <div class="col">
+          <div id="directSales" class="progressBar"></div>
+          <h3>$15,650</h3>
+          <span class="progressTitle">Direct Sales</span>
+        </div>
+      </div>-->
+
+      <table>
+        <tr>
+          <th>Book Name</th>
+          <th>Location</th>
+          <th>Owner</th>
+        </tr>
+
+        <tr>
+          <td>Harry Potter</td>
+          <td>Makati City</td>
+          <td>Matthew Alviz</td>
+        </tr>
+
+        <tr>
+          <td>Maze Runner</td>
+          <td>Malolos City</td>
+          <td>Jeff Green</td>
+        </tr>
+
+        <tr>
+          <td>Bazenga!</td>
+          <td>Dagupan City</td>
+          <td>Francis Francois</td>
+        </tr>
+
+        <tr>
+          <td>Macbeth</td>
+          <td>Quezon City</td>
+          <td>Jonathan Blak</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+</div>
+    </div>
+
+  <script type="text/javascript" src="../public/js/loading.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.min.js"></script>
+  <script type="text/javascript" src="../public/js/result.js"></script>
+  <script type="text/javascript" src="../public/js/result2.js"></script>
+  <script src="../public/js/jquery.flipster.min.js"></script>
+  <script>
+    $('.my-flipster').flipster();
+  </script>
+</body>
+</html>

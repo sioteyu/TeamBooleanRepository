@@ -1,11 +1,11 @@
 
 
 # BookHub
-
+BookHub is a book borrowing platform for students, professionals, autors, etc.
 
 
 ## Usage
-
+To look for reliable resources.
 
 
 ## Developing
