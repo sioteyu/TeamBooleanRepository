@@ -1,0 +1,146 @@
+.container-fluid {
+  position: absolute;
+  width: 20%;
+  border: none;
+}
+.container-fluid .search-row {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: top 1s cubic-bezier(0.25, 1, 0.25, 1);
+}
+.container-fluid .search-row #search-bar {
+  position: relative;
+  margin-top: 10%;
+  display: inline-block;
+  height: 70px;
+  width: 10px;
+  background: none;
+  padding: 3px 50px 0px 0px;
+  color: white;
+  font-size: 60px;
+  font-family: Josefin Sans;
+  letter-spacing: 1.3px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  transition: width 0.5s cubic-bezier(0.25, 1, 0.25, 1);
+}
+.container-fluid .search-row #search-bar:focus {
+  position: relative;
+  width: 50vw;
+  left: 0px;
+  /*padding: 3px 3px 3px 3px;*/
+  margin-right: 80px;
+  border-bottom: 2px solid #009fff;
+  cursor: text;
+}
+.container-fluid .search-row #search-icon {
+  position: absolute;
+  bottom: -12%;
+  display: inline-block;
+  background: none;
+  height: 70px;
+  width: 70px;
+  font-size: 40px;
+  color: #009fff;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  z-index: 2;
+  transform: translateX(-100%);
+}
+.container-fluid .search-row #reset-btn {
+  display: none;
+  position: absolute;
+  background: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: #009fff;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  z-index: 10;
+  cursor: pointer;
+  transform: translate(-300%, 40%);
+}
+.container-fluid .search-row #random-icon {
+  background: none;
+  height: 48px;
+  width: 48px;
+  font-size: 50px;
+  color: #009fff;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  transition: transform 0.5s ease;
+}
+.container-fluid .search-row #random-icon .fa-compass {
+  position: relative;
+  top: 50%;
+  transform: translate(-11%, -22%);
+}
+.container-fluid .search-row #random-icon:hover {
+  transform: rotate(650deg);
+}
+h1 {
+  font-size: 20px;
+  font-family: Sanchez;
+  transition: all 0.8s ease;
+  cursor: default;
+}
+.welcome {
+  margin-bottom: 30px;
+}
+.random {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.wiki-row {
+  position: relative;
+}
+.wiki-row .article-list {
+  list-style-type: none;
+}
+.wiki-row .article-list .article {
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 1px 1px 10px 2px #b8baba;
+  padding: 15px 25px;
+  margin: 18px 0;
+  border-left: 4px solid #fff;
+  cursor: pointer;
+}
+.wiki-row .article-list .article-title {
+  margin-bottom: 15px;
+  font-family: Josefin Sans;
+  font-size: 33px;
+  font-weight: 600;
+}
+.wiki-row .article-list .article-snippet {
+  font-family: Sanchez;
+  font-weight: 400;
+  font-size: 17px;
+}
+.wiki-row .article-list .article:hover {
+  background-color: #f9f8f8;
+  border-left: 4px solid #009fff;
+}
+body {
+  background-color: #fff;
+}
+a, a:link, a:visited {
+  color: #000;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+html {
+  overflow-y: scroll;
+}

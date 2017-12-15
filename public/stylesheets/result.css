@@ -172,6 +172,7 @@ body {
   /*height: 200vh;*/
   padding: 25px;
   display: table-cell;
+  /*background-image: url("../images/lib.jpg");*/
 }
 #titleBar {
   height: 36px;
