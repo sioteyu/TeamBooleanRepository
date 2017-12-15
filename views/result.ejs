@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  	<link rel="stylesheet" href="/stylesheets/result.css">
+    <link href='https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.css' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" href="/stylesheets/loading.css">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/jquery.flipster.min.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sanchez:400i,400" rel="stylesheet">
+    <link rel="stylesheet" href="../public/stylesheets/profile-card.css">
+    <link rel="stylesheet" href="../public/stylesheets/map.css">
+    <link rel="stylesheet" href="../public/stylesheets/search.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08"></script>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="overlay">
+      <!--<p id="name">Bookhub is loading...</p>-->
+      <div class="centre">
+        <div class="loader"></div>
+      </div>
+    </div>
+
+    <div id="container">
+  <div id="sideMenu">
+    <div id="sideMenuFixed"></div>
+    <div id="sidecontent">
+      <p style="font-family: 'Grand Hotel',cursive;
+      font-size: 35px;">
+          Book Hub
+      </p>
+
+    <ul class="menu">
+      <li>Main</li>
+      <li>Search</li>
+      <li>Reports <span class="notification">8</span></li>
+      <li>Groups</li>
+    </ul>
+
+    <ul class="menu">
+      <li>Account</li>
+      <li>Activity</li>
+      <li>Messages <span class="notification">4</span></li>
+      <li>Favorites</li>
+    </ul>
+
+    <ul class="menu">
+      <li>Categories</li>
+      <li>Popular <span class="colorIcon red"></span></li>
+      <li>Oldest <span class="colorIcon orange"></span></li>
+      <li>Latest <span class="colorIcon green"></span></li>
+    </ul>
+    <!--<div class="addCategory"><span class="plus">+</span> Add Category</div>-->
+    </div>
+  </div>
+  <div id="content">
+    <div id="titleBar">
+      <div class="container-fluid">
+  <div class="row search-row text-center">
+    <div class="col">
+      <form class="text-center wiki-form">
+        <input type="text" id="search-bar" placeholder="Search here" value="">
+        <button type="button" id="reset-btn" class="text-center" style="content:none;">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <button id="search-icon" class="text-center" style="content:none;">
+          <i class="fa fa-search" style="font-size: 80%;" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+      <!--<h2>Dashboard</h2>-->
+      <div id="profilePic">
+        <!--<a href="https://codepen.io/Varo" target="_blank"><img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/174537/profile/profile-80_9.jpg" /></a>-->
+        <a href=""><img src="http://img0.etsystatic.com/000/0/6525182/il_570xN.345773300.jpg" /></a>
+      </div>
+      <div class="options">
+        <a href="https://codepen.io/Varo" target="_blank"><div class="username">Alviz Matthew</div></a>
+        <hr>
+        <a href="#" class="option"><i class="fa fa-wrench"></i>Settings</a>
+        <a href="#" class="option"><i class="fa fa-suitcase"></i>Account Info</a>
+        <a href="#" class="option"><i class="fa fa-book"></i>Upload Books</a>
+        <a href="#" class="pro"><span>Upgrade to </span> PRO</a>
+        <a href="#" class="logout">Log out <i class="fa fa-sign-out"></i></a>
+      </div>
+      <span class="controls activeControl">Weekly</span>
+      <span class="controls">Monthly</span>
+    </div>
+
+    <div class="mainChart">
+      <div class="my-flipster" style="background-image: url('../public/images/shelf.jpg')">
+        <ul>
+<<<<<<< HEAD:views/result.html
+          <li style="margin-top: 2%"><img src="../public/images/text1.gif" height="300px" width="250px"></li>
+          <li style="margin-top: 2%"><img src="../public/images/text2.gif" height="300px" width="250px"></li>
+          <li style="margin-top: 2%"><img src="../public/images/text3.gif" height="300px" width="250px"></li>
+          <li style="margin-top: 2%"><img src="../public/images/text4.gif" height="300px" width="250px"></li>
+          <li style="margin-top: 2%"><img src="../public/images/text5.gif" height="300px" width="250px"></li>
+=======
+          <li><img src="/images/text1.gif" height="300px" width="250px"></li>
+          <li><img src="/images/text2.gif" height="300px" width="250px"></li>
+          <li><img src="/images/text3.gif" height="300px" width="250px"></li>
+          <li><img src="/images/text4.gif" height="300px" width="250px"></li>
+          <li><img src="/images/text5.gif" height="300px" width="250px"></li>
+>>>>>>> bdee5d3ef078370ce6f1efb191bf6d56f01d62e5:views/result.ejs
+
+          <!--<li><img src="http://widget.editis.com/Books/omnibus/9782258078086/gf/25807808_000_CV_000.png" height="300px" width="200px"/></li>
+          <li><img src="http://widget.editis.com/Books/omnibus/9782258078093/gf/25807809_000_CV_000.png" height="300px" width="200px"/></li>
+          <li><img src="https://t1.gstatic.com/images?q=tbn:ANd9GcQSe1tgzH4zgzd3ED_AAgB89LLBv2c2mBq1N9Q2adZfNmKolW-r" height="300px" width="200px"/></li>
+          <li><img src="https://t2.gstatic.com/images?q=tbn:ANd9GcReHzNSPMK0dAqiqSTfS6Zq34XeD6Pj2rVSw1jVC_X6Q8PAjXCV" height="300px" width="200px"/></li>
+          <li><img src="https://t1.gstatic.com/images?q=tbn:ANd9GcQOAH83CKpZ7OylLJ-_zWNEmK9WY8LrFcdjcCZ2xnFjCz9yW_-D" height="300px" width="200px"/></li>
+          <li><img src="https://t2.gstatic.com/images?q=tbn:ANd9GcRLaAr4o6_pUZYFjHCvhHvQ-u6jhO3KOzPSJVoEJkxvrbdXjob8" height="300px" width="200px"/></li>
+          <li><img src="http://ecx.images-amazon.com/images/I/51WhbqOzRRL._SX326_BO1,204,203,200_.jpg" height="300px" width="200px"/></li>-->
+        </ul>
+      </div>
+      <div class="clearFix"></div>
+
+<div class="map" style="background-image: url('../public/images/bg.jpg')">
+<div id="map"></div>
+<div class="map-c">
+<h1>ABC Stores</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium id cumque est dolores voluptatibus.</p>
+<div class="det"><i class="fa fa-map-marker"></i> 102 New Road, New City</div>
+<div class="det"><i class="fa fa-phone"></i> 001 2045 509</div>
+<div class="det"><i class="fa fa-globe"></i> www.abcstores.com</div>
+<center>
+  <button class="fa fa-car"></button>
+  <button class="fa fa-envelope"></button>
+</center>
+</div>
+  </div>
+
+  </div>
+</div>
+</div>
+    </div>
+
+  <script type="text/javascript" src="/js/loading.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.min.js"></script>
+<<<<<<< HEAD:views/result.html
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../public/js/result.js"></script>
+  <script type="text/javascript" src="../public/js/result2.js"></script>
+  <script type="text/javascript" src="../public/js/profile-card.js"></script>
+  <script type="text/javascript" src="../public/js/map.js"></script>
+  <script type="text/javascript" src="../public/js/search.js"></script>
+  <script src="../public/js/jquery.flipster.min.js"></script>
+=======
+  <script type="text/javascript" src="/js/result.js"></script>
+  <script type="text/javascript" src="/js/result2.js"></script>
+  <script src="/js/jquery.flipster.min.js"></script>
+>>>>>>> bdee5d3ef078370ce6f1efb191bf6d56f01d62e5:views/result.ejs
+  <script>
+    $('.my-flipster').flipster();
+  </script>
+</body>
+</html>
