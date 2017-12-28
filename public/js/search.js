@@ -1,4 +1,12 @@
 $(document).ready(function() {
+  /*$('#search-bar').on("click", function() {
+    $('.mainChart').removeClass("deblur");
+    $('.mainChart').addClass("blur");
+  });
+
+  $('.mainChart').on("click", function() {
+    $('.mainChart').addClass("deblur");
+  });*/
 
   $('#search-bar').stop(true, true, true).click(function() {
     $('.welcome').animate({
@@ -55,7 +63,7 @@ $(document).ready(function() {
 
 
   $('.wiki-form').submit(loadData);
-  $('#reset-btn').mousedown(resetData);
+  //$('#reset-btn').mousedown(resetData);
 
 
 

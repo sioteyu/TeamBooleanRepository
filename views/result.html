@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="../public/stylesheets/profile-card.css">
     <link rel="stylesheet" href="../public/stylesheets/map.css">
     <link rel="stylesheet" href="../public/stylesheets/search.css">
+    <link rel="stylesheet" href="../public/stylesheets/profileCard.css">
+    <link rel="stylesheet" href="../public/stylesheets/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08"></script>
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,23 +97,46 @@
       <span class="controls activeControl">Weekly</span>
       <span class="controls">Monthly</span>
     </div>
+    <div class="card">
+        <div class="card-photo">
+          <img src="http://vignette4.wikia.nocookie.net/sidonia-no-kishi/images/8/86/Lala.png/revision/latest/scale-to-width-down/285?cb=20131117044050">
+        </div>
+        <div class="card-name">
+          <h1><i class="fa fa-circle" aria-hidden="true"></i>
+     ABC Store</h1></div>
+        <div class="card-description">
+          <p>27 Successful Transaction</p>
+        </div>
+        <div class="card-follow">
+          <button style="padding: 0px;">Follow</button>
+        </div>
+        <div class="card-planets" style="margin: 0px;">
+          <i class="fa fa-plane" aria-hidden="true"></i>
+          <i class="fa fa-globe active" aria-hidden="true"></i>
+          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+        </div>
+      </div>
 
+      <div class="inviBox">
+
+      </div>
     <div class="mainChart">
+
       <div class="my-flipster" style="background-image: url('../public/images/shelf.jpg')">
         <ul>
-          <li style="margin-top: 2%"><img src="../public/images/text1.gif" height="300px" width="250px"></li>
+          <!--<li style="margin-top: 2%"><img src="../public/images/text1.gif" height="300px" width="250px"></li>
           <li style="margin-top: 2%"><img src="../public/images/text2.gif" height="300px" width="250px"></li>
           <li style="margin-top: 2%"><img src="../public/images/text3.gif" height="300px" width="250px"></li>
           <li style="margin-top: 2%"><img src="../public/images/text4.gif" height="300px" width="250px"></li>
-          <li style="margin-top: 2%"><img src="../public/images/text5.gif" height="300px" width="250px"></li>
+          <li style="margin-top: 2%"><img src="../public/images/text5.gif" height="300px" width="250px"></li>-->
 
-          <!--<li><img src="http://widget.editis.com/Books/omnibus/9782258078086/gf/25807808_000_CV_000.png" height="300px" width="200px"/></li>
+          <li><img src="http://widget.editis.com/Books/omnibus/9782258078086/gf/25807808_000_CV_000.png" height="300px" width="200px"/></li>
           <li><img src="http://widget.editis.com/Books/omnibus/9782258078093/gf/25807809_000_CV_000.png" height="300px" width="200px"/></li>
           <li><img src="https://t1.gstatic.com/images?q=tbn:ANd9GcQSe1tgzH4zgzd3ED_AAgB89LLBv2c2mBq1N9Q2adZfNmKolW-r" height="300px" width="200px"/></li>
           <li><img src="https://t2.gstatic.com/images?q=tbn:ANd9GcReHzNSPMK0dAqiqSTfS6Zq34XeD6Pj2rVSw1jVC_X6Q8PAjXCV" height="300px" width="200px"/></li>
           <li><img src="https://t1.gstatic.com/images?q=tbn:ANd9GcQOAH83CKpZ7OylLJ-_zWNEmK9WY8LrFcdjcCZ2xnFjCz9yW_-D" height="300px" width="200px"/></li>
           <li><img src="https://t2.gstatic.com/images?q=tbn:ANd9GcRLaAr4o6_pUZYFjHCvhHvQ-u6jhO3KOzPSJVoEJkxvrbdXjob8" height="300px" width="200px"/></li>
-          <li><img src="http://ecx.images-amazon.com/images/I/51WhbqOzRRL._SX326_BO1,204,203,200_.jpg" height="300px" width="200px"/></li>-->
+          <li><img src="http://ecx.images-amazon.com/images/I/51WhbqOzRRL._SX326_BO1,204,203,200_.jpg" height="300px" width="200px"/></li>
         </ul>
       </div>
       <div class="clearFix"></div>
@@ -118,7 +144,7 @@
 <div class="map" style="background-image: url('../public/images/bg.jpg')">
 <div id="map"></div>
 <div class="map-c">
-<h1>ABC Stores</h1>
+<div class="owner"><h1 style="cursor: pointer">ABC Stores</h1></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium id cumque est dolores voluptatibus.</p>
 <div class="det"><i class="fa fa-map-marker"></i> 102 New Road, New City</div>
 <div class="det"><i class="fa fa-phone"></i> 001 2045 509</div>
@@ -144,6 +170,7 @@
   <script type="text/javascript" src="../public/js/profile-card.js"></script>
   <script type="text/javascript" src="../public/js/map.js"></script>
   <script type="text/javascript" src="../public/js/search.js"></script>
+  <script type="text/javascript" src="../public/js/profileCard.js"></script>
   <script src="../public/js/jquery.flipster.min.js"></script>
   <script>
     $('.my-flipster').flipster();
