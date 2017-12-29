@@ -4,7 +4,7 @@ body {
 }
 
 .map {
-  height: 380px;
+  height: 356px;
   margin-top: 2.5vh;
   /*margin: calc(50vh - 190px) auto;*/
   box-shadow: 0 0 40px -10px black;
@@ -15,7 +15,7 @@ body {
 
 #map {
   width: 65%;
-  height: 380px;
+  height: 356px;
   display: inline-block
 }
 

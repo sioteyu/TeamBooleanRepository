@@ -111,6 +111,7 @@ body {
   background: #252C33;
   margin: 0px auto;
   border-radius: 0px;
+  transition: all 350ms ease-in-out
 }
 
 /* Side Bar */
@@ -123,6 +124,7 @@ body {
   display: table-cell;
   vertical-align: top;
   color: #fff;
+  transition: all 350ms ease-in-out
 }
 #sideMenuFixed{
   position: fixed;

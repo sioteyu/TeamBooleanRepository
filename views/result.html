@@ -17,8 +17,11 @@
     <link rel="stylesheet" href="../public/stylesheets/search.css">
     <link rel="stylesheet" href="../public/stylesheets/profileCard.css">
     <link rel="stylesheet" href="../public/stylesheets/animate.css">
+    <link rel="stylesheet" href="../public/stylesheets/burger.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -31,54 +34,56 @@
     </div>
 
     <div id="container">
-  <div id="sideMenu">
-    <div id="sideMenuFixed"></div>
-    <div id="sidecontent">
-      <p style="font-family: 'Grand Hotel',cursive;
-      font-size: 35px;">
-          Book Hub
-      </p>
 
-    <ul class="menu">
-      <li>Main</li>
-      <li>Search</li>
-      <li>Reports <span class="notification">8</span></li>
-      <li>Groups</li>
-    </ul>
+      <div id="sideMenu" style="display: none">
+        <div id="sideMenuFixed"></div>
+        <div id="sidecontent">
+          <a href="index.html"><p style="font-family: 'Grand Hotel',cursive;
+          font-size: 35px; color: white">
+              Book Hub
+          </p></a>
 
-    <ul class="menu">
-      <li>Account</li>
-      <li>Activity</li>
-      <li>Messages <span class="notification">4</span></li>
-      <li>Favorites</li>
-    </ul>
+        <ul class="menu">
+          <li>Main</li>
+          <li class="searchBut">Search</li>
+          <li>Notifications <span class="notification">8</span></li>
+          <li>Favorites</li>
+          <li>Reccomendations</li>
+        </ul>
 
-    <ul class="menu">
-      <li>Categories</li>
-      <li>Popular <span class="colorIcon red"></span></li>
-      <li>Oldest <span class="colorIcon orange"></span></li>
-      <li>Latest <span class="colorIcon green"></span></li>
-    </ul>
-    <!--<div class="addCategory"><span class="plus">+</span> Add Category</div>-->
-    </div>
-  </div>
+        <ul class="menu">
+          <li>Account</li>
+          <li>Privacy</li>
+          <li>General</li>
+          <li>Subscription</li>
+        </ul>
+
+        <ul class="menu">
+          <li>Sort By</li>
+          <li>Popular <span class="colorIcon red"></span></li>
+          <li>Oldest <span class="colorIcon orange"></span></li>
+          <li>Latest <span class="colorIcon green"></span></li>
+        </ul>
+        <!--<div class="addCategory"><span class="plus">+</span> Add Category</div>-->
+        </div>
+      </div>
+
+
   <div id="content">
     <div id="titleBar">
-      <div class="container-fluid">
-  <div class="row search-row text-center">
-    <div class="col">
-      <form class="text-center wiki-form">
-        <input type="text" id="search-bar" placeholder="Search here" value="">
-        <button type="button" id="reset-btn" class="text-center" style="content:none;">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </button>
-        <button id="search-icon" class="text-center" style="content:none;">
-          <i class="fa fa-search" style="font-size: 80%;" aria-hidden="true"></i>
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
+      <div class="nav-wrapper">
+              <label id="nav-trigger-anim" class=""><span></span></label>
+       </div>
+
+      <div class="site-search" style="text-align: center">
+      	<div class="site-search-inner">
+      		<div class="widget woocommerce widget_product_search">
+            <h1 style="font-size: 4em; margin-bottom: .5em; text-align: center; margin-top: 12%; font: 300 3em/1.5 'Lato', 'Helvetica Neue', Arial, sans-serif; color: white; text-transform: none; ">Search</h1>
+            <input id='s' type='search' style="text-align: center">
+
+      		</div>
+      	</div>
+      </div>
 
       <!--<h2>Dashboard</h2>-->
       <div id="profilePic">
@@ -144,7 +149,7 @@
 <div class="map" style="background-image: url('../public/images/bg.jpg')">
 <div id="map"></div>
 <div class="map-c">
-<div class="owner"><h1 style="cursor: pointer">ABC Stores</h1></div>
+<div class="owner"><h1 style="cursor: pointer; font: 300 1.8em/1.5 'Lato', 'Helvetica Neue', Arial, sans-serif;">ABC Stores</h1></div>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium id cumque est dolores voluptatibus.</p>
 <div class="det"><i class="fa fa-map-marker"></i> 102 New Road, New City</div>
 <div class="det"><i class="fa fa-phone"></i> 001 2045 509</div>
@@ -165,12 +170,15 @@
   <script type="text/javascript" src="https://cdn.rawgit.com/coverflowjs/coverflow/master/dist/coverflow.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js"></script>
   <script type="text/javascript" src="../public/js/result.js"></script>
   <script type="text/javascript" src="../public/js/result2.js"></script>
   <script type="text/javascript" src="../public/js/profile-card.js"></script>
   <script type="text/javascript" src="../public/js/map.js"></script>
   <script type="text/javascript" src="../public/js/search.js"></script>
   <script type="text/javascript" src="../public/js/profileCard.js"></script>
+  <script type="text/javascript" src="../public/js/burger.js"></script>
   <script src="../public/js/jquery.flipster.min.js"></script>
   <script>
     $('.my-flipster').flipster();
