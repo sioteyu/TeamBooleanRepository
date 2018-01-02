@@ -8,7 +8,7 @@ $(document).ready(function(){
     $('.inviBox').css("display", "block");
   });
 
-  $('.inviBox').on("click", function(){
+  $('.x').on("click", function(){
       $('.inviBox').css("display", "none");
         $('.mainChart').addClass("deblur");
         $('.card').addClass("fadeOut animated").removeClass("fadeInUp");

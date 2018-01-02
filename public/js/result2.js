@@ -30,7 +30,7 @@ var salesData = {
     }
   ]
 };
-var ctx = document.getElementById("salesData").getContext("2d");
+//var ctx = document.getElementById("salesData").getContext("2d");
 window.myLineChart = new Chart(ctx).Line(salesData, {
   pointDotRadius : 6,
   pointDotStrokeWidth : 2,
