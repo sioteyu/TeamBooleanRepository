@@ -358,6 +358,7 @@ body {
   cursor: pointer;
   border: solid 2px rgba(255, 255, 255, 0.01);
   background: rgba(255, 255, 255, 0.05);
+  transition: .45s ease-in-out;
 }
 .controls:hover, .controls:active {
   border-color: rgba(255, 255, 255, 0.01);
@@ -365,13 +366,12 @@ body {
 }
 .activeControl, .activeControl:hover {
   background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(255, 255, 255, 0.8);
   box-shadow: inset 0px -7px 10px rgba(0,0,0,.07);
   border-radius: 0px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   color: #202b33;
-  font-weight: 600;
+  /*font-weight: 600;*/
 }
 #salesData {
   margin-bottom: 60px;

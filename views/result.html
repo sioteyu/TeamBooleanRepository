@@ -48,13 +48,12 @@
           <li class="searchBut">Search</li>
           <li>Notifications <span class="notification">8</span></li>
           <li>Favorites</li>
-          <li>Reccomendations</li>
         </ul>
 
         <ul class="menu">
           <li>Account</li>
           <li>Privacy</li>
-          <li>General</li>
+          <li>Statistics</li>
           <li>Subscription</li>
         </ul>
 
@@ -99,8 +98,8 @@
         <a href="#" class="pro"><span>Upgrade to </span> PRO</a>
         <a href="#" class="logout">Log out <i class="fa fa-sign-out"></i></a>
       </div>
-      <span class="controls activeControl">Weekly</span>
-      <span class="controls">Monthly</span>
+      <span class="controls activeControl" id="cover" active="true">Coverflow</span>
+      <span class="controls" id="flat" active="false">Flat</span>
     </div>
     <div class="card">
         <div class="card-photo">
@@ -129,7 +128,7 @@
       </div>
     <div class="mainChart">
 
-      <div class="my-flipster" style="background-image: url('../public/images/shelf.jpg')">
+      <div id="fliper" class="my-flipster" style="background-image: url('../public/images/shelf.jpg')">
         <ul id="flip" data="something">
           <!--<li style="margin-top: 2%"><img src="../public/images/text1.gif" height="300px" width="250px"></li>
           <li style="margin-top: 2%"><img src="../public/images/text2.gif" height="300px" width="250px"></li>
@@ -181,7 +180,50 @@
   <script type="text/javascript" src="../public/js/profileCard.js"></script>
   <script src="../public/js/jquery.flipster.min.js"></script>
   <script>
+  //$(document).ready(function(){
+
     $('.my-flipster').flipster();
+    var x = $('#fliper').attr("class");
+    var y = x.split(" ");
+
+    $("#cover").on("click", function() {
+      $('#cover').css("color", "#202b33");
+      $('#cover').css("background", "rgba(255, 255, 255, 0.9)");
+      $('#cover').css("box-shadow", "inset 0px -7px 10px rgba(0,0,0,.07)");
+
+      $('#flat').css("color", "rgba(255, 255, 255, 0.5)");
+      $('#flat').css("background", "rgba(255, 255, 255, 0.05)");
+      $('#flat').css("box-shadow", "0px");
+
+      $('#cover').attr("active", "true");
+      $('#flat').attr("active", "false");
+      $('#flip1').attr('id', 'flip');
+      $('#fliper').attr('class', y[0]);
+      $('#fliper').css('height', '100%');
+      $('.my-flipster').flipster();
+    });
+
+    $('#flat').on("click", function(){
+      $('#flat').css("color", "#202b33");
+      $('#flat').css("background", "rgba(255, 255, 255, 0.9)");
+      $('#flat').css("box-shadow", "inset 0px -7px 10px rgba(0,0,0,.07)");
+
+      $('#cover').css("color", "rgba(255, 255, 255, 0.5)");
+      $('#cover').css("background", "rgba(255, 255, 255, 0.05)");
+      $('#cover').css("box-shadow", "0px");
+
+      $('#cover').attr("active", "false");
+      $('#flat').attr("active", "true");
+      $('#flip').attr('id', 'flip1');
+      $('#fliper').attr('class', y[0]);
+      $('#fliper').css('height', '47vh');
+      $(".my-flipster").flipster({
+        style: 'flat',
+        spacing: -0.25
+      });
+    });
+
+  //});
   </script>
   <script type="text/javascript" src="../public/js/burger.js"></script>
 </body>
