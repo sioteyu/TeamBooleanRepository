@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Almendra);
 
 .searchbar {
   height: 100vh;
@@ -204,3 +205,39 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance: none; }
 #s:hover, #s:focus { background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==) 14px 14px no-repeat; }
 
 #s:focus { width: 60%; cursor: text; }
+
+.close-btn {
+  color: #8b2f2f;
+  margin-right: 20px;
+  margin-top: -34px;
+  cursor: pointer;
+  height: 37px;
+  width: 37px;
+  position: relative;
+  float: right;
+  transition: 250ms ease;
+}
+.close-btn:before, .close-btn:after {
+  content: "";
+  height: 2px;
+  background: #8b2f2f;
+  width: 100%;
+  top: 50%;
+  left: 5%;
+  position: absolute;
+  transition: 250ms ease;
+}
+.close-btn:before {
+  transform: rotate(-45deg);
+}
+.close-btn:after {
+  transform: rotate(45deg);
+}
+.close-btn:hover, .close-btn:focus {
+  border: 2px solid;
+  border-radius: 100%;
+}
+.close-btn:hover:before, .close-btn:hover:after, .close-btn:focus:before, .close-btn:focus:after {
+  width: 50%;
+  left: 25%;
+}

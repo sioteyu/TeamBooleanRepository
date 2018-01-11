@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../public/stylesheets/profileCard.css">
     <link rel="stylesheet" href="../public/stylesheets/animate.css">
     <link rel="stylesheet" href="../public/stylesheets/burger.css">
+    <link rel="stylesheet" href="../public/stylesheets/upload.css">
     <link href="../public/stylesheets/FiraSansFont.css" rel="stylesheet">
     <link href='../public/stylesheets/LatoFont.css' rel='stylesheet' type='text/css'>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08"></script>
@@ -74,6 +75,63 @@
               <label id="nav-trigger-anim" class=""><span></span></label>
        </div>
 
+      <div class="site-search" style="text-align: center" id="site1">
+      	<div class="site-search-inner">
+      		<div class="widget woocommerce widget_product_search">
+            <div class="close-btn" id="close1" style="position:absolute; right:2px; margin-top:-152px;"></div>
+            <h1 style="font-size: 4em; margin-bottom: .5em; text-align: center; margin-top: 12%; font: 300 3em/1.5 'Lato', 'Helvetica Neue', Arial, sans-serif; color: white; text-transform: none;">Search</h1>
+            <input id='s' type='search' style="text-align: center">
+      		</div>
+      	</div>
+      </div>!
+
+      <div class="site-search" style="text-align: center" id="site2">
+      	<div class="site-search-inner">
+      		<div class="widget woocommerce widget_product_search">
+            <div class="close-btn" id="close2"></div>
+            <!-- multistep form -->
+            <form id="msform">
+              <!-- progressbar -->
+              <ul id="progressbar">
+                <li class="active">Step 1</li>
+                <li>Step 2</li>
+                <li>Step 3</li>
+              </ul>
+              <!-- fieldsets -->
+              <fieldset style="margin: 0 3%">
+                <h3 class="fs-subtitle" style="margin-left:0px;">Upload the cover of the book.</h3>
+                <div class="box">
+                  <div class="js--image-preview"></div>
+                  <div class="upload-options">
+                    <label>
+                      <input type="file" class="image-upload" accept="image/*">
+                    </label>
+                  </div>
+                </div>
+                  <input type="button" name="next" class="next action-button" value="Next" />
+                </fieldset>
+                <fieldset>
+                <h3 class="fs-subtitle" style="margin-left:0px;">Tell us about the book.</h3>
+                <input type="text" name="" value="" placeholder="Book Title"/>
+                <input type="text" name="" value="" placeholder="Author"/>
+                <input type="text" name="" value="" placeholder="Edition Number"/>
+                <input type="text" name="" value="" placeholder="Series/Volume No."/>
+                <textarea name="text" placeholder="Description" style="height:104px"></textarea>
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <input type="button" name="next" class="next action-button" value="Next" />
+              </fieldset>
+              <fieldset>
+                <h3 class="fs-subtitle" style="margin-left:0px;">Where can we locate the book.</h3>
+                <input type="text" name="" value="" placeholder="Longitude"/>
+                <input type="text" name="" value="" placeholder="Latitude"/>
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <input type="submit" name="submit" class="submit action-button" value="Submit" />
+              </fieldset>
+            </form>
+      		</div>
+      	</div>
+      </div>
+
       <div class="site-search" style="text-align: center">
       	<div class="site-search-inner">
       		<div class="widget woocommerce widget_product_search">
@@ -94,7 +152,7 @@
         <hr>
         <a href="#" class="option"><i class="fa fa-wrench"></i>Settings</a>
         <a href="#" class="option"><i class="fa fa-suitcase"></i>Account Info</a>
-        <a href="#" class="option"><i class="fa fa-book"></i>Upload Books</a>
+        <a href="#" class="option" id="upload"><i class="fa fa-book"></i>Upload Books</a>
         <a href="#" class="pro"><span>Upgrade to </span> PRO</a>
         <a href="#" class="logout">Log out <i class="fa fa-sign-out"></i></a>
       </div>
@@ -180,8 +238,6 @@
   <script type="text/javascript" src="../public/js/profileCard.js"></script>
   <script src="../public/js/jquery.flipster.min.js"></script>
   <script>
-  //$(document).ready(function(){
-
     $('.my-flipster').flipster();
     var x = $('#fliper').attr("class");
     var y = x.split(" ");
@@ -222,9 +278,104 @@
         spacing: -0.25
       });
     });
-
-  //});
   </script>
   <script type="text/javascript" src="../public/js/burger.js"></script>
+  <script type="text/javascript" src="../public/js/upload.js"></script>
+  <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script >function initImageUpload(box) {
+  let uploadField = box.querySelector('.image-upload');
+
+  uploadField.addEventListener('change', getFile);
+
+  function getFile(e){
+    let file = e.currentTarget.files[0];
+    checkType(file);
+  }
+
+  function previewImage(file){
+    let thumb = box.querySelector('.js--image-preview'),
+        reader = new FileReader();
+
+    reader.onload = function() {
+      thumb.style.backgroundImage = 'url(' + reader.result + ')';
+    }
+    reader.readAsDataURL(file);
+    thumb.className += ' js--no-default';
+  }
+
+  function checkType(file){
+    let imageType = /image.*/;
+    if (!file.type.match(imageType)) {
+      throw 'Datei ist kein Bild';
+    } else if (!file){
+      throw 'Kein Bild gewählt';
+    } else {
+      previewImage(file);
+    }
+  }
+
+}
+
+// initialize box-scope
+var boxes = document.querySelectorAll('.box');
+
+for(let i = 0; i < boxes.length; i++) {if (window.CP.shouldStopExecution(1)){break;}
+  let box = boxes[i];
+  initDropEffect(box);
+  initImageUpload(box);
+}
+window.CP.exitedLoop(1);
+
+
+
+
+/// drop-effect
+function initDropEffect(box){
+  let area, drop, areaWidth, areaHeight, maxDistance, dropWidth, dropHeight, x, y;
+
+  // get clickable area for drop effect
+  area = box.querySelector('.js--image-preview');
+  area.addEventListener('click', fireRipple);
+
+  function fireRipple(e){
+    area = e.currentTarget
+    // create drop
+    if(!drop){
+      drop = document.createElement('span');
+      drop.className = 'drop';
+      this.appendChild(drop);
+    }
+    // reset animate class
+    drop.className = 'drop';
+
+    // calculate dimensions of area (longest side)
+    areaWidth = getComputedStyle(this, null).getPropertyValue("width");
+    areaHeight = getComputedStyle(this, null).getPropertyValue("height");
+    maxDistance = Math.max(parseInt(areaWidth, 10), parseInt(areaHeight, 10));
+
+    // set drop dimensions to fill area
+    drop.style.width = maxDistance + 'px';
+    drop.style.height = maxDistance + 'px';
+
+    // calculate dimensions of drop
+    dropWidth = getComputedStyle(this, null).getPropertyValue("width");
+    dropHeight = getComputedStyle(this, null).getPropertyValue("height");
+
+    // calculate relative coordinates of click
+    // logic: click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center
+    x = e.pageX - this.offsetLeft - (parseInt(dropWidth, 10)/2);
+    y = e.pageY - this.offsetTop - (parseInt(dropHeight, 10)/2) - 30;
+
+    // position drop and animate
+    drop.style.top = y + 'px';
+    drop.style.left = x + 'px';
+    drop.className += ' animate';
+    e.stopPropagation();
+
+  }
+}
+
+//# sourceURL=pen.js
+</script>
 </body>
 </html>
