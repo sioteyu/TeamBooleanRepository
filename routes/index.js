@@ -1,4 +1,5 @@
 var firebase = require("firebase");
+require('@firebase/storage');
 var config = {
     apiKey: "AIzaSyD_wHMWNXjgp3SGUFODlEespynmWRnqN5o",
     authDomain: "teambooleaniacademy.firebaseapp.com",
@@ -9,7 +10,7 @@ var config = {
   };
 firebase.initializeApp(config);
 var ref = firebase.app().database().ref();
-
+var storage = firebase.storage().ref();
 exports.index = function(req, res){
   res.render('index', { title: 'Express' });
 };
@@ -42,15 +43,7 @@ exports.login = function(req, res){
 };
 
 exports.upload = function(req, res){
-  var bookRef = ref.child('books');
-  bookRef.push({
-    title:req.body.title,
-    author:req.body.author,
-    description:req.body.description,
-    longitude:req.body.longitude,
-    latitude:req.body.latitude
-  });
-  res.render('profile');
+  console.log(req.body.photo);
 };
 
 exports.profile = function(req, res){
@@ -73,3 +66,15 @@ exports.search = function(req, res){
 		});
     res.render('index');
 };
+
+
+//
+// var bookRef = ref.child('books');
+// bookRef.push({
+//   title:req.body.title,
+//   author:req.body.author,
+//   description:req.body.description,
+//   longitude:req.body.longitude,
+//   latitude:req.body.latitude
+// });
+// res.render('profile');
