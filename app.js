@@ -3,7 +3,7 @@ var express = require('express')
   , result = require('./routes/result')
   , http = require('http')
   , path = require('path');
-
+var session = require('express-session');
 var app = express();
 
 // all environments
@@ -14,16 +14,24 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+app.use(session({secret : 'shhhhhh', resave : true, saveUninitialized : false}));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+
+//all post and get
 app.get('/', routes.index);
-app.get('/result', result.list);
+app.get('/profile', routes.profile);
+app.post('/signup', routes.signup);
+app.post('/login', routes.login);
+app.post('/upload', routes.upload);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
