@@ -28,6 +28,7 @@ if ('development' == app.get('env')) {
 //all post and get
 app.get('/', routes.index);
 app.get('/profile', routes.profile);
+app.get('/search', routes.search)
 app.post('/signup', routes.signup);
 app.post('/login', routes.login);
 app.post('/upload', routes.upload);

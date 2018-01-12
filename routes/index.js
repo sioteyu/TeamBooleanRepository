@@ -12,8 +12,8 @@ var ref = firebase.app().database().ref();
 
 exports.index = function(req, res){
   res.render('index', { title: 'Express' });
-
 };
+
 exports.signup = function(req, res){
 	var usersRef = ref.child('users');
 	usersRef.push({
@@ -23,6 +23,7 @@ exports.signup = function(req, res){
 	password: req.body.password
 	});
 };
+
 exports.login = function(req, res){
 	var usersRef = ref.child('users');
 	usersRef.on('value', function (snap) {
@@ -58,5 +59,17 @@ exports.profile = function(req, res){
 	}else{
     res.render('index');
   }
+};
 
+exports.search = function(req, res){
+	var bookRef = ref.child('books');
+  bookRef.on('value', function (snap) {
+		snap.forEach(function (childSnap) {
+      var child = childSnap.child('title').val();
+        if (child.indexOf(req.query['searchItem'])!== -1) {
+          console.log(child);
+        }
+			});
+		});
+    res.render('index');
 };
