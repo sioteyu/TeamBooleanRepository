@@ -1,5 +1,4 @@
 var firebase = require("firebase");
-require('@firebase/storage');
 var config = {
     apiKey: "AIzaSyD_wHMWNXjgp3SGUFODlEespynmWRnqN5o",
     authDomain: "teambooleaniacademy.firebaseapp.com",
@@ -10,9 +9,22 @@ var config = {
   };
 firebase.initializeApp(config);
 var ref = firebase.app().database().ref();
-var storage = firebase.storage().ref();
+var formidable = require('formidable');
+var fs = require('fs');
+
+const keyFilename="./serviceKey.json";
+const projectId = "teambooleaniacademy";
+const bucketName = `${projectId}.appspot.com`;
+const gcs = require('@google-cloud/storage')({
+    projectId,
+    keyFilename
+});
+
+const bucket = gcs.bucket(bucketName);
+
 exports.index = function(req, res){
   res.render('index', { title: 'Express' });
+  console.log(req.files);
 };
 
 exports.signup = function(req, res){
@@ -32,23 +44,43 @@ exports.login = function(req, res){
 			if(childSnap.child('email').val()===req.body.email.trim()&&
 					childSnap.child('password').val()===req.body.password.trim()){
         req.session.email = childSnap.child('email').val();
+        req.session.name = childSnap.child('firstname').val() + ' ' + childSnap.child('lastname').val();
 				console.log("Login Sucess!!!");
-				res.render('profile', {
-          firstname:childSnap.child('firstname').val(),
-          lastname:childSnap.child('lastname').val()
-        });
+				res.render('profile', {name : req.session.name});
 			}
 		});
 	});
 };
 
 exports.upload = function(req, res){
-  console.log(req.body.photo);
+  // var bookRef = ref.child('books');
+  // bookRef.push({
+  //   title:req.body.title,
+  //   author:req.body.author,
+  //   description:req.body.description,
+  //   longitude:req.body.longitude,
+  //   latitude:req.body.latitude
+  // });
+
+  var form = new formidable.IncomingForm();
+  form.uploadDir = './uploads';
+  form.keepExtensions = true;
+  form.parse(req, function(err, fields, files)
+  {
+    bucket.upload('./'+files.fileUploaded.path.replace('\\', '/'), function(err, file) {
+        if(err)
+        {
+            console.log(err);
+            return;
+        }
+      });
+  });
+  res.render('profile', {name:req.session.name});
 };
 
 exports.profile = function(req, res){
 	if (req.session.email) {
-    res.render('profile');
+    res.render('profile',{name:req.session.name});
 	}else{
     res.render('index');
   }

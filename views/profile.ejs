@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Profile</title>
+    <title></title>
   	<link rel="stylesheet" href="/stylesheets/result.css">
     <link href='/stylesheets/coverflow.css' rel='stylesheet' type='text/css'>
   	<link rel="stylesheet" href="/stylesheets/loading.css">
@@ -21,8 +21,7 @@
     <link rel="stylesheet" href="/stylesheets/upload.css">
     <link href="/stylesheets/FiraSansFont.css" rel="stylesheet">
     <link href='/stylesheets/LatoFont.css' rel='stylesheet' type='text/css'>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08&sensor=false&libraries=places"></script>
     <link href='/stylesheets/MontserratFont.css' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -90,7 +89,7 @@
       		<div class="widget woocommerce widget_product_search">
             <div class="close-btn" id="close2"></div>
             <!-- multistep form -->
-            <form id="msform" action="/upload" method="post">
+            <form id="msform" action="/upload" method="post" enctype="multipart/form-data">
               <!-- progressbar -->
               <ul id="progressbar">
                 <li class="active">Step 1</li>
@@ -104,7 +103,7 @@
                   <div class="js--image-preview"></div>
                   <div class="upload-options">
                     <label>
-                      <input type="file" name="photo" class="image-upload" accept="image/*">
+                      <input type="file" class="image-upload" accept="image/*" name="fileUploaded">
                     </label>
                   </div>
                 </div>
@@ -113,29 +112,22 @@
                 <fieldset>
                 <h3 class="fs-subtitle" style="margin-left:0px;">Tell us about the book.</h3>
                 <input type="text" name="title" value="" placeholder="Book Title"/>
+                <input type="text" name="" value="" placeholder="Genre"/>
                 <input type="text" name="author" value="" placeholder="Author"/>
-                <textarea name="description" placeholder="Description" style="height:104px"></textarea>
+                <textarea type="textarea" name="description" placeholder="Description" style="height:104px"></textarea>
                 <input type="button" name="previous" class="previous action-button" value="Previous" />
-                <input type="button" name="next" class="next action-button" value="Next" />
+                <input type="button" name="next" id="initialization" class="next action-button" value="Next" />
               </fieldset>
-              <fieldset>
+              <fieldset style="margin: 0px -13%; width:130%">
                 <h3 class="fs-subtitle" style="margin-left:0px;">Where can we locate the book.</h3>
-                <input type="text" name="longitude" value="" placeholder="Longitude"/>
-                <input type="text" name="latitude" value="" placeholder="Latitude"/>
+                <input id="pac-input" class="controls" type="text" placeholder="Search for a place here...">
+                <input type="hidden" name="latitude" id="latitude" placeholder="latitude">
+                <input type="hidden" name="longitude" id="longitude" placeholder="longitude">
+                <div id="map2" style="width:100%; height:50vh"></div>
                 <input type="button" name="previous" class="previous action-button" value="Previous" />
-                <input type="submit" name="btnSubmit" class="submit action-button" value="Submit" onclick="document.getElementById('msform').submit();"/>
+                <input type="submit" name="btnsubmit" class="submit action-button" value="Submit" onclick="document.getElementById('msform').submit()"/>
               </fieldset>
             </form>
-      		</div>
-      	</div>
-      </div>
-
-      <div class="site-search" style="text-align: center">
-      	<div class="site-search-inner">
-      		<div class="widget woocommerce widget_product_search">
-            <h1 style="font-size: 4em; margin-bottom: .5em; text-align: center; margin-top: 12%; font: 300 3em/1.5 'Lato', 'Helvetica Neue', Arial, sans-serif; color: white; text-transform: none; ">Search</h1>
-            <input id='s' type='search' style="text-align: center">
-
       		</div>
       	</div>
       </div>
@@ -146,7 +138,7 @@
         <a href=""><img src="/images/samplePic2.jpg" /></a>
       </div>
       <div class="options">
-        <a href="" target="_blank"><div class="username"><%=firstname%> <%=lastname%></div></a>
+        <a href="" target="_blank"><div class="username"><%=name%></div></a>
         <hr>
         <a href="#" class="option"><i class="fa fa-wrench"></i>Settings</a>
         <a href="#" class="option"><i class="fa fa-suitcase"></i>Account Info</a>
@@ -157,31 +149,36 @@
       <span class="controls activeControl" id="cover" active="true">Coverflow</span>
       <span class="controls" id="flat" active="false">Flat</span>
     </div>
-    <div class="card">
-        <div class="card-photo">
-          <div class="x"><b></b><b></b><b></b><b></b></div>
-          <img src="/images/samplePic.png">
-        </div>
-        <div class="card-name">
-          <h1><i class="fa fa-circle" aria-hidden="true"></i>
-     ABC Store</h1></div>
-        <div class="card-description">
-          <p>27 Successful Transaction</p>
-        </div>
-        <div class="card-follow">
-          <button style="padding: 0px;">Follow</button>
-          <button style="padding: 0px;">Message</button>
-        </div>
-        <!--<div class="card-planets" style="margin: 0px;">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-          <i class="fa fa-globe active" aria-hidden="true"></i>
-          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-        </div>-->
-      </div>
 
-      <div class="inviBox">
-
+    <div class="site-search" style="text-align: center" id="site3">
+      <div class="site-search-inner">
+        <div class="widget woocommerce widget_product_search">
+          <div class="close-btn" id="close3" style="margin-top:12px;"></div>
+          <div class="card">
+              <div class="card-photo">
+                <!--<div class="x"><b></b><b></b><b></b><b></b></div>-->
+                <img src="/images/samplePic.png">
+              </div>
+              <div class="card-name">
+                <!--<h1><i class="fa fa-circle" aria-hidden="true"></i>-->
+           ABC Store</h1></div>
+              <div class="card-description">
+                <p>27 Successful Transaction</p>
+              </div>
+              <div class="card-follow">
+                <button style="padding: 0px;">Follow</button>
+                <button style="padding: 0px;">Message</button>
+              </div>
+              <!--<div class="card-planets" style="margin: 0px;">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <i class="fa fa-globe active" aria-hidden="true"></i>
+                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+              </div>-->
+            </div>
+        </div>
       </div>
+    </div>
+
     <div class="mainChart">
 
       <div id="fliper" class="my-flipster" style="background-image: url('/images/shelf.jpg')">
@@ -203,25 +200,25 @@
       </div>
       <div class="clearFix"></div>
 
-<div class="map" style="background-image: url('/images/bg.jpg')">
-<div id="map"></div>
-<div class="map-c">
-<div class="owner"><h1 style="cursor: pointer; font: 300 1.8em/1.5 'Lato', 'Helvetica Neue', Arial, sans-serif;">ABC Stores</h1></div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium id cumque est dolores voluptatibus.</p>
-<div class="det"><i class="fa fa-map-marker"></i> 102 New Road, New City</div>
-<div class="det"><i class="fa fa-phone"></i> 001 2045 509</div>
-<div class="det"><i class="fa fa-globe"></i> www.abcstores.com</div>
-<center>
-  <button class="fa fa-car"></button>
-  <button class="fa fa-envelope"></button>
-</center>
-</div>
-  </div>
+      <div class="map" style="background-image: url('/images/bg.jpg')">
+        <div id="map"></div>
+        <div class="map-c">
+          <div class="owner"><h1 style="cursor: pointer; font: 300 1.8em/1.5 'Lato', 'Helvetica Neue', Arial, sans-serif;">ABC Stores</h1></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium id cumque est dolores voluptatibus.</p>
+          <div class="det"><i class="fa fa-map-marker"></i> 102 New Road, New City</div>
+          <div class="det"><i class="fa fa-phone"></i> 001 2045 509</div>
+          <div class="det"><i class="fa fa-globe"></i> www.abcstores.com</div>
+          <center>
+            <button class="fa fa-car"></button>
+            <button class="fa fa-envelope"></button>
+          </center>
+        </div>
+      </div>
 
-  </div>
-</div>
-</div>
     </div>
+  </div>
+  </div>
+      </div>
 
   <script type="text/javascript" src="/js/loading.js"></script>
   <script type="text/javascript" src="/js/coverflow.js"></script>
@@ -233,22 +230,19 @@
   <script type="text/javascript" src="/js/profile-card.js"></script>
   <script type="text/javascript" src="/js/map.js"></script>
   <script type="text/javascript" src="/js/search.js"></script>
-  <script type="text/javascript" src="/js/profileCard.js"></script>
+  <script type="text/javascript" src="/js/selectMap.js"></script>
   <script src="/js/jquery.flipster.min.js"></script>
   <script>
     $('.my-flipster').flipster();
     var x = $('#fliper').attr("class");
     var y = x.split(" ");
-
     $("#cover").on("click", function() {
       $('#cover').css("color", "#202b33");
       $('#cover').css("background", "rgba(255, 255, 255, 0.9)");
       $('#cover').css("box-shadow", "inset 0px -7px 10px rgba(0,0,0,.07)");
-
       $('#flat').css("color", "rgba(255, 255, 255, 0.5)");
       $('#flat').css("background", "rgba(255, 255, 255, 0.05)");
       $('#flat').css("box-shadow", "0px");
-
       $('#cover').attr("active", "true");
       $('#flat').attr("active", "false");
       $('#flip1').attr('id', 'flip');
@@ -256,16 +250,13 @@
       $('#fliper').css('height', '100%');
       $('.my-flipster').flipster();
     });
-
     $('#flat').on("click", function(){
       $('#flat').css("color", "#202b33");
       $('#flat').css("background", "rgba(255, 255, 255, 0.9)");
       $('#flat').css("box-shadow", "inset 0px -7px 10px rgba(0,0,0,.07)");
-
       $('#cover').css("color", "rgba(255, 255, 255, 0.5)");
       $('#cover').css("background", "rgba(255, 255, 255, 0.05)");
       $('#cover').css("box-shadow", "0px");
-
       $('#cover').attr("active", "false");
       $('#flat').attr("active", "true");
       $('#flip').attr('id', 'flip1');
@@ -282,25 +273,20 @@
   <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
 <script >function initImageUpload(box) {
   let uploadField = box.querySelector('.image-upload');
-
   uploadField.addEventListener('change', getFile);
-
   function getFile(e){
     let file = e.currentTarget.files[0];
     checkType(file);
   }
-
   function previewImage(file){
     let thumb = box.querySelector('.js--image-preview'),
         reader = new FileReader();
-
     reader.onload = function() {
       thumb.style.backgroundImage = 'url(' + reader.result + ')';
     }
     reader.readAsDataURL(file);
     thumb.className += ' js--no-default';
   }
-
   function checkType(file){
     let imageType = /image.*/;
     if (!file.type.match(imageType)) {
@@ -311,30 +297,21 @@
       previewImage(file);
     }
   }
-
 }
-
 // initialize box-scope
 var boxes = document.querySelectorAll('.box');
-
 for(let i = 0; i < boxes.length; i++) {if (window.CP.shouldStopExecution(1)){break;}
   let box = boxes[i];
   initDropEffect(box);
   initImageUpload(box);
 }
 window.CP.exitedLoop(1);
-
-
-
-
 /// drop-effect
 function initDropEffect(box){
   let area, drop, areaWidth, areaHeight, maxDistance, dropWidth, dropHeight, x, y;
-
   // get clickable area for drop effect
   area = box.querySelector('.js--image-preview');
   area.addEventListener('click', fireRipple);
-
   function fireRipple(e){
     area = e.currentTarget
     // create drop
@@ -345,35 +322,27 @@ function initDropEffect(box){
     }
     // reset animate class
     drop.className = 'drop';
-
     // calculate dimensions of area (longest side)
     areaWidth = getComputedStyle(this, null).getPropertyValue("width");
     areaHeight = getComputedStyle(this, null).getPropertyValue("height");
     maxDistance = Math.max(parseInt(areaWidth, 10), parseInt(areaHeight, 10));
-
     // set drop dimensions to fill area
     drop.style.width = maxDistance + 'px';
     drop.style.height = maxDistance + 'px';
-
     // calculate dimensions of drop
     dropWidth = getComputedStyle(this, null).getPropertyValue("width");
     dropHeight = getComputedStyle(this, null).getPropertyValue("height");
-
     // calculate relative coordinates of click
     // logic: click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center
     x = e.pageX - this.offsetLeft - (parseInt(dropWidth, 10)/2);
     y = e.pageY - this.offsetTop - (parseInt(dropHeight, 10)/2) - 30;
-
     // position drop and animate
     drop.style.top = y + 'px';
     drop.style.left = x + 'px';
     drop.className += ' animate';
     e.stopPropagation();
-
   }
 }
-
-//# sourceURL=pen.js
 </script>
 </body>
 </html>

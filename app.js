@@ -5,14 +5,20 @@ var express = require('express')
   , path = require('path');
 var session = require('express-session');
 var app = express();
+var bodyParser = require('body-parser');
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
 app.use(express.favicon());
 app.use(express.logger('dev'));
-app.use(express.bodyParser({uploadDir:'./uploads'}));
+//app.use(express.bodyParser({uploadDir:'./uploads', keepExtensions:true}));
 app.use(express.methodOverride());
 app.use(session({secret : 'shhhhhh', resave : true, saveUninitialized : false}));
 app.use(app.router);
