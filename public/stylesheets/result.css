@@ -134,13 +134,14 @@ body {
   height: 100%;
   padding: 30px;
   border-right: 1px solid rgba(0,0,0,.1);
-  background: #1b232a;
+  background: rgb(28, 28, 28);
   z-index: 9;
 }
 #sidecontent{
   position: fixed;
   width: 200px;
   z-index: 10;
+  margin-top: 30px;
 }
 #sidecontent h1:first-child{
   color: #59ABE3;
@@ -175,7 +176,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   color: #DDD;
-  background: rgba(0,0,0,.08);
+  background: #223d4d;
   margin-left: -18px;
   padding: 0px 10px;
   border-radius: 8px;
@@ -197,12 +198,15 @@ body {
   /*height: 200vh;*/
   padding: 25px;
   display: table-cell;
+  position: relative;
+  top:8%;
   /*background-image: url("../images/lib.jpg");*/
+  z-index: 50;
 }
 #titleBar {
   height: 36px;
-  margin-bottom: 30px;
-  margin-right: -15px;
+  margin-bottom: 22px;
+  margin-right: 10px;
 }
 #profilePic {
   width: 50px;
@@ -415,7 +419,7 @@ body {
   border-radius: 50%;
   background: #59ABE3;
   position: absolute;
-  top: 0; bottom: 0; right: 2%;
+  top: 0; bottom: 0; right: 15%;
   margin: auto;
   transition: .3s ease;
 }

@@ -38,19 +38,24 @@
 /*buttons*/
 #msform .action-button {
 	width: 100px;
-	background: #27AE60;
+	background: white;
 	font-weight: bold;
-	color: white;
+	color: #009fff;
 	border: 0 none;
 	border-radius: 1px;
 	cursor: pointer;
 	padding: 10px 5px;
 	margin: 10px 5px;
   border-radius: 30px;
+	border:1px solid #009fff;
+	transition: ease 0.75s;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-  outline: none;
+	/*box-shadow: 0 0 0 2px white, 0 0 0 3px #009fff;
+  outline: none;*/
+	background: #009fff;
+	color: white;
+	border:none;
 }
 /*headings*/
 .fs-title {
@@ -61,7 +66,7 @@
 }
 .fs-subtitle {
 	font-weight: normal;
-	font-size: 13px;
+	font-size: 25px;
 	color: #666;
 	margin-bottom: 20px;
 }
@@ -111,7 +116,7 @@
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+	background: #009fff;
 	color: white;
 }
 
@@ -149,7 +154,7 @@
 .upload-options {
   position: relative;
   height: 75px;
-  background-color: cadetblue;
+  background-color: #009fff;
   cursor: pointer;
   overflow: hidden;
   text-align: center;
@@ -157,7 +162,7 @@
   transition: background-color ease-in-out 150ms;
 }
 .upload-options:hover {
-  background-color: #7fb1b3;
+  background-color: #058cde;
 }
 .upload-options input {
   width: 0.1px;
@@ -266,4 +271,49 @@ i.material-icons {
     -webkit-transform: scale(2.5);
             transform: scale(2.5);
   }
+}
+
+
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+				margin-top: 8px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+				text-align: left;
+				text-transform:none;
+				width:290px; top:-7px
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+.anothaBox{
+	position: fixed;
+    background-color: rgb(35, 35, 35);
+    width: 100%;
+    height: 9vh;
+		z-index: 70;
+		transition: ease 0.75s;
 }

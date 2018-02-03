@@ -17,12 +17,12 @@ body {
 /* line 32, ../compass/sass/style.scss */
 a {
   text-decoration: none;
-  color: #FF9500;
+  color: #6095b4;
   transition: .5s ease;
 }
 /* line 36, ../compass/sass/style.scss */
 a:hover {
-  color: #b67923;
+  color: #60b2e2;
 }
 
 /* line 41, ../compass/sass/style.scss */
@@ -63,12 +63,12 @@ a:hover {
 }
 /* line 71, ../compass/sass/style.scss */
 .tab-group li a:hover {
-  background: #b67923;
+  /*background: #60b2e2;*/
   color: #ffffff;
 }
 /* line 76, ../compass/sass/style.scss */
 .tab-group .active a {
-  background: #FF9500;
+  background: #009fff;
   color: #ffffff;
 }
 
@@ -100,12 +100,12 @@ label {
 /* line 103, ../compass/sass/style.scss */
 label .req {
   margin: 2px;
-  color: #FF9500;
+  color: #6095b4;
 }
 
 /* line 109, ../compass/sass/style.scss */
 label.active {
-  transform: translateY(50px);
+  transform: translateY(-23px);
   left: 2px;
   font-size: 12px;
 }
@@ -136,7 +136,7 @@ input, textarea {
 /* line 134, ../compass/sass/style.scss */
 input:focus, textarea:focus {
   outline: 0;
-  border-color: #FF9500;
+  border-color: #6095b4;
 }
 
 /* line 140, ../compass/sass/style.scss */
@@ -178,14 +178,14 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #FF9500;
+  background: #009fff;
   color: #ffffff;
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
 /* line 180, ../compass/sass/style.scss */
 .button:hover, .button:focus {
-  background: #b67923;
+  background: #058cde;
 }
 
 /* line 185, ../compass/sass/style.scss */
@@ -201,11 +201,11 @@ textarea {
 }
 
 .hov{
-  color: #FF9500;
+  color: #6095b4;
   text-decoration: none;
 }
 
 .hov:hover{
-  color: #b67923;
+  color: #60b2e2;
   text-decoration: none;
 }

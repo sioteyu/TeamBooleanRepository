@@ -3,15 +3,16 @@
   width: 285px;
   height: 380px;
   /*border: 2px solid green */
-  display: none;
+  /*display: none;*/
   flex-direction: column;
   align-items: center;
   background: #fff;
   border-radius: 10px;
   position: absolute;
-  left: 48%;
+  top: 50%;
+  left: 50%;
+  margin: 85px 0 0 -150px;
   z-index: 2;
-  top: 26;
   /*box-shadow: 2px 2px 1px #333 */
 }
 
@@ -22,7 +23,6 @@
 }
 
 .card-name {
-  display: flex;
   align-items: center;
 }
 
@@ -52,15 +52,24 @@
 
 .card-follow button {
   margin-top: 40px;
-  background: #ff6e40;
+  background: white;
   border-radius: 50px;
-  border-color: #ff6e40;
   width: 90px;
   height: 30px;
-  color: #fff;
+  color: #009fff;
   cursor: pointer;
   font-weight: bold;
   border-style: none;
+  border:1px solid #009fff;
+	transition: ease 0.75s;
+}
+
+.card-follow button:hover{
+  /*box-shadow: 0 0 0 2px white, 0 0 0 3px #009fff;
+  outline: none;*/
+  background: #009fff;
+	color: white;
+	border:none;
 }
 
 .card-planets {

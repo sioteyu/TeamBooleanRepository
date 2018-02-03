@@ -1,30 +1,19 @@
-var firebase = require("firebase");
-var config = {
-    apiKey: "AIzaSyD_wHMWNXjgp3SGUFODlEespynmWRnqN5o",
-    authDomain: "teambooleaniacademy.firebaseapp.com",
-    databaseURL: "https://teambooleaniacademy.firebaseio.com",
-    projectId: "teambooleaniacademy",
-    storageBucket: "teambooleaniacademy.appspot.com",
-    messagingSenderId: "490332136"
-  };
+var firebase = require('firebase');
+var singleton = require('./singleton.js');
+var config = singleton.config;
+var bucket = singleton.configAdmin;
 firebase.initializeApp(config);
 var ref = firebase.app().database().ref();
 var formidable = require('formidable');
 var fs = require('fs');
 
-const keyFilename="./serviceKey.json";
-const projectId = "teambooleaniacademy";
-const bucketName = `${projectId}.appspot.com`;
-const gcs = require('@google-cloud/storage')({
-    projectId,
-    keyFilename
-});
-
-const bucket = gcs.bucket(bucketName);
 
 exports.index = function(req, res){
   res.render('index', { title: 'Express' });
-  console.log(req.files);
+  //download algorithm
+  // bucket.file('68e94bf4eb6347674e058bd2f8c28094.jpg').download({
+  // destination: './public/downloads/68e94bf4eb6347674e058bd2f8c28094.jpg'
+  // })};
 };
 
 exports.signup = function(req, res){
@@ -43,6 +32,7 @@ exports.login = function(req, res){
 		snap.forEach(function (childSnap) {
 			if(childSnap.child('email').val()===req.body.email.trim()&&
 					childSnap.child('password').val()===req.body.password.trim()){
+        req.session.user = childSnap.key;
         req.session.email = childSnap.child('email').val();
         req.session.name = childSnap.child('firstname').val() + ' ' + childSnap.child('lastname').val();
 				console.log("Login Sucess!!!");
@@ -50,32 +40,6 @@ exports.login = function(req, res){
 			}
 		});
 	});
-};
-
-exports.upload = function(req, res){
-  // var bookRef = ref.child('books');
-  // bookRef.push({
-  //   title:req.body.title,
-  //   author:req.body.author,
-  //   description:req.body.description,
-  //   longitude:req.body.longitude,
-  //   latitude:req.body.latitude
-  // });
-
-  var form = new formidable.IncomingForm();
-  form.uploadDir = './uploads';
-  form.keepExtensions = true;
-  form.parse(req, function(err, fields, files)
-  {
-    bucket.upload('./'+files.fileUploaded.path.replace('\\', '/'), function(err, file) {
-        if(err)
-        {
-            console.log(err);
-            return;
-        }
-      });
-  });
-  res.render('profile', {name:req.session.name});
 };
 
 exports.profile = function(req, res){
@@ -88,25 +52,25 @@ exports.profile = function(req, res){
 
 exports.search = function(req, res){
 	var bookRef = ref.child('books');
+  var json = {};
+  var counter = 0;
+  json['data'] = [];
   bookRef.on('value', function (snap) {
 		snap.forEach(function (childSnap) {
-      var child = childSnap.child('title').val();
-        if (child.indexOf(req.query['searchItem'])!== -1) {
-          console.log(child);
+      var child = childSnap.child('title').val().toLowerCase();;
+        if (child.indexOf(req.query['searchItem'].toLowerCase()) !== -1) {
+          bucket
+          .file(childSnap.child('photo').val())
+          .download({destination: './public/downloads/'+childSnap.child('photo').val()})
+          .then(()=>{
+            counter++;
+            console.log(counter);
+            json['data'].push(childSnap.val());
+            if(counter==snap.numChildren()){
+              res.render('results', json);
+            }
+          });
         }
 			});
-		});
-    res.render('index');
+		})
 };
-
-
-//
-// var bookRef = ref.child('books');
-// bookRef.push({
-//   title:req.body.title,
-//   author:req.body.author,
-//   description:req.body.description,
-//   longitude:req.body.longitude,
-//   latitude:req.body.latitude
-// });
-// res.render('profile');
