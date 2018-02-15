@@ -1,0 +1,41 @@
+.wrapper11 {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #b3d4fc;
+}
+
+.users-list-card {
+margin: 25px;
+flex: 1 1 100%;
+max-width: 448px;
+}
+
+.users-list-card > .mdl-list {
+margin: 0;
+padding: 0 32px;
+}
+
+.users-list-card > .mdl-list > .mdl-list__item {
+padding: 0;
+}
+
+.users-list-card > .mdl-list > .mdl-list__item .mdl-textfield {
+padding: 0;
+}
+
+.users-list-card > .mdl-list > .mdl-list__item .mdl-textfield .mdl-textfield__input {
+border: none;
+top: 0;
+}
+
+.users-list-card > .mdl-card__supporting-text > .mdl-list {
+margin-top: 0;
+padding-top: 0;
+}
+
+.mdl-list__item-avatar {
+background: url("https://unsplash.it/200?random") no-repeat center center;
+background-size: cover;
+}
