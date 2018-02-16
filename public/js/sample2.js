@@ -47,7 +47,7 @@ map.addMarker({
   click: function(e){
     if(console.log)
       console.log(e);
-    alert('You clicked in this marker');
+    alert('You clicked in this marker' + num);
   },
   mouseover: function(e){
     if(console.log)
