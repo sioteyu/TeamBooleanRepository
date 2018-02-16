@@ -12,6 +12,10 @@ $("li.book-item").each(function() {
 var $this = $(this);
 
 $this.find(".item-details a.button").on('click', function() {
+  var title = $(this).parent().find('.book-item_title').text();
+  var author = $(this).parent().find('.author').text();
+  var desc = $(this).parent().find('.description').text();
+
 if($("#" + lastOpened).attr("isOpen")=="true"){
 
 } else{
@@ -26,6 +30,9 @@ var num = $this.attr("pop-up");
 id = "moreDetails" + num;
 var liNumber = parseInt($this.attr("liNum"));
 
+$('#' + id).find('.item-details').find('#mytable').find('#myTR').find('#details').find('.book2-item_title').text(title);
+$('#' + id).find('.item-details').find('#mytable').find('#myTR').find('#details').find('.author').text(author);
+$('#' + id).find('.item-details').find('#mytable').find('#myTR').find('#details').find('.description').text(desc);
 
 $("#" + id).attr("class", "mix color-1 book2-item small-12 medium-6 columns shuffle-item shuffle-item--visible active");
 //$("#" + id).attr("style", "width:100%; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease; background-color:#303030; overflow:hidden; display:inline-block; animation: OpenDown 5s ease-out 0s 1;");
