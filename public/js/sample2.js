@@ -29,6 +29,41 @@ $("#" + id).attr("class", "mix color-1 book2-item small-12 medium-6 columns shuf
 //$("#" + id).attr("style", "width:100%; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease; background-color:#303030; overflow:hidden; display:inline-block; animation: OpenDown 5s ease-out 0s 1;");
 $("#" + id).attr("style", "width:100%; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease; background-color:#303030");
 
+var map;
+
+map = new GMaps({
+  el: '#map' + num,
+  lat: -12.043333,
+  lng: -77.028333
+});
+map.addMarker({
+  lat: -12.043333,
+  lng: -77.03,
+  title: 'Lima',
+  details: {
+    database_id: 42,
+    author: 'HPNeo'
+  },
+  click: function(e){
+    if(console.log)
+      console.log(e);
+    alert('You clicked in this marker');
+  },
+  mouseover: function(e){
+    if(console.log)
+      console.log(e);
+  }
+});
+
+map.addMarker({
+  lat: -12.042,
+  lng: -77.028333,
+  title: 'Marker with InfoWindow',
+  infoWindow: {
+    content: '<p>HTML Content</p>'
+  }
+});
+
 if(liNumber%3==0){
 $('.arrow-up').css("left", "86%");
 } else if(liNumber%3==2){

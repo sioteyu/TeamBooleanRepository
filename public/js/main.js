@@ -21,13 +21,12 @@ var foursquareBaseUrl = 'https://api.foursquare.com/v2/venues/search?client_id='
  * Initialize Google Map
  */
 
-/* $('#ace').on( "click", function() {
+/*$('#ace').on( "click", function() {
 	 alert("Started");
-	 initialize();
- });*/
+});*/
 
  function initialize() {
-
+	 alert("FIRST");
  	var geocoder = new google.maps.Geocoder();
  	bounds = new google.maps.LatLngBounds();
 
