@@ -42,10 +42,11 @@ $this.addClass("book3-item");
 var map;
 
 map = new GMaps({
-  el: '#map' + num,
+  el: '.map' + num,
   lat: -12.043333,
   lng: -77.028333
 });
+
 map.addMarker({
   lat: -12.043333,
   lng: -77.03,
@@ -62,15 +63,6 @@ map.addMarker({
   mouseover: function(e){
     if(console.log)
       console.log(e);
-  }
-});
-
-map.addMarker({
-  lat: -12.042,
-  lng: -77.028333,
-  title: 'Marker with InfoWindow',
-  infoWindow: {
-    content: '<p>HTML Content</p>'
   }
 });
 

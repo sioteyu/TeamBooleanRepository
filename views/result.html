@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="../public/stylesheets/result.css">
   <link href="../public/stylesheets/bootstrap.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="../public/stylesheets/main.css?__inline=true">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css">
 
 </head>
 <body style="background-color:#ebeef6; overflow:auto; width:100%; height:100%">
@@ -162,9 +164,32 @@ Deathly Hallows shattered sales records upon release, surpassing marks set by pr
       <p class="description" style="margin-bottom:38px; color:black;"></p>
       <a class="button" style="color:white; background-color: #219e9a;">Comment</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button " style="color:white">Location</a>
     </td>
-      <td style="width: 40%; padding-left: 30px; padding-top: 29px; line-height:20px">
-        <div id="map1" style="height:80%"></div>
-    </td>
+    <td style="width: 40%; padding-left: 30px; padding-top: 15px; line-height:20px">
+    <section class="mainDiv">
+      <div class="col-md-3 nopadding view-list" style="overflow:auto">
+        <div class="list-group">
+          <a style="color:white; background-color:#219e9a" class="list-group-item disabled">
+            Book Locations
+          </a>
+          <div data-bind="foreach: locList">
+            <!--LOOPS-->
+            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+            <!--LOOPS-->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 nopadding">
+        <div id="mapDiv" class="map1"></div>
+      </div>
+    </section>
+  </td>
   </tr>
   </table>
 </div>
@@ -229,6 +254,7 @@ Deathly Hallows shattered sales records upon release, surpassing marks set by pr
                 <a class="button " style="color:white">Details</a>
               </div>
             </li>
+
             <!--TEST-->
             <li  id="moreDetails2" class="book2-item small-12 medium-6 columns shuffle-item shuffle-item--visible" isOpen="false" data-groups="[&quot;fantasy&quot;,&quot;young&quot;]" data-date-created="2007" data-title="Harry Potter and the Deathly Hallows" data-color="#b06010" style="width:100%; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease; background-color:#303030; overflow:auto">
               <div class="arrow-up">
@@ -243,9 +269,30 @@ Deathly Hallows shattered sales records upon release, surpassing marks set by pr
                   <p style="margin-bottom:38px; color:black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in.</p>
                   <a class="button" style="color:white; background-color: #219e9a;">Comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button " style="color:white">Location</a>
                 </td>
-                  <td style="width: 40%; padding-left: 30px; padding-top: 29px; line-height:20px">
-                    <div id="map2" style="height:80%"></div>
-                </td>
+                <td style="width: 40%; padding-left: 30px; padding-top: 15px; line-height:20px">
+                <section class="mainDiv">
+                  <div class="col-md-3 nopadding view-list" style="overflow:auto">
+                    <div class="list-group">
+                      <a style="color:white; background-color:#219e9a" class="list-group-item disabled">
+                        Book Locations
+                      </a>
+                      <div data-bind="foreach: locList">
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-9 nopadding">
+                    <div id="mapDiv" class="map2"></div>
+                  </div>
+                </section>
+              </td>
               </tr>
               </table>
             </div>
@@ -328,9 +375,30 @@ Deathly Hallows shattered sales records upon release, surpassing marks set by pr
                   <p style="margin-bottom:38px; color:black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in.</p>
                   <a class="button" style="color:white; background-color: #219e9a;">Comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button " style="color:white">Location</a>
                 </td>
-                  <td style="width: 40%; padding-left: 30px; padding-top: 29px; line-height:20px">
-                    <div id="map3" style="height:80%"></div>
-                </td>
+                <td style="width: 40%; padding-left: 30px; padding-top: 15px; line-height:20px">
+                <section class="mainDiv">
+                  <div class="col-md-3 nopadding view-list" style="overflow:auto">
+                    <div class="list-group">
+                      <a style="color:white; background-color:#219e9a" class="list-group-item disabled">
+                        Book Locations
+                      </a>
+                      <div data-bind="foreach: locList">
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-9 nopadding">
+                    <div id="mapDiv" class="map3"></div>
+                  </div>
+                </section>
+              </td>
               </tr>
               </table>
             </div>
@@ -445,7 +513,6 @@ Deathly Hallows shattered sales records upon release, surpassing marks set by pr
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Shuffle/4.0.0/shuffle.min.js'></script>
 <script src="../public/js/sample2.js"></script>
 <script src="../public/js/sample.js"></script>
-<script src="../public/js/Book2.js"></script>
 <script src="../public/js/gmaps.js"></script>
 <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08"></script>
 </body>
