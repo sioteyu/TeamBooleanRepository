@@ -12,6 +12,7 @@ $("li.book-item").each(function() {
 var $this = $(this);
 
 $this.find(".item-details a.button").on('click', function() {
+
   var title = $(this).parent().find('.book-item_title').text();
   var author = $(this).parent().find('.author').text();
   var desc = $(this).parent().find('.description').text();
@@ -67,11 +68,12 @@ map.addMarker({
 });
 
 if(liNumber%3==0){
-$('.arrow-up').css("left", "86%");
-} else if(liNumber%3==2){
-$('.arrow-up').css("left", "50%");
-} else{
 $('.arrow-up').css("left", "16%");
+} else if(liNumber%3==2){
+  $('.arrow-up').css("left", "86%");
+} else{
+$('.arrow-up').css("left", "86%");
+$('.arrow-up').css("left", "50%");
 }
 
 if(lastClicked == $this.attr("liNum")){
