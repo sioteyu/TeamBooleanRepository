@@ -6,7 +6,6 @@
   <meta charset="UTF-8">
   <title></title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
   <link rel="stylesheet" href="../public/stylesheets/reset.min.css">
   <link rel="stylesheet" href="../public/stylesheets/Lato.css">
   <link rel="stylesheet" href="../public/stylesheets/FontAwesome.css">
@@ -17,7 +16,7 @@
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="../public/stylesheets/main.css?__inline=true">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css">
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </head>
 <body style="background-color:#ebeef6; overflow:auto; width:100%; height:100%">
   <div id="main-container" class="main-container nav-effect-1">
@@ -78,9 +77,8 @@
           </div>
         </div>
 
-        <section class="cd-gallery" style="    padding-left: 40px;
-    padding-right: 40px;">
-          <ul>
+        <section class="cd-gallery">
+          <ul id="Start" data="Hello">
 
 
 
@@ -110,335 +108,184 @@
 
 
 
+<script type="text/javascript">
+var ctr=1;
+var j=0;
 
-            <li class="mix Of Mice and Men check1 radio2 option3 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" id="0" liNum="0" pop-up="1" data-groups="[&quot;classic&quot;]" data-date-created="1937" data-title="Of Mice and Men" data-color="#fcc278" style="width:30vw;visibility: visible; will-change: transform; transition: transform 250ms ease, opacity 250ms ease;">
-              <div class="bk-img">
-                <div class="bk-wrapper">
-                  <div class="bk-book bk-bookdefault">
-                    <div class="bk-front">
-                      <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_1-small.jpg&quot;); background-color: rgb(252, 194, 120);"></div>
-                    </div>
-                    <div class="bk-back"></div>
-                    <div class="bk-left" ></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details">
-                <h3 class="book-item_title">Of Mice and Men</h3>
-                <p class="author">by John Steinbeck • 1937</p>
-                <p class="description" style="margin-bottom:38px; color:black;">it tells the story of George Milton and Lennie Small, two displaced migrant ranch workers, who move from place to place in California in search of new job opportunities during the Great Depression in the United States.
+var dbArray = ["Saab", "Volvo", "BMW", "BMW", "BMW", "BMW", "BMW", "BMW", "BMW", "BMW"];
+for(;j<dbArray.length;j++){
 
-Steinbeck based the novella on his own experiences working alongside migrant farm workers as a teenager in the 1910s (before the arrival of the Okies he would vividly describe in The Grapes of Wrath). The title is taken from Robert Burns' poem "To a Mouse", which reads: "The best laid schemes o' mice an' men / Gang aft agley". (The best laid schemes of mice and men / Often go awry.)
+if(j%3==1 || j%3==2 && j!=0){
+  //console.log("INITIATED");
+  $('#Start').append("<li class='mix <TITLE OF BOOK FROM DATABASE> check1 radio2 option3 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible' id='" + j + "' liNum='" + j + "' pop-up='" + ctr + "' data-groups='[&quot;classic&quot;]' data-date-created='1998' data-title='<TITLE OF BOOK FROM DATABASE>' data-color='#fcc278' style='width:30vw;visibility: visible; will-change: transform; transition: transform 250ms ease, opacity 250ms ease; margin-left:2%'>"
+  + "<div class='bk-img'>"
+  +  "<div class='bk-wrapper'>"
+  +   "<div class='bk-book bk-bookdefault'>"
+  +     "<div class='bk-front'>"
+  +      "<div class='bk-cover' style='background-image: url(http://interactivejoe.com/book-viewer/assets/images/bk_19-small.jpg); background-size: contain; background-color: rgb(252, 194, 120);'></div>"
+  +   "</div>"
+  +    "<div class='bk-back'></div>"
+  +    "<div class='bk-left' ></div>"
+  +  "</div>"
+  +"</div>"
+  +"</div>"
+  +"<div class='item-details'>"
+  +"<h3 class='book-item_title'>Harry Potter and the Deathly Hallows</h3>"
+  +"<p class='author'>by J.K. Rowling • 2007</p>"
+  +"<p class='description' style='margin-bottom:38px; color:black;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>"
+  +"<a class='button ' style='color:white'>Details</a>"
+  +"</div>"
+  +"</li>");
+}  else{
+//console.log("id: " + j + " liNum: " + j + " pop-up: " + ctr);
+$('#Start').append("<li class='mix <TITLE OF BOOK FROM DATABASE> check1 radio2 option3 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible' id='" + j + "' liNum='" + j + "' pop-up='" + ctr + "' data-groups='[&quot;classic&quot;]' data-date-created='1998' data-title='<TITLE OF BOOK FROM DATABASE>' data-color='#fcc278' style='width:30vw;visibility: visible; will-change: transform; transition: transform 250ms ease, opacity 250ms ease;'>"
++ "<div class='bk-img'>"
++  "<div class='bk-wrapper'>"
++   "<div class='bk-book bk-bookdefault'>"
++     "<div class='bk-front'>"
++      "<div class='bk-cover' style='background-image: url(http://interactivejoe.com/book-viewer/assets/images/bk_19-small.jpg); background-size: contain; background-color: rgb(252, 194, 120);'></div>"
++   "</div>"
++    "<div class='bk-back'></div>"
++    "<div class='bk-left' ></div>"
++  "</div>"
++"</div>"
++"</div>"
++"<div class='item-details'>"
++"<h3 class='book-item_title'>Harry Potter and the Deathly Hallows</h3>"
++"<p class='author'>by J.K. Rowling • 2007</p>"
++"<p class='description' style='margin-bottom:38px; color:black;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>"
++"<a class='button ' style='color:white'>Details</a>"
++"</div>"
++"</li>");
+}
 
-While it is a book taught in many schools,[3] Of Mice and Men has been a frequent target of censors for vulgarity and what some consider offensive and racist language; consequently, it appears on the American Library Association's list of the Most Challenged Books of 21st Century.[4]</p>
-                <a class="button " style="color:white">Details</a>
-              </div>
-            </li>
+if(j%3==2 && j!=0){
+console.log("maps" + ctr);
 
-            <li class="mix The Catcher in the Rye check3 radio3 option1 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" id="1" liNum="1" pop-up="1" data-groups="[&quot;classic&quot;,&quot;young&quot;]" data-date-created="1951" data-title="The Catcher in the Rye" data-color="#009c8b" style="width:30vw;visibility: visible; will-change: transform; opacity: 1; transform: translate(511px, 0px) scale(1); transition-duration: 250ms, 250ms; transition-timing-function: ease, ease; transition-property: transform, opacity;">
-              <div class="bk-img">
-                <div class="bk-wrapper">
-                  <div class="bk-book bk-bookdefault">
-                    <div class="bk-front">
-                      <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_2-small.jpg&quot;); background-color: rgb(0, 156, 139);"></div>
-                    </div>
-                    <div class="bk-back"></div>
-                    <div class="bk-left"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details">
-                <h3 class="book-item_title">The Catcher in the Rye</h3>
-                <p class="author">by J.D. Salinger • 1951</p>
-                <p class="description" style="margin-bottom:38px; color:black">The Catcher in the Rye is a 1951 novel by J. D. Salinger.[3] A classic novel originally published for adults, it has since become popular with adolescent readers for its themes of teenage angst and alienation.[4][5] It has been translated into almost all of the world's major languages.[6] Around 1 million copies are sold each year with total sales of more than 65 million books.[7] The novel's protagonist Holden Caulfield has become an icon for teenage rebellion.[8] The novel also deals with complex issues of innocence, identity, belonging, loss, and connection.
+$('#Start').append("<li  id='moreDetails" + ctr + "' class='book2-item small-12 medium-6 columns shuffle-item shuffle-item--visible' isOpen='false' style='width:100%; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease; background-color:#303030; overflow:auto'>"
++ "<div class='arrow-up'>"
 
-The novel was included on Time's 2005 list of the 100 best English-language novels written since 1923[9] and it was named by Modern Library and its readers as one of the 100 best English-language novels of the 20th century.[10][11][12] In 2003, it was listed at #15 on the BBC's survey The Big Read.[13]</p>
-                <a class="button " style="color:white">Details</a>
-              </div>
-            </li>
++ "</div>"
++ "<div class='item-details'>"
++ "<table id='mytable' style='width:100%'>"
+  + "<tr id='myTR'>"
+  + "<td id='details' style='padding-bottom: 25px;'>"
+  + "<h3 class='book2-item_title' style='font-size:31px;'></h3>"
+  + "<p class='author'></p>"
+  + "<p class='description' style='margin-bottom:38px; color:black;'></p>"
+  + "<a class='button' style='color:white; background-color: #219e9a;'>Comment</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class='button ' style='color:white'>Location</a>"
++ "</td>"
++ "<td style='width: 40%; padding-left: 30px; padding-top: 15px; line-height:20px'>"
++ "<section class='mainDiv'>"
+  + "<div class='col-md-3 nopadding view-list' style='overflow:auto'>"
+    + "<div class='list-group'>"
+      + "<a style='color:white; background-color:#219e9a' class='list-group-item disabled'>"
+        + "Book Locations"
+      + "</a>"
+      + "<div data-bind='foreach: locList'>"
 
-            <li class="mix Harry Potter and the Deathly Hallows check3 radio2 option4 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" id="2" liNum="2" pop-up="1" data-groups="[&quot;fantasy&quot;,&quot;young&quot;]" data-date-created="2007" data-title="Harry Potter and the Deathly Hallows" data-color="#b06010" style="width:30vw; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease;">
-              <div class="bk-img">
-                <div class="bk-wrapper">
-                  <div class="bk-book bk-bookdefault">
-                    <div class="bk-front">
-                      <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_19-small.jpg&quot;); background-color: rgb(176, 96, 16);"></div>
-                    </div>
-                    <div class="bk-back"></div>
-                    <div class="bk-left"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details">
-                <h3 class="book-item_title">Harry Potter and the Deathly Hallows</h3>
-                <p class="author">by J.K. Rowling • 2007</p>
-                <p class="description" style="margin-bottom:38px; color:black">Harry Potter and the Deathly Hallows is a fantasy novel written by British author J. K. Rowling and the seventh and final novel of the Harry Potter series. The book was released on 21 July 2007, ending the series that began in 1997 with the publication of Harry Potter and the Philosopher's Stone. It was published by Bloomsbury Publishing in the United Kingdom, in the United States by Scholastic, and in Canada by Raincoast Books. The novel chronicles the events directly following Harry Potter and the Half-Blood Prince (2005), and the final confrontation between the wizards Harry Potter and Lord Voldemort.
+      +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+      +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+      +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+      +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+      +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+      +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+      +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+      +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+      +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
 
-Deathly Hallows shattered sales records upon release, surpassing marks set by previous titles of the Potter series. It holds the Guinness World Record for most novels sold within 24 hours of release, with 8.3 million sold in the U.S. alone and 2.65 million in the U.K.[1][2] Generally well-received by critics, the book won the 2008 Colorado Blue Spruce Book Award, and the American Library Association named it a "Best Book for Young Adults". A film adaptation of the novel was released in two parts: Harry Potter and the Deathly Hallows – Part 1 in November 2010, and Part 2 in July 2011.</p>
-                <a  class="button " style="color:white">Details</a>
-              </div>
-            </li>
-<!--TEST-->
-<li  id="moreDetails1" class="book2-item small-12 medium-6 columns shuffle-item shuffle-item--visible" isOpen="false" style="width:100%; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease; background-color:#303030; overflow:auto">
-  <div class="arrow-up">
+    +   "</div>"
+  +   "</div>"
++   "</div>"
++   "<div class='col-md-9 nopadding'>"
++     "<div id='mapDiv' class='map" + ctr + "'></div>"
++   "</div>"
++   "</section>"
++ "</td>"
++ "</tr>"
++"</table>"
++ "</div>"
++ "</li>");
 
-  </div>
-  <div class="item-details">
-    <table id="mytable" style="width:100%">
-      <tr id="myTR">
-      <td id="details" style="padding-bottom: 25px;">
-      <h3 class="book2-item_title" style="font-size:31px;"></h3>
-      <p class="author"></p>
-      <p class="description" style="margin-bottom:38px; color:black;"></p>
-      <a class="button" style="color:white; background-color: #219e9a;">Comment</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button " style="color:white">Location</a>
-    </td>
-    <td style="width: 40%; padding-left: 30px; padding-top: 15px; line-height:20px">
-    <section class="mainDiv">
-      <div class="col-md-3 nopadding view-list" style="overflow:auto">
-        <div class="list-group">
-          <a style="color:white; background-color:#219e9a" class="list-group-item disabled">
-            Book Locations
-          </a>
-          <div data-bind="foreach: locList">
-            <!--LOOPS-->
-            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-            <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-            <!--LOOPS-->
-          </div>
-        </div>
-      </div>
-      <div class="col-md-9 nopadding">
-        <div id="mapDiv" class="map1"></div>
-      </div>
-    </section>
-  </td>
-  </tr>
-  </table>
-</div>
-</li>
-<!--TEST-->
-            <li class="mix Of Mice and Men check1 radio2 option3 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" id="3" liNum="3" pop-up="2" data-groups="[&quot;classic&quot;]" data-date-created="1937" data-title="Of Mice and Men" data-color="#fcc278" style="width:30vw;visibility: visible; will-change: transform; transition: transform 250ms ease, opacity 250ms ease;">
-              <div class="bk-img">
-                <div class="bk-wrapper">
-                  <div class="bk-book bk-bookdefault">
-                    <div class="bk-front">
-                      <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_1-small.jpg&quot;); background-color: rgb(252, 194, 120);"></div>
-                    </div>
-                    <div class="bk-back"></div>
-                    <div class="bk-left"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details">
-                <h3 class="book-item_title">Of Mice and Men</h3>
-                <p class="author">by John Steinbeck • 1937</p>
-                <p class="description" style="margin-bottom:38px; color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>
-                <a class="button " style="color:white">Details</a>
-              </div>
-            </li>
+ctr++;
+}
+}
 
-            <li class="mix The Catcher in the Rye check3 radio3 option1 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" id="4" liNum="4" pop-up="2" data-groups="[&quot;classic&quot;,&quot;young&quot;]" data-date-created="1951" data-title="The Catcher in the Rye" data-color="#009c8b" style="width:30vw;visibility: visible; will-change: transform; opacity: 1; transform: translate(511px, 0px) scale(1); transition-duration: 250ms, 250ms; transition-timing-function: ease, ease; transition-property: transform, opacity;">
-              <div class="bk-img">
-                <div class="bk-wrapper">
-                  <div class="bk-book bk-bookdefault">
-                    <div class="bk-front">
-                      <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_2-small.jpg&quot;); background-color: rgb(0, 156, 139);"></div>
-                    </div>
-                    <div class="bk-back"></div>
-                    <div class="bk-left" ></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details">
-                <h3 class="book-item_title">The Catcher in the Rye</h3>
-                <p class="author">by J.D. Salinger • 1951</p>
-                <p class="description" style="margin-bottom:38px; color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>
-                <a  class="button " style="color:white">Details</a>
-              </div>
-            </li>
+var addLength = dbArray.length-1;
+console.log(addLength);
+if(addLength%3!=2){
+  console.log("Extra maps" + ctr);
 
-            <li class="mix Harry Potter and the Deathly Hallows check3 radio2 option4 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" id="5" liNum="5" pop-up="2" data-groups="[&quot;fantasy&quot;,&quot;young&quot;]" data-date-created="2007" data-title="Harry Potter and the Deathly Hallows" data-color="#b06010" style="width:30vw; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease;">
-              <div class="bk-img">
-                <div class="bk-wrapper">
-                  <div class="bk-book bk-bookdefault">
-                    <div class="bk-front">
-                      <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_19-small.jpg&quot;); background-color: rgb(176, 96, 16);"></div>
-                    </div>
-                    <div class="bk-back"></div>
-                    <div class="bk-left"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details">
-                <h3 class="book-item_title">Harry Potter and the Deathly Hallows</h3>
-                <p class="author">by J.K. Rowling • 2007</p>
-                <p class="description" style="margin-bottom:38px; color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>
-                <a class="button " style="color:white">Details</a>
-              </div>
-            </li>
+  $('#Start').append("<li  id='moreDetails" + ctr + "' class='book2-item small-12 medium-6 columns shuffle-item shuffle-item--visible' isOpen='false' style='width:100%; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease; background-color:#303030; overflow:auto'>"
+  + "<div class='arrow-up'>"
 
-            <!--TEST-->
-            <li  id="moreDetails2" class="book2-item small-12 medium-6 columns shuffle-item shuffle-item--visible" isOpen="false" data-groups="[&quot;fantasy&quot;,&quot;young&quot;]" data-date-created="2007" data-title="Harry Potter and the Deathly Hallows" data-color="#b06010" style="width:100%; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease; background-color:#303030; overflow:auto">
-              <div class="arrow-up">
+  + "</div>"
+  + "<div class='item-details'>"
+  + "<table id='mytable' style='width:100%'>"
+    + "<tr id='myTR'>"
+    + "<td id='details' style='padding-bottom: 25px;'>"
+    + "<h3 class='book2-item_title' style='font-size:31px;'></h3>"
+    + "<p class='author'></p>"
+    + "<p class='description' style='margin-bottom:38px; color:black;'></p>"
+    + "<a class='button' style='color:white; background-color: #219e9a;'>Comment</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class='button ' style='color:white'>Location</a>"
+  + "</td>"
+  + "<td style='width: 40%; padding-left: 30px; padding-top: 15px; line-height:20px'>"
+  + "<section class='mainDiv'>"
+    + "<div class='col-md-3 nopadding view-list' style='overflow:auto'>"
+      + "<div class='list-group'>"
+        + "<a style='color:white; background-color:#219e9a' class='list-group-item disabled'>"
+          + "Book Locations"
+        + "</a>"
+        + "<div data-bind='foreach: locList'>"
 
-              </div>
-              <div class="item-details">
-                <table id="mytable" style="width:100%">
-                  <tr id="myTR">
-                  <td id="details" style="padding-bottom: 25px;">
-                  <h3 class="book2-item_title" style="font-size:31px;">Harry Potter and the Deathly Hallows</h3>
-                  <p class="author">by J.K. Rowling • 2007</p>
-                  <p style="margin-bottom:38px; color:black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in.</p>
-                  <a class="button" style="color:white; background-color: #219e9a;">Comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button " style="color:white">Location</a>
-                </td>
-                <td style="width: 40%; padding-left: 30px; padding-top: 15px; line-height:20px">
-                <section class="mainDiv">
-                  <div class="col-md-3 nopadding view-list" style="overflow:auto">
-                    <div class="list-group">
-                      <a style="color:white; background-color:#219e9a" class="list-group-item disabled">
-                        Book Locations
-                      </a>
-                      <div data-bind="foreach: locList">
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-9 nopadding">
-                    <div id="mapDiv" class="map2"></div>
-                  </div>
-                </section>
-              </td>
-              </tr>
-              </table>
-            </div>
-            </li>
-            <!--TEST-->
+        +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+        +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+        +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+        +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+        +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+        +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+        +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+        +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
+        +   "<a href='#' class='list-group-item' data-bind='text: name, click: $parent.setLoc'>Shanghai Chinese Restaurant</a>"
 
-            <li class="mix Harry Potter and the Deathly Hallows check3 radio2 option4 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" id="6" liNum="6" pop-up="3" data-groups="[&quot;fantasy&quot;,&quot;young&quot;]" data-date-created="2007" data-title="Harry Potter and the Deathly Hallows" data-color="#b06010" style="width:30vw; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease;">
-              <div class="bk-img">
-                <div class="bk-wrapper">
-                  <div class="bk-book bk-bookdefault">
-                    <div class="bk-front">
-                      <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_19-small.jpg&quot;); background-color: rgb(176, 96, 16);"></div>
-                    </div>
-                    <div class="bk-back"></div>
-                    <div class="bk-left"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details">
-                <h3 class="book-item_title">Harry Potter and the Deathly Hallows</h3>
-                <p class="author">by J.K. Rowling • 2007</p>
-                <p class="description" style="margin-bottom:38px; color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>
-                <a class="button " style="color:white">Details</a>
-              </div>
-            </li>
-
-            <li class="mix Harry Potter and the Deathly Hallows check3 radio2 option4 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" id="7" liNum="7" pop-up="3" data-groups="[&quot;fantasy&quot;,&quot;young&quot;]" data-date-created="2007" data-title="Harry Potter and the Deathly Hallows" data-color="#b06010" style="width:30vw; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease;">
-              <div class="bk-img">
-                <div class="bk-wrapper">
-                  <div class="bk-book bk-bookdefault">
-                    <div class="bk-front">
-                      <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_19-small.jpg&quot;); background-color: rgb(176, 96, 16);"></div>
-                    </div>
-                    <div class="bk-back"></div>
-                    <div class="bk-left"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details">
-                <h3 class="book-item_title">Harry Potter and the Deathly Hallows</h3>
-                <p class="author">by J.K. Rowling • 2007</p>
-                <p class="description" style="margin-bottom:38px; color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>
-                <a class="button " style="color:white">Details</a>
-              </div>
-            </li>
-
-            <!-- DUMMY DIV IF LAST NUMBER IS NOT DIVISIBLE BY 3 -->
-            <li id="dummyLi" class="mix color-1 check3 radio2 option4 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" data-groups="[&quot;fantasy&quot;,&quot;young&quot;]" data-date-created="2007" data-title="Harry Potter and the Deathly Hallows" data-color="#b06010" style="width:30vw; visibility: visible; will-change: transform; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease;">
-              <div class="bk-img">
-                <div class="bk-wrapper">
-                  <div class="bk-book bk-bookdefault">
-                    <div class="bk-front">
-                      <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_19-small.jpg&quot;); background-color: rgb(176, 96, 16);"></div>
-                    </div>
-                    <div class="bk-back"></div>
-                    <div class="bk-left"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="item-details">
-                <h3 class="book-item_title">Harry Potter and the Deathly Hallows</h3>
-                <p class="author">by J.K. Rowling • 2007</p>
-                <p style="margin-bottom:38px; color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>
-                <a class="button " style="color:white">Details</a>
-              </div>
-            </li>
-            <!-- DUMMY DIV IF LAST NUMBER IS NOT DIVISIBLE BY -->
-
-            <!--TEST-->
-            <li  id="moreDetails3" class="book2-item small-12 medium-6 columns shuffle-item shuffle-item--visible" isOpen="false" data-groups="[&quot;fantasy&quot;,&quot;young&quot;]" data-date-created="2007" data-title="Harry Potter and the Deathly Hallows" data-color="#b06010" style="width:100%; visibility: visible; will-change: transform; opacity: 1; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease; background-color:#303030; overflow:auto">
-              <div class="arrow-up">
-
-              </div>
-              <div class="item-details">
-                <table id="mytable" style="width:100%">
-                  <tr id="myTR">
-                  <td id="details" style="padding-bottom: 25px;">
-                  <h3 class="book2-item_title" style="font-size:31px;">Harry Potter and the Deathly Hallows</h3>
-                  <p class="author">by J.K. Rowling • 2007</p>
-                  <p style="margin-bottom:38px; color:black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in.</p>
-                  <a class="button" style="color:white; background-color: #219e9a;">Comments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button " style="color:white">Location</a>
-                </td>
-                <td style="width: 40%; padding-left: 30px; padding-top: 15px; line-height:20px">
-                <section class="mainDiv">
-                  <div class="col-md-3 nopadding view-list" style="overflow:auto">
-                    <div class="list-group">
-                      <a style="color:white; background-color:#219e9a" class="list-group-item disabled">
-                        Book Locations
-                      </a>
-                      <div data-bind="foreach: locList">
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                        <a href="#" class="list-group-item" data-bind="text: name, click: $parent.setLoc">Shanghai Chinese Restaurant</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-9 nopadding">
-                    <div id="mapDiv" class="map3"></div>
-                  </div>
-                </section>
-              </td>
-              </tr>
-              </table>
-            </div>
-            </li>
-            <!--TEST-->
+      +   "</div>"
+    +   "</div>"
+  +   "</div>"
+  +   "<div class='col-md-9 nopadding'>"
+  +     "<div id='mapDiv' class='map" + ctr + "'></div>"
+  +   "</div>"
+  +   "</section>"
+  + "</td>"
+  + "</tr>"
+  +"</table>"
+  + "</div>"
+  + "</li>");
+}
 
 
-
-
-
-
-
+/*if(j%3!=0){
+      console.log("DUMMY INIT!");
+      $('#Start').append(<li id="dummyLi" class="mix color-1 check3 radio2 option4 book-item small-12 medium-6 columns shuffle-item shuffle-item--visible" data-groups="[&quot;fantasy&quot;,&quot;young&quot;]" data-date-created="2007" data-title="Harry Potter and the Deathly Hallows" data-color="#b06010" style="width:30vw; visibility: visible; will-change: transform; transform: translate(0px, 2475px) scale(1); transition: transform 250ms ease, opacity 250ms ease;">
+        + <div class="bk-img">
+          + <div class="bk-wrapper">
+            + <div class="bk-book bk-bookdefault">
+              + <div class="bk-front">
+                + <div class="bk-cover" style="background-image: url(&quot;http://interactivejoe.com/book-viewer/assets/images/bk_19-small.jpg&quot;); background-color: rgb(176, 96, 16);"></div>
+              + </div>
+              + <div class="bk-back"></div>
+              + <div class="bk-left"></div>
+            + </div>
+          + </div>
+        + </div>
+        + <div class="item-details">
+          + <h3 class="book-item_title">Harry Potter and the Deathly Hallows</h3>
+          + <p class="author">by J.K. Rowling • 2007</p>
+          + <p style="margin-bottom:38px; color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>
+          + <a class="button " style="color:white">Details</a>
+        + </div>
+      + </li>);
+    }*/
+</script>
 
 
 
@@ -572,7 +419,7 @@ Deathly Hallows shattered sales records upon release, surpassing marks set by pr
   </div>
 
 </div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/8426/jquery.mixitup.min.js'></script>
 <script src='https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/Shuffle/4.0.0/shuffle.min.js'></script>
