@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Find and Share Books - Bookhub</title>
+    <link rel="icon" type="image/png" href="images/landingpage/BookHub_ico.png"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts/CircularStdFont/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/landingpage/index.css">
+    <link rel="stylesheet" href="css/landingpage/search.css">
+    <link rel="stylesheet" href="css/landingpage/cardView.css">
+    <link rel="stylesheet" href="css/landingpage/genre.css">
+    <link rel="stylesheet" href="css/landingpage/search2.css">
+    <link rel="stylesheet" href="css/landingpage/Premium.css">
+    <link rel="stylesheet" href="css/landingpage/loading.css">
+  </head>
+  <body style="overflow-x:hidden">
+    <nav class="container-fluid nav" style="padding-left:0px;">
+  <div class="container cf">
+    <div class="brand" style="background-color:white; position:relative; z-index:5">
+      <a href="landingPage.html"><img src="images/landingpage/BookHub_ico.png" alt="" style="width: 50px; height: 50px;"></a>
+    </div>
+    <a href="landingPage.html"><h1 style="display:inline-block; font-family: 'Comfortaa', Helvetica, sans-serif; color:#354d9c; padding-top:13px; padding-left:10px; animation: logo-anim 1s; position:relative; z-index:3">Bookhub</h1></a>
+    <i class="fa fa-bars nav-toggle"></i>
+    <ul>
+      <li><a>About Bookhub</a></li>
+      <li><a>Share A Book</a></li>
+      <li><a>Sign-up</a></li>
+      <li><a>Log-in</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid splash" id="splash" style="padding-left: 0px; padding-right: 0px; height:630px;">
+  <div class="container" style="padding-top: 0px;padding-bottom: 0px; height:630px">
+    <div style="position:relative; z-index:2; color:white; height:100%; width:100%; background-color: #00000070;">
+    <h1 style="text-shadow:2px 2px 4px #363333a6; font-family: 'Comfortaa', Helvetica, sans-serif; padding-top:15%">Find The Books You Need</h1>
+    <span class="lead" style="margin-bottom:80px; font-family: 'Comfortaa', Helvetica, sans-serif;">Find that elusive book. Help your fellows find theirs.</span>
+    <!--<span class="continue"><a href="#about"><i class="fa fa-angle-down"></i></a></span>-->
+
+    <!--<div class="postbox" style="margin-top:0px; margin-bottom:5px; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.32)">
+  <div class="search__section">
+    <div id="search-icon" style="background-color:#354d9c;border-bottom-left-radius: 4px;border-top-left-radius: 4px;">
+      <svg class="icon" fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+    </div>
+    <input type="text" placeholder="What are you looking for?" style="margin-left:70px; color: #979797"/>
+  </div>
+
+  <a id="menu-icon">
+    <svg class="icon" fill="#dadada" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </svg>
+  </a>
+</div>-->
+<div id="form-wrapper">
+<button class="go-button"><i class="fa fa-search"></i> Search</button>
+<span class="nav-list">
+  <span class="current-selection">
+    <i class="fa fa-book"></i>
+  </span>
+  <span class="arrow"></span>
+    <select id="dropdown">
+    <option value="book" id='Book' icon-type="book">Book</option>
+    <option value="book-owner" id='Book-Owner' icon-type="user">Book-Owner</option>
+  </select>
+</span>
+  <div class="in-wrap">
+    <input type="text" name="q" id="search-box" placeholder="What are you looking for?">
+  </div>
+</div>
+
+<div class="search-results" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <a class="result">
+    <div class="result__picture four-members" style="background-image:url('images/landingpage/book.png'); background-size:contain">
+
+    </div>
+    <div class="result__details">
+      Harry Potter and the Chamber of Secrets
+      <span class="result__subtitle">JK Rowling <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9733;&#9734;&#9734;</big> </span>
+    </div>
+  </a>
+
+  <a class="result" id="example-result">
+    <div class="result__picture four-members" style="background-image:url('images/landingpage/book.png'); background-size:contain">
+
+    </div>
+    <div class="result__details">
+      Harry Potter and the Sorcerer Stone
+      <span class="result__subtitle">JK Rowling <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9734;&#9734;&#9734;</big> </span>
+    </div>
+  </a>
+
+  <a class="result">
+    <div class="result__picture four-members" style="background-image:url('images/landingpage/free-user.png'); background-size:contain">
+
+    </div>
+    <div class="result__details">
+      JK Rowling
+      <span class="result__subtitle">Free User <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9734;&#9734;&#9734;</big> </span>
+    </div>
+  </a>
+
+  <a class="result">
+    <div class="result__picture four-members" style="background-image:url('images/landingpage/premium-user.png'); background-size:contain">
+
+    </div>
+    <div class="result__details">
+      Matthew Alviz
+      <span class="result__subtitle">Verified User <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9733;&#9733;&#9733;</big> </span>
+    </div>
+  </a>
+
+
+</div>
+    </div>
+    <video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" style="width:100%; height:664px; position:absolute; z-index:1; transform:scaleX(1.3); top:0;">
+
+        <source src="images/landingpage/lapse.mp4" type="video/mp4">
+        Video not supported
+    </video>
+  </div>
+</div>
+
+<!--<div class="cube-wrapper">
+  <div class="cube-folding">
+    <span class="leaf1"></span>
+    <span class="leaf2"></span>
+    <span class="leaf3"></span>
+    <span class="leaf4"></span>
+  </div>
+</div>-->
+
+<div class="container-fluid features" id="about" style="border-top: 1px solid rgba(0, 0, 0, 0.075);padding-right: 250px;
+    padding-left: 250px;">
+  <div class="container cf">
+    <h1 style="text-shadow: 2px 2px 4px #cdc2c2a6;text-align:left; font-family: 'Comfortaa', Helvetica, sans-serif;">Explore Bookhub</h1>
+    <div class="lead" style="margin-bottom:80px; text-align:left; font-family: 'Comfortaa', Helvetica, sans-serif;">Explore some books based on the categories below.</div>
+  <div id="app">
+  <div class="rela-block new-item-container">
+    <div class="vert-center move-arrow left-arrow disabled">&lt;</div>
+    <div class="vert-center move-arrow right-arrow">&gt;</div>
+    <div class="inner-moving-container" style="left: 1px;">
+      <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore1.jpg')">
+        <div class="new-item-info"><p class="abs-center">Checkout top 30<br>must read <br>books this 2018</p></div>
+        <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+      </div>
+      <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore2.jpg'); animation-delay: 0.1s;">
+        <div class="new-item-info">
+          <p class="abs-center">Checkout best books<br>to review for the upcoming<br> ICSE board exam</p>
+        </div>
+        <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+      </div>
+      <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore3.jpg'); animation-delay: 0.2s;">
+        <div class="new-item-info">
+          <p class="abs-center">Checkout most<br>anticipated books<br>this march</p>
+        </div>
+        <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+      </div>
+      <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore4.jpg'); animation-delay: 0.3s;">
+        <div class="new-item-info"><p class="abs-center">Checkout the<br>best Children's book<br>of all time</p></div>
+        <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+      </div>
+      <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore5.jpg'); animation-delay: 0.4s;">
+        <div class="new-item-info">
+          <p class="abs-center">Checkout best<br>books for<br> programming</p>
+        </div>
+        <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+      </div>
+      <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore6.jpg'); animation-delay: 0.5s;">
+        <div class="new-item-info">
+          <p class="abs-center">Checkout best<br>books for<br> IELTS exams</p></div>
+          <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+        </div>
+        <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore7.jpg'); animation-delay: 0.6s;">
+          <div class="new-item-info"><p class="abs-center">Checkout best<br>books for<br>CDS exams</p></div>
+          <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+        </div>
+        <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore8.jpg'); animation-delay: 0.7s;">
+          <div class="new-item-info">
+            <p class="abs-center">Checkout top<br>20 books for<br>psychology</p>
+          </div>
+            <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+          </div>
+          <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore9.jpg'); animation-delay: 0.8s;">
+            <div class="new-item-info">
+              <p class="abs-center">Checkout books<br>about poetry</p>
+            </div>
+            <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+          </div>
+          <div class="rela-inline new-item" style="background-image: url('images/landingpage/explore10.jpg'); animation-delay: 0.9s;">
+            <div class="new-item-info"><p class="abs-center">Checkout books<br>about fantasy</p></div>
+            <div class="product-view-button" style="background-color: #0070ff; color:white;">View</div>
+          </div>
+          </div>
+        </div>
+</div>
+  </div>
+</div>
+
+<div class="container-fluid features" id="skills" style="background-color:#f9f9f9; padding-right: 250px;
+    padding-left: 250px; background-image:url('images/landingpage/bg.jpg'); background-size:cover">
+  <div class="container cf">
+    <h1 style="text-shadow:2px 2px 4px #363333a6; text-align:left; font-family: 'Comfortaa', Helvetica, sans-serif; color:white">Explore Books Around Makati</h1>
+    <div class="lead" style="text-align:left; font-family: 'Comfortaa', Helvetica, sans-serif; color:white">Explore some books that might pique your interest around your area.</div>
+
+<br><br><br><br>
+    <div class="card-view" id="0" style="border-radius:4px">
+          <div class='bg' style="border-radius:4px">
+            <img src="images/landingpage/sample.jpeg" alt="company image" style='height: 100%; width: 100%; object-fit: contain'>
+          </div>
+        <div class="container1" style="border-radius:4px">
+          <a href='#'><div class="tag_name blue">Fantasy / Drama / Mystery</div></a>
+          <div class="company">
+            <div class="c_logo">
+              <a href="#"><img src="https://s10.postimg.org/k7scmco79/focuslab.jpg" alt="Focus Lab"></a>
+            </div>
+            <div class="c_info">
+              <a href="#" class="c_name">Harry Potter And The Phillosopher's Stones</a><br>
+              <span class="c_industry">J.K. Rowling</span><br>
+              <span id="c_stars" data-star="4"></span>
+              <div class="c_num">4</div >
+            </div>
+            <div class="c_content">
+              <a href='#' class="title"><p>Description</p></a>
+              <p class="review">The plot follows Harry Potter, a young wizard who discovers his magical heritage as he makes close friends and a few enemies in his first year at the Hogwarts School of Witchcraft and Wizardry. With the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.</p>
+            </div>
+          </div> <!-- end .company -->
+
+          <!--<div class="user">
+            <div class="user_avatar">
+              <img src="https://s4.postimg.org/la5lt1z6x/image.jpg" alt="Bill Kenny">
+            </div>
+            <div class="user_info">
+              <a href="#" class="user_name orange">Bill Kenny</a> • May 30, 2015<br>Current Brand Director
+            </div>
+          </div>-->
+        </div>
+      </div>
+
+      <div class="card-view" id="1" style="border-radius:4px">
+            <div class='bg' style="border-radius:4px">
+              <img src="images/landingpage/sample.jpeg" alt="company image" style='height: 100%; width: 100%; object-fit: contain'>
+            </div>
+          <div class="container1" style="border-radius:4px">
+            <a href='#'><div class="tag_name blue">Fantasy / Drama / Mystery</div></a>
+            <div class="company">
+              <div class="c_logo">
+                <a href="#"><img src="https://s10.postimg.org/k7scmco79/focuslab.jpg" alt="Focus Lab"></a>
+              </div>
+              <div class="c_info">
+                <a href="#" class="c_name">Harry Potter And The Phillosopher's Stones</a><br>
+                <span class="c_industry">J.K. Rowling</span><br>
+                <span id="c_stars" data-star="4"></span>
+                <div class="c_num">4</div >
+              </div>
+              <div class="c_content">
+                <a href='#' class="title"><p>Description</p></a>
+                <p class="review">The plot follows Harry Potter, a young wizard who discovers his magical heritage as he makes close friends and a few enemies in his first year at the Hogwarts School of Witchcraft and Wizardry. With the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.</p>
+              </div>
+            </div> <!-- end .company -->
+
+            <!--<div class="user">
+              <div class="user_avatar">
+                <img src="https://s4.postimg.org/la5lt1z6x/image.jpg" alt="Bill Kenny">
+              </div>
+              <div class="user_info">
+                <a href="#" class="user_name orange">Bill Kenny</a> • May 30, 2015<br>Current Brand Director
+              </div>
+            </div>-->
+          </div>
+        </div>
+
+        <div class="card-view" id="2" style="border-radius:4px">
+              <div class='bg' style="border-radius:4px">
+                <img src="images/landingpage/sample.jpeg" alt="company image" style='height: 100%; width: 100%; object-fit: contain'>
+              </div>
+            <div class="container1" style="border-radius:4px">
+              <a href='#'><div class="tag_name blue">Fantasy / Drama / Mystery</div></a>
+              <div class="company">
+                <div class="c_logo">
+                  <a href="#"><img src="https://s10.postimg.org/k7scmco79/focuslab.jpg" alt="Focus Lab"></a>
+                </div>
+                <div class="c_info">
+                  <a href="#" class="c_name">Harry Potter And The Phillosopher's Stones</a><br>
+                  <span class="c_industry">J.K. Rowling</span><br>
+                  <span id="c_stars" data-star="4"></span>
+                  <div class="c_num">4</div >
+                </div>
+                <div class="c_content">
+                  <a href='#' class="title"><p>Description</p></a>
+                  <p class="review">The plot follows Harry Potter, a young wizard who discovers his magical heritage as he makes close friends and a few enemies in his first year at the Hogwarts School of Witchcraft and Wizardry. With the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.</p>
+                </div>
+              </div> <!-- end .company -->
+
+              <!--<div class="user">
+                <div class="user_avatar">
+                  <img src="https://s4.postimg.org/la5lt1z6x/image.jpg" alt="Bill Kenny">
+                </div>
+                <div class="user_info">
+                  <a href="#" class="user_name orange">Bill Kenny</a> • May 30, 2015<br>Current Brand Director
+                </div>
+              </div>-->
+            </div>
+          </div>
+
+          <div class="card-view" id="3" style="border-radius:4px">
+                <div class='bg' style="border-radius:4px">
+                  <img src="images/landingpage/sample.jpeg" alt="company image" style='height: 100%; width: 100%; object-fit: contain'>
+                </div>
+              <div class="container1" style="border-radius:4px">
+                <a href='#'><div class="tag_name blue">Fantasy / Drama / Mystery</div></a>
+                <div class="company">
+                  <div class="c_logo">
+                    <a href="#"><img src="https://s10.postimg.org/k7scmco79/focuslab.jpg" alt="Focus Lab"></a>
+                  </div>
+                  <div class="c_info">
+                    <a href="#" class="c_name">Harry Potter And The Phillosopher's Stones</a><br>
+                    <span class="c_industry">J.K. Rowling</span><br>
+                    <span id="c_stars" data-star="4"></span>
+                    <div class="c_num">4</div >
+                  </div>
+                  <div class="c_content">
+                    <a href='#' class="title"><p>Description</p></a>
+                    <p class="review">The plot follows Harry Potter, a young wizard who discovers his magical heritage as he makes close friends and a few enemies in his first year at the Hogwarts School of Witchcraft and Wizardry. With the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.</p>
+                  </div>
+                </div> <!-- end .company -->
+
+                <!--<div class="user">
+                  <div class="user_avatar">
+                    <img src="https://s4.postimg.org/la5lt1z6x/image.jpg" alt="Bill Kenny">
+                  </div>
+                  <div class="user_info">
+                    <a href="#" class="user_name orange">Bill Kenny</a> • May 30, 2015<br>Current Brand Director
+                  </div>
+                </div>-->
+              </div>
+            </div>
+
+            <div class="card-view" id="4" style="border-radius:4px">
+                  <div class='bg' style="border-radius:4px">
+                    <img src="images/landingpage/sample.jpeg" alt="company image" style='height: 100%; width: 100%; object-fit: contain'>
+                  </div>
+                <div class="container1" style="border-radius:4px">
+                  <a href='#'><div class="tag_name blue">Fantasy / Drama / Mystery</div></a>
+                  <div class="company">
+                    <div class="c_logo">
+                      <a href="#"><img src="https://s10.postimg.org/k7scmco79/focuslab.jpg" alt="Focus Lab"></a>
+                    </div>
+                    <div class="c_info">
+                      <a href="#" class="c_name">Harry Potter And The Phillosopher's Stones</a><br>
+                      <span class="c_industry">J.K. Rowling</span><br>
+                      <span id="c_stars" data-star="4"></span>
+                      <div class="c_num">4</div >
+                    </div>
+                    <div class="c_content">
+                      <a href='#' class="title"><p>Description</p></a>
+                      <p class="review">The plot follows Harry Potter, a young wizard who discovers his magical heritage as he makes close friends and a few enemies in his first year at the Hogwarts School of Witchcraft and Wizardry. With the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.</p>
+                    </div>
+                  </div> <!-- end .company -->
+
+                  <!--<div class="user">
+                    <div class="user_avatar">
+                      <img src="https://s4.postimg.org/la5lt1z6x/image.jpg" alt="Bill Kenny">
+                    </div>
+                    <div class="user_info">
+                      <a href="#" class="user_name orange">Bill Kenny</a> • May 30, 2015<br>Current Brand Director
+                    </div>
+                  </div>-->
+                </div>
+              </div>
+
+              <div class="card-view" id="5" style="border-radius:4px">
+                    <div class='bg' style="border-radius:4px">
+                      <img src="images/landingpage/sample.jpeg" alt="company image" style='height: 100%; width: 100%; object-fit: contain'>
+                    </div>
+                  <div class="container1" style="border-radius:4px">
+                    <a href='#'><div class="tag_name blue">Fantasy / Drama / Mystery</div></a>
+                    <div class="company">
+                      <div class="c_logo">
+                        <a href="#"><img src="https://s10.postimg.org/k7scmco79/focuslab.jpg" alt="Focus Lab"></a>
+                      </div>
+                      <div class="c_info">
+                        <a href="#" class="c_name">Harry Potter And The Phillosopher's Stones</a><br>
+                        <span class="c_industry">J.K. Rowling</span><br>
+                        <span id="c_stars" data-star="4"></span>
+                        <div class="c_num">4</div >
+                      </div>
+                      <div class="c_content">
+                        <a href='#' class="title"><p>Description</p></a>
+                        <p class="review">The plot follows Harry Potter, a young wizard who discovers his magical heritage as he makes close friends and a few enemies in his first year at the Hogwarts School of Witchcraft and Wizardry. With the help of his friends, Harry faces an attempted comeback by the dark wizard Lord Voldemort, who killed Harry's parents, but failed to kill Harry when he was just 15 months old.</p>
+                      </div>
+                    </div> <!-- end .company -->
+
+                    <!--<div class="user">
+                      <div class="user_avatar">
+                        <img src="https://s4.postimg.org/la5lt1z6x/image.jpg" alt="Bill Kenny">
+                      </div>
+                      <div class="user_info">
+                        <a href="#" class="user_name orange">Bill Kenny</a> • May 30, 2015<br>Current Brand Director
+                      </div>
+                    </div>-->
+                  </div>
+                </div>
+  </div>
+</div>
+
+<div class="container-fluid portfolio" id="portfolio" style="border-bottom: 1px solid rgba(0, 0, 0, 0.075); padding-right: 250px; padding-left: 250px">
+  <div class="container cf">
+    <h1 style="text-shadow: 2px 2px 4px #cdc2c2a6; text-align:left;    font-family: 'Comfortaa', Helvetica, sans-serif;">Share A Book</h1>
+    <div class="lead" style="margin-bottom:80px; text-align:left;    font-family: 'Comfortaa', Helvetica, sans-serif;">Rent your books or advertise them. Help others help you.</div>
+
+    <div class="wrapper-card">
+    <div class="card popular" style="background-image:url('images/landingpage/premium2.png'); background-size:cover">
+        <div class="card-title">
+            <h3>Bookhub Free</h3>
+            <h4>Get to borrow or rent books whenever you like.</h4>
+        </div>
+        <div class="card-price">
+            <h1>
+                <sup>&dollar;</sup>
+                0
+                <small>monthly</small>
+            </h1>
+        </div>
+        <div class="card-description">
+            <ul>
+                <li><i class="fa fa-check" style="color:#3498db"></i> Locate Books</li>
+                <li><i class="fa fa-check" style="color:#3498db"></i> Borrow Books</li>
+                <li><i class="fa fa-times" style="color:#3498db"></i> Share a book</li>
+                <li><i class="fa fa-times" style="color:#3498db"></i> Manage shared books</li>
+            </ul>
+        </div>
+        <div class="card-action">
+            <button type="button">Sign Up Now!</button>
+        </div>
+    </div>
+    <div class="card popular" style="background-image:url('images/landingpage/premium3.png'); background-size:cover">
+        <div class="card-ribbon">
+            <span>most popular</span>
+        </div>
+        <div class="card-title">
+            <h3>Bookhub Pro</h3>
+            <h4>Get to rent or advertise books. Earn some money out of it.</h4>
+        </div>
+        <div class="card-price">
+            <h1>
+                <sup>&dollar;</sup>
+                5
+                <small>monthly</small>
+            </h1>
+        </div>
+        <div class="card-description">
+            <ul>
+              <li><i class="fa fa-check" style="color:#3498db"></i> Locate Books</li>
+              <li><i class="fa fa-check" style="color:#3498db"></i> Borrow Books</li>
+              <li><i class="fa fa-check" style="color:#3498db"></i> Share a book</li>
+              <li><i class="fa fa-check" style="color:#3498db"></i> Manage shared books</li>
+            </ul>
+        </div>
+        <div class="card-action">
+            <button type="button">Get Pro</button>
+        </div>
+    </div>
+</div>
+    <!--<div class="gallery">
+      <div class="gallery-image"><img src="https://unsplash.it/800/450?image=250" alt=""></div>
+      <div class="gallery-image"><img src="https://unsplash.it/800/450?image=249" alt=""></div>
+      <div class="gallery-image"><img src="https://unsplash.it/800/450?image=248" alt=""></div>
+      <div class="gallery-image"><img src="https://unsplash.it/800/450?image=247" alt=""></div>
+      <div class="gallery-image"><img src="https://unsplash.it/800/450?image=239" alt=""></div>
+      <div class="gallery-image"><img src="https://unsplash.it/800/450?image=238" alt=""></div>
+    </div>-->
+  </div>
+</div>
+
+<!--<div class="container-fluid contact" id="contact">
+  <div class="container">
+    <form>
+      <h2>Contact Me</h2>
+      <input type="text" placeholder="Name" id="name" name="name" class="full-half">
+      <input type="email" placeholder="Email" id="email" name="email" class="full-half">
+      <input type="text" placeholder="Subject" id="subject" name="subject">
+      <textarea placeholder="Message" id="message" name="message"></textarea>
+      <input type="submit" value="Send">
+    </form>
+  </div>
+</div>-->
+
+<footer class="container-fluid footer">
+  <div class="container">
+    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="#" target="_blank"><i class="fa fa-github"></i></a>
+    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+  </div>
+</footer>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js" type="text/javascript"></script>
+<script src="js/landingpage/index.js" type="text/javascript"></script>
+<script src="js/landingpage/search.js" type="text/javascript"></script>
+<script src="js/landingpage/search2.js" type="text/javascript"></script>
+<script src="js/landingpage/cardView.js" type="text/javascript"></script>
+<script src="js/landingpage/genre.js" type="text/javascript"></script>
+  </body>
+</html>
