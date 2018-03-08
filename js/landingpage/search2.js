@@ -1,5 +1,5 @@
 $(function(){
-  var $dropdown = $('#dropdown'),
+  var $dropdown = $('#dropdown2'),
       $currentSelection = $('.current-selection');
 
   var current = "";
@@ -11,7 +11,7 @@ $(function(){
   .find('option:selected').text());
 
   // change the selection text to match dropdown selected item
-  $('#dropdown').change(function(){
+  $('#dropdown2').change(function(){
 
     current = $(this)
     .find('option:selected').text();
