@@ -4448,7 +4448,6 @@ h2.comments-title,
 .page-job-dashboard .chosen-container-multi .chosen-choices li.search-choice,
 .product-content .price,
 .listing-products__items [itemprop="description"] {
-	font-family: "Hanken", sans-serif;
 }
 
 .intro,
@@ -4548,7 +4547,6 @@ p.intro {
 	color: #919191;
 	display: block;
 	font-size: 1.125rem;
-	text-align: center;
 }
 
 .wp-caption-text,
@@ -4570,7 +4568,6 @@ p.intro {
 .entry-content,
 .comment-content,
 .listing-sidebar .widget_listing_content {
-	line-height: 1.7;
 }
 .entry-content blockquote cite,
 .comment-content blockquote cite,

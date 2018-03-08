@@ -119,14 +119,14 @@ a {
 	color: #7e8890;
 }
 
-.card-view #c_stars, #c_stars span { /* white star bottom */
+ #c_stars, #c_stars span { /* white star bottom */
 	display: inline-block;
 	background: url('https://s15.postimg.org/igu2opvh3/stars.png') 0 -12px repeat-x;
 	width: 60px;
 	height: 12px;
 }
 
-.card-view #c_stars span { /* orange stars overlay  - set width by JS code */
+ #c_stars span { /* orange stars overlay  - set width by JS code */
 	background-position: 0 0;
 	vertical-align: super;
 }

@@ -5,4 +5,4 @@ $.fn.stars = function() {
   })
 };
 
-$("span#c_stars").stars(); 
+$("span#c_stars").stars();
