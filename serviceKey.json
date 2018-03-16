@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "teambooleaniacademy",
+  "private_key_id": "76c4e7f505571adf3220800c8faa0c2fb557a001",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCDGb5g2l1IANjt\nEDoAdUM+SxGiTePMHmJNhpeR+T643c3IuXiPukK5LboKizrCfYAqIYJwEhpu/tYL\nqrhlH+40HomTRY92c2aHnXRPTSynKlHNY36vp2LUUAZ/wVbEHwBvR7ICBsGsCKz4\nf4mV0j04STd2DUOUxdcleWAVIBjwYMBG8/NRk4Z0ENpTNBW2kiRwMQZpu3Rh9sWA\ndwpQhTwhcxKH5yz14WmhtJkORNj2ZYYBGDDYqkaeL0cekdP667aXAig8A9H2LgQ8\nMXSiN0f6lkgtd1qK3D8EWHaM460wOPFGmjStP4JFJd3G9Lwl20AYSE88LUpej8Om\n+6NfrHadAgMBAAECggEAAMZWePva+kTbA1RwHoMsfkIMtodV6P8y+IW3mcq9ydmx\ntu9Cdm/IDinmUNw8YPYQTrw7XGf9Yc0kVnxQGHTlJpSzOAlJgEGaIdBwTAZ6Oy14\nv0lIieEBqGlZDuJr6ovLJ/bMZzVDNr30YiGROBWLSN/4SzybB7y/LHI4ez3hBKaj\njrxOeLfwatcfOhWPASmN4NitCZ/JQXXQJhFj0kSFNlJw0xWLByfDltCtbHkLJI4C\nmtUmXDtMwEI/9ovFAMsIJQ+pFQlp7QMkH3YYecewNMGwi0WrvznfcXrQOb/tMz/T\nhux4Mlte5Zc2rDp6+tEZdfBsezY4lycry/4YZQLXoQKBgQC3g3VdSk/50JRKqF6s\nwLy5dKS+O5dPfcfbGMe0VSrziFBAQtvzAMtcT1y1yAAqdHB76zhaxZiAMUp+R5uM\nNW1P5bbEXA0aPGE6d/Si9hCWboXxMqNQQZWqBp578h3IS7z5w7J7k/PuTBIuNqwn\nf/WnT9C3vR18tiG0D/kzb5rBLQKBgQC24mLi0YTD2DUQbGFIOkXkEyzphuVdHFJW\nr+e5ntplY6CThpGpuzBlYPkki/U4hdJuMlOlTlH35P6MbaU2A//+2zKTEjONmo6h\n12TZr76IAeunlEyoVH/X+vqer49Dft+G6Y8BU796v7JH07wuhwrkLRRdPWyatojM\nQmiRcg+RMQKBgEewgS7akveidevcbm/KM2+3k4wFN40ENAjxW0KlaswMWl1gQRBj\nJQ6AqlURNo9fQXoHX9KGEpcxqko+qxNQ480sjgOTekLfh5QRvG3U9pHtx0F8aLQ3\nisILJ+p/oQbYH5Dq1FTWbZqP+SI4lXQw1sRvt7evl09azzvKaa2gUbJZAoGAMhwj\npixsaVEDcSWRHj5BSjXq123LyNBqyy/VmWmqQ5+hrupvXQdaQlzoxxfGMB+Swfju\nLFwiX38SNB4S55L/ALDE0cFp+MHBlRy0mGTsGs4T6M3clz7X7LDrHLHT2lWYH5o9\nQcrVq2d9DOs6I7GCzXSAoO+ko1uibf1AM6ICG/ECgYEAsH7yXLyTEoPOK2V4DbdI\n4H/wq2KUOf614Uf2lcFEVyKY6sR93WHku87aUKjuiRPCrUJfjjz5Q+16PEUGwLpa\n5NLJLVmkXwGJGvi3FhD3JD1JMqlAckQiMp8eYZ/ytFs9a7p19NciW3KywaJhDMpc\nDy2/cIWzS8X1zb+RQC8NDJ8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "teambooleaniacademy@appspot.gserviceaccount.com",
+  "client_id": "110851094612045683206",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/teambooleaniacademy%40appspot.gserviceaccount.com"
+}

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="icon" type="image/png" href="images/landingpage/BookHub_ico.png"/>
+
+<meta name="description" content="Explore some of the best listings from around the city from our partners and friends."/>
+
+<link rel='stylesheet' id='chosen-css'  href='css/bookResult/chosen.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-job-manager-frontend-css'  href='css/bookResult/frontend.css' type='text/css' media='all' />
+<link rel='stylesheet' id='listable-style-css'  href='css/bookResult/index.css' type='text/css' media='all' />
+<link rel="stylesheet" href="css/landingpage/cardView.css">
+<link rel="stylesheet" href="css/landingpage/cardView2.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="css/fonts/CircularStdFont/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/landingpage/index.css">
+<link rel="stylesheet" href="css/landingpage/search.css">
+<link rel="stylesheet" href="css/landingpage/search2.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+<script type='text/javascript' src='https://demos.pixelgrade.com/listable/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08&sensor=true"></script>
+<script type="text/javascript" src="js/bookResult/gmaps.js"></script>
+<script type="text/javascript">
+  var map;
+  $(document).ready(function(){
+    map = new GMaps({
+      el: '#map',
+      lat: -12.043333,
+      lng: -77.028333,
+      zoomControl : true,
+      zoomControlOpt: {
+          style : 'SMALL',
+          position: 'TOP_LEFT'
+      },
+      panControl : false,
+      streetViewControl : false,
+      mapTypeControl: false,
+      overviewMapControl: false
+    });
+  });
+</script>
+</head>
+
+<body class="page-template-default page page-id-12 wp-custom-logo page-listings listable" data-mapbox-token="pk.eyJ1IjoiZ2Vvcmdlb2xhcnUiLCJhIjoiY2lneTNtZ2VtMDBlNmtya3IzdHY0ZTl2biJ9.ZQPEMiJW_XQjJHUFRlioug" data-mapbox-style="mapbox.streets-basic">
+<div id="content" class="site-content js-header-height-padding-top">
+  <script type="text/javascript">
+  var singleton = require('../routes/singleton.js');
+  var bucket = singleton.configAdmin;
+  // <%for(var i = 0;i<data.length;++i){%>
+  //   bucket
+  //   .file(<%=data[i].photo%>)
+  //   .download({destination: './public/downloads/'+<%=data[i].photo%>})
+  //   .then(()=>{
+  //     alert('done');
+  //   });
+  // <%}%>
+  </script>
+  <div id="primary" class="content-area">
+  	<main id="main" class="site-main" role="main">
+  		<article id="post-12" class="post-12 page type-page status-publish hentry">
+  	     <div class="entry-content" id="entry-content-anchor">
+            	<div class="job_listings" data-location="" data-keywords="" data-show_filters="true" data-show_pagination="false" data-per_page="50" data-orderby="featured" data-order="DESC" data-categories="" ><div class="myflex" style="margin-top:6%">
+            <div class="myflex__left">
+            	<form class="job_filters">
+
+            		<div class="search_jobs">
+            						<input type="hidden" name="search_keywords" id="search_keywords" value=""/>
+
+            			<div class="search_location">
+            				<label for="search_location">Location</label>
+            				<input type="text" name="search_location" id="search_location"
+            				       placeholder="Location"
+            				       value=""/>
+            			</div>
+
+            			<div class="select-categories">
+
+            					<div class="search_categories">
+            						<label for="search_categories">Category</label>
+            						<select name='search_categories[]' id='search_categories' class='job-manager-category-dropdown '  data-placeholder='Choose a category&hellip;' data-no_results_text='No results match' data-multiple_text='Select Some Options'>
+            <option value="">Newest</option>
+            <option value="">Most Rated</option>
+            <option value="">Alphabetical</option>
+            </select>
+            					</div>
+
+            							</div><!-- .select-categories -->
+
+            							<div class="select-tags">
+            					<select class="tags-select" data-placeholder="Filter by tags"
+            					        name="job_tag_select" multiple>
+            													<option value="Comedy">Comedy</option>
+            													<option value="Horror">Horror</option>
+            													<option value="Action">Action</option>
+            													<option value="Drama">Drama</option>
+            													<option value="Romance">Romance</option>
+            													<option value="Mystery">Mystery</option>
+            													<option value="Educational">Educational</option>
+            											</select>
+            				</div>
+            				<div class="active-tags"></div>
+            			<div class="filter_wide filter_by_tag" style="font-family: 'Circular Std Book';">Filter by tag: <span class="filter_by_tag_cloud"></span></div><select  name='search_region' id='search_region' class='search_region' style="font-family: 'Circular Std Book';">
+            	<option value='0'>All Regions</option>
+            	<option class="level-0" value="171">NCR</option>
+            	<option class="level-0" value="168">Ilocos Region</option>
+            	<option class="level-0" value="172">CAR</option>
+            	<option class="level-0" value="173">Cagayan Valley</option>
+            	<option class="level-0" value="170">Central Luzon</option>
+            	<option class="level-0" value="169">CALABARZON</option>
+            	<option class="level-0" value="169">MIMAROPA</option>
+            	<option class="level-0" value="169">Bicol Region</option>
+            	<option class="level-0" value="169">Western Visayas</option>
+            	<option class="level-0" value="169">Central Visayas</option>
+            	<option class="level-0" value="169">Eastern Visayas</option>
+            	<option class="level-0" value="169">Zamboanga Peninsula</option>
+            	<option class="level-0" value="169">Northern Mindanao</option>
+            	<option class="level-0" value="169">Davao Region</option>
+            	<option class="level-0" value="169">SOCCSKSARGEN</option>
+            	<option class="level-0" value="169">Caraga Region</option>
+            	<option class="level-0" value="169">ARMM</option>
+            </select>
+            		</div><!-- .search_jobs -->
+
+            		<div class="mobile-buttons">
+            			<button class="btn btn--filter">Filter				<span>Listings</span></button>
+            			<button class="btn btn--view btn--view-map"><span>Map View</span>
+            			</button>
+            			<button class="btn btn--view btn--view-cards">
+            				<span>Cards View </span></button>
+            		</div>
+
+            			<ul class="job_types">
+            					<li><label for="job_type_eat" class="eat"><input type="checkbox" name="filter_job_type[]" value="eat"  checked='checked' id="job_type_eat" /> Eat</label></li>
+            					<li><label for="job_type_shop" class="shop"><input type="checkbox" name="filter_job_type[]" value="shop"  checked='checked' id="job_type_shop" /> Shop</label></li>
+            					<li><label for="job_type_stay" class="stay"><input type="checkbox" name="filter_job_type[]" value="stay"  checked='checked' id="job_type_stay" /> Stay</label></li>
+            					<li><label for="job_type_visit" class="visit"><input type="checkbox" name="filter_job_type[]" value="visit"  checked='checked' id="job_type_visit" /> Visit</label></li>
+            			</ul>
+            	<input type="hidden" name="filter_job_type[]" value="" />
+            <div class="showing_jobs"></div>
+            	</form><!-- .job_filter -->
+
+
+            <div class="grid list job_listings" style="background-color:#f9f9f9">
+              <%for(var i = 0; i < data.length; ++i){%>
+                <div class="grid__item">
+                  <div class="column">
+                      <!-- Post-->
+                      <div class="post-module">
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                          <div class="date">
+                            <div class="day">7</div>
+                            <div class="month">Copies</div>
+                          </div><img src="images/landingpage/sample.jpeg"/>
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                          <div class="category">Check it out</div>
+                          <h1 class="title"><%=data[i].title%></h1>
+                          <h2 class="sub_title" style="padding-bottom:0; color:black">By: <%=data[i].author%></h2>
+
+                          <div class="c_info" style="padding-left:0">
+                                  <span id="c_stars" data-star="0"><span style="width: 33px;"></span></span>
+                                  <div class="c_num">0 Stars</div>
+                          </div>
+
+                          <h2 class="sub_title">Fantasy</h2>
+                          <p class="description"><%=data[i].description%></p>
+                          <div class="post-meta"><span class="timestamp"><i class="fa fa-compass"></i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 3 comments</a></span></div>
+                        </div>
+                      </div>
+                    </div>
+                </div><!-- .grid__item -->
+              <%}%>
+            </div><!-- .grid.list.job_listings -->
+
+            <svg class="loader" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <linearGradient x1="50%" y1="7.52257671%" x2="50%" y2="100%" id="linearGradient-1">
+                        <stop stop-color="currentColor" stop-opacity="0.5" offset="0%"></stop>
+                        <stop stop-color="currentColor" stop-opacity="0" offset="100%"></stop>
+                    </linearGradient>
+                    <linearGradient x1="50%" y1="7.70206696%" x2="50%" y2="100%" id="linearGradient-2">
+                        <stop stop-color="currentColor" stop-opacity="0.5" offset="0%"></stop>
+                        <stop stop-color="currentColor" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g>
+                        <path d="M20,0 C31.045695,0 40,8.954305 40,20 C40,31.045695 31.045695,40 20,40 L20,38 C29.9411255,38 38,29.9411255 38,20 C38,10.0588745 29.9411255,2 20,2 L20,0 Z" id="Oval-1" fill="url(#linearGradient-1)"></path>
+                        <path d="M20,0 C8.954305,0 0,8.954305 0,20 C0,31.045695 8.954305,40 20,40 L20,38 C10.0588745,38 2,29.9411255 2,20 C2,10.0588745 10.0588745,2 20,2 L20,0 Z" id="Oval-1-Copy" fill="url(#linearGradient-2)"></path>
+                    </g>
+                </g>
+            </svg>
+
+            <a class="load_more_jobs" href="#" style="display:none;"><strong>Load more listings</strong></a>	</div><!-- .myflex__left -->
+            <div id="map" class="map myflex__right" style="top:100px"></div>
+            </div><!-- .myflex -->
+            </div>
+  	     </div><!-- .entry-content -->
+      </article><!-- #post-## -->
+    </main><!-- #main -->
+  </div><!-- #primary -->
+
+</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+					<div id="footer-sidebar" class="footer-widget-area" role="complementary">
+				<aside id="nav_menu-3" class="widget  widget--footer  widget_nav_menu"><div class="menu-social-menu-container"><ul id="menu-social-menu" class="menu"><li id="menu-item-761" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-761"><a href="https://www.facebook.com/PixelGradeMedia">Facebook</a></li>
+<li id="menu-item-762" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-762"><a href="https://twitter.com/pixelgrade">Twitter</a></li>
+<li id="menu-item-763" class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-763"><a href="https://www.youtube.com/user/PixelGradeVideos">Youtube</a></li>
+<li id="menu-item-766" class="pinterest menu-item menu-item-type-custom menu-item-object-custom menu-item-766"><a href="https://www.pinterest.com/pixelgrade/">Pinterest</a></li>
+<li id="menu-item-769" class="vk menu-item menu-item-type-custom menu-item-object-custom menu-item-769"><a href="https://vk.com/">Vk</a></li>
+<li id="menu-item-770" class="instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-770"><a href="https://instagram.com/sir.paco/">Instagram</a></li>
+</ul></div></aside>			</div><!-- #primary-sidebar -->
+				<div class="footer-text-area">
+			<div class="site-info">
+									<div class="site-copyright-area">
+						Copyright © 2016 Company Inc.   •  Address   •   Tel: 42-898-4363					</div>
+								<ul id="menu-footer-menu" class="footer-menu"><li id="menu-item-993" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-993"><a href="http://themeforest.net/item/listable-a-friendly-directory-wordpress-theme/13398377?ref=pixelgrade">Get the Theme</a></li>
+<li id="menu-item-994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-994"><a href="https://demos.pixelgrade.com/listable/permissions-and-copyright/">Contact</a></li>
+</ul>			</div><!-- .site-info -->
+			<div class="theme-info">
+				<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+				<span class="sep"> and </span>
+				<a href="http://themeforest.net/item/listable-a-friendly-directory-wordpress-theme/13398377?ref=pixelgrade" rel="theme">Listable</a> by <a href="https://pixelgrade.com/" rel="designer">PixelGrade</a>.			</div>
+		</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<div class="hide">
+	<div class="arrow-icon-svg"><svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg"><path d="M24.394 12.81c.04-.043.08-.084.114-.13.02-.02.04-.047.055-.07l.025-.034c.258-.345.412-.773.412-1.24 0-.464-.154-.89-.412-1.237-.01-.02-.022-.036-.035-.05l-.045-.06c-.035-.044-.073-.09-.118-.13L15.138.61c-.814-.813-2.132-.813-2.946 0-.814.814-.814 2.132 0 2.947l5.697 5.7H2.08c-1.148 0-2.08.93-2.08 2.083 0 1.15.932 2.082 2.084 2.085H17.89l-5.7 5.695c-.814.815-.814 2.137 0 2.95.814.815 2.132.815 2.946 0l9.256-9.255c-.004-.003 0-.006 0-.006z" fill="currentColor" fill-rule="evenodd"/></svg>
+
+</div>
+	<div class="cluster-icon-svg"><svg width="50px" height="62px" viewBox="0 0 50 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path id="unique-path-2" d="M6.75141997,6.76666667 C0.287315594,13.2746963 -1.50665686,22.6191407 1.24745785,30.7382815 C7.20204673,48.0746963 23.0106822,58 23.0106822,58 C23.0106822,58 38.6298497,48.1382815 44.6475946,30.9969185 C44.6475946,30.9333333 44.7107506,30.8697481 44.7107506,30.8027259 C47.5280214,22.6191407 45.7340489,13.2746963 39.2699445,6.76666667 C30.3086168,-2.25555556 15.7127477,-2.25555556 6.75141997,6.76666667 Z"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path id="unique-path-4" d="M8.87079997,8.83664825 C3.24983965,14.4470186 1.6898636,22.5025742 4.08474595,29.5018334 C9.26264933,44.4470186 23.0092889,53.0033149 23.0092889,53.0033149 C23.0092889,53.0033149 36.5911736,44.5018334 41.8239953,29.7247964 C41.8239953,29.6699816 41.8789136,29.6151668 41.8789136,29.557389 C44.3287142,22.5025742 42.7687382,14.4470186 37.1477778,8.83664825 C29.355319,1.05887047 16.6632588,1.05887047 8.87079997,8.83664825 Z"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path id="unique-path-6" d="M10.28372,10.25 C5.22485568,15.2993333 3.82087724,22.5493333 5.97627136,28.8486667 C10.6363844,42.2993333 23.00836,50 23.00836,50 C23.00836,50 35.2320563,42.3486667 39.9415958,29.0493333 C39.9415958,29 39.9910222,28.9506667 39.9910222,28.8986667 C42.1958428,22.5493333 40.7918644,15.2993333 35.7330001,10.25 C28.7197871,3.25 17.296933,3.25 10.28372,10.25 Z"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path id="unique-path-8" d="M11.69664,11.6666667 C7.19987172,16.154963 5.95189088,22.5994074 7.86779676,28.1988148 C12.0101195,40.154963 23.0074311,47 23.0074311,47 C23.0074311,47 33.8729389,40.1988148 38.0591962,28.3771852 C38.0591962,28.3333333 38.1031309,28.2894815 38.1031309,28.2432593 C40.0629714,22.5994074 38.8149905,16.154963 34.3182223,11.6666667 C28.0842552,5.44444444 17.9306071,5.44444444 11.69664,11.6666667 Z"></path>
+    </defs>
+    <g id="Page---Listings-Archive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pin-4" transform="translate(2.000000, 1.000000)">
+            <g id="Pin-Copy-4" filter="url(#filter-1)">
+                <use fill="#FFFFFF" xlink:href="#unique-path-2"></use>
+                <use id="svgCluster1" fill="currentColor" xlink:href="#unique-path-2"></use>
+            </g>
+            <g id="Pin-Copy-3" filter="url(#filter-3)">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#unique-path-4"></use>
+                <use id="svgCluster2" fill="none" xlink:href="#unique-path-4"></use>
+            </g>
+            <g id="Pin-Copy-6" filter="url(#filter-5)">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#unique-path-6"></use>
+                <use id="svgCluster3" fill="none" xlink:href="#unique-path-6"></use>
+            </g>
+            <g id="Pin-Copy-5" filter="url(#filter-7)">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#unique-path-8"></use>
+                <use id="svgCluster4" fill="none" xlink:href="#unique-path-8"></use>
+            </g>
+        </g>
+    </g>
+</svg>
+</div>
+	<div class="selected-icon-svg"><svg width="48px" height="59px" viewBox="0 0 48 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path id="path-2" d="M6.47133474,6.469534 C0.275396197,12.691788 -1.44415263,21.6259064 1.19570658,29.3885257 C6.90326708,45.9636772 22.0560753,55.4531486 22.0560753,55.4531486 C22.0560753,55.4531486 37.0272756,46.0244703 42.7953721,29.6358057 C42.7953721,29.5750126 42.8559081,29.5142195 42.8559081,29.4501403 C45.5563033,21.6259064 43.8367544,12.691788 37.6408159,6.469534 C29.0512523,-2.15651133 15.0608983,-2.15651133 6.47133474,6.469534 Z"></path>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(2.000000, 1.000000)">
+            <g id="Pin" filter="url(#filter-1)">
+                <use fill="#FFFFFF" xlink:href="#path-2"></use>
+                <use id="selected" xlink:href="#path-2"></use>
+            </g>
+            <ellipse id="oval" fill="#FFFFFF" cx="22" cy="22.0243094" rx="18" ry="18.0198895"></ellipse>
+        </g>
+    </g>
+</svg>
+</div>
+	<div class="empty-icon-svg"><svg width="48px" height="59px" viewBox="0 0 48 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+	    <path d="M8.47133474,8.077269 C2.2753962,14.299523 0.55584737,23.2336414 3.19570658,30.9962607 C8.90326708,47.5714122 24.0560753,57.0608836 24.0560753,57.0608836 C24.0560753,57.0608836 39.0272756,47.6322053 44.7953721,31.2435407 C44.7953721,31.1827476 44.8559081,31.1219545 44.8559081,31.0578753 C47.5563033,23.2336414 45.8367544,14.299523 39.6408159,8.077269 C31.0512523,-0.54877633 17.0608983,-0.54877633 8.47133474,8.077269 L8.47133474,8.077269 Z M24,33.607735 C29.5228475,33.607735 34,29.1305825 34,23.607735 C34,18.0848875 29.5228475,13.607735 24,13.607735 C18.4771525,13.607735 14,18.0848875 14,23.607735 C14,29.1305825 18.4771525,33.607735 24,33.607735 L24,33.607735 Z" id="path-empty"></path>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(2.000000, 1.000000)">
+            <g id="Pin" filter="url(#filter-1)">
+                <use fill="#FFFFFF" xlink:href="#path-empty"></use>
+                <use id="selected" xlink:href="#path-empty"></use>
+            </g>
+        </g>
+    </g>
+</svg>
+</div>
+	<div class="card-pin-svg"><svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M7,0 C3.13383665,0 0,3.0828692 0,6.88540084 C0,10.68827 6.33390528,20 7,20 C7.66609472,20 14,10.68827 14,6.88540084 C14,3.0828692 10.8661633,0 7,0 L7,0 Z M7,9.87341772 C5.2947838,9.87341772 3.91146191,8.51274262 3.91146191,6.83544304 C3.91146191,5.15814346 5.2947838,3.79746835 7,3.79746835 C8.7052162,3.79746835 10.0885381,5.15814346 10.0885381,6.83544304 C10.0885381,8.51274262 8.7052162,9.87341772 7,9.87341772 L7,9.87341772 Z" id="Imported-Layers-Copy-5" fill="currentColor" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
+</div>
+</div>
+
+	<div style="display:none">
+	</div>
+<div id="lwa-modal-holder">	<div class="lwa lwa-template-modal">
+				<div class="lwa-modal" style="display:none;">
+			<form name="lwa-form" class="lwa-form  lwa-login  js-lwa-login  form-visible" action="https://demos.pixelgrade.com/listable/wp-login.php" method="post">
+				<p>
+					<label for="username">Username or Email Address *</label>
+					<input type="text" name="log" id="lwa_user_login" class="input" />
+				</p>
+				<p>
+					<label for="password">Password *</label>
+					<input type="password" name="pwd" id="lwa_user_pass" class="input" value="" />
+				</p>
+
+
+	<div class="wc-social-login form-row-wide">
+
+		<p></p>
+
+		<a href="https://demos.pixelgrade.com/listable/?wc-api=auth&#038;start=facebook&#038;return=https%3A%2F%2Fdemos.pixelgrade.com%2Flistable%2Flistable%2Flistings%2F" class="button-social-login button-social-login-facebook"><span class="si si-facebook"></span>Connect with Facebook</a> <a href="https://demos.pixelgrade.com/listable/?wc-api=auth&#038;start=google&#038;return=https%3A%2F%2Fdemos.pixelgrade.com%2Flistable%2Flistable%2Flistings%2F" class="button-social-login button-social-login-google"><span class="si si-google"></span>Connect with Google</a>
+	</div>
+
+				<p class="lwa-meta  grid">
+					<span class="grid__item w50  remember-me">
+						<input name="rememberme" type="checkbox" id="lwa_rememberme" class="remember-me-checkbox" value="1" /><label for="lwa_rememberme">Remember me</label>
+					</span>
+										<span class="grid__item  w50  lost-password">
+						<a class="lwa-show-remember-pass  lwa-action-link  js-lwa-open-remember-form" href="https://demos.pixelgrade.com/listable/wp-login.php?action=lostpassword" title="Password Lost and Found">Lost your password?</a>
+					</span>
+									</p>
+				<p class="lwa-submit-wrapper">
+					<button type="submit" name="wp-submit" class="lwa-wp-submit" tabindex="100"><span class="button-arrow">Log In</span></button>
+					<input type="hidden" name="lwa_profile_link" value="0" />
+					<input type="hidden" name="login-with-ajax" value="login" />
+									</p>
+							</form>
+
+        		        <form name="lwa-remember" class="lwa-remember  lwa-form  js-lwa-remember" action="https://demos.pixelgrade.com/listable/wp-login.php?action=lostpassword" method="post" style="display:none;">
+				<p>
+					<label>Username or Email</label>
+				    <input type="text" name="user_login" id="lwa_user_remember" />
+									</p>
+				<p class="lwa-submit-wrapper">
+	                <button type="submit"><span class="button-arrow">Get New Password</span></button>
+	                <input type="hidden" name="login-with-ajax" value="remember" />
+				</p>
+		        <p class="cancel-button-wrapper">
+			        <a href="#" class="lwa-action-link  js-lwa-close-remember-form">Cancel</a>
+		        </p>
+
+	        </form>
+	        		    		</div>
+	</div></div>
+
+<script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=1518791655'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var listable_params = {"login_url":"https:\/\/demos.pixelgrade.com\/listable\/wp-login.php","listings_page_url":"https:\/\/demos.pixelgrade.com\/listable\/listings\/","mapbox":{"maxZoom":19},"strings":{"wp-job-manager-file-upload":"Add Photo","no_job_listings_found":"No results","results-no":"Results","select_some_options":"Select Some Options","select_an_option":"Select an Option","no_results_match":"No results match","social_login_string":"or"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/themes/listable/assets/js/main.js?ver=1518791655'></script>
+<script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/wp-job-manager/assets/js/jquery-chosen/chosen.jquery.min.js?ver=1518791655'></script>
+<script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/wp-job-manager-locations/assets/js/main.js?ver=1518791655'></script>
+<script type='text/javascript' src='https://demos.pixelgrade.com/listable/wp-includes/js/wp-embed.min.js?ver=4.9.4'></script>
+<script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/wp-job-manager/assets/js/jquery-deserialize/jquery.deserialize.js?ver=1518791655'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var job_manager_ajax_filters = {"ajax_url":"\/listable\/jm-ajax\/%%endpoint%%\/","is_rtl":"0","i18n_load_prev_listings":"Load previous listings","lang":null};
+/* ]]> */
+</script>
+<script type='text/javascript' src='js/landingpage/sample.js'></script>
+<script type='text/javascript' src='js/landingpage/search2.js'></script>
+<script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/wp-job-manager-tags/assets/js/tag-filter.js?ver=1518791655'></script>
+<script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/woocommerce-social-login/assets/js/frontend/wc-social-login.min.js?ver=1518791655'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201809.js' async='async' defer='defer'></script>
+<script type='text/javascript' src='js/landingpage/extra.js'></script>
+<script src="js/landingpage/cardView.js" type="text/javascript"></script>
+<script src="js/landingpage/cardView2.js" type="text/javascript"></script>
+</body>
+</html>

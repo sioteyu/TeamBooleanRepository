@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%=title%></title>
+  </head>
+  <body>
+    <nav class="container-fluid nav" style="padding-left:0px">
+  	<div class="container cf">
+  	<div class="brand" style="background-color:white; position:relative; z-index:5">
+  		<a href="landingPage.html"><img src="images/landingpage/BookHub_ico.png" alt="" style="width: 50px; height: 50px;"></a>
+  	</div>
+  	<a href="landingPage.html"><h1 style="display:inline-block; font-family: 'Comfortaa', Helvetica, sans-serif; color:#354d9c; padding-top:13px; padding-left:10px; animation: logo-anim 1s; position:relative; z-index:3; float:left; animation:unset; font-size:1.5em; margin-top:1.2%">Bookhub</h1></a>
+  	<i class="fa fa-bars nav-toggle"></i>
+  	<%if(title!=='Home'){%>
+      <div id="form-wrapper" style="position:unset; display:inline-block; width:38%; height:60px; margin-top:1%; margin-left:50px; animation: logo-anim 1s;">
+    	<button class="go-button" onclick="document.getElementById('topForm').submit()"><i class="fa fa-search"></i></button>
+    	<span class="nav-list" style="height:60px">
+    	<span class="current-selection" style="margin-top:8px;color:#888283"><i class="fa fa-book"></i>   Book</span>
+    	<span class="arrow" style="margin-top:8px; color:#888283"></span>
+    	<select id="dropdown2" style="top: 1px;">
+    	<option value="book" id="Book" icon-type="book">Book</option>
+    	<option value="owner" id="Owner" icon-type="user">Owner</option>
+    	</select>
+    	</span>
+    	<div class="in-wrap">
+    	<form id="topForm" action="/search" method="get">
+        <input type="text" name="searchItem" id="search-box" placeholder="What are you looking for?" style="height:60px">
+      </form>
+    	</div>
+    	</div>
+    <%}%>
+  	<ul>
+  		<li><a>About Bookhub</a></li>
+  		<li><a>Share A Book</a></li>
+  		<li><a>Sign-up</a></li>
+  		<li><a>Log-in</a></li>
+  	</ul>
+  	</div>
+  	</nav>
+      <%- body %>
+  </body>
+</html>
