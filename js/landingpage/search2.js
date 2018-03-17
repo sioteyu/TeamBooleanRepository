@@ -12,7 +12,6 @@ $(function(){
 
   // change the selection text to match dropdown selected item
   $('#dropdown2').change(function(){
-
     current = $(this)
     .find('option:selected').text();
 

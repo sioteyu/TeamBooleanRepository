@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Harry Potter and the Sorcerer Stone - Bookhub</title>
+<link rel="icon" type="image/png" href="images/landingpage/BookHub_ico.png"/>
+<link rel='stylesheet' id='listable-style-css'  href='https://cdn.demos.pixelgrade.com/wp-content/themes/listable/style.css?ver=1518791655' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-raty-style-css'  href='https://cdn.demos.pixelgrade.com/wp-content/plugins/comments-ratings/css/jquery.raty.css?ver=1518791654' type='text/css' media='' />
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="css/landingpage/index.css">
+<link rel="stylesheet" href="css/landingpage/search.css">
+<link rel="stylesheet" href="css/landingpage/search2.css">
+<link rel="stylesheet" href="css/bookPreview/cardView3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08&sensor=true"></script>
+<link rel="stylesheet" href="css/fonts/CircularStdFont/style.css">
+<link rel="stylesheet" href="css/bookPreview/borrow.css">
+<script type="text/javascript" src="js/bookResult/gmaps.js"></script>
+<script type="text/javascript">
+  var map;
+  $(document).ready(function(){
+    map = new GMaps({
+      el: '#map-canvas',
+      lat: -12.043333,
+      lng: -77.028333,
+      zoomControl : true,
+      zoomControlOpt: {
+          style : 'SMALL',
+          position: 'TOP_LEFT'
+      },
+      panControl : false,
+      streetViewControl : false,
+      mapTypeControl: false,
+      overviewMapControl: false
+    });
+
+    map2 = new GMaps({
+      el: '#map',
+      lat: -12.043333,
+      lng: -77.028333,
+      zoomControl : true,
+      zoomControlOpt: {
+          style : 'SMALL',
+          position: 'TOP_LEFT'
+      },
+      panControl : false,
+      streetViewControl : false,
+      mapTypeControl: false,
+      overviewMapControl: false
+    });
+  });
+</script>
+<style id="customify_typography_output_style">
+
+
+input,
+								textarea,
+								label,
+								html,
+								.entry-content blockquote cite,
+								.comment-content blockquote cite,
+								.card--feature .card__content,
+								.rating,
+								.widget--footer .search-form .search-field,
+								.featured-label,
+								.package__description,
+								.footer-text-area,
+								.widget_listing_comments h3.pixrating_title,
+								.chosen-container-multi .chosen-choices,
+								.chosen-container-single .chosen-single,
+								.product .product__price,
+								.product .product__tag {
+}
+.entry-title, .archive-title,
+									h1, h2, h3,
+									.card--feature .card__title,
+									.results,
+									.page-title,
+									.search_location input,
+									.package__title, .package__price,
+									.package__subscription-period,
+									h2.comments-title,
+									.page-add-listing fieldset:first-child label,
+									.product-content .price {
+
+}
+.intro,
+									.description,
+									.tabs.wc-tabs,
+									.job-manager-form fieldset .job-manager-uploaded-files .job-manager-uploaded-file .job-manager-uploaded-file-preview a,
+									.widget_subtitle--frontpage,
+									.category-list a,
+									.single:not(.single-job_listing) .entry-subtitle,
+									.page .entry-subtitle,
+									.single-job_listing .entry-subtitle {
+
+}
+.card__title.card__title, ul.categories--widget .category-count,
+									ul.categories--widget .category-text {
+
+}
+.card {
+
+}
+.single:not(.single-job_listing) .entry-meta,
+								.page .entry-meta,
+								.single:not(.single-job_listing) div.sd-social.sd-social > div.sd-content.sd-content ul li > a,
+								.page div.sd-social.sd-social > div.sd-content.sd-content ul li > a,
+								.search_jobs select,
+								.search-form .search-field,
+								.search_jobs--frontpage .chosen-container .chosen-results li,
+								.search_jobs--frontpage .chosen-container-multi .chosen-choices li.search-field input[type=text],
+								.search_jobs--frontpage .chosen-container-single .chosen-single span,
+								.search_jobs .chosen-container .chosen-results li,
+								.search_jobs .chosen-container-multi .chosen-choices li.search-field input[type=text],
+								.search_jobs .chosen-container-single .chosen-single span,
+								.search_jobs--frontpage-facetwp,
+								.search_jobs--frontpage-facetwp input,
+								.search_jobs--frontpage-facetwp select,
+								.search_jobs--frontpage-facetwp .facetwp-filter-title,
+								.header-facet-wrapper .facetwp-facet input,
+								.header-facet-wrapper .facetwp-facet select,
+								.header-facet-wrapper .facetwp-facet label,
+								.active-tag,
+								.chosen-results,
+								.job_filters .search_jobs div.search_location input,
+								.search-suggestions-menu li a,
+								.page-template-front_page .search-form .search-submit,
+								.btn,
+								input[type="submit"],
+								button[type="submit"],
+								.woocommerce-account:not(.logged-in) .woocommerce form.login input[type="submit"],
+								.woocommerce .button,
+								.search_jobs--frontpage #search_location {
+
+}
+		</style>
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+			<style id="customify_output_style">
+
+.site-branding img{max-height: 32px}.section-wrap { max-width: 1100px; }
+.single:not(.single-job_listing) .header-content,
+    .single:not(.single-job_listing) .entry-content,
+    .single:not(.single-job_listing) .entry-footer,
+    .single:not(.single-job_listing) .comments-area,
+    .single:not(.single-job_listing) .post-navigation,
+    .page .header-content,
+    body:not(.woocommerce-checkout):not(.page-template-full_width) .entry-content,
+    .page .entry-footer,
+    .page .comments-area,
+    .page .post-navigation,
+    .secondary-menu,
+    .error404 .header-content, .error404 .entry-content,
+    .search-no-results .header-content, .search-no-results .entry-content,
+    .upsells, .related { max-width: 760px; }
+.bar, .bar--fixed, .site-header,
+.primary-menu ul .children, ul.primary-menu .sub-menu, .search-suggestions-menu,
+.search-suggestions-menu .sub-menu,
+.site-header .search-form .search-field,
+.site-header .search-form.is--active,
+.search_jobs--frontpage .chosen-container .chosen-results,
+.header-facet-wrapper .facet-wrapper input, .header-facet-wrapper .facet-wrapper select { background-color: #ffffff; }
+ul.primary-menu > .menu-item.menu-item-has-children > .sub-menu:before,
+  .site-header .search-suggestions-menu:before { border-top-color: #ffffff; }
+.site-header .site-title,
+.menu-trigger, .search-trigger--mobile { color: #484848; }
+.search-form .search-field,
+.search-form .search-submit { color: #484848; }
+.header--transparent .primary-menu ul .children a,
+.primary-menu ul .header--transparent .children a,
+.header--transparent ul.primary-menu .sub-menu a,
+ul.primary-menu .header--transparent .sub-menu a,
+div.sd-social.sd-social .inner a span { color: #919191; }
+.primary-menu ul a, ul.primary-menu a, .menu-wrapper a,
+.primary-menu ul .page_item a,
+ul.primary-menu .menu-item a,
+.primary-menu ul .page_item_has_children > a,
+ul.primary-menu .menu-item-has-children > a { color: #919191; }
+.sub-menu .primary-menu ul .page_item_has_children:after,
+.primary-menu ul .sub-menu .page_item_has_children:after,
+.sub-menu ul.primary-menu .menu-item-has-children:after,
+ul.primary-menu .sub-menu .menu-item-has-children:after,
+.primary-menu ul .page_item_has_children:after,
+ul.primary-menu .menu-item-has-children:after,
+.primary-menu ul > .cta.page_item:after,
+ul.primary-menu > .cta.menu-item:after { border-top-color: #919191; }
+.primary-menu.primary-menu ul .page_item_has_children:hover:after,
+ul.primary-menu.primary-menu .menu-item-has-children:hover:after,
+.hover.menu-item-has-children > a:after, .hover.page_item_has_children > a:after,
+.page-template-front_page .is--active .search-field-wrapper:after { border-top-color: #5D9CEC; }
+.search-suggestions-menu .menu-item-has-children:hover:after { border-left-color: #5D9CEC; }
+.primary-menu > ul li:hover > a, ul.primary-menu li:hover > a,
+.search-suggestions-menu li:hover > a,
+.header--transparent .primary-menu ul .page_item_has_children:hover > a,
+.header--transparent .primary-menu ul .page_item:hover > a,
+.header--transparent ul.primary-menu .menu-item-has-children:hover > a,
+.header--transparent ul.primary-menu .menu-item:hover > a { color: #5D9CEC; }
+.page-template-front_page .search-suggestions-menu > .menu-item:hover > a,
+.search_jobs--frontpage .chosen-container .chosen-results li:hover { background-color: #5D9CEC; }
+html, .job_filters, .page-package-selection .hentry.hentry, .single-job_listing .entry-header:before,
+.listing-sidebar--main .widget:not(.widget_listing_tags):not(.widget_listing_actions):not(.widget_listing_comments),
+.listing-sidebar--top .widget,
+.listing-sidebar--bottom,
+.listing-sidebar--main .comment-respond,
+.page-add-listing .entry-content,
+.page-add-listing fieldset:first-child,
+.woocommerce-account:not(.logged-in) .entry-content .woocommerce form,
+.post-password-form,
+.page-listings div.job_listings .load_more_jobs strong,
+body.registration .entry-content { background-color: #ffffff; }
+.widget_listing_comments #add_post_rating:not(:empty):before { border-right-color: #ffffff; }
+.front-page-section:nth-child(2n),
+.blog, .archive, .woocommerce.archive,
+.page-header, .page-header-background,
+.single:not(.single-job_listing) .entry-featured, .page .entry-featured,
+.error404 .entry-header, .search-no-results .entry-header,
+.single-job_listing,
+.page-add-listing .hentry,
+.job_filters .showing_jobs,
+.job_listing_packages,
+.page-listings,
+.tax-job_listing_category,
+.tax-job_listing_tag,
+.single-action-buttons .action__icon,
+.woocommerce-account:not(.logged-in) .site-content,
+.woocommerce-account:not(.logged-in) .entry-content,
+.mobile-buttons, .tabs.wc-tabs,
+.woocommerce-cart,
+.woocommerce-checkout,
+body.registration { background-color: #f9f9f9; }
+.job_listing_packages, { background-color: #f9f9f9; }
+.page-title,
+.widget_title--frontpage,
+.single:not(.single-job_listing) .entry-title, .page .entry-title,
+
+.card__title.card__title,
+.card__title.card__title a,
+.package__price,
+.product .card__title.card__title,
+
+h1, h2, h3, h4, h5, h6,
+.results,
+.intro,
+.listing-sidebar .widget_sidebar_title { color: #484848; }
+.widget_subtitle--frontpage { color: #919191; }
+.entry-content a:hover, .comment-content a:hover,
+label, html,
+
+.widget--footer .search-form .search-field,
+.entry-content a.listing-contact,
+.single-action-buttons .action__text, .single-action-buttons .action__text--mobile,
+div.sd-social.sd-social > div.sd-content.sd-content ul li > a span,
+
+.listing-sidebar,
+.widget_listing_content,
+.widget_listing_comments h3.pixrating_title,
+.widget_listing_sidebar_categories .category-text,
+.widget_listing_tags .tag__text,
+ol.comment-list .fn,
+ol.comment-list .fn a,
+ol.comment-list .comment-content,
+ol.comment-list .reply,
+.comment-respond label,
+.page-template-front_page .search-form .search-field,
+.woocommerce-account:not(.logged-in) .woocommerce form.login .form-row .required,
+.mobile-buttons .btn--view, .search_jobs--frontpage .chosen-container .chosen-results li { color: #484848; }
+input[type="checkbox"]:focus,
+.package__btn.package__btn:hover { border-color: #484848; }
+.btn:hover, input[type="submit"]:hover,
+.job-manager-form fieldset .job-manager-uploaded-files .job-manager-uploaded-file .job-manager-uploaded-file-preview a:hover,
+.woocommerce-account:not(.logged-in) .woocommerce form.login input[type="submit"]:hover,
+.woocommerce .button:hover, .btn:focus, input[type="submit"]:focus,
+.job-manager-form fieldset .job-manager-uploaded-files .job-manager-uploaded-file .job-manager-uploaded-file-preview a:focus,
+.woocommerce-account:not(.logged-in) .woocommerce form.login input[type="submit"]:focus, .woocommerce .button:focus,
+.package__btn.package__btn:hover,
+.job_listing_preview_title input[name="edit_job"],
+ .page-template-front_page .search-form .search-submit:hover, .woocommerce-message > a.button.wc-forward:hover { background-color: #484848; }
+.btn, input[type="submit"],
+.page-template-front_page .search-form .search-submit,
+.job-manager-form fieldset .job-manager-uploaded-files .job-manager-uploaded-file .job-manager-uploaded-file-preview a,
+.woocommerce-account:not(.logged-in) .woocommerce form.login input[type="submit"],
+.woocommerce .button,
+.popup__rating,
+.single-action-buttons .action:hover .action__icon,
+.action--favorite.bookmarked .action__icon,
+.package--labeled .package__btn.package__btn,
+.featured-label,
+.product .product__tag,
+.wc-bookings-date-picker .ui-datepicker td > a:hover,
+.wc-bookings-date-picker .ui-datepicker table .bookable-range a,
+.wc-bookings-date-picker .ui-datepicker table .ui-datepicker-current-day a,
+.block-picker > li a.selected,
+.block-picker > li a:hover,
+.lwa-form input[type="submit"]:hover,
+.no-results .clear-results-btn { background-color: #5D9CEC; }
+.package__btn.package__btn { color: #5D9CEC; }
+.heart.is--bookmarked #hearshape { fill: #5D9CEC; }
+.card, .package, .leaflet-popup-content, .leaflet-popup-tip { background-color: #ffffff; }
+.card { border-radius: 8px; }
+ul.categories--widget .category-cover { border-radius: 4px; }
+.card--listing .card__title.card__title,
+.card--post a:hover,
+.grid__item--widget .posted-on a:hover,
+.grid__item--widget .card--post a:hover,
+.popup__title.popup__title { color: #5D9CEC; }
+.card, .card__content, .card--post.sticky,
+.popup__address, .package__description,
+.single-job_listing .entry-subtitle { color: #ababab; }
+.card .pin,
+.card .pin__icon,
+.card--listing .card__rating.rating,
+.widget_listing_sidebar_categories .category-icon { color: #5D9CEC; }
+.card__tag,
+.card__rating.rating,
+.single-action-buttons .action__icon,
+.widget_listing_sidebar_categories .category-icon { border-color: #5D9CEC; }
+.pin--selected #selected { fill: #5D9CEC; }
+.card__rating.card__pin { color: #5D9CEC; }
+.card__tag,
+.card__rating.rating,
+.widget_listing_sidebar_categories .category-icon { background-color: #ffffff; }
+.pin #selected,
+.marker-cluster svg #svgCluster2,
+.marker-cluster svg #svgCluster3,
+.marker-cluster svg #svgCluster4,
+.pin #oval { fill: #ffffff; }
+.pin--selected #selected,
+.marker-cluster svg #svgCluster1,
+.heart.is--bookmarked #heartshape { fill: #5D9CEC; }
+.marker-cluster, .pin__icon { color: #5D9CEC; }
+.footer-widget-area { background-color: #2f2929; }
+.widget--footer { color: #ffffff; }
+.site-footer { background-color: #261e1e; }
+.site-info { color: #adadb2; }
+.theme-info { color: #706c6c; }
+.not-entry-content a,
+.comment-content a,
+.single-categories-breadcrumb a:hover,
+.single-rating > i, .widget_listing_comments .comment .review_rate > i,
+.single-action-buttons .action:hover .action__text,
+.action--favorite.bookmarked .action__icon,
+.tags-links a:hover, .tags-links a:focus,
+.loader,
+.listing-sidebar .widget_listing_content a,
+.listing-sidebar a:hover,
+.listing-sidebar .action__icon,
+.widget_listing_comments #add_comment_rating_wrap i,
+ol.comment-list .fn a:hover,
+.single-job_listing .entry-title,
+.page-listings div.job_listings .load_more_jobs:hover strong,
+.tax-job_listing_category div.job_listings .load_more_jobs:hover strong,
+.tax-job_listing_tag div.job_listings .load_more_jobs:hover strong,
+.chosen-container-single .chosen-single span,
+.chosen-container .chosen-results li.highlighted,
+progress,
+.single-product .stars a:before,
+.product-content .price,
+.tabs.wc-tabs li.active a,
+.color-accent,
+.entry-content a, .comment-content a,
+.gallery-arrow,
+.job-manager-form fieldset .job-manager-uploaded-files .job-manager-uploaded-file .job-manager-uploaded-file-preview a:hover,
+.job-manager-form fieldset .job-manager-uploaded-files .job-manager-uploaded-file .job-manager-uploaded-file-preview a:focus,
+.package__btn.package__btn:hover,
+.nav-links a:hover, .site-footer a:hover, .facetwp-pager a:hover,
+.facetwp-pager a.first-page:hover:before, .facetwp-pager a.first-page:hover:after,
+.facetwp-pager a.last-page:hover:before, .facetwp-pager a.last-page:hover:after,
+.widget_listing_sidebar_claim_listing .listing-claim-button, .lwa-form .lwa-action-link,
+.pac-container .pac-item:hover .pac-item-query { color: #5D9CEC; }
+.secondary-menu, .secondary-menu-wrapper:before, .product__remove,
+.page-template-front_page .pac-container .pac-item:hover,
+.page-template-front_page .search_jobs--frontpage .search-submit,
+.facetwp-type-slider .noUi-connect,
+.card__featured-tag, .woocommerce-message, .no-results .clear-results-btn { background-color: #5D9CEC; }
+progress::-webkit-progress-bar { background: #5D9CEC; }
+progress::-webkit-progress-value { background: #5D9CEC; }
+progress::-moz-progress-bar { background: #5D9CEC; }
+.page-template-front_page .is--active .search-field-wrapper.has--menu:after,
+                ul.secondary-menu > .menu-item.menu-item-has-children > .sub-menu:after,
+                .search_jobs--frontpage .chosen-with-drop.chosen-container-active .chosen-single:after { border-top-color: #5D9CEC; }
+.description, .tabs.wc-tabs,
+.single-categories-breadcrumb a,
+.single-categories-breadcrumb a:after,
+.single-rating .rating-value, .widget_listing_comments .comment .review_rate .rating-value,
+div.sd-social.sd-social > div.sd-content.sd-content ul li > a,
+.sharedaddy div.sd-social-icon .sd-content ul li[class*="share-"].share-press-this a.sd-button,
+.sharedaddy div.sd-social-icon .sd-content ul li[class*="share-"].share-press-this a.sd-button:before,
+.tags-links,
+.tags-links a,
+.listing-sidebar a,
+.widget_listing_comments .comment-meta a,
+.comment-meta a,
+.single:not(.single-job_listing) .entry-subtitle, .page .entry-subtitle,
+.single:not(.single-job_listing) .entry-meta a, .page .entry-meta a,
+.tax-job_listing_category div.job_listings .load_more_jobs strong, .tax-job_listing_tag div.job_listings .load_more_jobs strong,
+
+.search_jobs select,
+.chosen-container-multi .chosen-choices li.search-field input[type=text], .chosen-container-single .chosen-single span,
+.active-tag,
+.select-tags .chosen-container-multi .chosen-choices,
+
+.chosen-results,
+.job-manager-form .field small.field-description,
+.uploader-btn .spacer .text,
+.page-add-listing .chosen-container-multi .chosen-choices li.search-choice,
+.woocommerce-account:not(.logged-in) .woocommerce form.login label[for=rememberme],
+.woocommerce-account:not(.logged-in) .lost_password a,
+.woocommerce-breadcrumb,
+.product-content .price del,
+.mfp-iframe-scaler.mfp-wp-login .mfp-close,
+.nav-links a, .facetwp-pager a,
+.job_filters .facetwp-type-fselect .fs-label.fs-label { color: #919191; }
+.page-template-front_page .search-form .search-field::-webkit-input-placeholder { color: #919191; }
+.page-template-front_page .search-form .search-field::-moz-placeholder { color: #919191; }
+.page-template-front_page .search-form .search-field::-moz-placeholder { color: #919191; }
+.select-tags .chosen-container-multi .chosen-choices li.search-field::-webkit-input-placeholder { color: #919191; }
+.select-tags .chosen-container-multi .chosen-choices li.search-field:-moz-placeholder { color: #919191; }
+.select-tags .chosen-container-multi .chosen-choices li.search-field::-moz-placeholder { color: #919191; }
+.select-tags .chosen-container-multi .chosen-choices li.search-field:-ms-input-placeholder { color: #919191; }
+.description_tooltip { color: #919191; }
+.job_filters .showing_jobs,
+.tax-job_listing_category div.job_listings .load_more_jobs strong,
+.tax-job_listing_tag div.job_listings .load_more_jobs strong { color: #ababab; }
+.chosen-container-single .chosen-single div b:after,
+.select-tags .chosen-container-multi .chosen-choices:after { border-top-color: #ababab; }
+.remove-tag:before,
+.remove-tag:after { background-color: #ababab; }
+.site-header .site-title { font-size: 24px; }
+.site-header .site-title { text-transform: None; }
+.site-header .site-title { letter-spacing: 0px; }
+.primary-menu > ul a, ul.primary-menu a,
+.search-suggestions-menu li a { font-size: 14.95px; }
+.primary-menu > ul a, ul.primary-menu a,
+.search-suggestions-menu li a { text-transform: none; }
+.primary-menu > ul a, ul.primary-menu a,
+.search-suggestions-menu li a { letter-spacing: 0px; }
+.card__title.card__title,
+ul.categories--widget .category-text { font-size: 24px; }
+.card__title.card__title, ul.categories--widget .category-count,
+ul.categories--widget .category-text { text-transform: None; }
+.card__title.card__title, ul.categories--widget .category-count,
+ul.categories--widget .category-text { letter-spacing: 0px; }
+@media  screen and (min-width: 900px) { .site-header{padding-top: 0px}ul.primary-menu > .menu-item > a, .header--transparent ul.primary-menu > .menu-item > a { padding-left: 20px; }
+ }
+@media screen and (min-width: 900px)  { ul.primary-menu > .menu-item > a { padding-right: 20px; }
+.primary-menu ul > .cta.page_item, ul.primary-menu > .cta.menu-item { border-color: #ebebeb; }
+ }
+@media  only screen and (min-width: 900px) { .front-page-section { padding-top: 90px; }
+ }
+@media only screen and (min-width: 900px)  { .front-page-section { padding-bottom: 90px; }
+ }
+@media only screen and  (min-width: 900px) { .primary-menu ul .children, ul.primary-menu .sub-menu{border-top-color: #f9f9f9} }
+@media not screen and (min-width: 900px) { .menu-wrapper, .search-form input.search-field { background-color: #ffffff; }
+ul.primary-menu .hover.menu-item-has-children > a:after, .primary-menu > ul .hover.page_item_has_children > a:after { border-top-color: #5D9CEC; }
+ }
+@media not screen  and (min-width: 900px) { .primary-menu ul .children, ul.primary-menu .sub-menu{background-color: #f9f9f9} }
+@media not screen and (min-width: 480px) { .grid.job_listings > .grid__item,
+.job_listings.product-content > .grid__item,
+.product-content.job_listings > * { background-color: #f9f9f9; }
+ }
+
+		</style>			<style type="text/css" id="wp-custom-css">
+				.address__country-short,
+.address__state-short,
+body .address__street-no:after,
+.single:not(.single-job_listing) .post-navigation,
+.page .post-navigation,
+.comment-notes,
+.gform_wrapper .top_label .gfield_label {
+    display: none !important;
+}
+
+.postcard__title {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/*Hide Listings Packages*/
+.post-215, .post-210, .post-213 {
+    display: none !important;
+}
+
+.search-suggestions-menu li a ._mi + span {
+    margin-left: 34px;
+}
+
+/*Checkout Notes height*/
+.order_comments {
+    min-height: 87px;
+}
+
+/*Hide the heart icon on Frontpage Widgets*/
+.front-page-section .heart {
+	display: none;
+}
+
+/* Firefox Browse the high-ights */
+html {
+    -moz-hyphens: none;
+}
+
+</style>
+</head>
+<body class="job_listing-template-default single single-job_listing postid-128 wp-custom-logo listable" data-mapbox-token="pk.eyJ1IjoiZ2Vvcmdlb2xhcnUiLCJhIjoiY2lneTNtZ2VtMDBlNmtya3IzdHY0ZTl2biJ9.ZQPEMiJW_XQjJHUFRlioug" data-mapbox-style="mapbox.streets-basic">
+
+    <div id="page" class="hfeed site">
+
+      <div id="content" class="site-content js-header-height-padding-top">
+
+
+        <div id="primary" class="content-area">
+
+          <main id="main" class="site-main" role="main">
+
+          <nav class="container-fluid nav" style="padding-left:0px">
+            <div class="brand" style="background-color:white; position:relative; z-index:5">
+              <a href="landingPage.html"><img src="images/landingpage/BookHub_ico.png" alt="" style="width: 50px; height: 50px;"></a>
+            </div>
+
+            <a href="landingPage.html"><h1 style="font-weight:700;display:inline-block; font-family: 'Comfortaa', Helvetica, sans-serif; color:#354d9c; padding-top:13px; padding-left:10px; animation: logo-anim 1s; position:relative; z-index:3; float:left; animation:unset; font-size:1.5em; margin-top:1.2%">Bookhub</h1></a>
+            <i class="fa fa-bars nav-toggle"></i>
+            <div id="form-wrapper" style="position:unset; display:inline-block; width:38%; height:60px; margin-top:1%; margin-left:50px; animation: logo-anim 1s;">
+              <button class="go-button"><i class="fa fa-search"></i></button>
+              <span class="nav-list" style="height:60px">
+                <span class="current-selection" style="margin-top:8px;color:#888283"><i class="fa fa-book"></i>   Book</span>
+                <span class="arrow" style="margin-top:8px; color:#888283"></span>
+                <select id="dropdown2" style="top: 1px;">
+                  <option value="book" id="Book" icon-type="book">Book</option>
+                  <option value="owner" id="Owner" icon-type="user">Owner</option>
+                </select>
+              </span>
+              <div class="in-wrap">
+                <input type="text" name="q" id="search-box" placeholder="What are you looking for?" style="height:60px">
+              </div>
+            </div>
+
+            <ul>
+              <li><a>About Bookhub</a></li>
+              <li><a>Share A Book</a></li>
+              <li><a>Sign-up</a></li>
+              <li><a>Log-in</a></li>
+            </ul>
+          </nav>
+
+          <div id="panel" style="width: 370px; float: left; margin-right: 10px; margin-top:13vh; height:500px; overflow-y:scroll">
+          <!-- Controllers-->
+          <!--<div class="controller-container"><span class="controller is_current" id="big">BIG CARD</span><span class="controller" id="medium">MEDIUM CARD</span><span class="controller" id="small">SMALL CARD</span></div>-->
+          <!-- Cards-->
+            <div class="card card--small">
+              <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
+              <h2 class="card__title">Matthew Alviz</h2><span class="card__subtitle"></span>
+              <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+
+              <div class="card__action-bar">
+                <button class="card__button">SHOW</button>
+                <button class="card__button">LEARN MORE</button>
+              </div>
+            </div>
+
+            <div class="card card--small">
+              <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
+              <h2 class="card__title">John Cuthpert</h2><span class="card__subtitle"></span>
+              <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+              <div class="card__action-bar">
+                <button class="card__button">SHOW</button>
+                <button class="card__button">LEARN MORE</button>
+              </div>
+            </div>
+
+            <div class="card card--small">
+              <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
+              <h2 class="card__title">Gelline Gruta</h2><span class="card__subtitle"></span>
+              <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+              <div class="card__action-bar">
+                <button class="card__button">SHOW</button>
+                <button class="card__button">LEARN MORE</button>
+              </div>
+            </div>
+
+            <div class="card card--small">
+              <div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div>
+              <h2 class="card__title">Anton Macrohon</h2><span class="card__subtitle"></span>
+              <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+              <div class="card__action-bar">
+                <button class="card__button">SHOW</button>
+                <button class="card__button">LEARN MORE</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="map-canvas" style="height: 600px;"></div>
+
+          <div class="single_job_listing"
+          data-latitude="51.520138"
+          data-longitude="-0.0703134"
+          data-categories="Eat"
+          data-icon="">
+
+            <div class="grid">
+              <div class="grid__item  column-content  entry-content">
+                <header class="entry-header">
+                  <nav class="single-categories-breadcrumb">
+                    <a href="">Mystery</a> /
+                    <a href="">Fantasy</a> /<a href="">Drama</a>
+                  </nav>
+
+                  <h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:#333333; font-weight:700">Harry Potter and the Sorcerer Stone</h1>
+                  <span class="entry-subtitle" itemprop="description">by: JK Rowling</span>
+
+                  <div class="single-meta">
+                    <a href="#comments" class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                      <meta itemprop="ratingValue" content = "3.00">
+                    </a>
+                    <!--<a class="listing-contact  listing--phone" href="tel:+44 20 3818" itemprop="telephone">+44 20 3818</a>
+                    <a class="listing-contact  listing--twitter" href="https://twitter.com/jagorestaurant" itemprop="url">@jagorestaurant</a>
+                    <a class="listing-contact  listing--website" href="http://jagorestaurant.com" itemprop="url" target="_blank" rel="nofollow">jagorestaurant.com</a>-->
+                  </div>
+
+                </header><!-- .entry-header -->
+
+                <div class="listing-sidebar  listing-sidebar--main">
+                  <div id="listing_actions-2" class="widget  widget_listing_actions">
+                    <div class="single-action-buttons">
+
+                      <a href="#respond" class="action  action--review">
+                        <span class="action__icon">
+
+                          <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <defs>
+                            <path id="path-1" d="M10.617312,14.9553574 L7.40104003,12.5799081 L4.18357469,14.9553574 C3.98595869,15.1007054 3.75206536,15.1754081 3.51888803,15.1754081 C3.28857469,15.1754081 3.05826136,15.1035694 2.86160003,14.9598921 C2.46636803,14.6737307 2.30216536,14.1646547 2.45706003,13.7014027 L3.72127736,9.9068414 L0.46848936,7.58079607 C0.0713480263,7.29654407 -0.0954799737,6.78842274 0.054402693,6.32421607 C0.204524026,5.86263474 0.634362693,5.55117474 1.11909469,5.55117474 C1.12100403,5.55117474 5.12606936,5.5829174 5.12606936,5.5829174 L6.33252936,1.76997874 C6.47883203,1.30457874 6.91153469,0.988584071 7.39913069,0.988584071 C7.88672669,0.988584071 8.31919069,1.3055334 8.46477736,1.76997874 L9.67099869,5.5829174 L13.6686654,5.55117474 C14.1619894,5.55117474 14.5944534,5.86263474 14.7409947,6.32421607 C14.8927867,6.7893774 14.727868,7.2955894 14.329772,7.58079607 L11.0788934,9.9068414 L12.34502,13.7014027 C12.4977667,14.1637001 12.3338027,14.6727761 11.941196,14.9598921 C11.7454894,15.1026147 11.5132667,15.1754081 11.2819987,15.1754081 C11.0471507,15.1754081 10.8139734,15.1007054 10.617312,14.9553574 Z">
+                            </path>
+                          </defs>
+                          <g id="Page---Listing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Icon-Slicing" transform="translate(0.000000, -1.000000)">
+                              <g id="Imported-Layers-Copy">
+                                <use fill="currentColor" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                <use fill="none" xlink:href="#path-1"></use>
+                              </g>
+                            </g>
+                          </g>
+                          </svg>
+
+                        </span>
+
+                        <span class="action__text" style="font-family:'Circular Std Book'">Write a review</span>
+                        <span class="action__text--mobile" style="font-family:'Circular Std Book">Review</span>
+                      </a>
+
+                      <div class="job-manager-form action--favorite  action  wp-job-manager-bookmarks-form lwa">
+                        <span class="action__icon">
+                          <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg"><path d="M12.67 8.552c1.626-1.625 1.59-3.995.113-5.465-1.478-1.47-3.868-1.464-5.338.014-1.47-1.474-3.86-1.48-5.338-.01C.63 4.558.595 6.928 2.22 8.55l5.225 5.226c.51-.508 3.41-3.412 5.225-5.226z" fill="currentColor" fill-rule="evenodd"/></svg>
+                        </span>
+                        <a class="action__text lwa-links-modal lwa-login-link" style="font-family:'Circular Std Book" href="">
+                          Add to favorites
+                        </a>
+                        <a class="action__text--mobile lwa-links-modal lwa-login-link" style="font-family:'Circular Std Book" href="">
+                          Favorite
+                        </a>
+                      </div>
+
+                      <div class="action  action--share  tooltip-container">
+                        <a href="#" class="tooltip-trigger  js-tooltip-trigger">
+                          <span class="action__icon">
+                            <svg width="15px" height="16px" viewBox="0 0 15 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <defs></defs>
+                              <g id="Page---Listing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Icon-Slicing" transform="translate(-36.000000, 0.000000)" fill="currentColor">
+                                  <path d="M36,14.5981841 C36,4.64082407 44.3594,4.68562407 44.3594,4.68562407 L44.3594,1.48858407 L50.93716,7.15298407 L44.3594,12.6799041 L44.3594,9.39522407 C44.3594,9.39522407 39.24296,7.92970407 36,14.5981841 L36,14.5981841 Z" id="Imported-Layers-Copy-8"></path>
+                                </g>
+                              </g>
+                            </svg>
+                          </span>
+                          <span class="action__text" style="font-family:'Circular Std Book">Share</span>
+                          <span class="action__text--mobile" style="font-family:'Circular Std Book">Share</span>
+                        </a>
+
+                        <div class="sharedaddy sd-sharing-enabled">
+                          <div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing">
+                            <h3 class="sd-title">Share this:</h3>
+                            <div class="sd-content">
+                              <ul>
+                                <li class="share-twitter">
+                                  <a rel="nofollow" data-shared="sharing-twitter-128" class="share-twitter sd-button share-icon" href="https://demos.pixelgrade.com/listable/listings/jago/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a>
+                                </li>
+                                <li class="share-facebook">
+                                  <a rel="nofollow" data-shared="sharing-facebook-128" class="share-facebook sd-button share-icon" href="https://demos.pixelgrade.com/listable/listings/jago/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a>
+                                </li>
+                                <li class="share-google-plus-1">
+                                  <a rel="nofollow" data-shared="sharing-google-128" class="share-google-plus-1 sd-button share-icon" href="https://demos.pixelgrade.com/listable/listings/jago/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a>
+                                </li>
+                                <li class="share-end"></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div><!-- .action.action--share.tooltip-container -->
+
+
+                    </div><!-- .single-action-buttons -->
+
+                  </div>
+
+                  <div id="listing_content-2" class="widget  widget_listing_content">
+
+                    <div class="job_description" itemprop="description">
+                      <p style="text-align:justify">Harry Potter is an average bespectacled 11 year old boy who has lived with the Dursley family ever since his parents died in a car crash. For some reason the family has always mistreated him. On his 11th birthday a giant man named Rubeus Hagrid hands him a letter telling him that he has been accepted as a student at the Hogwarts School of Witchcraft and Wizardry. Harry learns that his parents were wizards and were killed by an evil wizard Voldemort, a truth that was hidden from him all these years. He embarks for his new life as a student, gathering two good friends Ron Weasley and Hermione Granger along the way. They soon learn that something very valuable is hidden somewhere inside the school and Voldemort is very anxious to lay his hands on it.</p>
+                    </div>
+
+                  </div>
+                  <!--<div id="listing_tags-4" class="widget  widget_listing_tags">
+                  <ul class="listing-tag-list">
+
+                  <li><a href="https://demos.pixelgrade.com/listable/listing-tag/accepts-credit-cards/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-card.svg" alt=""/></span><span class="tag__text">Accepts Credit Cards</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/bike-parking/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-bike.svg" alt=""/></span><span class="tag__text">Bike Parking</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/parking-street/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-car-park.svg" alt=""/></span><span class="tag__text">Parking Street</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/pets-friendly/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-pets.svg" alt=""/></span><span class="tag__text">Pets Friendly</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/wheelchair-accessible/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-wheel-chair.svg" alt=""/></span><span class="tag__text">Wheelchair Accessible</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/wireless-internet/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-wifi.svg" alt=""/></span><span class="tag__text">Wireless Internet</span></a></li>
+                  </ul>
+
+                  </div>-->
+                  <div id="listing_comments-2" class="widget  widget_listing_comments">
+                    <div id="comments" class="comments-area">
+
+
+                      <h2 class="comments-title">1 review</h2>
+
+
+                      <ol class="comment-list">
+                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                          <div class="comment-wrapper" id="div-comment-33">
+                            <header class="comment-header">
+                              <div class="comment-author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                <img src="https://secure.gravatar.com/avatar/b39b9365cd9f10c2e9fb1e89185f70b5?s=75&#038;d=mm&#038;r=g" width="75" height="75" alt="" class="avatar avatar-75wp-user-avatar wp-user-avatar-75 alignnone photo avatar-default" /><span class="fn">Michael</span>
+                              </div><!-- .comment-author .vcard -->
+                            </header>
+
+                            <div class="comment-content" itemprop="reviewBody">
+                              <h3 class="pixrating_title">Good Quality Shit!</h3>
+                              <div class="review_rate" data-pixrating="5"></div>
+                              <div class="comment-meta commentmetadata" itemprop="datePublished" content = "2015-11-06T17:12:39+0000">
+                                <a>
+                                  <time pubdate datetime="2015-11-06T17:12:39+00:00">on November 6, 2015</time><br />
+                                </a>
+                              </div>
+                              <p>a smart move on the part of filmmakers, who knew any significant departure would quickly alienate the target audience. The masterfully made film offers virtually no surprises. That leaves us dealing with the same questions that have been lurking since the first copy of J.K. Rowling’s book rolled off the press. Is it fantasy magic or occult magic? Does the distinction even matter?</p>
+                            </div>
+
+                            <div class="reply">
+                              <a rel='nofollow' class='comment-reply-link' href='https://demos.pixelgrade.com/listable/listings/jago/?replytocom=33#respond' onclick='return addComment.moveForm( "div-comment-33", "33", "respond", "128" )' aria-label='Reply to Michael'>Reply</a>
+                            </div><!-- .reply -->
+                          </div>
+                        </li><!-- #comment-## -->
+                      </ol><!-- .comment-list -->
+
+
+                      <div id="respond" class="comment-respond">
+                        <h3 id="reply-title" class="comment-reply-title">Rate and write a review <small><a rel="nofollow" id="cancel-comment-reply-link" href="/listable/listings/jago/#respond" style="display:none;">Cancel reply</a></small></h3>
+                        <form action="https://demos.pixelgrade.com/listable/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+                          <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked
+                            <span class="required">*</span>
+                          </p>
+                          <p class="comment-form-comment">
+                            <label for="comment">Your Review:</label>
+                            <textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required" placeholder="Tell about Harry Potter and the Sorcerer Stone"></textarea>
+                          </p>
+                          <p class="comment-form-author">
+                            <label for="author">Name <span class="required">*</span></label>
+                            <input id="author" placeholder="Your name" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' />
+                          </p>
+                          <p class="comment-form-email">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input id="email" placeholder="your@email.com" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' />
+                          </p>
+                          <p class="comment-form-url">
+                            <label for="url">Website</label>
+                            <input id="url" name="url" type="url" value="" size="30" maxlength="200" />
+                          </p>
+
+                          <div id="add_comment_rating_wrap">
+                            <label for="add_post_rating">Your overall rating of this listing</label>
+
+                            <div id="add_post_rating" data-pixrating="4" data-assets_path="https://demos.pixelgrade.com/wp-content/plugins/comments-ratings//images"></div>
+                          </div>
+
+                          <p class="review-title-form">
+                            <label for="pixrating_title">Title of your review</label>
+                            <input type='text' id='pixrating_title' name='pixrating_title' value="" placeholder="Summarize your opinion or highlight an interesting detail" size='25'/>
+                          </p>
+
+                          <p class="form-submit">
+                            <input name="submit" type="submit" id="submit" class="submit" value="Submit your Review" />
+                            <input type='hidden' name='comment_post_ID' value='128' id='comment_post_ID' />
+                            <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                          </p>
+                          <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="f1e3d1018c" /></p>
+                          <p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" />
+                            <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label>
+                          </p>
+                          <p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="134"/></p>
+                        </form>
+                      </div><!-- #respond -->
+                    </div><!-- #comments -->
+                  </div>
+                </div>
+              </div> <!-- / .column-1 -->
+
+              <div class="grid__item  column-sidebar" style="padding-left: 10vw">
+
+                <div class="container calendar">
+                  <div class="header">
+                    <div class="icon arr prev"></div>
+                    <div class="month">May 2014</div>
+                    <div class="icon arr next"></div>
+                  </div>
+
+                  <table>
+                    <tr>
+                      <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                    <tr>
+                      <td class="notCurMonth">29</td><td class="notCurMonth">30</td>
+                      <td>1</td><td>2</td><td class="curDay">3</td><td>4</td><td>5</td>
+                    </tr>
+                    <tr>
+                      <td>6</td><td class="holiday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+                    </tr>
+                    <tr>
+                      <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+                    </tr>
+                    <tr>
+                      <td>20</td><td>21</td><td>22</td><td class="holiday">23</td><td>24</td><td>25</td><td>26</td>
+                    </tr>
+                    <tr>
+                      <td>27</td><td>28</td><td>29</td><td>30</td>
+                      <td class="notCurMonth">1</td><td class="notCurMonth">2</td class="notCurMonth"><td class="notCurMonth">3</td>
+                    </tr>
+                  </table>
+                  <button class="button-big" id="add_event">Add event</button>
+                </div>
+
+
+                <form action="" class="container booking" name="booking">
+                  <div class="header" id='map'>
+                  </div>
+
+                  <div class="dates" data-type="none">
+                    <label for="checkin">Borrow from</label>
+                    <div class="input-text">
+                      <input type="datetime" value="9 July, 2016" id="checkin" readonly>
+                      <div class="icon pop-up"></div>
+                    </div>
+
+                    <label for="checkout">Up to</label>
+                    <div class="input-text">
+                      <input type="datetime" value="16 July, 2016" id="checkout" readonly>
+                      <div class="icon pop-up"></div>
+                    </div>
+
+                  </div>
+
+                  <button class="button-big" id="search"><div class="icon"></div>Borrow this book</button>
+                </form>
+              </div><!-- / .column-2 -->
+            </div>
+          </div>
+        </div><!-- .entry-content -->
+
+
+        <div class="single-listing-map-category-icon">
+          <svg width="24" height="26" viewBox="0 0 24 26" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-12 -11)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"/>
+            <g fill="currentColor">
+              <path d="M18.372 36.737h-.036c-1.278 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-3.367 2.39-6.106 5.325-6.106 2.938 0 5.325 2.74 5.325 6.106 0 1.833-.71 3.552-1.946 4.715-.672.634-1.043 1.442-1.043 2.278v10.17c0 1.282-1.04 2.322-2.318 2.322zm-.02-24.55c-2.363 0-4.285 2.273-4.285 5.065 0 1.547.59 2.99 1.617 3.96.884.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.28-.575 1.28-1.28V24.244c0-1.126.487-2.202 1.37-3.034 1.03-.968 1.62-2.41 1.62-3.958.002-2.794-1.922-5.066-4.287-5.066zM29.983 36.737h-.036c-1.28 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-1.406 0-3.155 1.094-4.374.21-.23.49-.357.797-.357.582 0 1.056.46 1.077 1.033l.448 3.343c.01.072.127.053.133-.002l.46-4.1c.015-.487.364-.91.843-1.017.04-.007.075-.013.113-.013h.728c.04 0 .077.004.113.013.478.106.828.53.843 1.016l.46 4.1c.01.075.125.056.132.003l.45-3.343c.02-.572.495-1.032 1.075-1.032.307 0 .588.127.796.358 1.093 1.22 1.093 2.968 1.093 4.374 0 1.833-.71 3.552-1.945 4.715-.67.634-1.042 1.444-1.042 2.278v10.17c-.002 1.282-1.042 2.322-2.323 2.322zm-3.865-23.512l.386.347c-.766.854-.826 2.118-.826 3.68 0 1.547.59 2.99 1.617 3.96.883.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.282-.575 1.282-1.28V24.244c0-1.126.486-2.202 1.37-3.034 1.028-.968 1.617-2.41 1.617-3.958 0-1.562-.062-2.826-.828-3.68 0 .023-.062.067-.066.09l-.452 3.372c-.072.545-.542.956-1.092.956-.57 0-1.042-.42-1.105-.978l-.46-4.126c-.003-.02-.005-.038-.005-.06l.004-.02h-.533c-.008.023-.03.063-.03.08l-.462 4.126c-.062.557-.533.978-1.095.978-.56 0-1.03-.41-1.1-.956l-.453-3.373c-.003-.02-.003-.044-.003-.067l-.452-.368z"/><path d="M18.397 21.105c-1.72 0-3.118-1.67-3.118-3.723 0-2.054 1.397-3.724 3.117-3.724.216 0 .39.174.39.39 0 .215-.174.39-.39.39-1.29 0-2.338 1.32-2.338 2.944 0 1.623 1.046 2.944 2.337 2.944.216 0 .39.174.39.39 0 .215-.174.39-.39.39z"/>
+            </g>
+          </svg>
+        </div>
+
+      </div><!-- #content -->
+
+
+  </div><!-- Page -->
+
+  <script type='text/javascript' src='https://demos.pixelgrade.com/listable/wp-includes/js/comment-reply.min.js?ver=4.9.4'></script>
+  <script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/comments-ratings/js/jquery.raty.js?ver=1518791654'></script>
+  <script type='text/javascript'>
+  /* <![CDATA[ */
+    var pixreviews = {"hints":["Terrible","Poor","Average","Very Good","Exceptional"]};
+  /* ]]> */
+  </script>
+  <script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/comments-ratings/js/reviews.js?ver=1518791654'></script>
+<script type='text/javascript' src='js/landingpage/search2.js'></script>
+</body>
+</html>
