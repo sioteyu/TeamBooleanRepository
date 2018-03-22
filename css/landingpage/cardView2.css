@@ -40,7 +40,7 @@
   height: 400px;
   overflow: hidden;
 }
-.post-module .thumbnail .date {
+.date {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -59,10 +59,10 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.post-module .thumbnail .date .day {
+.date .day {
   font-size: 18px;
 }
-.post-module .thumbnail .date .month {
+.date .month {
   font-size: 12px;
   text-transform: uppercase;
 }
