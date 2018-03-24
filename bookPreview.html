@@ -66,10 +66,10 @@
             </ul>
           </nav>
 
-          <div id="panel" style="width: 370px; float: left; margin-right: 10px; margin-top:13vh;">
+          <div id="panel" style="width: 370px; float: left; margin-right: 10px; margin-top:100px;">
           <div class="dropdown" style="text-align:center">
           <div class="select" style="background-color: #5d9cec; border-bottom: solid #ececec;">
-            <span style="font-size:1.5em; font-weight:600; color:white">Select Filter</span>
+            <span style="font-size:1.5em; font-weight:600; color:white">Most Rated</span>
             <i class="fa fa-chevron-left"></i>
           </div>
           <input type="hidden" name="gender">
@@ -143,7 +143,7 @@
         </div>
 
           <div class="date" style="top:4%; border-radius:80px; width:191px">
-              <div class="day">7</div>
+              <div class="day">4</div>
               <div class="month">Copies</div>
             </div>
 
@@ -170,7 +170,7 @@
                     <a href="#comments" class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
                       <meta itemprop="ratingValue" content = "3.00">
                     </a>
-                    <a class="listing-contact">5 Stars</a>
+                    <a class="listing-contact">3 Stars</a>
                   </div>
                   <ul class="tags" style="padding-left:0;">
 	                   <li><a href="#" style="color:white; margin-left:10px">Mystery</a></li>
@@ -396,7 +396,7 @@
                 <div class="listing-sidebar  listing-sidebar--bottom  listing-sidebar--secondary" style="width:346px">
                   <div id="listing_sidebar_gallery-2" class="widget  widget_listing_sidebar_gallery">
             			<header class="listing-gallery__header">
-            				<span class="listing-gallery__title" style="font-size:1.3em; font-weight:600">Awards</span>
+            				<span class="listing-gallery__title" style="font-size:1.3em; font-weight:600">Recognitions</span>
             			</header>
             			<div class="listing-gallery__items  js-widget-gallery">
 
@@ -462,33 +462,63 @@
     $(document).ready(function(){
       map = new GMaps({
         el: '#map-canvas',
-        lat: -12.043333,
-        lng: -77.028333,
-        zoomControl : true,
-        zoomControlOpt: {
-            style : 'SMALL',
-            position: 'TOP_LEFT'
-        },
+        lat: 14.561734,
+        lng: 121.019549,
+        zoom: 16,
         panControl : false,
         streetViewControl : false,
         mapTypeControl: false,
         overviewMapControl: false
       });
 
-      map2 = new GMaps({
-        el: '#map',
-        lat: -12.043333,
-        lng: -77.028333,
-        zoomControl : true,
-        zoomControlOpt: {
-            style : 'SMALL',
-            position: 'TOP_LEFT'
-        },
-        panControl : false,
-        streetViewControl : false,
-        mapTypeControl: false,
-        overviewMapControl: false
+      map.addMarker({
+        lat: 14.561734,
+        lng: 121.019549,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+          content: '<p>HTML Content</p>'
+        }
       });
+
+      map.addMarker({
+        lat: 14.563066,
+        lng: 121.019194,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+          content: '<p>HTML Content</p>'
+        }
+      });
+
+      map.addMarker({
+        lat: 14.561576,
+        lng: 121.017939,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+          content: '<p>HTML Content</p>'
+        }
+      });
+
+      map.addMarker({
+        lat: 14.561130,
+        lng: 121.020901,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+          content: '<p>HTML Content</p>'
+        }
+      });
+
+
+      var url = GMaps.staticMapURL({
+        size: [610, 350],
+        lat: 14.561734,
+        lng: 121.019549,
+        zoom:18,
+        markers: [
+          {  lat: 14.561734,
+            lng: 121.019549},
+        ]
+      });
+      $('<img/>').attr('src', url).appendTo('#map');
     });
   </script>
   <script type="text/javascript">
