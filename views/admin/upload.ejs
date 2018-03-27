@@ -1,0 +1,20 @@
+<h1 class="text-center">Upload Books</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" class="form-control" name="title" placeholder="title">
+  </div>
+  <div class="form-group">
+    <label>Author</label>
+    <input type="text" class="form-control" name="author" placeholder="author">
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <textarea class="form-control" rows="4" name="description" placeholder="Enter Description" style="resize:none"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Upload Image</label>
+    <input type="file" accept="image/*" name="fileUploaded">
+  </div>
+  <button type="submit" class="btn btn-info">Submit</button>
+</form>
