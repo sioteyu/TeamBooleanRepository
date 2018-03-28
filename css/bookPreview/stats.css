@@ -1,0 +1,45 @@
+.stats {
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+.stats h2 {
+  margin-top: 0;
+  color: #3b3b3b;
+}
+.stat {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 640px) {
+  .stat {
+    margin-right: 4rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.stat h4 {
+  margin-bottom: 0.1rem;
+  margin-top: 0;
+  color: #9c9c9c;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.65rem;
+}
+@media (min-width: 640px) {
+  .stat h4 {
+    font-size: 0.7rem;
+  }
+}
+.stat p {
+  line-height: 1;
+  font-weight: 800;
+  color: #333333;
+  margin: 0;
+  font-size: 2.25rem;
+}
+@media (min-width: 640px) {
+  .stat p {
+    font-size: 3rem;
+  }
+}

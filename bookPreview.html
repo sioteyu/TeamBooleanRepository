@@ -23,9 +23,13 @@
 <link rel="stylesheet" href="css/landingpage/cardView.css">
 <link rel="stylesheet" href="css/bookPreview/tags.css">
 <link rel="stylesheet" href="css/bookPreview/filter.css">
+<link rel="stylesheet" href="css/bookPreview/grid.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="css/bookPreview/stats.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body class="job_listing-template-default single single-job_listing postid-128 wp-custom-logo listable" data-mapbox-token="pk.eyJ1IjoiZ2Vvcmdlb2xhcnUiLCJhIjoiY2lneTNtZ2VtMDBlNmtya3IzdHY0ZTl2biJ9.ZQPEMiJW_XQjJHUFRlioug" data-mapbox-style="mapbox.streets-basic">
+<body class="job_listing-template-default single single-job_listing postid-128 wp-custom-logo listable">
 
     <div id="page" class="hfeed site">
 
@@ -66,123 +70,51 @@
             </ul>
           </nav>
 
-          <div id="panel" style="width: 370px; float: left; margin-right: 10px; margin-top:100px;">
-          <div class="dropdown" style="text-align:center">
-          <div class="select" style="background-color: #5d9cec; border-bottom: solid #ececec;">
-            <span style="font-size:1.5em; font-weight:600; color:white">Most Rated</span>
-            <i class="fa fa-chevron-left"></i>
-          </div>
-          <input type="hidden" name="gender">
-            <ul class="dropdown-menu">
-              <li id="male">Most Rated</li>
-              <li id="female">Price</li>
-              <li id="female">Alphabetical</li>
-            </ul>
-          </div>
+          <header class="entry-header" style="margin-top:100px; padding-top:0px; padding-bottom:0px">
+            <div class="grid1" style="height:590px; padding-right:0; margin-left:7%">
+	              <article class="module desktop-3 tablet-4" style="background-color:#f9f9f9; height:500px; padding-left:50px;">
+                  <h1 class="entry-title" itemprop="name" style="text-transform:unset;font-family:'Circular Std Book'; color:#333333; font-weight:700; font-size:3em">Harry Potter and the Philosopher Stone</h1>
+                <span class="entry-subtitle" itemprop="description" style="font-family: 'Circular Std Book'; font-size:1.3em; color:#333333">By: JK Rowling</span>
 
-          <div style="overflow-y:scroll; height:434px;">
-            <div class="card card--small" style="background-color:white">
-              <div class="card__image" style="background-image: url('images/bookPreview/sample2.jpg');"></div>
-              <h2 class="card__title">Matthew Alviz</h2><span class="card__subtitle">
-              <div class="c_info" style="padding-left:0">
-                    <span id="c_stars" data-star="5"><span style="width: 60px;"></span></span>
-                    <div class="c_num">5 Stars</div>
-            </div>
-          </span>
-              <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
-              <div class="card__action-bar">
-                <button class="card__button">SHOW</button>
-                <button class="card__button">BORROW</button>
+                <div class="single-meta" style="justify-content:unset">
+                  <a href="#comments" class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" style="padding:0">
+                    <meta itemprop="ratingValue" content = "3.00">
+                  </a>
+                  <a class="listing-contact" style="color:#333333">3 Stars</a>
+                </div>
+                <ul class="tags" style="padding-left:0;margin-top:20px;margin-bottom:71px">
+                   <li><a href="#" style="color:white; margin-left:10px">Mystery</a></li>
+                   <li><a href="#" style="color:white">Drama</a></li>
+                </ul>
+                <div class="stats">
+
+                  <div class="stat">
+                    <h4>Recognitions</h4>
+                    <p><i class="fa fa-trophy" style="color:#ecd34a"></i>+5</p>
+                  </div>
+
+                  <div class="stat">
+                    <h4>Favorites</h4>
+                    <p><i class="fa fa-heart" style="padding:0; position:unset;color:#c55252"></i>+30</p>
+                  </div>
+                </div>
+
+              </article>
+	              <article class="module desktop-3 tablet-4" style="padding-top: 0;height: 500px; width: 500px; padding: 0; margin-left:0; background-color: #f9f9f9; padding:15px;"><img style="height:470px;width:470px" src="images/landingpage/sample.jpeg" alt=""></article>
               </div>
-            </div>
+          </header><!-- .entry-header -->
 
-            <div class="card card--small" style="background-color:white">
-              <div class="card__image" style="background-image: url('images/bookPreview/sample3.png');"></div>
-              <h2 class="card__title">John Cuthpert</h2><span class="card__subtitle">
-                <div class="c_info" style="padding-left:0">
-                      <span id="c_stars" data-star="5"><span style="width: 60px;"></span></span>
-                      <div class="c_num">5 Stars</div>
-              </div>
-            </span>
-              <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
-              <div class="card__action-bar">
-                <button class="card__button">SHOW</button>
-                <button class="card__button">BORROW</button>
-              </div>
-            </div>
+          <div class="single_job_listing">
 
-            <div class="card card--small" style="background-color:white">
-              <div class="card__image" style="background-image: url('images/bookPreview/sample4.jpg');"></div>
-              <h2 class="card__title">Gelline Gruta</h2><span class="card__subtitle">
-                <div class="c_info" style="padding-left:0">
-                      <span id="c_stars" data-star="5"><span style="width: 60px;"></span></span>
-                      <div class="c_num">5 Stars</div>
-              </div>
-            </span>
-              <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
-              <div class="card__action-bar">
-                <button class="card__button">SHOW</button>
-                <button class="card__button">BORROW</button>
-              </div>
-            </div>
-
-            <div class="card card--small" style="background-color:white">
-              <div class="card__image" style="background-image: url('images/bookPreview/sample5.jpg');"></div>
-              <h2 class="card__title">Anton Macrohon</h2><span class="card__subtitle"><div class="c_info" style="padding-left:0">
-                    <span id="c_stars" data-star="5"><span style="width: 60px;"></span></span>
-                    <div class="c_num">5 Stars</div>
-            </div>
-          </span>
-              <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
-              <div class="card__action-bar">
-                <button class="card__button">SHOW</button>
-                <button class="card__button">BORROW</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-          <div class="date" style="top:4%; border-radius:80px; width:191px">
-              <div class="day">4</div>
-              <div class="month">Copies</div>
-            </div>
-
-          <div id="map-canvas" style="height: 600px;"></div>
-
-          <div class="single_job_listing"
-          data-latitude="51.520138"
-          data-longitude="-0.0703134"
-          data-categories="Eat"
-          data-icon="">
 
             <div class="grid">
-              <div class="grid__item  column-content  entry-content">
-                <header class="entry-header">
-                  <nav class="single-categories-breadcrumb">
-                    <a href="">Mystery</a> /
-                    <a href="">Fantasy</a> /<a href="">Drama</a>
-                  </nav>
-
-                  <h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:#333333; font-weight:700">Harry Potter and the Philospher Stone</h1>
-                  <span class="entry-subtitle" itemprop="description" style="font-family: 'Circular Std Book'; font-size:1.3em">By: JK Rowling</span>
-
-                  <div class="single-meta" style="justify-content:unset">
-                    <a href="#comments" class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
-                      <meta itemprop="ratingValue" content = "3.00">
-                    </a>
-                    <a class="listing-contact">3 Stars</a>
-                  </div>
-                  <ul class="tags" style="padding-left:0;">
-	                   <li><a href="#" style="color:white; margin-left:10px">Mystery</a></li>
-	                   <li><a href="#" style="color:white">Drama</a></li>
-                  </ul>
-                </header><!-- .entry-header -->
+              <div class="">
 
                 <div class="listing-sidebar  listing-sidebar--main">
                   <div id="listing_actions-2" class="widget  widget_listing_actions">
                     <div class="single-action-buttons">
 
-                      <a href="#respond" class="action  action--review">
+                      <a href="#respond" class="action  action--review" style="font-size:1.3em">
                         <span class="action__icon">
 
                           <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -202,15 +134,15 @@
 
                         </span>
 
-                        <span class="action__text" style="font-family:'Circular Std Book'">Write a review</span>
+                        <span class="action__text" style="font-family:'Circular Std Book'" >Write a review</span>
                         <span class="action__text--mobile" style="font-family:'Circular Std Book">Review</span>
                       </a>
 
-                      <div class="job-manager-form action--favorite  action  wp-job-manager-bookmarks-form lwa">
+                      <div class="job-manager-form action--favorite  action  wp-job-manager-bookmarks-form lwa" style="font-size:1.3em">
                         <span class="action__icon">
                           <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg"><path d="M12.67 8.552c1.626-1.625 1.59-3.995.113-5.465-1.478-1.47-3.868-1.464-5.338.014-1.47-1.474-3.86-1.48-5.338-.01C.63 4.558.595 6.928 2.22 8.55l5.225 5.226c.51-.508 3.41-3.412 5.225-5.226z" fill="currentColor" fill-rule="evenodd"/></svg>
                         </span>
-                        <a class="action__text lwa-links-modal lwa-login-link" style="font-family:'Circular Std Book" href="">
+                        <a class="action__text lwa-links-modal lwa-login-link" style="font-family:'Circular Std Book"  style="font-size:1.5em" href="">
                           Add to favorites
                         </a>
                         <a class="action__text--mobile lwa-links-modal lwa-login-link" style="font-family:'Circular Std Book" href="">
@@ -218,8 +150,17 @@
                         </a>
                       </div>
 
+                      <div class="job-manager-form action--favorite  action  wp-job-manager-bookmarks-form lwa" style="font-size:1.3em">
+                        <span class="action__icon">
+                          <svg width="15" height="16" viewBox="0 0 15 16"  style="left:42%;top:46%" xmlns="http://www.w3.org/2000/svg"><path xmlns="http://www.w3.org/2000/svg" d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                        </span>
+                        <a class="action__text lwa-links-modal lwa-login-link" style="font-family:'Circular Std Book" href="">
+                          Borrow a copy
+                        </a>
+                      </div>
+
                       <div class="action  action--share  tooltip-container">
-                        <a href="#" class="tooltip-trigger  js-tooltip-trigger">
+                        <a href="#" class="tooltip-trigger  js-tooltip-trigger" style="font-size:1.3em">
                           <span class="action__icon">
                             <svg width="15px" height="16px" viewBox="0 0 15 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                               <defs></defs>
@@ -261,6 +202,7 @@
 
                   </div>
 
+                  <h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:white; font-weight:700; color: #413d3d; border-top:1px solid rgba(0, 0, 0, 0.075); padding-top:15px; font-size:2.3em">Synopsis</h1>
                   <div id="listing_content-2" class="widget  widget_listing_content">
 
                     <div class="job_description" itemprop="description">
@@ -268,23 +210,102 @@
                     </div>
 
                   </div>
-                  <!--<div id="listing_tags-4" class="widget  widget_listing_tags">
-                  <ul class="listing-tag-list">
 
-                  <li><a href="https://demos.pixelgrade.com/listable/listing-tag/accepts-credit-cards/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-card.svg" alt=""/></span><span class="tag__text">Accepts Credit Cards</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/bike-parking/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-bike.svg" alt=""/></span><span class="tag__text">Bike Parking</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/parking-street/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-car-park.svg" alt=""/></span><span class="tag__text">Parking Street</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/pets-friendly/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-pets.svg" alt=""/></span><span class="tag__text">Pets Friendly</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/wheelchair-accessible/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-wheel-chair.svg" alt=""/></span><span class="tag__text">Wheelchair Accessible</span></a></li><li><a href="https://demos.pixelgrade.com/listable/listing-tag/wireless-internet/" class="listing-tag"><span class="tag__icon"><img src="https://cdn.demos.pixelgrade.com/wp-content/uploads/sites/17/2015/10/tag-wifi.svg" alt=""/></span><span class="tag__text">Wireless Internet</span></a></li>
-                  </ul>
-
-                  </div>-->
+                  <h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:white; font-weight:700; color: #413d3d; border-top:1px solid rgba(0, 0, 0, 0.075); padding-top:15px; font-size:2.3em">Location</h1>
                   <div id="listing_comments-2" class="widget  widget_listing_comments">
                     <div id="comments" class="comments-area">
+                      <div class="" style="height:100%; width:100%">
+                        <div id="panel" style="width: 370px; float: left; margin-right: 10px;">
+                        <div class="dropdown" style="text-align:center">
+                        <div class="select" style="background-color: #5d9cec; border-bottom: solid #ececec;">
+                          <span style="font-size:1.5em; font-weight:600; color:white">Most Rated</span>
+                          <i class="fa fa-chevron-left"></i>
+                        </div>
+                        <input type="hidden" name="gender">
+                          <ul class="dropdown-menu">
+                            <li id="male">Most Rated</li>
+                            <li id="female">Price</li>
+                            <li id="female">Alphabetical</li>
+                          </ul>
+                        </div>
+
+                        <div style="overflow-y:scroll; height:434px;">
+                          <div class="card card--small" style="background-color:white">
+                            <div class="card__image" style="background-image: url('images/bookPreview/sample2.jpg');"></div>
+                            <h2 class="card__title">Matthew Alviz</h2><span class="card__subtitle">
+                            <div class="c_info" style="padding-left:0">
+                                  <span id="c_stars" data-star="5"><span style="width: 60px;"></span></span>
+                                  <div class="c_num">5 Stars</div>
+                          </div>
+                        </span>
+                            <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+                            <div class="card__action-bar">
+                              <button class="card__button">SHOW</button>
+                              <button class="card__button">BORROW</button>
+                            </div>
+                          </div>
+
+                          <div class="card card--small" style="background-color:white">
+                            <div class="card__image" style="background-image: url('images/bookPreview/sample3.png');"></div>
+                            <h2 class="card__title">John Cuthpert</h2><span class="card__subtitle">
+                              <div class="c_info" style="padding-left:0">
+                                    <span id="c_stars" data-star="5"><span style="width: 60px;"></span></span>
+                                    <div class="c_num">5 Stars</div>
+                            </div>
+                          </span>
+                            <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+                            <div class="card__action-bar">
+                              <button class="card__button">SHOW</button>
+                              <button class="card__button">BORROW</button>
+                            </div>
+                          </div>
+
+                          <div class="card card--small" style="background-color:white">
+                            <div class="card__image" style="background-image: url('images/bookPreview/sample4.jpg');"></div>
+                            <h2 class="card__title">Gelline Gruta</h2><span class="card__subtitle">
+                              <div class="c_info" style="padding-left:0">
+                                    <span id="c_stars" data-star="5"><span style="width: 60px;"></span></span>
+                                    <div class="c_num">5 Stars</div>
+                            </div>
+                          </span>
+                            <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+                            <div class="card__action-bar">
+                              <button class="card__button">SHOW</button>
+                              <button class="card__button">BORROW</button>
+                            </div>
+                          </div>
+
+                          <div class="card card--small" style="background-color:white">
+                            <div class="card__image" style="background-image: url('images/bookPreview/sample5.jpg');"></div>
+                            <h2 class="card__title">Anton Macrohon</h2><span class="card__subtitle"><div class="c_info" style="padding-left:0">
+                                  <span id="c_stars" data-star="5"><span style="width: 60px;"></span></span>
+                                  <div class="c_num">5 Stars</div>
+                          </div>
+                        </span>
+                            <p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+                            <div class="card__action-bar">
+                              <button class="card__button">SHOW</button>
+                              <button class="card__button">BORROW</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                        <!--<div class="date" style="top:4%; border-radius:80px; width:191px">
+                            <div class="day">4</div>
+                            <div class="month">Copies</div>
+                          </div>-->
+
+                        <div id="map-canvas" style="height: 500px;"></div>
+                    </div>
 
 
-                      <h2 class="comments-title">3 review</h2>
+                    <h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:white; font-weight:700; color: #413d3d; border-top:1px solid rgba(0, 0, 0, 0.075); padding-top:15px; font-size:2.3em; margin-bottom:40px; margin-top:40px">Reviews</h1>
 
 
                       <ol class="comment-list">
-                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review">
-                          <div class="comment-wrapper" id="div-comment-33">
+                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review" style="border:unset; margin-bottom:20px">
+                          <div class="comment-wrapper" id="div-comment-33" style="background-color: white; padding:20px; border: 1px solid rgba(0, 0, 0, 0.075);border-radius: 4px;">
                             <header class="comment-header">
                               <div class="comment-author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
                                 <img src="images/bookPreview/profpic1.jpg" width="75" height="75" alt="" class="avatar avatar-75wp-user-avatar wp-user-avatar-75 alignnone photo avatar-default" /><span class="fn">John Doe</span>
@@ -304,8 +325,8 @@
                           </div>
                         </li><!-- #comment-## -->
 
-                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review">
-                          <div class="comment-wrapper" id="div-comment-33">
+                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review" style="border:unset; margin-bottom:20px">
+                          <div class="comment-wrapper" id="div-comment-33" style="background-color: white; padding:20px; border: 1px solid rgba(0, 0, 0, 0.075);border-radius: 4px;">
                             <header class="comment-header">
                               <div class="comment-author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
                                 <img src="images/bookPreview/profpic2.jpg" width="75" height="75" alt="" class="avatar avatar-75wp-user-avatar wp-user-avatar-75 alignnone photo avatar-default" /><span class="fn">Rasheed</span>
@@ -325,8 +346,8 @@
                           </div>
                         </li><!-- #comment-## -->
 
-                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review">
-                          <div class="comment-wrapper" id="div-comment-33">
+                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review" style="border:unset; margin-bottom:20px">
+                          <div class="comment-wrapper" id="div-comment-33" style="background-color: white; padding:20px; border: 1px solid rgba(0, 0, 0, 0.075);border-radius: 4px;">
                             <header class="comment-header">
                               <div class="comment-author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
                                 <img src="images/bookPreview/profpic3.jpg" width="75" height="75" alt="" class="avatar avatar-75wp-user-avatar wp-user-avatar-75 alignnone photo avatar-default" /><span class="fn">Duvi</span>
@@ -347,9 +368,8 @@
                         </li><!-- #comment-## -->
                       </ol><!-- .comment-list -->
 
-
+                      <h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:white; font-weight:700; color: #413d3d; border-top:1px solid rgba(0, 0, 0, 0.075); padding-top:15px; font-size:2.3em; margin-bottom:40px; margin-top:40px">Rate and write a review</h1>
                       <div id="respond" class="comment-respond">
-                        <h3 id="reply-title" class="comment-reply-title" style="font-size:1.3em">Rate and write a review <small><a rel="nofollow" id="cancel-comment-reply-link" href="/listable/listings/jago/#respond" style="display:none;">Cancel reply</a></small></h3>
                         <form action=" " method="post" id="commentform" class="comment-form" novalidate>
                           <p class="review-title-form">
                             <label for="pixrating_title">Title of your review</label>
@@ -392,51 +412,6 @@
                 </div>
               </div> <!-- / .column-1 -->
 
-              <div class="grid__item  column-sidebar" style="padding-left: 10vw">
-                <div class="listing-sidebar  listing-sidebar--bottom  listing-sidebar--secondary" style="width:346px">
-                  <div id="listing_sidebar_gallery-2" class="widget  widget_listing_sidebar_gallery">
-            			<header class="listing-gallery__header">
-            				<span class="listing-gallery__title" style="font-size:1.3em; font-weight:600">Recognitions</span>
-            			</header>
-            			<div class="listing-gallery__items  js-widget-gallery">
-
-            									<a  class="listing-gallery__item">
-            						              <img width="300" height="300" src="images/bookResult/sample1.png" class="attachment-thumbnail size-thumbnail">
-                             </a>
-                             <a  class="listing-gallery__item">
-                                     <img width="300" height="300" src="images/bookResult/sample2.png" class="attachment-thumbnail size-thumbnail">
-                            </a>
-                            <a  class="listing-gallery__item">
-                                    <img width="300" height="300" src="images/bookResult/sample3.png" class="attachment-thumbnail size-thumbnail">
-                           </a>
-                           <a  class="listing-gallery__item">
-                                   <img width="300" height="300" src="images/bookResult/sample4.png" class="attachment-thumbnail size-thumbnail">
-                          </a>
-                          <a  class="listing-gallery__item">
-                                  <img width="300" height="300" src="images/bookResult/sample5.png" class="attachment-thumbnail size-thumbnail">
-                         </a>
-
-    			        </div><!-- .listing-gallery__items -->
-
-            		</div>
-  </div>
-
-                <form action="" class="container booking" id='borrowForm' name="booking">
-                  <div class="header" id='map'>
-                  </div>
-
-                  <!--<div class="dates" data-type="none">
-                    <label for="checkin">Borrow at:</label>
-                    <div class="input-text">
-                      <input type="datetime" value="March 22, 2018" id="checkin" readonly>
-                      <div class="icon pop-up"></div>
-                    </div>
-                  </div>-->
-
-                  <button class="button-big" id="search">BORROW THIS COPY</button>
-                  <button class="button-big" id="search" style="margin-top:0" onclick="topFunction()">CHECK OUT MORE</button>
-                </form>
-              </div><!-- / .column-2 -->
             </div>
           </div>
         </div><!-- .entry-content -->
@@ -528,7 +503,6 @@
 }
   </script>
   <script type="text/javascript" src="js/bookPreview/filter.js"></script>
-  <script type="text/javascript" src="js/bookPreview/borrowForm.js"></script>
   <script type='text/javascript' src='https://demos.pixelgrade.com/listable/wp-includes/js/comment-reply.min.js?ver=4.9.4'></script>
   <script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/comments-ratings/js/jquery.raty.js?ver=1518791654'></script>
   <script type='text/javascript'>
