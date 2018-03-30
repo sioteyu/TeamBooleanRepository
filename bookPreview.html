@@ -26,10 +26,36 @@
 <link rel="stylesheet" href="css/bookPreview/grid.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900" rel="stylesheet">
 <link rel="stylesheet" href="css/bookPreview/stats.css">
+<link rel="stylesheet" href="css/bookPreview/log-in.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body class="job_listing-template-default single single-job_listing postid-128 wp-custom-logo listable">
+<body id='hey' class="job_listing-template-default single single-job_listing postid-128 wp-custom-logo listable">
+
+    <div class='here' style="position:absolute; width:100%; height:500%; background-color:rgba(0, 0, 0, 0.75) !important; z-index:99; transition:2s; display:none">
+
+    </div>
+
+    <div style="position:fixed;top:30vh; left:37vw; z-index:100; display:none" class="login-page">
+      <div class="form2">
+        <h1 class="entry-title" id='text1'itemprop="name" style="font-family:'Circular Std Book'; font-weight:700; color: #413d3d; border-bottom:1px solid rgba(0, 0, 0, 0.075); padding-bottom:15px; font-size:2.3em">Log-in</h1>
+        <form class="register-form">
+          <input type="text" placeholder="Enter first name" style="margin-top:20px"/>
+          <input type="text" placeholder="Enter last name"/>
+          <input type="text" placeholder="Email address"/>
+          <input type="password" placeholder="Create a password"/>
+          <button>create</button>
+          <p class="message">Already registered? <a class='mssg2'>Log-in</a></p>
+        </form>
+        <form class="login-form">
+          <input type="text" style="margin-top:20px"placeholder="Email address"/>
+          <input type="password" placeholder="Password"/>
+          <button>login</button>
+          <p class="message"><a>Forgot password?</a></p>
+          <p class="message" style="margin-top:0">Not registered? <a class='mssg1'>Create an account</a></p>
+        </form>
+      </div>
+    </div>
 
     <div id="page" class="hfeed site">
 
@@ -65,8 +91,8 @@
             <ul>
               <li><a>About Bookhub</a></li>
               <li><a>Share A Book</a></li>
-              <li><a>Sign-up</a></li>
-              <li><a>Log-in</a></li>
+              <li><a class="sign-up">Sign-up</a></li>
+              <li><a class="log-in">Log-in</a></li>
             </ul>
           </nav>
 
@@ -215,7 +241,7 @@
                   <div id="listing_comments-2" class="widget  widget_listing_comments">
                     <div id="comments" class="comments-area">
                       <div class="" style="height:100%; width:100%">
-                        <div id="panel" style="width: 370px; float: left; margin-right: 10px;">
+                        <div id="panel" style="width: 370px; float: left;">
                         <div class="dropdown" style="text-align:center">
                         <div class="select" style="background-color: #5d9cec; border-bottom: solid #ececec;">
                           <span style="font-size:1.5em; font-weight:600; color:white">Most Rated</span>
@@ -512,5 +538,6 @@
   </script>
   <script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/comments-ratings/js/reviews.js?ver=1518791654'></script>
 <script type='text/javascript' src='js/landingpage/search2.js'></script>
+<script type='text/javascript' src='js/bookPreview/log-in.js'></script>
 </body>
 </html>
