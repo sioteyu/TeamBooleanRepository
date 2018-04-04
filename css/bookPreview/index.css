@@ -156,7 +156,7 @@ html, .job_filters, .page-package-selection .hentry.hentry, .single-job_listing 
 .woocommerce-account:not(.logged-in) .entry-content .woocommerce form,
 .post-password-form,
 .page-listings div.job_listings .load_more_jobs strong,
-body.registration .entry-content { background-color: #ffffff; }
+body.registration .entry-content { background-color: #f9f9f9; }
 .widget_listing_comments #add_post_rating:not(:empty):before { border-right-color: #ffffff; }
 .front-page-section:nth-child(2n),
 .blog, .archive, .woocommerce.archive,
@@ -223,7 +223,7 @@ input[type="checkbox"]:focus,
 .woocommerce-account:not(.logged-in) .woocommerce form.login input[type="submit"]:focus, .woocommerce .button:focus,
 .package__btn.package__btn:hover,
 .job_listing_preview_title input[name="edit_job"],
- .page-template-front_page .search-form .search-submit:hover, .woocommerce-message > a.button.wc-forward:hover { background-color: #3498db; }
+ .page-template-front_page .search-form .search-submit:hover, .woocommerce-message > a.button.wc-forward:hover { background-color: #4A89DC; }
 .btn, input[type="submit"],
 .page-template-front_page .search-form .search-submit,
 .job-manager-form fieldset .job-manager-uploaded-files .job-manager-uploaded-file .job-manager-uploaded-file-preview a,
