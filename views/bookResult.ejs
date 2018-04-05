@@ -42,22 +42,11 @@
     });
   });
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
 <body class="page-template-default page page-id-12 wp-custom-logo page-listings listable" data-mapbox-token="pk.eyJ1IjoiZ2Vvcmdlb2xhcnUiLCJhIjoiY2lneTNtZ2VtMDBlNmtya3IzdHY0ZTl2biJ9.ZQPEMiJW_XQjJHUFRlioug" data-mapbox-style="mapbox.streets-basic">
 <div id="content" class="site-content js-header-height-padding-top">
-  <script type="text/javascript">
-  var singleton = require('../routes/singleton.js');
-  var bucket = singleton.configAdmin;
-  // <%for(var i = 0;i<data.length;++i){%>
-  //   bucket
-  //   .file(<%=data[i].photo%>)
-  //   .download({destination: './public/downloads/'+<%=data[i].photo%>})
-  //   .then(()=>{
-  //     alert('done');
-  //   });
-  // <%}%>
-  </script>
   <div id="primary" class="content-area">
   	<main id="main" class="site-main" role="main">
   		<article id="post-12" class="post-12 page type-page status-publish hentry">
@@ -154,7 +143,7 @@
                           <div class="date">
                             <div class="day">7</div>
                             <div class="month">Copies</div>
-                          </div><img src="images/landingpage/sample.jpeg"/>
+                          </div><img src="<%=photoUrl[i]%>"/>
                         </div>
                         <!-- Post Content-->
                         <div class="post-content">

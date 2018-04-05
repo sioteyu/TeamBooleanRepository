@@ -1,12 +1,13 @@
 var firebase = require('firebase');
 var singleton = require('../helpers/singleton.js');
 var config = singleton.config;
-var bucket = singleton.configAdmin
+var bucket = singleton.configAdmin;
 var filter = require('../helpers/filter.js');
 var ref = firebase.app().database().ref();
 
 exports.upload = function(req, res){
   var bookRef = ref.child('books');
+  console.log('./'+req.files.fileUploaded.path.replace('\\', '/'));
   bucket.upload('./'+req.files.fileUploaded.path.replace('\\', '/'), function(err, file) {
     var photoName = req.files.fileUploaded.path.split('\\');
     bookRef.push({
@@ -15,7 +16,8 @@ exports.upload = function(req, res){
       description:req.body.description,
       photo:photoName[1],
       availability: null,
-      comments: null
+      comments: null,
+      ratings: 0
     });
       if(err)
       {
@@ -40,8 +42,8 @@ exports.searchBook = function(req, res){
   var bookRef = ref.child('books');
   var json = {'title':'Results'};
   var query = req.query['searchItem'].toLowerCase();
-  console.log(filter.filterAll(query));
   json['data'] = [];
+
   bookRef.on('value', function (snap) {
 		snap.forEach(function (childSnap) {
       var child = childSnap.child('title').val().toLowerCase();;

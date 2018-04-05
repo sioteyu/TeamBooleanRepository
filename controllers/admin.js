@@ -20,6 +20,6 @@ exports.adminPage = function(app){
   app.post('/upload', function(req, res){
     var form = new formidable.IncomingForm();
     books.upload(req, res);
-    res.render('upload', {title:'Admin', layout:'layouts/adminLayout'});
+    res.render('admin/upload', {title:'Admin', layout:'layouts/adminLayout', page:'uploadForm'});
   });
 }
