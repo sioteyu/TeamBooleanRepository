@@ -14,7 +14,7 @@ exports.upload = function(req, res){
       title:req.body.title,
       author:req.body.author,
       description:req.body.description,
-      photo:photoName[1],
+      photo:photoName[2],
       availability: null,
       comments: null,
       ratings: 0
@@ -41,16 +41,20 @@ exports.getUsers = function(req, res) {
 exports.searchBook = function(req, res){
   var bookRef = ref.child('books');
   var json = {'title':'Results'};
-  var query = req.query['searchItem'].toLowerCase();
+  var query = req.query['searchItem'].toLowerCase().trim();
   json['data'] = [];
 
-  bookRef.on('value', function (snap) {
-		snap.forEach(function (childSnap) {
-      var child = childSnap.child('title').val().toLowerCase();;
-      if (child.indexOf(query) !== -1) {
-        json['data'].push(childSnap.val());
-      }
-			});
-      res.render('bookResult', json)
-		})
+  if(!query){
+    res.render('bookResult', json);
+  }else{
+    bookRef.on('value', function (snap) {
+    	snap.forEach(function (childSnap) {
+        var child = childSnap.child('title').val().toLowerCase();;
+        if (child.indexOf(query) !== -1) {
+          json['data'].push(childSnap.val());
+        }
+  			});
+        res.render('bookResult', json);
+		});
+  }
 }

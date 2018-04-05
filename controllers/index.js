@@ -14,11 +14,10 @@ exports.indexPage = function(app){
   	books.searchBook(req, res);
   });
 
-  app.post('/login', function(req, res){
-  	users.authenticate(req, res);
-  });
-
   app.post('/signup', function(req, res){
     users.addUser(req, res);
   });
+  app.get('/bookPreview', function(req, res){
+    res.render('bookPreview', {title: 'Results'});
+  })
 }

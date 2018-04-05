@@ -40,12 +40,12 @@
   height: 400px;
   overflow: hidden;
 }
-.post-module .thumbnail .date {
+.date {
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 1;
-  background: #00aff0;
+  background: #5d9cec;
   width: 55px;
   height: 55px;
   padding: 12.5px 0;
@@ -59,10 +59,10 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.post-module .thumbnail .date .day {
+.date .day {
   font-size: 18px;
 }
-.post-module .thumbnail .date .month {
+.date .month {
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -94,7 +94,7 @@
   position: absolute;
   top: -34px;
   left: 0;
-  background: #00aff0;
+  background: #5d9cec;
   padding: 10px 15px;
   color: #FFFFFF;
   font-size: 14px;
@@ -111,7 +111,7 @@
 .post-module .post-content .sub_title {
   margin: 0;
   padding: 0 0 20px;
-  color: #00aff0;
+  color: #5d9cec;
   font-size: 20px;
   font-weight: 400;
   font-family: 'Circular Std Book';

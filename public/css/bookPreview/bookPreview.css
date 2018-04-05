@@ -1,85 +1,3 @@
-the GNU GPL v2 or later.
-*/
-/**
- *
- * Table of Contents
- * -------------------------------------------------
- * 1.0 - Tools
- *   1.1 - Clearfix
- *   1.2 - Queries
- *   1.3 - WP Offset
- *   1.4 - Helpers
- *   1.5 - Icon fonts
- *
- * 2.0 - Resets
- *
- * 3.0 - Base
- *   3.1 - Blockquote
- *   3.2 - Lists
- *   3.3 - Tables
- *   3.4 - Titles
- *   3.5 - Links
- *   3.6 - Forms
- *   3.7 - Typography
- *   3.8 - WP Align
- *
- * 4.0 - Components
- *   4.1 - Bar
- *   4.2 - Buttons
- *   4.3 - Card
- *   4.4 - Popup
- *   4.5 - Postcard
- *   4.6 - Carousel
- *   4.7 - Grid
- *   4.8 - Front page section
- *   4.9 - Leaflet
- *   4.10 - Leaflet cluster
- *   4.11 - List
- *   4.12 - Pin
- *   4.13 - Map
- *   4.14 - Menu primary
- *   4.15 - Menu social
- *   4.16 - Page header
- *   4.17 - Page title
- *   4.18 - Search form
- *   4.19 - Site branding
- *   4.20 - Widget
- *   4.21 - Single categories
- *   4.22 - Single meta
- *   4.23 - Single action buttons
- *   4.24 - Tooltip
- *   4.25 - Jetpack share
- *   4.26 - Search by location
- *   4.27 - Tags
- *   4.28 - Loader
- *
- * 5.0 - Objects
- *   5.1 - Site header
- *   5.2 - Site footer
- *   5.3 - Listing single sidebars
- *   5.4 - Gallery
- *   5.5 - Gallery
- *
- * 6.0 - Pages
- *   6.1 - Single post, page
- *   6.2 - Single listing
- *   6.3 - Listings page
- *   6.4 - Front page
- *   6.5 - Job manager
- *   6.6 - Add listing
- *   6.7 - WooCommerce login
- *
- * 7.0 - Vendor
- *   7.1 - Magnific popup
- *
- * 8.0 - Overrides
- *   8.1 - Widths
- *   8.2 - Winners
- */
-/**
- * 1.0 - Tools
- *   1.1 - Clearfix
- */
 .cf:after,
 .comment .comment-wrapper:after,
 .pingback .comment-wrapper:after,
@@ -3698,6 +3616,7 @@ h6 + h6 {
 .archive-title,
 h1 {
 	font-size: 3rem;
+	font-weight: normal;
 	line-height: 1.27;
 }
 
@@ -3756,7 +3675,7 @@ h1 {
 .entry-content a,
 .comment-content a,
 .listing-sidebar .widget_listing_content a {
-	color: #324493;
+	color: #ff4d55;
 	-webkit-transition: color 0.1s linear, background-color 0.1s ease-out;
 	transition: color 0.1s linear, background-color 0.1s ease-out;
 }
@@ -4291,7 +4210,7 @@ input[type="checkbox"]:focus {
 	border-color: rgba(0, 0, 0, 0.075);
 }
 .listing-sidebar--secondary .gform_wrapper .validation_message {
-	color: #324493;
+	color: #ff4d55;
 	font-weight: normal;
 }
 .listing-sidebar--secondary .gform_wrapper .gfield_description + .gform_wrapper .gfield_description.validation_message,
@@ -4448,6 +4367,7 @@ h2.comments-title,
 .page-job-dashboard .chosen-container-multi .chosen-choices li.search-choice,
 .product-content .price,
 .listing-products__items [itemprop="description"] {
+	font-family: "Hanken", sans-serif;
 }
 
 .intro,
@@ -4547,13 +4467,7 @@ p.intro {
 	color: #919191;
 	display: block;
 	font-size: 1.125rem;
-
-
-  overflow: hidden;
-  position: relative;
-  line-height: 1.2em;
-  max-height: 6.8em;
-  text-align: justify;
+	text-align: center;
 }
 
 .wp-caption-text,
@@ -4575,6 +4489,7 @@ p.intro {
 .entry-content,
 .comment-content,
 .listing-sidebar .widget_listing_content {
+	line-height: 1.7;
 }
 .entry-content blockquote cite,
 .comment-content blockquote cite,
@@ -4850,7 +4765,7 @@ button[type="submit"],
 body.registration .entry-content #buddypress .standard-form input#signup_submit[type="submit"],
 .woocommerce .button,
 .woocommerce-message > a {
-	background-color: #324493;
+	background-color: #ff4d55;
 	border: 0;
 	border-radius: 4px;
 	color: white;
@@ -5056,7 +4971,7 @@ ul.job-manager-bookmark-actions a:focus,
 }
 
 .card--listing .card__title {
-	color: #324493;
+	color: #ff4d55;
 }
 
 @media not screen and (min-width: 480px) {
@@ -5087,7 +5002,7 @@ ul.job-manager-bookmark-actions a:focus,
 }
 
 .card__featured-tag {
-	background-color: #324493;
+	background-color: #ff4d55;
 	border-radius: 2px;
 	color: white;
 	display: block;
@@ -5128,7 +5043,7 @@ ul.job-manager-bookmark-actions a:focus,
 }
 
 .card__rating {
-	color: #324493;
+	color: #ff4d55;
 	float: left;
 	margin-right: 10px;
 }
@@ -5155,7 +5070,7 @@ ul.job-manager-bookmark-actions a:focus,
 }
 
 .card__tag {
-	border: 2px solid #324493;
+	border: 2px solid #ff4d55;
 	border-radius: 50%;
 	height: 40px;
 	overflow: hidden;
@@ -5264,7 +5179,7 @@ ul.job-manager-bookmark-actions a:focus,
 	margin-bottom: 17px;
 }
 .card--post a:hover {
-	color: #324493;
+	color: #ff4d55;
 }
 .card--post ul.card__links {
 	padding-left: 0;
@@ -5303,7 +5218,7 @@ ul.job-manager-bookmark-actions a:focus,
  *   4.4 - Popup
  */
 .popup__title.popup__title {
-	color: #324493;
+	color: #ff4d55;
 	font-size: 18px;
 	font-weight: normal;
 	line-height: 23px;
@@ -5317,7 +5232,7 @@ ul.job-manager-bookmark-actions a:focus,
 }
 
 .popup__rating {
-	background: #324493;
+	background: #ff4d55;
 	border-radius: 50%;
 	color: white;
 	float: left;
@@ -5519,7 +5434,7 @@ ul.job-manager-bookmark-actions a:focus,
 .gallery-arrow {
 	background: white;
 	border-radius: 50%;
-	color: #324493;
+	color: #ff4d55;
 	cursor: pointer;
 	height: 48px;
 	opacity: 0;
@@ -5651,7 +5566,7 @@ body.rtl .gallery-arrow-left svg {
 .grid__item--widget .card--post a:hover,
 .jobs-by-tags-page ul.job_listings .grid__item .card--post a:hover,
 .jobs-by-tags-page ul.job_listings .product-content > * .card--post a:hover {
-	color: #324493;
+	color: #ff4d55;
 }
 
 .postcard--widget,
@@ -6529,7 +6444,7 @@ ul.categories--widget a:hover {
  *   4.12 - Pin
  */
 .pin {
-	color: #324493;
+	color: #ff4d55;
 	height: 59px;
 	margin-left: -24px;
 	margin-top: -59px;
@@ -6538,7 +6453,7 @@ ul.categories--widget a:hover {
 	width: 48px;
 }
 .pin__icon {
-	color: #324493;
+	color: #ff4d55;
 	left: 50%;
 	position: absolute;
 	top: 38%;
@@ -6570,11 +6485,11 @@ ul.categories--widget a:hover {
 	fill: white;
 }
 .pin--selected #selected {
-	fill: #324493;
+	fill: #ff4d55;
 }
 
 .marker-cluster {
-	color: #324493;
+	color: #ff4d55;
 	font-size: 18px;
 	font-weight: bold;
 	height: 62px !important;
@@ -6837,7 +6752,7 @@ ul.primary-menu li:hover > a,
 ul.secondary-menu li:hover > a,
 .search-suggestions-menu li:hover > a,
 .pac-container li:hover > a {
-	color: #324493;
+	color: #ff4d55;
 }
 
 .primary-menu > ul a:hover,
@@ -6846,7 +6761,7 @@ ul.primary-menu a:hover,
 ul.secondary-menu a:hover,
 .search-suggestions-menu a:hover,
 .pac-container a:hover {
-	color: #324493;
+	color: #ff4d55;
 }
 
 .primary-menu > ul,
@@ -7033,11 +6948,11 @@ ul.secondary-menu .lwa {
 	}
 	ul.primary-menu .hover.menu-item-has-children > a,
 	.primary-menu > ul .hover.page_item_has_children > a {
-		color: #324493;
+		color: #ff4d55;
 	}
 	ul.primary-menu .hover.menu-item-has-children > a:after,
 	.primary-menu > ul .hover.page_item_has_children > a:after {
-		border-top-color: #324493;
+		border-top-color: #ff4d55;
 		-webkit-transform: translateY(-100%) rotate(180deg);
 		transform: translateY(-100%) rotate(180deg);
 	}
@@ -7208,7 +7123,7 @@ ul.secondary-menu .lwa {
 	ul.primary-menu .menu-item-has-children:hover:after,
 	.primary-menu > ul .hover.page_item_has_children:after,
 	ul.primary-menu .hover.menu-item-has-children:after {
-		border-top-color: #324493;
+		border-top-color: #ff4d55;
 	}
 	.primary-menu > ul .children,
 	ul.primary-menu .sub-menu {
@@ -7403,7 +7318,7 @@ ul.secondary-menu .lwa {
 }
 
 .secondary-menu {
-	background-color: #324493;
+	background-color: #ff4d55;
 }
 .header--transparent .secondary-menu {
 	display: none;
@@ -7426,7 +7341,7 @@ ul.primary-menu.secondary-menu > li:hover > a {
 }
 
 ul.secondary-menu > .menu-item.menu-item-has-children > .sub-menu:after {
-	border-top-color: #324493;
+	border-top-color: #ff4d55;
 }
 
 ul.secondary-menu > .current-menu-item.menu-item-has-children > .sub-menu:after {
@@ -7522,7 +7437,7 @@ ul.secondary-menu .menu-item-has-children > a:after,
 		display: none;
 	}
 	.secondary-menu-wrapper:before {
-		background-color: #324493;
+		background-color: #ff4d55;
 		bottom: 0;
 		content: "";
 		display: block;
@@ -8211,7 +8126,7 @@ html.is--edge .site-branding img[src*="svg"] {
 	content: none;
 }
 .single-categories-breadcrumb a:hover {
-	color: #324493;
+	color: #ff4d55;
 }
 
 /**
@@ -8456,7 +8371,7 @@ a.listing-contact.listing--renren:before {
 }
 .single-rating > i,
 .widget_listing_comments .comment .review_rate > i {
-	color: #324493;
+	color: #ff4d55;
 	display: inline-block;
 	font-size: 1.125rem;
 	height: 1rem;
@@ -8499,10 +8414,10 @@ a.listing-contact.listing--renren:before {
 	vertical-align: middle;
 }
 .single-action-buttons .action:hover .action__text {
-	color: #324493;
+	color: #ff4d55;
 }
 .single-action-buttons .action:hover .action__icon {
-	background-color: #324493;
+	background-color: #ff4d55;
 	color: white;
 }
 .single-action-buttons .action__text,
@@ -8532,7 +8447,7 @@ a.listing-contact.listing--renren:before {
 }
 .single-action-buttons .action__icon {
 	background-color: white;
-	border: 2px solid #324493;
+	border: 2px solid #ff4d55;
 	border-radius: 50%;
 	display: inline-block;
 	height: 30px;
@@ -8633,7 +8548,7 @@ a.listing-contact.listing--renren:before {
 }
 
 .action--favorite.bookmarked .action__icon {
-	background-color: #324493;
+	background-color: #ff4d55;
 	color: white !important;
 }
 
@@ -9006,7 +8921,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 }
 
 .findme {
-	background-image:url("../images/bookResult/icon1.png");
+	background: white url(assets/svg/findme.svg) center no-repeat;
 	border-radius: 50%;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
 	box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
@@ -9135,7 +9050,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 }
 .tags-links a:hover,
 .tags-links a:focus {
-	color: #324493;
+	color: #ff4d55;
 }
 
 /**
@@ -9144,7 +9059,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 .loader {
 	-webkit-animation: rotate 1s infinite;
 	animation: rotate 1s infinite;
-	color: #324493;
+	color: #ff4d55;
 	height: 40px;
 	left: 50%;
 	margin-left: -20px;
@@ -9262,7 +9177,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 	stroke-width: 2px;
 }
 .heart.is--bookmarked #heartshape {
-	fill: #324493;
+	fill: #ff4d55;
 	stroke-width: 0;
 }
 
@@ -9467,13 +9382,13 @@ div.sharedaddy h3.sd-title.sd-title em,
 .package--labeled .package__btn.package__btn,
 .package--labeled .no-results .clear-results-btn,
 .no-results .package--labeled .clear-results-btn {
-	background: #324493;
+	background: #ff4d55;
 	border: 0;
 	color: white;
 }
 
 .featured-label {
-	background: #324493;
+	background: #ff4d55;
 	border-radius: 4px;
 	color: white;
 	display: inline-block;
@@ -9546,7 +9461,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 .no-results .clear-results-btn {
 	background: white;
 	border: 1px solid rgba(0, 0, 0, 0.075);
-	color: #324493;
+	color: #ff4d55;
 	margin-top: 12px;
 	-webkit-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
@@ -9684,7 +9599,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 	display: block;
 }
 .search-suggestions-menu .menu-item-has-children:hover:after {
-	border-left-color: #324493;
+	border-left-color: #ff4d55;
 }
 @media only screen and (min-width: 900px) {
 	.search-suggestions-menu .menu-item-has-children:after {
@@ -9753,7 +9668,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 }
 
 .page-template-front_page .is--active .search-field-wrapper.has--menu:after {
-	border-top-color: #324493;
+	border-top-color: #ff4d55;
 }
 
 .page-template-front_page .search-field-wrapper.has--menu {
@@ -9845,7 +9760,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 	border-left-color: white;
 }
 .page-template-front_page .search-suggestions-menu > .menu-item:hover > a {
-	background-color: #324493;
+	background-color: #ff4d55;
 }
 .page-template-front_page .search-suggestions-menu > .menu-item:hover > a,
 .page-template-front_page .search-suggestions-menu > .menu-item:hover > a * {
@@ -9941,7 +9856,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 }
 
 .chosen-container-single .chosen-single span {
-	color: #324493;
+	color: #ff4d55;
 }
 
 .chosen-container-single .chosen-single div b {
@@ -9974,7 +9889,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 
 .chosen-container .chosen-results li.highlighted {
 	background: none;
-	color: #324493;
+	color: #ff4d55;
 }
 
 .chosen-container-multi .chosen-choices li.search-choice {
@@ -10398,7 +10313,7 @@ body.registration .entry-content .oneall_social_login {
 	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25) !important;
 }
 .search_jobs--frontpage .chosen-with-drop.chosen-container-active .chosen-single:after {
-	border-top-color: #324493;
+	border-top-color: #ff4d55;
 }
 .search_jobs--frontpage .chosen-with-drop.chosen-container-active .chosen-drop {
 	opacity: 1;
@@ -10428,7 +10343,7 @@ body.registration .entry-content .oneall_social_login {
 	padding-right: 20px;
 }
 .search_jobs--frontpage .chosen-container .chosen-results li:hover {
-	background-color: #324493;
+	background-color: #ff4d55;
 	color: white;
 }
 .search_jobs--frontpage.has--one-field {
@@ -10553,7 +10468,7 @@ body.registration .entry-content .oneall_social_login {
 	border-radius: 0;
 }
 .facetwp-type-slider .noUi-connect {
-	background-color: #324493;
+	background-color: #ff4d55;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
@@ -11304,7 +11219,7 @@ body[class*="rtl"] #facetwp-location {
 	padding-right: 20px;
 }
 .search_jobs--frontpage-facetwp .fs-dropdown .fs-option:hover {
-	background-color: #324493;
+	background-color: #ff4d55;
 	color: white;
 }
 .search_jobs--frontpage-facetwp .fs-dropdown .fs-search {
@@ -11530,10 +11445,10 @@ body[class*="rtl"] #facetwp-location {
 	cursor: pointer;
 }
 .pac-container .pac-item:hover .pac-item-query {
-	color: #324493;
+	color: #ff4d55;
 }
 .page-template-front_page .pac-container .pac-item:hover {
-	background-color: #324493;
+	background-color: #ff4d55;
 	color: white;
 }
 .page-template-front_page .pac-container .pac-item:hover .pac-item-query {
@@ -11601,7 +11516,7 @@ body[class*="rtl"] #facetwp-location {
 .facetwp-pager a.first-page:hover:after,
 .facetwp-pager a.last-page:hover:before,
 .facetwp-pager a.last-page:hover:after {
-	color: #324493;
+	color: #ff4d55;
 }
 .facetwp-pager a.first-page:before {
 	content: "";
@@ -11651,7 +11566,7 @@ body[class*="rtl"] .job_filters .facetwp-type-checkboxes .facetwp-checkbox {
 	padding: 50px 0 0 150px;
 }
 .no-results .clear-results-btn {
-	background: #324493;
+	background: #ff4d55;
 	border: 0;
 	color: white;
 }
@@ -12424,10 +12339,10 @@ body[class*="rtl"] .job_filters .facetwp-type-checkboxes .facetwp-checkbox {
 	color: #919191;
 }
 .listing-sidebar a:hover {
-	color: #324493;
+	color: #ff4d55;
 }
 .listing-sidebar .action__icon {
-	color: #324493;
+	color: #ff4d55;
 }
 .listing-sidebar .listing-map {
 	max-width: 100%;
@@ -12890,9 +12805,9 @@ div.addon-description p {
 }
 
 .widget_listing_sidebar_categories .category-icon {
-	border: 2px solid #324493;
+	border: 2px solid #ff4d55;
 	border-radius: 50%;
-	color: #324493;
+	color: #ff4d55;
 	height: 38px;
 	margin-right: 6px;
 	position: relative;
@@ -13098,7 +13013,7 @@ body.rtl .listing-address-directions:before {
 	margin-bottom: 15px;
 }
 .widget_listing_comments #add_comment_rating_wrap i {
-	color: #324493;
+	color: #ff4d55;
 	cursor: pointer;
 	display: inline-block;
 }
@@ -13198,7 +13113,7 @@ body.rtl .listing-address-directions:before {
 .widget_listing_sidebar_claim_listing .claim-listing,
 .widget_listing_sidebar_claim_listing .claim-verified,
 .widget_listing_sidebar_claim_listing .claim-user-notice {
-	color: #324493;
+	color: #ff4d55;
 	display: inline;
 	-webkit-font-smoothing: antialiased;
 	margin-left: 10px;
@@ -13220,8 +13135,8 @@ body.rtl .listing-address-directions:before {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 }
 .widget_listing_sidebar_claim_listing .listing-claim-description a:hover {
-	border-bottom-color: #324493;
-	color: #324493;
+	border-bottom-color: #ff4d55;
+	color: #ff4d55;
 }
 
 /**
@@ -13504,7 +13419,7 @@ ol.comment-list .fn a {
 	color: #484848;
 }
 ol.comment-list .fn a:hover {
-	color: #324493;
+	color: #ff4d55;
 }
 .single:not(.single-job_listing) ol.comment-list .fn,
 .page ol.comment-list .fn {
@@ -14134,7 +14049,7 @@ p.comment-form-author {
 	z-index: -1;
 }
 .single-job_listing .entry-title {
-	color: #324493;
+	color: #ff4d55;
 	-webkit-hyphens: none;
 	hyphens: none;
 	margin-left: -0.07em;
@@ -14237,7 +14152,7 @@ p.comment-form-author {
 }
 .page-listings div.job_listings .load_more_jobs:hover strong,
 .post-type-archive-job_listing div.job_listings .load_more_jobs:hover strong {
-	color: #324493;
+	color: #ff4d55;
 }
 
 .page-listings div.job_listings .load_previous,
@@ -14816,7 +14731,7 @@ body .search_jobs.search_jobs div.search_categories {
 	height: 18px;
 	position: absolute;
 	right: 7px;
-	top: 4px;
+	top: 9px;
 	width: 18px;
 }
 .remove-tag:before,
@@ -15004,7 +14919,7 @@ ul.job-manager-bookmark-actions a[class*="delete"] {
 }
 
 .job-dashboard-actions .job-dashboard-action-delete {
-	color: #324493;
+	color: #ff4d55;
 }
 
 .job-dashboard-actions > li:after {
@@ -15227,22 +15142,22 @@ ul.job-manager-bookmark-actions a[class*="delete"] {
 }
 
 progress {
-	color: #324493;
+	color: #ff4d55;
 	margin-top: 16.66%;
 	padding-right: 20px;
 	width: 33%;
 }
 
 progress::-webkit-progress-bar {
-	background: #324493;
+	background: #ff4d55;
 }
 
 progress::-webkit-progress-value {
-	background: #324493;
+	background: #ff4d55;
 }
 
 progress::-moz-progress-bar {
-	background: #324493;
+	background: #ff4d55;
 }
 
 .job-manager-form fieldset .job-manager-uploaded-files .job-manager-uploaded-file .job-manager-uploaded-file-preview a {
@@ -16273,7 +16188,7 @@ img.mfp-img {
 	opacity: 1;
 }
 .wc-bookings-date-picker .ui-datepicker td > a:hover {
-	background: #324493;
+	background: #ff4d55;
 	color: white;
 	position: relative;
 }
@@ -16328,7 +16243,7 @@ img.mfp-img {
 
 .wc-bookings-date-picker .ui-datepicker table .bookable-range a,
 .wc-bookings-date-picker .ui-datepicker table .ui-datepicker-current-day a {
-	background-color: #324493;
+	background-color: #ff4d55;
 	color: white;
 	position: relative;
 }
@@ -16445,7 +16360,7 @@ img.mfp-img {
 }
 .block-picker > li a.selected,
 .block-picker > li a:hover {
-	background: #324493;
+	background: #ff4d55;
 	color: white;
 	position: relative;
 }
@@ -16715,7 +16630,7 @@ html {
 }
 .product .product__tag,
 .product .onsale {
-	background-color: #324493;
+	background-color: #ff4d55;
 	border-radius: 4px;
 	color: white;
 	font-size: 12px;
@@ -16765,7 +16680,7 @@ html {
 	color: white;
 }
 .single-product .stars a:before {
-	color: #324493;
+	color: #ff4d55;
 	content: "";
 }
 .single-product .stars a:not(.active):before {
@@ -16809,7 +16724,7 @@ html {
 	display: none;
 }
 .product-content .price {
-	color: #324493;
+	color: #ff4d55;
 	font-size: 2.25rem;
 }
 * > .product-content .price {
@@ -17063,7 +16978,7 @@ html {
 	padding: 1.25rem;
 }
 .tabs.wc-tabs li.active a {
-	color: #324493;
+	color: #ff4d55;
 }
 
 .woocommerce label {
@@ -17272,7 +17187,7 @@ html {
 
 @media only screen and (min-width: 900px) {
 	.product__remove {
-		background: #324493;
+		background: #ff4d55;
 		border-radius: 50%;
 		color: white;
 		left: -9px;
@@ -17617,7 +17532,7 @@ form.woocommerce-checkout > .woocommerce-checkout-payment {
 }
 
 .listing-products__items .price {
-	color: #324493;
+	color: #ff4d55;
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.1px;
@@ -17709,7 +17624,7 @@ ul[id="shipping_method"] input[type="radio"] + label:before {
 .custom-checkbox input[type="radio"]:checked + label:before,
 .payment_methods.methods input[type="radio"]:checked + label:before,
 ul[id="shipping_method"] input[type="radio"]:checked + label:before {
-	background: #324493;
+	background: #ff4d55;
 }
 
 .custom-checkbox .amount,
@@ -18040,8 +17955,8 @@ body.registration .entry-content #buddypress .standard-form input.btn--update-ca
 .woocommerce .btn--update-cart.button:focus,
 .woocommerce-message > a.btn--update-cart:focus {
 	background: transparent;
-	border-color: #324493;
-	color: #324493;
+	border-color: #ff4d55;
+	color: #ff4d55;
 }
 
 @media not screen and (min-width: 900px) {
@@ -18141,7 +18056,7 @@ body.registration .entry-content #buddypress .standard-form input.btn--update-ca
 }
 
 .woocommerce-message {
-	background: #324493;
+	background: #ff4d55;
 	bottom: 0;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 2px 0;
 	box-shadow: rgba(0, 0, 0, 0.25) 0 0 2px 0;
@@ -18453,7 +18368,7 @@ body.js-show-first-payment-box .payment_methods > :first-child .payment_box {
 .facetwp-pager a:hover,
 #content nav.job-manager-pagination ul li > a:hover,
 .nav-links a:hover {
-	color: #324493;
+	color: #ff4d55;
 }
 
 .nav-links {
@@ -18815,7 +18730,7 @@ body[class*="rtl"] .cta-text:after {
 }
 
 .color-accent {
-	color: #324493;
+	color: #ff4d55;
 }
 
 .is--iele10 svg circle {

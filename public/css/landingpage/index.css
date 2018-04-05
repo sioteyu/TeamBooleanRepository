@@ -41,7 +41,7 @@ p {
   line-height: 1.5;
 }
 
-a, a:hover, a:focus, a:active, a:visited {
+nav a, nav a:hover, nav a:focus, nav a:active, nav a:visited {
   color: #3498db;
   cursor: pointer;
 }
@@ -133,6 +133,7 @@ nav ul {
 nav ul li {
   border-bottom: 1px solid #ccc;
   text-align: center;
+  font-family: Roboto, sans-serif;
 }
 
 nav ul li a {
@@ -293,7 +294,7 @@ Footer
 Media Queries
 ======================== */
 
-@media (min-width: 768px) {
+@media (min-width: 1030px) {
 
   nav .nav-toggle {
     display: none;

@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 app.use(express.favicon());
 app.use(express.logger('dev'));
-app.use(express.bodyParser({uploadDir:'./uploads', keepExtensions:true}));
+app.use(express.bodyParser({uploadDir:'./public/uploads', keepExtensions:true}));
 app.use(express.methodOverride());
 app.use(session({secret : 'shhhhhh', resave : true, saveUninitialized : false}));
 app.use(app.router);
