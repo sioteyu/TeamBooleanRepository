@@ -24,7 +24,9 @@ app.use(express.methodOverride());
 app.use(session({secret : 'shhhhhh', resave : true, saveUninitialized : false}));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(function(req, res, next){
+    res.status(404).render('404', {title: "Sorry, page not found", layout:false});
+});
 
 // development only
 if ('development' == app.get('env')) {
@@ -34,7 +36,6 @@ if ('development' == app.get('env')) {
 index.indexPage(app);
 admin.adminPage(app);
 user.userPage(app);
-
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
