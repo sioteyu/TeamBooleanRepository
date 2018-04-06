@@ -1,0 +1,192 @@
+/*body {
+  max-width: 740px;
+  margin: 20px auto;
+}*/
+
+/*.book-club-books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+  line-height: 1.4;
+}
+.book-club-books .book {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 10%;
+          flex: 0 1 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  padding: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4)
+}
+@media (max-width: 470px) {
+  .book-club-books .book {
+    padding: 20px;
+  }
+}
+.book-club-books .book-cover {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 250px;
+          flex: 0 0 250px;
+}
+@media (max-width: 600px) {
+  .book-club-books .book-cover {
+    -ms-flex-preferred-size: 100px;
+        flex-basis: 100px;
+  }
+}
+@media (max-width: 470px) {
+  .book-club-books .book-cover {
+    display: none;
+  }
+}
+.book-club-books .book-cover img {
+  width: 250px;
+  -webkit-box-shadow: 0px 15px 40px -10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 15px 40px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+@media (max-width: 600px) {
+  .book-club-books .book-cover img {
+    width: 100px;
+  }
+}
+.book-club-books .book-cover img:hover {
+  -webkit-transform: rotateZ(-2deg) scale(0.95);
+          transform: rotateZ(-2deg) scale(0.95);
+}
+.book-club-books .book-info {
+  padding: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 20px;
+}
+@media (max-width: 470px) {
+  .book-club-books .book-info {
+    margin-left: 0;
+    padding: 0;
+  }
+}
+.book-club-books .book-title-link {
+  font-size: 30px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.book-club-books .author-line {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.book-club-books .details {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.book-club-books a, .book-club-books a:hover, .book-club-books a:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+a {
+  color: #18f;
+}
+*/
+
+​@media (min-width: 600px) {}
+
+
+.card {
+  background-color: #1c1d21;
+  box-shadow: 10px 10px 90px black;
+  width: 55%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.book {
+  box-shadow: 10px 10px 90px black;
+  z-index: 1;
+}
+
+.panel {
+  position: absolute;
+  top: 6%;
+  left:70%;
+  transform: translateX(-60%);
+  -webkit-transform: translateX(-60%);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+p {
+  color: #737578;
+}
+
+.break {
+  background: #ab5255 no-repeat scroll center;
+  width: 25em;
+  height: .3em;
+}
+
+ .x {
+  position: absolute;
+  z-index: 2;
+  padding: 5px;
+}
+/*
+.box {
+  width: 409px;
+  height: 35px;
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  opacity: .9;
+}
+
+*/
+
+img.resize{
+    width:540px; /* you can use % */
+    height: auto;
+}
+
+.good{
+
+}
+
+.bad {
+
+}

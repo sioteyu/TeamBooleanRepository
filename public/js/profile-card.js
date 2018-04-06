@@ -1,0 +1,19 @@
+$('.head').hover
+  (
+    function(){
+      $('.body').stop().slideDown('fast');
+    },
+    function(){
+      $('.body').stop().slideUp('fast');
+    }
+  );
+
+$('.body').hover
+  (
+    function(){
+      $(this).slideDown('fast').stop();
+    },
+    function(){
+      $(this).slideUp('fast');
+    }
+  );
