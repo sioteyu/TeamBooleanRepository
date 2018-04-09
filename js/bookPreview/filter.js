@@ -9,10 +9,10 @@ $('.dropdown').click(function () {
         $(this).find('.dropdown-menu').slideUp(300);
     });
     $('.dropdown .dropdown-menu li').click(function () {
-        $(this).parents('.dropdown').find('span').text($(this).text());
+        $(this).parents('.dropdown').find('#changeThis').text($(this).text());
         $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
     });
 
 $('.dropdown-menu li').click(function () {
   var input = $(this).parents('.dropdown').find('input').val();
-}); 
+});

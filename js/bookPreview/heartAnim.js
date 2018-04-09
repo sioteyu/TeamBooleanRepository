@@ -1,13 +1,3 @@
-/*$("#addFave1").click(function(){
-  //$('.container10').css('display', 'unset').delay(1000).fadeOut('slow');
-  $('.container10').toggle().delay(1000).fadeOut('slow');
-});
-
-$("#addFave2").click(function(){
-  //$('.container10').css('display', 'unset').delay(1000).fadeOut('slow');
-  $('.container10').toggle().delay(1000).fadeOut('slow');
-});*/
-
 $( ".addFave2" ).click(function() {
     if ( $( ".addFave2" ).attr("switch")=='on' ) {
         $( ".addFave2" ).attr('switch', 'off');
