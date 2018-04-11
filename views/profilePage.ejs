@@ -15,9 +15,66 @@
     <link rel="stylesheet" href="css/landingpage/search2.css">
     <link rel="stylesheet" href="css/profilePage/profile.css">
     <link rel="stylesheet" href="css/profilePage/bulma.css">
+    <link rel="stylesheet" href="css/landingpage/grid.css">
+    <link rel="stylesheet" href="css/landingpage/cardView2.css">
+    <link rel="stylesheet" href="css/landingpage/cardView.css">
   </head>
 
   <body id='hey'>
+    <div class='here' style="position:absolute; top:0px;width:100%; height:500%; background-color:rgba(0, 0, 0, 0.75) !important; z-index:99; transition:2s; display:none">
+
+    </div>
+
+    <div style="position:fixed;top:30vh; left:37vw; z-index:100; display:none" class="login-page">
+      <div class="form2">
+        <h1 class="entry-title" id='text1'itemprop="name" style="font-family:'Circular Std Book'; font-weight:700; color: #413d3d; border-bottom:1px solid rgba(0, 0, 0, 0.075); padding-bottom:15px; font-size:2.3em">Log-in</h1>
+        <form class="register-form">
+          <input type="text" placeholder="Enter first name" style="margin-top:20px"/>
+          <input type="text" placeholder="Enter last name"/>
+          <input type="text" placeholder="Email address"/>
+          <input type="password" placeholder="Create a password"/>
+          <button>create</button>
+          <p class="message">Already registered? <a class='mssg2'>Log-in</a></p>
+        </form>
+        <form class="login-form">
+          <input type="text" style="margin-top:20px"placeholder="Email address"/>
+          <input type="password" placeholder="Password"/>
+          <button>login</button>
+          <p class="message"><a>Forgot password?</a></p>
+          <p class="message" style="margin-top:0">Not registered? <a class='mssg1'>Create an account</a></p>
+        </form>
+      </div>
+    </div>
+
+    <nav class="container-fluid nav" style="padding-left:0px;">
+      <div class="brand" style="background-color:white; position:relative; z-index:5">
+        <a href="landingPage.html" style="padding:1.2em 0 ;padding-left:27px"><img src="images/landingpage/BookHub_ico.png" alt="" style="width: 50px; height: 50px;"></a>
+      </div>
+
+      <a href="landingPage.html"><h1 style="font-weight:700;display:inline-block; font-family: 'Comfortaa', Helvetica, sans-serif; color:#354d9c; padding-top:13px; padding-left:10px; animation: logo-anim 1s; position:relative; z-index:3; float:left; animation:unset; font-size:2em !important; margin-top:1.2%">Bookhub</h1></a>
+      <i class="fa fa-bars nav-toggle"></i>
+      <div id="form-wrapper" style="position:unset; display:inline-block; width:38%; height:60px; margin-top:1%; margin-left:50px; animation: logo-anim 1s;">
+        <button class="go-button"><i class="fa fa-search"></i></button>
+        <span class="nav-list" style="height:60px">
+          <span class="current-selection" style="margin-top:8px;color:#888283"><i class="fa fa-book"></i>   Book</span>
+          <span class="arrow" style="margin-top:8px; color:#888283"></span>
+          <select id="dropdown2" style="top: 1px;">
+            <option value="book" id="Book" icon-type="book">Book</option>
+            <option value="owner" id="Owner" icon-type="user">Owner</option>
+          </select>
+        </span>
+        <div class="in-wrap">
+          <input type="text" name="q" id="search-box" placeholder="What are you looking for?" style="height:60px">
+        </div>
+      </div>
+
+      <ul style="font-size:1.3em">
+        <li><a>About Bookhub</a></li>
+        <li><a>Share A Book</a></li>
+        <li><a class="sign-up">Sign-up</a></li>
+        <li><a class="log-in">Log-in</a></li>
+      </ul>
+    </nav>
     <div class='columns' style="margin-top:110px">
       <div class='container profile'>
         <div class='modal' id='edit-preferences-modal'>
@@ -36,13 +93,41 @@
                 <span class='title is-bold'>Paul Miller</span>
                 <br>
                 <a class='button is-primary is-outlined' href='#' id='edit-preferences' style='margin: 5px 0'>
-                  Edit Preferences
+                  Privacy Settings
                 </a>
                 <br>
               </p>
-              <p class='tagline'>
-                The users profile bio would go here, of course. It could be two lines or more or whatever. We should probably limit the amount of characters to ~500 at most though.
-              </p>
+
+              <table>
+                <tr>
+                  <th style="font-weight: 400;
+                  color: #667E99;
+                  background-color: transparent;
+                  width: 110px;">Email/Username</th>
+                  <th style="font-weight:400">Wehttamzivla@gmail.com</th>
+                </tr>
+                <tr>
+                  <th style="font-weight: 400;
+                  color: #667E99;
+                  background-color: transparent;
+                  width: 110px;">Status</th>
+                  <th style="font-weight:400">Verified user</th>
+                </tr>
+                <tr>
+                  <th style="font-weight: 400;
+                  color: #667E99;
+                  background-color: transparent;
+                  width: 110px;">Location</th>
+                  <th style="font-weight:400"><i class="fa fa-map-marker" style="color:red"></i>&nbsp;Bel-Air Makati, City</th>
+                </tr>
+                <tr>
+                  <th style="font-weight: 400;
+                  color: #667E99;
+                  background-color: transparent;
+                  width: 110px;">Contacts</th>
+                  <th style="font-weight:400"><i class="fa fa-facebook" style="color:#3273dc"></i>&nbsp;Facebook<br><i class="fa fa-twitter" style="color:#5d9cec"></i>&nbsp;Twitter<br><i class="fa fa-google" style="color:#d14836"></i>&nbsp;Gmail</th>
+                </tr>
+              </table>
             </div>
             <div class='column is-2-tablet is-4-mobile has-text-centered'>
               <p class='stat-val'>30</p>
@@ -61,7 +146,7 @@
         <div class='profile-options is-fullwidth'>
           <div class='tabs is-fullwidth is-medium'>
             <ul>
-              <li class='link'>
+              <li class='link is-active'>
                 <a>
                   <span class='icon'>
                     <i class='fa fa-list'></i>
@@ -69,10 +154,10 @@
                   <span>My Books</span>
                 </a>
               </li>
-              <li class='link is-active'>
+              <li class='link'>
                 <a>
                   <span class='icon'>
-                    <i class='fa fa-thumbs-up'></i>
+                    <i class='fa fa-book'></i>
                   </span>
                   <span>Books Borrowed</span>
                 </a>
@@ -80,7 +165,7 @@
               <li class='link'>
                 <a>
                   <span class='icon'>
-                    <i class='fa fa-search'></i>
+                    <i class='fa fa-heart'></i>
                   </span>
                   <span>My Favorites</span>
                 </a>
@@ -97,177 +182,81 @@
           </div>
         </div>
 
-        <div class='columns is-mobile'>
-          <div class='column is-3-tablet is-6-mobile'>
-            <div class='card'>
-              <div class='card-image'>
-                <figure class='image is-4by3'>
-                  <img alt='' src='http://placehold.it/300x225'>
-                </figure>
-              </div>
-              <div class='card-content'>
-                <div class='content'>
-                  <span class='tag is-dark subtitle'>#1</span>
-                  <p>Personal Notes on the Property (can be edited and saved automatically by clicking in and clicking out of text area) - these are unique to the user - they will show up as part of a saved listings' info here - but adding notes to a property does not automatically create a saved listing. Likewise, removing this proeprty from saved listings does not auto remove the notes.</p>
-                </div>
-              </div>
-              <footer class='card-footer'>
-                <a class='card-footer-item'>Compare</a>
-                <a class='card-footer-item'>Share</a>
-                <a class='card-footer-item'>Delete</a>
-              </footer>
+        <div class="grid">
+  <div class="col-one-third">
+    <div class="post-module" style="cursor:pointer" onclick="window.open('bookPreview.html','_blank');">
+        <!-- Thumbnail-->
+        <div class="thumbnail">
+          <img src="images/landingpage/sample.jpeg">
+        </div>
+        <!-- Post Content-->
+        <div class="post-content">
+          <div class="category" style="top:-40px">Status: Borrowed</div>
+          <h1 class="title">Harry Potter and the Philosopher stone</h1>
+          <h2 class="sub_title" style="padding-bottom:0; color:black">By: JK Rowling</h2>
+
+          <div class="c_info" style="padding-left:0">
+            <span id="c_stars" data-star="0"><span style="width: 0px;"></span></span>
+            <div class="c_num">0 Stars</div>
             </div>
-            <br>
-          </div>
-          <div class='column is-3-tablet is-6-mobile'>
-            <div class='card'>
-              <div class='card-image'>
-                <figure class='image is-4by3'>
-                  <img alt='' src='http://placehold.it/300x225'>
-                </figure>
-              </div>
-              <div class='card-content'>
-                <div class='content'>
-                  <span class='tag is-dark subtitle'>#2</span>
-                  <p>Personal Notes on the Property (can be edited and saved automatically by clicking in and clicking out of text area) - these are unique to the user - they will show up as part of a saved listings' info here - but adding notes to a property does not automatically create a saved listing. Likewise, removing this proeprty from saved listings does not auto remove the notes.</p>
-                </div>
-              </div>
-              <footer class='card-footer'>
-                <a class='card-footer-item'>Compare</a>
-                <a class='card-footer-item'>Share</a>
-                <a class='card-footer-item'>Delete</a>
-              </footer>
+
+          <h2 class="sub_title">Fantasy</h2>
+          <p class="description" style="text-align: justify; display: none; height: 149px; opacity: 1;">A boy learns on his eleventh birthday that he is the orphaned son of two powerful wizards. He is summoned from his life as an unwanted child to become a student at Hogwarts.</p>
+          <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 3 comments</a></span></div>
+        </div>
+      </div>
+  </div>
+
+
+        <div class="col-one-third">
+          <div class="post-module" style="cursor:pointer" onclick="window.open('bookPreview.html','_blank');">
+            <!-- Thumbnail-->
+            <div class="thumbnail">
+              <img src="images/landingpage/sample2.jpg">
             </div>
-            <br>
-          </div>
-          <div class='column is-3'>
-            <div class='card'>
-              <div class='card-image'>
-                <figure class='image is-4by3'>
-                  <img alt='' src='http://placehold.it/300x225'>
-                </figure>
-              </div>
-              <div class='card-content'>
-                <div class='content'>
-                  <span class='tag is-dark subtitle'>#3</span>
-                  <p>Personal Notes on the Property (can be edited and saved automatically by clicking in and clicking out of text area) - these are unique to the user - they will show up as part of a saved listings' info here - but adding notes to a property does not automatically create a saved listing. Likewise, removing this proeprty from saved listings does not auto remove the notes.</p>
+            <!-- Post Content-->
+            <div class="post-content">
+              <div class="category" style="top:-40px">Status: Advertised</div>
+              <h1 class="title">Catcher in the Rye</h1>
+              <h2 class="sub_title" style="padding-bottom:0; color:black">By: David Leviathan</h2>
+
+              <div class="c_info" style="padding-left:0">
+                <span id="c_stars" data-star="5"><span style="width: 60px;"></span></span>
+                <div class="c_num">5 Stars</div>
                 </div>
-              </div>
-              <footer class='card-footer'>
-                <a class='card-footer-item'>Compare</a>
-                <a class='card-footer-item'>Share</a>
-                <a class='card-footer-item'>Delete</a>
-              </footer>
+
+              <h2 class="sub_title">Mystery/Drama</h2>
+              <p class="description" style="text-align: justify; display: none; height: 198px; opacity: 1;">The Catcher in the Rye is narrated by a young man named Holden Caulfield. Holden is not specific about his location while he's telling the story, but he makes it clear that he is undergoing treatment in a mental hospital or sanatorium.</p>
+              <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 120 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 10 comments</a></span></div>
             </div>
-            <br>
-          </div>
-          <div class='column is-3'>
-            <div class='card'>
-              <div class='card-image'>
-                <figure class='image is-4by3'>
-                  <img alt='' src='http://placehold.it/300x225'>
-                </figure>
-              </div>
-              <div class='card-content'>
-                <div class='content'>
-                  <span class='tag is-dark subtitle'>#4</span>
-                  <p>Personal Notes on the Property (can be edited and saved automatically by clicking in and clicking out of text area) - these are unique to the user - they will show up as part of a saved listings' info here - but adding notes to a property does not automatically create a saved listing. Likewise, removing this proeprty from saved listings does not auto remove the notes.</p>
-                </div>
-              </div>
-              <footer class='card-footer'>
-                <a class='card-footer-item'>Compare</a>
-                <a class='card-footer-item'>Share</a>
-                <a class='card-footer-item'>Delete</a>
-              </footer>
-            </div>
-            <br>
           </div>
         </div>
-        <div class='columns is-mobile'>
-          <div class='column is-3'>
-            <div class='card'>
-              <div class='card-image'>
-                <figure class='image is-4by3'>
-                  <img alt='' src='http://placehold.it/300x225'>
-                </figure>
+
+
+          <div class="col-one-third">
+            <div class="post-module" style="cursor:pointer" onclick="window.open('bookPreview.html','_blank');">
+              <!-- Thumbnail-->
+              <div class="thumbnail">
+                <img src="images/landingpage/sample3.jpg">
               </div>
-              <div class='card-content'>
-                <div class='content'>
-                  <span class='tag is-dark subtitle'>#5</span>
-                  <p>Personal Notes on the Property (can be edited and saved automatically by clicking in and clicking out of text area) - these are unique to the user - they will show up as part of a saved listings' info here - but adding notes to a property does not automatically create a saved listing. Likewise, removing this proeprty from saved listings does not auto remove the notes.</p>
-                </div>
+              <!-- Post Content-->
+              <div class="post-content">
+                <div class="category" style="top:-40px">Status: Occupied</div>
+                <h1 class="title">Every Day</h1>
+                <h2 class="sub_title" style="padding-bottom:0; color:black">By: David Leviathan</h2>
+
+                <div class="c_info" style="padding-left:0">
+                  <span id="c_stars" data-star="3"><span style="width: 36px;"></span></span>
+                  <div class="c_num">3 Stars</div>
+                  </div>
+
+                <h2 class="sub_title">Drama/Romance</h2>
+                <p class="description" style="text-align: justify; display: none; height: 149px; opacity: 1;">Every Day is about the story of A, a person who wakes up occupying a different body each day. A has their own memories, but they are also able to tap into the memories of the person whose body they are occupying.</p>
+                <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 200 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 5 comments</a></span></div>
               </div>
-              <footer class='card-footer'>
-                <a class='card-footer-item'>Compare</a>
-                <a class='card-footer-item'>Share</a>
-                <a class='card-footer-item'>Delete</a>
-              </footer>
             </div>
-            <br>
           </div>
-          <div class='column is-3'>
-            <div class='card'>
-              <div class='card-image'>
-                <figure class='image is-4by3'>
-                  <img alt='' src='http://placehold.it/300x225'>
-                </figure>
-              </div>
-              <div class='card-content'>
-                <div class='content'>
-                  <span class='tag is-dark subtitle'>#6</span>
-                  <p>Personal Notes on the Property (can be edited and saved automatically by clicking in and clicking out of text area) - these are unique to the user - they will show up as part of a saved listings' info here - but adding notes to a property does not automatically create a saved listing. Likewise, removing this proeprty from saved listings does not auto remove the notes.</p>
-                </div>
-              </div>
-              <footer class='card-footer'>
-                <a class='card-footer-item'>Compare</a>
-                <a class='card-footer-item'>Share</a>
-                <a class='card-footer-item'>Delete</a>
-              </footer>
-            </div>
-            <br>
-          </div>
-          <div class='column is-3'>
-            <div class='card'>
-              <div class='card-image'>
-                <figure class='image is-4by3'>
-                  <img alt='' src='http://placehold.it/300x225'>
-                </figure>
-              </div>
-              <div class='card-content'>
-                <div class='content'>
-                  <span class='tag is-dark subtitle'>#7</span>
-                  <p>Personal Notes on the Property (can be edited and saved automatically by clicking in and clicking out of text area) - these are unique to the user - they will show up as part of a saved listings' info here - but adding notes to a property does not automatically create a saved listing. Likewise, removing this proeprty from saved listings does not auto remove the notes.</p>
-                </div>
-              </div>
-              <footer class='card-footer'>
-                <a class='card-footer-item'>Compare</a>
-                <a class='card-footer-item'>Share</a>
-                <a class='card-footer-item'>Delete</a>
-              </footer>
-            </div>
-            <br>
-          </div>
-          <div class='column is-3'>
-            <div class='card'>
-              <div class='card-image'>
-                <figure class='image is-4by3'>
-                  <img alt='' src='http://placehold.it/300x225'>
-                </figure>
-              </div>
-              <div class='card-content'>
-                <div class='content'>
-                  <span class='tag is-dark subtitle'>#8</span>
-                  <p>Personal Notes on the Property (can be edited and saved automatically by clicking in and clicking out of text area) - these are unique to the user - they will show up as part of a saved listings' info here - but adding notes to a property does not automatically create a saved listing. Likewise, removing this proeprty from saved listings does not auto remove the notes.</p>
-                </div>
-              </div>
-              <footer class='card-footer'>
-                <a class='card-footer-item'>Compare</a>
-                <a class='card-footer-item'>Share</a>
-                <a class='card-footer-item'>Delete</a>
-              </footer>
-            </div>
-            <br>
-          </div>
+
         </div>
       </div>
     </div>
@@ -277,5 +266,7 @@
     <script src="js/landingpage/index.js" type="text/javascript"></script>
     <script src="js/landingpage/search.js" type="text/javascript"></script>
     <script src="js/landingpage/search2.js" type="text/javascript"></script>
+    <script type='text/javascript' src='js/bookPreview/log-in.js'></script>
+    <script src="js/landingpage/cardView2.js" type="text/javascript"></script>
   </body>
 </html>

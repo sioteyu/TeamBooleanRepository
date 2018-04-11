@@ -3575,12 +3575,10 @@ a.box:active {
 }
 
 .message {
-  background-color: whitesmoke;
   border-radius: 3px;
 }
 
 .message:not(:last-child) {
-  margin-bottom: 20px;
 }
 
 .message.is-white {
@@ -4466,7 +4464,6 @@ a.panel-block:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #dbdbdb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

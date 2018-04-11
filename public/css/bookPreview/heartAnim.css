@@ -1,0 +1,347 @@
+.container10 svg {
+  height: 100%;
+  width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container10 {
+  position: fixed;
+  height: 50%;
+  width: 50vh;
+  top:30%;
+  left:35%;
+  display: none;
+  z-index: 100
+}
+
+@-webkit-keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  17.5% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  17.5% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+#Heart_2_ {
+  will-change: transform;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: heart 1.8s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+          animation: heart 1.8s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+@-webkit-keyframes fadeInDown {
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes bubble {
+  0%,100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    stroke-width: 0;
+    stroke: rgba(233, 172, 193, 0);
+  }
+  15% {
+    fill: #E9ACC1;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    stroke: #E9ACC1;
+    stroke-width: 6;
+  }
+  100% {
+    fill: rgba(233, 172, 193, 0);
+  }
+}
+
+@keyframes bubble {
+  0%,100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    stroke-width: 0;
+    stroke: rgba(233, 172, 193, 0);
+  }
+  15% {
+    fill: #E9ACC1;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    stroke: #E9ACC1;
+    stroke-width: 6;
+  }
+  100% {
+    fill: rgba(233, 172, 193, 0);
+  }
+}
+#Circle {
+  fill: #E9ACC1;
+  will-change: transform;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: bubble 1.8s cubic-bezier(0.21, 0.61, 0.35, 1);
+          animation: bubble 1.8s cubic-bezier(0.21, 0.61, 0.35, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes particle {
+  0%,100% {
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(0);
+            transform: translate(0, 0) scale(0);
+  }
+}
+
+@keyframes particle {
+  0%,100% {
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(0);
+            transform: translate(0, 0) scale(0);
+  }
+}
+[id*=Particle] {
+  will-change: transform;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  transform-box: fill-box;
+  opacity: 0;
+  -webkit-animation: particle 2.7s cubic-bezier(0.21, 0.61, 0.35, 1);
+          animation: particle 2.7s cubic-bezier(0.21, 0.61, 0.35, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+[id*=Particle]:nth-child(1) {
+  -webkit-animation-duration: 1798ms;
+          animation-duration: 1798ms;
+}
+
+[id*=Particle]:nth-child(2) {
+  -webkit-animation-duration: 1851ms;
+          animation-duration: 1851ms;
+}
+
+[id*=Particle]:nth-child(3) {
+  -webkit-animation-duration: 1819ms;
+          animation-duration: 1819ms;
+}
+
+[id*=Particle]:nth-child(4) {
+  -webkit-animation-duration: 1901ms;
+          animation-duration: 1901ms;
+}
+
+[id*=Particle]:nth-child(5) {
+  -webkit-animation-duration: 1081ms;
+          animation-duration: 1081ms;
+}
+
+[id*=Particle]:nth-child(6) {
+  -webkit-animation-duration: 1569ms;
+          animation-duration: 1569ms;
+}
+
+[id*=Particle]:nth-child(7) {
+  -webkit-animation-duration: 1970ms;
+          animation-duration: 1970ms;
+}
+
+[id*=Particle]:nth-child(8) {
+  -webkit-animation-duration: 1207ms;
+          animation-duration: 1207ms;
+}
+
+[id*=Particle]:nth-child(9) {
+  -webkit-animation-duration: 1487ms;
+          animation-duration: 1487ms;
+}
+
+[id*=Particle]:nth-child(10) {
+  -webkit-animation-duration: 1698ms;
+          animation-duration: 1698ms;
+}
+
+[id*=Particle]:nth-child(11) {
+  -webkit-animation-duration: 1324ms;
+          animation-duration: 1324ms;
+}
+
+[id*=Particle]:nth-child(12) {
+  -webkit-animation-duration: 1312ms;
+          animation-duration: 1312ms;
+}
+
+[id*=Particle]:nth-child(13) {
+  -webkit-animation-duration: 1132ms;
+          animation-duration: 1132ms;
+}
+
+[id*=Particle]:nth-child(14) {
+  -webkit-animation-duration: 1743ms;
+          animation-duration: 1743ms;
+}
+
+[id*=Particle]:nth-child(15) {
+  -webkit-animation-duration: 1350ms;
+          animation-duration: 1350ms;
+}
+
+[id*=Particle]:nth-child(16) {
+  -webkit-animation-duration: 1003ms;
+          animation-duration: 1003ms;
+}
+
+[id*=Particle]:nth-child(17) {
+  -webkit-animation-duration: 1654ms;
+          animation-duration: 1654ms;
+}
+
+[id*=Particle]:nth-child(18) {
+  -webkit-animation-duration: 1305ms;
+          animation-duration: 1305ms;
+}
+
+[id*=Particle]:nth-child(1) {
+  -webkit-transform: translate(500%, 500%) scale(0);
+          transform: translate(500%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(2) {
+  -webkit-transform: translate(250%, 500%) scale(0);
+          transform: translate(250%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(3) {
+  -webkit-transform: translate(0, 500%) scale(0);
+          transform: translate(0, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(4) {
+  -webkit-transform: translate(-250%, 500%) scale(0);
+          transform: translate(-250%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(5) {
+  -webkit-transform: translate(-500%, 500%) scale(0);
+          transform: translate(-500%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(6) {
+  -webkit-transform: translate(-500%, 250%) scale(0);
+          transform: translate(-500%, 250%) scale(0);
+}
+
+[id*=Particle]:nth-child(7) {
+  -webkit-transform: translate(-500%, 0%) scale(0);
+          transform: translate(-500%, 0%) scale(0);
+}
+
+[id*=Particle]:nth-child(8) {
+  -webkit-transform: translate(-500%, -250%) scale(0);
+          transform: translate(-500%, -250%) scale(0);
+}
+
+[id*=Particle]:nth-child(9) {
+  -webkit-transform: translate(-500%, -500%) scale(0);
+          transform: translate(-500%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(10) {
+  -webkit-transform: translate(-250%, -500%) scale(0);
+          transform: translate(-250%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(11) {
+  -webkit-transform: translate(0%, -500%) scale(0);
+          transform: translate(0%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(12) {
+  -webkit-transform: translate(250%, -500%) scale(0);
+          transform: translate(250%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(13) {
+  -webkit-transform: translate(500%, -500%) scale(0);
+          transform: translate(500%, -500%) scale(0);
+}
+
+[id*=Particle]:nth-child(14) {
+  -webkit-transform: translate(500%, -250%) scale(0);
+          transform: translate(500%, -250%) scale(0);
+}
+
+[id*=Particle]:nth-child(15) {
+  -webkit-transform: translate(500%, 0%) scale(0);
+          transform: translate(500%, 0%) scale(0);
+}
+
+[id*=Particle]:nth-child(16) {
+  -webkit-transform: translate(500%, 250%) scale(0);
+          transform: translate(500%, 250%) scale(0);
+}
+
+[id*=Particle]:nth-child(17) {
+  -webkit-transform: translate(500%, 500%) scale(0);
+          transform: translate(500%, 500%) scale(0);
+}
+
+[id*=Particle]:nth-child(18) {
+  -webkit-transform: translate(500%, 500%) scale(0);
+          transform: translate(500%, 500%) scale(0);
+}
