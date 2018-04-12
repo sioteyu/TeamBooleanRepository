@@ -40,13 +40,9 @@ exports.getUsers = function(req, res) {
 
 exports.searchBook = function(req, res){
   var bookRef = ref.child('books');
-  var json = {'title':'Results'};
+  var json = {'header':'Results'};
   var query = req.query['searchItem'].toLowerCase().trim();
   json['data'] = [];
-
-  if(!query){
-    res.render('bookResult', json);
-  }else{
     bookRef.on('value', function (snap) {
     	snap.forEach(function (childSnap) {
         var child = childSnap.child('title').val().toLowerCase();;
@@ -54,7 +50,7 @@ exports.searchBook = function(req, res){
           json['data'].push(childSnap.val());
         }
   			});
-        res.render('bookResult', json);
+        req.session.data = json;
+        res.render('bookResult', req.session.data);
 		});
-  }
 }

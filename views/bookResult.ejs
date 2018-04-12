@@ -117,7 +117,7 @@
 <div class="grid list job_listings" style="background-color:#f4f4f4">
 	<%var i=0%>
 	<%for(i = 0; i < data.length; ++i){%>
-		<div class="grid__item" onclick="window.open('/bookPreview','_blank');">
+		<div class="grid__item" onclick="window.open('/bookPreview?id=<%=i%>','_blank');">
 			<div class="column" style="cursor:pointer">
 					<!-- Post-->
 					<div class="post-module">

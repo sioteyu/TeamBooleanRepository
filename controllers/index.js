@@ -7,7 +7,7 @@ var crypto = require('../helpers/encryption.js')
 exports.indexPage = function(app){
 
   app.get('/', function(req, res){
-    res.render('landingPage', { title: 'Home' });
+    res.render('landingPage', { header: 'Home' });
   });
 
   app.get('/search', function(req, res){
@@ -18,6 +18,8 @@ exports.indexPage = function(app){
     users.addUser(req, res);
   });
   app.get('/bookPreview', function(req, res){
-    res.render('bookPreview', {title: 'Results'});
+    json = req.session.data.data[parseInt(req.query['id'])];
+    json['header'] = 'Book Preview';
+    res.render('bookPreview', json);
   })
 }
