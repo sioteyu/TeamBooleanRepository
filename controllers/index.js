@@ -14,12 +14,14 @@ exports.indexPage = function(app){
   	books.searchBook(req, res);
   });
 
+  app.get('/bookPreview', function(req, res){
+    books.getBook(req.query['id'], function(data){
+    data['header'] = 'Book Preview';
+    res.render('bookPreview', data);
+    });
+  });
+
   app.post('/signup', function(req, res){
     users.addUser(req, res);
   });
-  app.get('/bookPreview', function(req, res){
-    json = req.session.data.data[parseInt(req.query['id'])];
-    json['header'] = 'Book Preview';
-    res.render('bookPreview', json);
-  })
 }

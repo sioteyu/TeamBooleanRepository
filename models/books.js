@@ -48,9 +48,17 @@ exports.searchBook = function(req, res){
         var child = childSnap.child('title').val().toLowerCase();;
         if (child.indexOf(query) !== -1) {
           json['data'].push(childSnap.val());
+          json.data[json.data.length - 1].key = childSnap.key;
         }
   			});
         req.session.data = json;
         res.render('bookResult', req.session.data);
 		});
-}
+  }
+  exports.getBook = function(query, cb){
+    var bookRef = ref.child('books');
+
+    bookRef.on('value', function (snap) {
+      cb(snap.val()[query]);
+    });
+  }
