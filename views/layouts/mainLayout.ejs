@@ -39,7 +39,7 @@
   	<i class="fa fa-bars nav-toggle"></i>
     <%if(header != 'Home'){%>
     <div id="form-wrapper" style="position:unset; display:inline-block; width:38%; height:60px; margin-top:1%; margin-left:50px; animation: logo-anim 1s;">
-  	<button class="go-button"><i class="fa fa-search"></i></button>
+  	<button class="go-button" onclick="document.getElementById('searchForm').submit()"><i class="fa fa-search"></i></button>
   	<span class="nav-list" style="height:60px">
   	<span class="current-selection" style="margin-top:8px;color:#888283"><i class="fa fa-book"></i>   Book</span>
   	<span class="arrow" style="margin-top:8px; color:#888283"></span>
@@ -49,7 +49,9 @@
   	</select>
   	</span>
   	<div class="in-wrap">
-  	<input type="text" name="q" id="search-box" placeholder="What are you looking for?" style="height:60px">
+      <form class="" action="/search" method="get" id="searchForm">
+        <input type="text" name="searchItem" id="search-box" placeholder="What are you looking for?">
+      </form>
   	</div>
   	</div>
     <%}%>
@@ -63,5 +65,6 @@
   	</nav>
       <%- body %>
     <script type='text/javascript' src='js/bookPreview/log-in.js'></script>
+
   </body>
 </html>
