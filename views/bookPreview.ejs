@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<html lang="en-US" prefix="og: http://ogp.me/ns#" style="overflow-x:hidden">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -710,9 +710,15 @@
         title: 'Marker',
         infoWindow: {
           content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">Matthew Alviz</span>' + '<br>'
-          + '<span id="' + 'c_stars"' + 'data-star="' + '5"' + '><span style="' + 'width: 60px;"' + '></span></span>'
-          + '<div class="' + 'c_num"' + '>&nbsp;&nbsp;5 Stars</div> <br>'
-          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center' + '" num="'+'0"'+'>CONTACT ME</a>',
+          + '<div class=' + '"single-meta"' +  'style=' + '"justify-content:unset"' + '>'
+            + '<a class=' + '"single-rating review_rate display-only"' + 'data-pixrating=' + '"3.00"' + 'itemprop=' + '"aggregateRating"' + 'id=' + '"special"' + 'itemtype=' + '"http://schema.org/AggregateRating"' + 'style=' + '"padding:0"' + 'title=' + '"regular"' + '>'
+              + '<meta itemprop=' + '"ratingValue"' + 'content=' + '"3.00"' + '>'
+              + '<i data-alt=' + '"1"' + 'class=' + '"star-on-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"2"' + ' class=' + '"star-on-png"'+ 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"3"' + 'class=' + '"star-on-png"'
+              + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"4"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"5"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i><input name=' + '"pixrating"'
+              + 'type=' + '"hidden"' + 'value=' + '"3"' + 'readonly=' + '""' + '>&nbsp;&nbsp;&nbsp;&nbsp;</a>'
+              + '<a class=' + '"listing-contact"' + 'style=' + '"color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em"' + '>3 Stars</a>'
+        +  '</div>'
+          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center; margin-top:20px' + '" num="'+'0"'+'>CONTACT ME</a>',
         },click: function(e){
           $('.card-media-body').each(function(){
             if($(this).find('.card-media-body-top').find('.subtle').text() == 'Matthew Alviz'){
@@ -730,10 +736,16 @@
         lng: 121.019194,
         title: 'Marker with InfoWindow',
         infoWindow: {
-          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">Makati Public lib</span>' + '<br>'
-          + '<span id="' + 'c_stars"' + 'data-star="' + '5"' + '><span style="' + 'width: 60px;"' + '></span></span>'
-          + '<div class="' + 'c_num"' + '>&nbsp;&nbsp;5 Stars</div> <br>'
-          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center' + '" num="'+'0"'+'>CONTACT ME</a>',
+          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">Matthew Alviz</span>' + '<br>'
+          + '<div class=' + '"single-meta"' +  'style=' + '"justify-content:unset"' + '>'
+            + '<a class=' + '"single-rating review_rate display-only"' + 'data-pixrating=' + '"3.00"' + 'itemprop=' + '"aggregateRating"' + 'id=' + '"special"' + 'itemtype=' + '"http://schema.org/AggregateRating"' + 'style=' + '"padding:0"' + 'title=' + '"regular"' + '>'
+              + '<meta itemprop=' + '"ratingValue"' + 'content=' + '"3.00"' + '>'
+              + '<i data-alt=' + '"1"' + 'class=' + '"star-on-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"2"' + ' class=' + '"star-on-png"'+ 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"3"' + 'class=' + '"star-on-png"'
+              + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"4"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"5"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i><input name=' + '"pixrating"'
+              + 'type=' + '"hidden"' + 'value=' + '"3"' + 'readonly=' + '""' + '>&nbsp;&nbsp;&nbsp;&nbsp;</a>'
+              + '<a class=' + '"listing-contact"' + 'style=' + '"color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em"' + '>3 Stars</a>'
+        +  '</div>'
+          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center; margin-top:20px' + '" num="'+'0"'+'>CONTACT ME</a>',
         },click: function(e){
           $('.card-media-body').each(function(){
             if($(this).find('.card-media-body-top').find('.subtle').text() == 'Makati Public lib'){
@@ -751,10 +763,16 @@
         lng: 121.017939,
         title: 'Marker with InfoWindow',
         infoWindow: {
-          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">Anton Macrohon</span>' + '<br>'
-          + '<span id="' + 'c_stars"' + 'data-star="' + '5"' + '><span style="' + 'width: 60px;"' + '></span></span>'
-          + '<div class="' + 'c_num"' + '>&nbsp;&nbsp;5 Stars</div> <br>'
-          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center' + '" num="'+'0"'+'>CONTACT ME</a>',
+          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">Matthew Alviz</span>' + '<br>'
+          + '<div class=' + '"single-meta"' +  'style=' + '"justify-content:unset"' + '>'
+            + '<a class=' + '"single-rating review_rate display-only"' + 'data-pixrating=' + '"3.00"' + 'itemprop=' + '"aggregateRating"' + 'id=' + '"special"' + 'itemtype=' + '"http://schema.org/AggregateRating"' + 'style=' + '"padding:0"' + 'title=' + '"regular"' + '>'
+              + '<meta itemprop=' + '"ratingValue"' + 'content=' + '"3.00"' + '>'
+              + '<i data-alt=' + '"1"' + 'class=' + '"star-on-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"2"' + ' class=' + '"star-on-png"'+ 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"3"' + 'class=' + '"star-on-png"'
+              + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"4"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"5"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i><input name=' + '"pixrating"'
+              + 'type=' + '"hidden"' + 'value=' + '"3"' + 'readonly=' + '""' + '>&nbsp;&nbsp;&nbsp;&nbsp;</a>'
+              + '<a class=' + '"listing-contact"' + 'style=' + '"color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em"' + '>3 Stars</a>'
+        +  '</div>'
+          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center; margin-top:20px' + '" num="'+'0"'+'>CONTACT ME</a>',
         },click: function(e){
           $('.card-media-body').each(function(){
             if($(this).find('.card-media-body-top').find('.subtle').text() == 'Anton Macrohon'){
