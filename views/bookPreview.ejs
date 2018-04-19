@@ -551,73 +551,33 @@
                     </div>
 
 
-                    <h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:white; font-weight:700; color: #413d3d; border-top:1px solid rgba(0, 0, 0, 0.075); padding-top:15px; font-size:2.3em; margin-bottom:40px; margin-top:40px">3 Reviews for this copy</h1>
+                    <h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:white; font-weight:700; color: #413d3d; border-top:1px solid rgba(0, 0, 0, 0.075); padding-top:15px; font-size:2.3em; margin-bottom:40px; margin-top:40px"><%=comments.comments.length%> Reviews for this copy</h1>
 
 
                       <ol class="comment-list">
-                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review" style="border:unset; margin-bottom:20px">
-                          <div class="comment-wrapper" id="div-comment-33" style="background-color: white; padding:20px; border-radius: 4px;">
-                            <header class="comment-header" style="z-index:0">
-                              <div class="comment-author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                                <img src="images/bookPreview/profpic1.jpg" width="75" height="75" alt="" class="avatar avatar-75wp-user-avatar wp-user-avatar-75 alignnone photo avatar-default" /><span class="fn">John Doe</span>
-                              </div><!-- .comment-author .vcard -->
-                            </header>
+                        <%for(var i = 0;i < comments.comments.length;++i){%>
+                          <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review" style="border:unset; margin-bottom:20px">
+                            <div class="comment-wrapper" id="div-comment-33" style="background-color: white; padding:20px; border-top: 1px solid rgba(0, 0, 0, 0.075);border-radius: 4px;">
+                              <header class="comment-header" style="z-index:0">
+                                <div class="comment-author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                  <img src="images/bookPreview/profpic2.jpg" width="75" height="75" alt="" class="avatar avatar-75wp-user-avatar wp-user-avatar-75 alignnone photo avatar-default" /><span class="fn">Rasheed</span>
+                                </div><!-- .comment-author .vcard -->
+                              </header>
 
-                            <div class="comment-content" itemprop="reviewBody">
-                              <h3 class="pixrating_title">Good Quality Shit!</h3>
-                              <div class="review_rate" data-pixrating="5"></div>
-                              <div class="comment-meta commentmetadata" itemprop="datePublished" content = "2015-11-06T17:12:39+0000">
-                                <a>
-                                  <time pubdate datetime="2015-11-06T17:12:39+00:00">on November 6, 2018</time><br />
-                                </a>
+                              <div class="comment-content" itemprop="reviewBody">
+                                <h3 class="pixrating_title"><%=comments.comments[i].title%></h3>
+                                <div class="review_rate" data-pixrating="<%=comments.comments[0].rating%>"></div>
+                                <div class="comment-meta commentmetadata" itemprop="datePublished" content = "2015-11-06T17:12:39+0000">
+                                  <a>
+                                    <time pubdate datetime="2015-11-06T17:12:39+00:00">on <%=comments.comments[i].date%></time><br />
+                                  </a>
+                                </div>
+                                <p><%=comments.comments[i].body%></p>
                               </div>
-                              <p>a smart move on the part of filmmakers, who knew any significant departure would quickly alienate the target audience. The masterfully made film offers virtually no surprises. That leaves us dealing with the same questions that have been lurking since the first copy of J.K. Rowling’s book rolled off the press. Is it fantasy magic or occult magic? Does the distinction even matter?</p>
                             </div>
-                          </div>
-                        </li><!-- #comment-## -->
-
-                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review" style="border:unset; margin-bottom:20px">
-                          <div class="comment-wrapper" id="div-comment-33" style="background-color: white; padding:20px; border-top: 1px solid rgba(0, 0, 0, 0.075);border-radius: 4px;">
-                            <header class="comment-header" style="z-index:0">
-                              <div class="comment-author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                                <img src="images/bookPreview/profpic2.jpg" width="75" height="75" alt="" class="avatar avatar-75wp-user-avatar wp-user-avatar-75 alignnone photo avatar-default" /><span class="fn">Rasheed</span>
-                              </div><!-- .comment-author .vcard -->
-                            </header>
-
-                            <div class="comment-content" itemprop="reviewBody">
-                              <h3 class="pixrating_title">Impressive!</h3>
-                              <div class="review_rate" data-pixrating="5"></div>
-                              <div class="comment-meta commentmetadata" itemprop="datePublished" content = "2015-11-06T17:12:39+0000">
-                                <a>
-                                  <time pubdate datetime="2015-11-06T17:12:39+00:00">on October 12, 2018</time><br />
-                                </a>
-                              </div>
-                              <p>The start to the Harry Potter book series is filled with visual splendor, valiant heroes, spectacular special effects, and irresistible characters. It's only fair to say that it's truly magical. The settings manage to be sensationally imaginative and yet at the same time so clearly believable and lived-in</p>
-                            </div>
-                          </div>
-                        </li><!-- #comment-## -->
-
-                        <li class="comment even thread-even depth-1" id="li-comment-33" itemprop="review" itemscope itemtype="http://schema.org/Review" style="border:unset; margin-bottom:20px">
-                          <div class="comment-wrapper" id="div-comment-33" style="background-color: white; padding:20px; border-top: 1px solid rgba(0, 0, 0, 0.075);border-radius: 4px;">
-                            <header class="comment-header" style="z-index:0">
-                              <div class="comment-author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                                <img src="images/bookPreview/profpic3.jpg" width="75" height="75" alt="" class="avatar avatar-75wp-user-avatar wp-user-avatar-75 alignnone photo avatar-default" /><span class="fn">Duvi</span>
-                              </div><!-- .comment-author .vcard -->
-                            </header>
-
-                            <div class="comment-content" itemprop="reviewBody">
-                              <h3 class="pixrating_title">It's a so-so</h3>
-                              <div class="review_rate" data-pixrating="5"></div>
-                              <div class="comment-meta commentmetadata" itemprop="datePublished" content = "2015-11-06T17:12:39+0000">
-                                <a>
-                                  <time pubdate datetime="2015-11-06T17:12:39+00:00">on August 20, 2018</time><br />
-                                </a>
-                              </div>
-                              <p>Harry Potter and the Sorcerer Stone is very much a Potter book – it has all the plot twists and turns and characters and quotes that stay with you long after you have read the book. For anyone who tells you otherwise – don’t let them.</p>
-                            </div>
-                          </div>
-                        </li><!-- #comment-## -->
-                      </ol><!-- .comment-list -->
+                          </li>
+                        <%}%>
+                      </ol>
 
                       <div id="rev">
 
@@ -625,7 +585,8 @@
 
                       <h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:white; font-weight:700; color: #413d3d; border-top:1px solid rgba(0, 0, 0, 0.075); padding-top:15px; font-size:2.3em; margin-bottom:40px; margin-top:40px">Rate and write a review for this copy</h1>
                       <div id="respond" class="comment-respond">
-                        <form action=" " method="post" id="commentform" class="comment-form" novalidate>
+                        <form action="/comment" method="post" id="commentform" class="comment-form" novalidate>
+                          <input type="hidden" name="bookID" value="<%=bookID%>">
                           <p class="review-title-form">
                             <label for="pixrating_title">Title of your review</label>
                             <input type='text' id='pixrating_title' name='pixrating_title' value="" placeholder="Summarize your opinion or highlight an interesting detail" size='25'/>
