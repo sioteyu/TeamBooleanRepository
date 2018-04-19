@@ -28,7 +28,7 @@ exports.upload = function(req, res){
 }
 exports.getUsers = function(req, res) {
   var usersRef = ref.child('users');
-  var json = {'title':'Admin', 'layout':'layouts/adminLayout', page:'users'};
+  var json = {'title':'Admin', 'layout':'layouts/adminLayout', page:'users', user: req.session.user};
   json['data'] = [];
   usersRef.on('value', function (snap) {
 		snap.forEach(function (childSnap) {
@@ -43,6 +43,7 @@ exports.searchBook = function(req, res){
   var json = {'header':'Results'};
   var query = req.query['searchItem'].toLowerCase().trim();
   json['data'] = [];
+  json['user'] = req.session.user;
     bookRef.on('value', function (snap) {
     	snap.forEach(function (childSnap) {
         var child = childSnap.child('title').val().toLowerCase();;

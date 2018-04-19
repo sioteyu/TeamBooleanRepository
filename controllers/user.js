@@ -7,7 +7,7 @@ exports.userPage = function(app){
 
   app.get('/profile', function(req, res) {
     if (req.session.user) {
-      res.render('profilePage', {title:'Profile'});
+      res.render('profilePage', {title:'Profile', user: req.session.user});
     }
   });
 

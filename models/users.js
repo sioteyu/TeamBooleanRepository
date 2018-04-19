@@ -27,7 +27,7 @@ exports.authenticate = function(req, res){
         req.session.email = childSnap.child('email').val();
         req.session.name = childSnap.child('firstname').val() + ' ' + childSnap.child('lastname').val();
 				console.log("Login Sucess!!!");
-        res.render('profilePage', {header:'Profile'});
+        res.render('profilePage', {header:'Profile', user: req.session.user});
 			}
 		});
 	});

@@ -56,10 +56,13 @@
   	</div>
     <%}%>
   	<ul>
+      <li><a href="/">Home</a></li>
   		<li><a>About Bookhub</a></li>
   		<li><a>Share A Book</a></li>
-  		<li><a class="sign-up">Sign-up</a></li>
-  		<li><a class="log-in">Log-in</a></li>
+      <%if(!user){%>
+    		<li><a class="sign-up">Sign-up</a></li>
+    		<li><a class="log-in">Log-in</a></li>
+      <%}%>
   	</ul>
   	</div>
   	</nav>
