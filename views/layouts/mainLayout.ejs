@@ -10,13 +10,13 @@
   	</div>
 
   	<div style="position:fixed;top:30vh; left:37vw; z-index:100; display:none" class="login-page">
-  		<div class="form2">
+  		<div class="form2" action = "/signup" method = "post">
   			<h1 class="entry-title" id='text1'itemprop="name" style="font-family:'Circular Std Book'; font-weight:700; color: #413d3d; border-bottom:1px solid rgba(0, 0, 0, 0.075); padding-bottom:15px; font-size:2.3em">Log-in</h1>
   			<form class="register-form">
-  				<input type="text" placeholder="Enter first name" style="margin-top:20px"/>
-  				<input type="text" placeholder="Enter last name"/>
-  				<input type="text" placeholder="Email address"/>
-  				<input type="password" placeholder="Create a password"/>
+  				<input type="text" name="firstname" placeholder="Enter first name" style="margin-top:20px"/>
+  				<input type="text" name="lastname" placeholder="Enter last name"/>
+  				<input type="text" name="email" placeholder="Email address"/>
+  				<input type="password" name="password" placeholder="Create a password"/>
   				<button>create</button>
   				<p class="message">Already registered? <a class='mssg2'>Log-in</a></p>
   			</form>
