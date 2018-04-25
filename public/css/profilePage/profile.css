@@ -36,3 +36,8 @@ body {
   padding: 20px;
   background-color: #F1F1F1;
 }
+
+.clickable:hover{
+  text-decoration: underline;
+  text-decoration-color: #268bd2
+}

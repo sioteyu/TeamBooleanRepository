@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+
+tr {
+    display: block;
+    position: relative;
+    padding: 1.2em 0;
+    padding-top: 2%;
+    padding-bottom: 0px
+  }
+  /*tr:first-of-type {
+    border-top: 1px solid #ccc;
+  }*/
+
+  td {
+    display: table-row;
+    font-size: 0.8em !important;
+  }
+  td:before {
+    content: attr(data-label);
+    display: table-cell;
+    font-weight: bold;
+    padding: 0.2em 0.6em 0.2em 0;
+    text-align: left;
+  }
+  /*td:last-child:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #ccc;
+  }*/
