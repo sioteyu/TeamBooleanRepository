@@ -4495,8 +4495,8 @@ p,
 .entry-content li,
 .comment-content li,
 .listing-sidebar .widget_listing_content li {
-	-webkit-font-feature-settings: "kern" 1, "onum" 1, "liga" 1;
-	font-feature-settings: "kern" 1, "onum" 1, "liga" 1;
+	/*-webkit-font-feature-settings: "kern" 1, "onum" 1, "liga" 1;
+	font-feature-settings: "kern" 1, "onum" 1, "liga" 1;*/
 }
 
 h1,
