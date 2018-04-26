@@ -20,6 +20,7 @@ input#toggle:checked ~ .menu { display: none; }
 	color: rgba( 0, 0, 0, 0.4 );
 	line-height: 40px;
 	box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.2 );
+  font-family: Roboto, sans-serif;
 }
 
 .menu::before{
@@ -49,9 +50,9 @@ input#toggle:checked ~ .menu { display: none; }
 	border-bottom-right-radius: 3px;
 }
 
-.menu a:hover { color: #555555; }
+.menu a:hover { color: #5d9cec; }
 
-.menu a:hover > .octicon { color: #555555; }
+.menu a:hover > .octicon { color: #5d9cec; }
 
 .icon
 {

@@ -141,15 +141,6 @@ body.registration .entry-content .form-row:after,
 	src: url("assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("assets/fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("assets/fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("assets/fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("assets/fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
 }
 
-.icon {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: auto;
-}
-
 /* makes the font 33% larger relative to the icon container */
 .icon-lg {
 	font-size: 1.33333em;
@@ -3474,7 +3465,6 @@ button {
 .entry-content ol li,
 .comment-content ol li,
 .listing-sidebar .widget_listing_content ol li {
-	display: list-item;
 	padding: 0.25em 0;
 	position: relative;
 }
