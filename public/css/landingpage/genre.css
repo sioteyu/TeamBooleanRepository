@@ -58,7 +58,7 @@ h3 {
   text-transform: uppercase;
   margin-bottom: 15px;
 }
-.menu {
+/*.menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -68,7 +68,7 @@ h3 {
   background-color: #e6e6e6;
   text-align: center;
   padding: 20px;
-}
+}*/
 .page-container {
   z-index: 2;
   position: absolute;
