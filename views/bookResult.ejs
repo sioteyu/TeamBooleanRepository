@@ -24,6 +24,8 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="css/landingpage/index.css">
 <link rel="stylesheet" href="css/bookPreview/tags.css">
+<link rel='stylesheet' id='jquery-raty-style-css'  href='https://cdn.demos.pixelgrade.com/wp-content/plugins/comments-ratings/css/jquery.raty.css?ver=1518791654' type='text/css' media='' />
+<link rel='stylesheet' id='listable-style-css'  href='css/bookPreview/additional.css' type='text/css' media='all'/>
 </head>
 
 <body id='hey' class="page-template-default page page-id-12 wp-custom-logo page-listings listable" data-mapbox-token="pk.eyJ1IjoiZ2Vvcmdlb2xhcnUiLCJhIjoiY2lneTNtZ2VtMDBlNmtya3IzdHY0ZTl2biJ9.ZQPEMiJW_XQjJHUFRlioug" data-mapbox-style="mapbox.streets-basic">
@@ -133,12 +135,18 @@
 						<!-- Post Content-->
 						<div class="post-content">
 							<!--<div class="category">Check it out</div>-->
-							<h1 class="title"><%=data[i].title%></h1>
+							<h1 class="title" style="font-family: 'Circular Std Book' !important"><%=data[i].title%></h1>
 							<h2 class="sub_title" style="padding-bottom:0; color:black">By: <%=data[i].author%></h2>
 
 							<div class="c_info" style="padding-left:0">
-											<span id="c_stars" data-star="0"><span style="width: 33px;"></span></span>
-											<div class="c_num">0 Stars</div>
+											<!--<span id="c_stars" data-star="0"><span style="width: 33px;"></span></span>
+											<div class="c_num">0 Stars</div>-->
+											<div class="single-meta" style="justify-content:unset">
+                  			<a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
+                    			<meta itemprop="ratingValue" content="3.00">
+                  			<i data-alt="1" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="2" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-off-png" title="regular"></i>&nbsp;<i data-alt="5" class="star-off-png" title="regular"></i><input name="pixrating" type="hidden" value="3" readonly="">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                  			<a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
+                </div>
 							</div>
 
 							<!--<h2 class="sub_title">Fantasy</h2>-->

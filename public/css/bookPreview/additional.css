@@ -3485,7 +3485,6 @@ button {
 .entry-content ol li,
 .comment-content ol li,
 .listing-sidebar .widget_listing_content ol li {
-	display: list-item;
 	padding: 0.25em 0;
 	position: relative;
 }
@@ -3768,7 +3767,7 @@ h1 {
 .entry-content a,
 .comment-content a,
 .listing-sidebar .widget_listing_content a {
-	color: #ff4d55;
+	color: #fd6b0d;
 	-webkit-transition: color 0.1s linear, background-color 0.1s ease-out;
 	transition: color 0.1s linear, background-color 0.1s ease-out;
 }
@@ -4618,20 +4617,20 @@ p.intro {
 }
 
 body {
-	font-size: 0.875rem;
+	/*font-size: 0.875rem;*/
 }
 
-@media only screen and (min-width: 740px) {
+/*@media only screen and (min-width: 740px) {
 	body {
 		font-size: 0.93437rem;
 	}
-}
+}*/
 
-@media only screen and (min-width: 900px) {
+/*@media only screen and (min-width: 900px) {
 	body {
 		font-size: 1rem;
 	}
-}
+}*/
 
 /**
  *   3.8 - WP Align
@@ -8458,7 +8457,7 @@ a.listing-contact.listing--renren:before {
 }
 .single-rating > i,
 .widget_listing_comments .comment .review_rate > i {
-	color: #ff4d55;
+	color: #fd6b0d;
 	display: inline-block;
 	font-size: 1.125rem;
 	height: 1rem;
@@ -9943,7 +9942,6 @@ div.sharedaddy h3.sd-title.sd-title em,
 }
 
 .chosen-container-single .chosen-single span {
-	color: #ff4d55;
 }
 
 .chosen-container-single .chosen-single div b {
@@ -9976,7 +9974,7 @@ div.sharedaddy h3.sd-title.sd-title em,
 
 .chosen-container .chosen-results li.highlighted {
 	background: none;
-	color: #ff4d55;
+	color: #5D9CEC;
 }
 
 .chosen-container-multi .chosen-choices li.search-choice {
