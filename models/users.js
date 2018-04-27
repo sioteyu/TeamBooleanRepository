@@ -13,7 +13,8 @@ exports.addUser = function(req, res){
 	lastname: req.body.lastname,
 	email: req.body.email,
 	password: req.body.password,
-  isBanned: false
+  isBanned: false,
+  verified: false
 	});
 }
 
