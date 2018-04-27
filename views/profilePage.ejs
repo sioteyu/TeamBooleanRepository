@@ -72,7 +72,7 @@
               <li class='link is-active'>
                 <a>
                   <span class='icon' style="color:#5d9cec">
-                    <i class='fa fa-bar-chart'></i>
+                    <i class='fa fa-book'></i>
                   </span>
                   <span>My Books</span>
                 </a>
@@ -99,7 +99,7 @@
               <li class='link'>
                 <a>
                   <span class='icon'>
-                    <i class='fa fa-heart'></i>
+                    <i class='fa fa-history'></i>
                   </span>
                   <span>History</span>
                 </a>
@@ -111,8 +111,16 @@
         <div class="grid">
   <div class="col-one-third">
     <div class="post-module" style="cursor:pointer" onclick="window.open('bookPreview.html','_blank');">
+      <div class="menu" style="position:absolute; right:7px; margin-top:90px; z-index:3">
+  			<a>Matthew Alviz<span class="icon octicon octicon-x"></span><span class="icon octicon octicon-check"></span></a>
+  			<a>Anton Macrohon<span class="icon octicon octicon-x"></span><span class="icon octicon octicon-check"></span></a>
+  			<a>Gelline Gruta <span class="icon octicon octicon-x"></span><span class="icon octicon octicon-check"></span></a>
+  		</div>
         <!-- Thumbnail-->
         <div class="thumbnail">
+          <div class="date" style="z-index: 1">
+								<div class="day" style="margin-top:10px"><i class="fa fa-user-plus"></i></div>
+							</div>
           <img src="images/landingpage/sample.jpeg">
         </div>
         <!-- Post Content-->
@@ -148,6 +156,9 @@
           <div class="post-module" style="cursor:pointer" onclick="window.open('bookPreview.html','_blank');">
             <!-- Thumbnail-->
             <div class="thumbnail">
+              <div class="date" style="z-index:1">
+								<div class="day" style="margin-top:10px"><i class="fa fa-user-plus"></i></div>
+							</div>
               <img src="images/landingpage/sample2.jpg">
             </div>
             <!-- Post Content-->
@@ -182,6 +193,9 @@
             <div class="post-module" style="cursor:pointer" onclick="window.open('bookPreview.html','_blank');">
               <!-- Thumbnail-->
               <div class="thumbnail">
+                <div class="date" style="z-index:1">
+								<div class="day" style="margin-top:10px"><i class="fa fa-user-plus"></i></div>
+							</div>
                 <img src="images/landingpage/sample3.jpg">
               </div>
               <!-- Post Content-->
@@ -222,5 +236,6 @@
     <script src="js/landingpage/search2.js" type="text/javascript"></script>
     <script type='text/javascript' src='js/bookPreview/log-in.js'></script>
     <script src="js/Profilepage/index.js" type="text/javascript"></script>
+    <script src="js/Profilepage/Requests.js" type="text/javascript"></script>
   </body>
 </html>
