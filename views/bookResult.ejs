@@ -130,7 +130,12 @@
 							<div class="date">
 								<div class="day">7</div>
 								<div class="month">Copies</div>
-							</div><img src="/uploads/<%=data[i].photo%>" srcset="/uploads/not-available.jpg"/>
+								<script type="text/javascript">
+									function replace(x){
+										document.getElementById(x).src = "/uploads/not-available.jpg";
+									}
+								</script>
+							</div><img id="<%=i%>" src="/uploads/<%=data[i].photo%>" onerror="replace('<%=i%>')"/>
 						</div>
 						<!-- Post Content-->
 						<div class="post-content">
