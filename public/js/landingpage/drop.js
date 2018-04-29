@@ -1,5 +1,5 @@
 $('#Pic').click(
   function(){
-  $('.menu').toggle();
+  $('#profPicDrp').toggle();
 }
 );

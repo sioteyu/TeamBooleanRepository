@@ -4,6 +4,7 @@ input#toggle:checked ~ .menu { display: none; }
 
 .menu{
  margin-top: 15px;
+ display: none;
 }
 
 .menu a
