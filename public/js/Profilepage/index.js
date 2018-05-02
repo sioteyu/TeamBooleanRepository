@@ -10,4 +10,6 @@ $('.link').click(function(){
   $(this).children().children().css('color', '#5d9cec');
   var x = $(this).children().attr('id');
   $('#grid' + x).attr('style', 'display:unset;');
+
+  previous = this
 });
