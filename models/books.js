@@ -64,3 +64,18 @@ exports.searchBook = function(req, res){
       cb(snap.val()[query]);
     });
   }
+  exports.getMultipleBook = function(query, cb){
+    var bookRef = ref.child('books');
+    var json = {};
+    json['bookData'] = [];
+    counter = 0
+    for (var i = 0; i < query.length; i++) {
+      bookRef.child(query[i]).on('value', function(snap){
+        json['bookData'].push(snap.val());
+        counter += 1;
+        if(counter == query.length){
+          cb(json)
+        }
+      });
+    }
+  }
