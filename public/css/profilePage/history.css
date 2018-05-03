@@ -8,6 +8,7 @@
   z-index: 1;
   margin: 100px 0px;
   padding-bottom: 30px;
+  margin-top: 0px;
 }
 
 a:focus, a:hover {
@@ -340,14 +341,14 @@ a:focus, a:hover {
   font-weight: 600;
 }
 
-.tabs {
+/*.tabs {
   display: block;
   border-bottom: 1px solid #d8d8d8;
   margin: 10px 0px 20px;
   float: left;
   width: 100%;
   padding: 0px 15px;
-}
+}*/
 
 .tab {
   height: 44px;
@@ -581,7 +582,7 @@ span.deposits + span.spent {
   padding-right: 0px;
 }
 
-.date {
+.date2 {
   display: inline-block;
   position: relative;
   min-height: 44px;
@@ -590,7 +591,7 @@ span.deposits + span.spent {
   display: none;
 }
 
-.date span {
+.date2 span {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -601,7 +602,7 @@ span.deposits + span.spent {
   width: 100%;
 }
 
-.category {
+/*.category {
   position: absolute;
   margin: -7px;
   width: 58px;
@@ -611,7 +612,7 @@ span.deposits + span.spent {
   padding: 7px;
   -webkit-transition: opacity ease-in-out 0.15s, border-color ease-in-out 0.15s, background-color ease-in-out 0.15s, color ease-in-out 0.15s, box-shadow ease-in-out 0.2s;
   transition: opacity ease-in-out 0.15s, border-color ease-in-out 0.15s, background-color ease-in-out 0.15s, color ease-in-out 0.15s, box-shadow ease-in-out 0.2s;
-}
+}*/
 
 .demo1 .category {
   border-radius: 50px;
@@ -703,14 +704,6 @@ span.deposits + span.spent {
 .negative {
   color: #c30000;
   /*   font-weight: bold; */
-}
-
-.icon {
-  min-width: 44px;
-  height: 44px;
-  padding: 12px;
-  display: inline-block;
-  float: right;
 }
 
 .icon:hover {
