@@ -5,7 +5,7 @@ exports.userPage = function(app){
       if (err) {
         console.log(err);
       }else{
-        res.render('landingPage', { header: 'Home', user: '', photo:req.session.photo});
+        res.render('landingPage', { header: 'Home', user: '', userPhoto:''});
       }
     });
   });
@@ -13,18 +13,18 @@ exports.userPage = function(app){
   app.get('/profile', function(req, res) {
     if (req.session.user) {
       users.getUser(req.session.user, function(data){
-        res.render('profilePage', {header:'Profile', user: req.session.user, userData: data, photo:req.session.photo});
+        res.render('profilePage', {header:'Profile', user: req.session.user, userData: data, userPhoto:req.session.photo});
       })
 
     }else{
-      res.render('landingPage', { header: 'Home', user: req.session.user, photo:req.session.photo});
+      res.render('landingPage', { header: 'Home', user: req.session.user, userPhoto:req.session.photo});
     }
   });
 
   app.post('/login', function(req, res){
   	users.authenticate(req, res, function(){
       users.getUser(req.session.user, function(data){
-        res.render('profilePage', {header:'Profile', user: req.session.user, userData: data, photo:req.session.photo});
+        res.render('profilePage', {header:'Profile', user: req.session.user, userData: data, userPhoto:req.session.photo});
       })
     });
   });

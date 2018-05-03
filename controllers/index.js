@@ -8,7 +8,7 @@ var crypto = require('../helpers/encryption.js')
 exports.indexPage = function(app){
 
   app.get('/', function(req, res){
-    res.render('landingPage', { header: 'Home', user: req.session.user, photo:req.session.photo});
+    res.render('landingPage', { header: 'Home', user: req.session.user, userPhoto:req.session.photo});
   });
 
   app.get('/search', function(req, res){
@@ -22,7 +22,7 @@ exports.indexPage = function(app){
         data['user'] = req.session.user;
         data['bookID'] = req.query['id'];
         data['comments'] = json;
-        data['photo'] = req.session.photo;
+        data['userPhoto'] = req.session.photo;
         res.render('bookPreview', data);
       });
     });
@@ -35,6 +35,6 @@ exports.indexPage = function(app){
 
   app.post('/signup', function(req, res){
     users.addUser(req, res);
-    res.render('landingPage', { header: 'Home', user: req.session.user, photo:req.session.photo});
+    res.render('landingPage', { header: 'Home', user: req.session.user, userPhoto:req.session.photo});
   });
 }
