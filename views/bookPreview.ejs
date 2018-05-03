@@ -782,8 +782,9 @@ $( ".addFave2" ).click(function() {
         $('.container10').css('display', 'unset').delay(1000).fadeOut('slow');
         $('.myFave1').text('Remove to favorites');
     }
-  <%}else{
-  }%>
+  <%}else{%>
+    document.getElementById('loginButton').click();
+  <%}%>
 });
 </script>
 <script type='text/javascript' src='js/bookPreview/trophy-cart.js'></script>

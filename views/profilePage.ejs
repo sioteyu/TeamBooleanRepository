@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="images/landingpage/BookHub_ico.png"/>
-    <link rel="stylesheet" href="css/landingpage/index.css">
-    <link rel="stylesheet" href="css/landingpage/search.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -23,6 +21,8 @@
     <link rel="stylesheet" href="css/bookPreview/tags.css">
     <link rel='stylesheet' id='jquery-raty-style-css'  href='https://cdn.demos.pixelgrade.com/wp-content/plugins/comments-ratings/css/jquery.raty.css?ver=1518791654' type='text/css' media='' />
     <link rel='stylesheet' id='listable-style-css'  href='css/bookPreview/additional.css' type='text/css' media='all'/>
+    <link rel="stylesheet" href="css/landingpage/index.css">
+    <link rel="stylesheet" href="css/landingpage/search.css">
   </head>
 
   <body id='hey'>
@@ -36,12 +36,16 @@
           <div class='columns is-mobile is-multiline'>
             <div class='column is-2'>
               <span class='header-icon user-profile-image'>
-                <img alt='' src='images/bookPreview/profpic1.jpg'>
+                <%if(userData.photo){%>
+                  <img alt='' src='uploads/<%=userData.photo%>'>
+                <%}else{%>
+                  <img alt='' src='uploads/default.png'>
+                <%}%>
               </span>
             </div>
             <div class='column is-4-tablet is-10-mobile name'>
               <p>
-                <span class='title is-bold'>Paul Miller</span>
+                <span class='title is-bold'><%=userData.firstname%> <%=userData.lastname%></span>
                 <br>
                 <a class='button is-primary is-outlined' href='#' id='edit-preferences' style='margin: 5px 0'>
                   Privacy Settings
@@ -50,7 +54,7 @@
               </p>
               <table>
               <tr>
-                <td data-label="Email:">jmalviz123@gmail.com</td>
+                <td data-label="Email:"><%=userData.email%></td>
                 <td data-label="Location:">Denver, CO</td>
                 <td data-label="Contact no:">+63 927 088 2569</td>
                 <td data-label="Facebook:"><span style="color:#268bd2; cursor:pointer" class="clickable">https://www.facebook.com/Wehttamzivla</span></td>

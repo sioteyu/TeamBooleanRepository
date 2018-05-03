@@ -33,6 +33,7 @@ exports.getUsers = function(req, res) {
   usersRef.on('value', function (snap) {
 		snap.forEach(function (childSnap) {
       json['data'].push(childSnap.val());
+      json['photo'] = req.session.photo;
 		});
     res.render('admin/users', json);
 	});
@@ -43,6 +44,7 @@ exports.searchBook = function(req, res){
   var json = {'header':'Results'};
   var query = req.query['searchItem'].toLowerCase().trim();
   json['data'] = [];
+  json['photo'] = req.session.photo;
   json['user'] = req.session.user;
     bookRef.on('value', function (snap) {
     	snap.forEach(function (childSnap) {
@@ -52,8 +54,7 @@ exports.searchBook = function(req, res){
           json.data[json.data.length - 1].key = childSnap.key;
         }
   			});
-        req.session.data = json;
-        res.render('bookResult', req.session.data);
+        res.render('bookResult', json);
 		});
   }
   exports.getBook = function(query, cb){
