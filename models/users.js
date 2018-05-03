@@ -31,10 +31,9 @@ exports.authenticate = function(req, res, cb){
 			}
 		});
 	});
-
-  exports.getUser = function(userID, cb){
-    ref.child('users').child(userID).on('value', function(snap) {
-      cb(snap.val())
-    })
-  };
 }
+exports.getUser = function(userID, cb){
+  ref.child('users').child(userID).on('value', function(snap) {
+    cb(snap.val())
+  })
+};

@@ -18,6 +18,21 @@ exports.indexPage = function(app){
   app.get('/bookPreview', function(req, res){
     books.getBook(req.query['id'], function(data){
       comments.getComments(req, res, req.query['id'], function(json){
+        data['favorite'] = 'off'
+        if (req.session.user) {
+          users.getUser(req.session.user, function(userData){
+            var favorites = userData['favorites'].split(',');
+            console.log(favorites);
+            for (var i = 0; i < favorites.length; i++) {
+              if(req.query['id'] == favorites[i]){
+                data['favorite'] = 'on';
+                break;
+              }else{
+                data['favorite'] = 'off';
+              }
+            }
+          })
+        }
         data['header'] = 'Book Preview';
         data['user'] = req.session.user;
         data['bookID'] = req.query['id'];
