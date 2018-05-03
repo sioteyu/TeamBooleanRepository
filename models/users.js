@@ -18,18 +18,22 @@ exports.addUser = function(req, res){
 	});
 }
 
-exports.authenticate = function(req, res){
+exports.authenticate = function(req, res, cb){
   var usersRef = ref.child('users');
 	usersRef.on('value', function (snap) {
 		snap.forEach(function (childSnap) {
 			if(childSnap.child('email').val()===req.body.email.trim()&&
 					childSnap.child('password').val()===req.body.password.trim()){
         req.session.user = childSnap.key;
-        req.session.email = childSnap.child('email').val();
-        req.session.name = childSnap.child('firstname').val() + ' ' + childSnap.child('lastname').val();
+        req.session.photo = childSnap.child('photo').val();
 				console.log("Login Sucess!!!");
-        res.render('profilePage', {header:'Profile', user: req.session.user});
+        cb()
 			}
 		});
 	});
 }
+exports.getUser = function(userID, cb){
+  ref.child('users').child(userID).on('value', function(snap) {
+    cb(snap.val())
+  })
+};

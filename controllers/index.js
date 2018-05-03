@@ -8,7 +8,7 @@ var crypto = require('../helpers/encryption.js')
 exports.indexPage = function(app){
 
   app.get('/', function(req, res){
-    res.render('landingPage', { header: 'Home', user: req.session.user});
+    res.render('landingPage', { header: 'Home', user: req.session.user, userPhoto:req.session.photo});
   });
 
   app.get('/search', function(req, res){
@@ -18,10 +18,26 @@ exports.indexPage = function(app){
   app.get('/bookPreview', function(req, res){
     books.getBook(req.query['id'], function(data){
       comments.getComments(req, res, req.query['id'], function(json){
+        data['favorite'] = 'off'
+        if (req.session.user) {
+          users.getUser(req.session.user, function(userData){
+            var favorites = userData['favorites'].split(',');
+            console.log(favorites);
+            for (var i = 0; i < favorites.length; i++) {
+              if(req.query['id'] == favorites[i]){
+                data['favorite'] = 'on';
+                break;
+              }else{
+                data['favorite'] = 'off';
+              }
+            }
+          })
+        }
         data['header'] = 'Book Preview';
         data['user'] = req.session.user;
         data['bookID'] = req.query['id'];
         data['comments'] = json;
+        data['userPhoto'] = req.session.photo;
         res.render('bookPreview', data);
       });
     });
@@ -34,5 +50,6 @@ exports.indexPage = function(app){
 
   app.post('/signup', function(req, res){
     users.addUser(req, res);
+    res.render('landingPage', { header: 'Home', user: req.session.user, userPhoto:req.session.photo});
   });
 }

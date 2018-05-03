@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="css/bookPreview/log-in.css">
     <link rel="stylesheet" href="css/profilePage/drop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.css">
+    <style media="screen">
+      textarea{
+        resize: none
+      }
+    </style>
   </head>
   <body>
     <div class='here' style="position:absolute; top:0px;  width:100%; height:500%; background-color:rgba(0, 0, 0, 0.75) !important; z-index:99; transition:2s; display:none">
@@ -15,7 +20,7 @@
   	<div style="position:fixed;top:30vh; left:37vw; z-index:100; display:none" class="login-page">
   		<div class="form2" action = "/signup" method = "post">
   			<h1 class="entry-title" id='text1'itemprop="name" style="font-family:'Circular Std Book'; font-weight:700; color: #413d3d; border-bottom:1px solid rgba(0, 0, 0, 0.075); padding-bottom:15px; font-size:2.3em">Log-in</h1>
-  			<form class="register-form">
+  			<form class="register-form" action="/signup" method="post">
   				<input type="text" name="firstname" placeholder="Enter first name" style="margin-top:20px"/>
   				<input type="text" name="lastname" placeholder="Enter last name"/>
   				<input type="text" name="email" placeholder="Email address"/>
@@ -70,11 +75,18 @@
     	</div>
     <%}%>
     <%if(user){%>
-    <img src="../images/bookPreview/profpic1.jpg" alt="" style="width:50px; height:50px; border-radius:100px; float:right; margin-top:25px; margin-left:20px" id="Pic">
+      <%if(userPhoto){%>
+        <img src="uploads/<%=userPhoto%>" alt="" style="width:50px; height:50px; border-radius:100px; float:right; margin-top:25px; margin-left:20px" id="Pic">
+      <%}else{%>
+        <img src="uploads/default.png" alt="" style="width:50px; height:50px; border-radius:100px; float:right; margin-top:25px; margin-left:20px" id="Pic">
+      <%}%>
     <div class="menu" id="profPicDrp" style="position:absolute; right:0; display:none">
-			<a>Profile<span class="icon octicon octicon-personcolor"></span></a>
+			<a href="/profile">Profile<span class="icon octicon octicon-personcolor"></span></a>
 			<a>Advertise book<span class="icon octicon octicon-repo-pull"></span></a>
-			<a>Log out <span class="icon octicon octicon-sign-out"></span></a>
+			<a onclick="document.getElementById('logoutForm').click()">Log out <span class="icon octicon octicon-sign-out"></span></a>
+      <form class="" action="/logout" method="post" hidden>
+        <input type="submit" name="" value="" id="logoutForm" >
+      </form>
 		</div>
     <%}%>
   	<ul>
@@ -83,7 +95,7 @@
   		<li><a>Share A Book</a></li>
       <%if(!user){%>
     		<li><a class="sign-up">Sign-up</a></li>
-    		<li><a class="log-in">Log-in</a></li>
+    		<li><a class="log-in" id="loginButton">Log-in</a></li>
       <%}%>
 
   	</ul>

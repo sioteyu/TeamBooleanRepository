@@ -135,13 +135,18 @@
                         <span class="action__text--mobile" style="font-family:'Circular Std Book">Review</span>
                       </a>
 
-                      <div class="action  action--share  tooltip-container addFave2" switch="off">
+                      <div class="action  action--share  tooltip-container addFave2" switch="<%=favorite%>">
                         <a  class="tooltip-trigger  js-tooltip-trigger" style="font-size:1em; margin-right:20px; margin-top:20px">
                           <span class="action__icon">
                             <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg"><path d="M12.67 8.552c1.626-1.625 1.59-3.995.113-5.465-1.478-1.47-3.868-1.464-5.338.014-1.47-1.474-3.86-1.48-5.338-.01C.63 4.558.595 6.928 2.22 8.55l5.225 5.226c.51-.508 3.41-3.412 5.225-5.226z" fill="currentColor" fill-rule="evenodd"></path></svg>
                           </span>
-                          <span class="action__text  myFave1" style="font-family:'Circular Std Book">Add to favorites</span>
-                          <span class="action__text--mobile" style="font-family:'Circular Std Book">Add to favorites</span>
+                          <%if(favorite == 'off'){%>
+                            <span class="action__text  myFave1" style="font-family:'Circular Std Book">Add to favorites</span>
+                            <span class="action__text--mobile" style="font-family:'Circular Std Book">Add to favorites</span>
+                          <%}else{%>
+                            <span class="action__text  myFave1" style="font-family:'Circular Std Book">Remove to favorites</span>
+                            <span class="action__text--mobile" style="font-family:'Circular Std Book">Remove to favorites</span>
+                          <%}%>
                         </a>
 
                         <div class="sharedaddy sd-sharing-enabled">
@@ -333,13 +338,18 @@
                         <span class="action__text--mobile" style="font-family:'Circular Std Book">Review</span>
                       </a>
 
-                      <div class="action  action--share  tooltip-container addFave2" switch="off">
+                      <div class="action  action--share  tooltip-container addFave2" switch="<%=favorite%>">
                         <a  class="tooltip-trigger  js-tooltip-trigger" style="font-size:1.3em" >
                           <span class="action__icon">
                             <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg"><path d="M12.67 8.552c1.626-1.625 1.59-3.995.113-5.465-1.478-1.47-3.868-1.464-5.338.014-1.47-1.474-3.86-1.48-5.338-.01C.63 4.558.595 6.928 2.22 8.55l5.225 5.226c.51-.508 3.41-3.412 5.225-5.226z" fill="currentColor" fill-rule="evenodd"></path></svg>
                           </span>
-                          <span class="action__text myFave1" style="font-family:'Circular Std Book">Add to favorites</span>
-                          <span class="action__text--mobile" style="font-family:'Circular Std Book">Add to favorites</span>
+                          <%if(favorite == 'off'){%>
+                            <span class="action__text  myFave1" style="font-family:'Circular Std Book">Add to favorites</span>
+                            <span class="action__text--mobile" style="font-family:'Circular Std Book">Add to favorites</span>
+                          <%}else{%>
+                            <span class="action__text  myFave1" style="font-family:'Circular Std Book">Remove to favorites</span>
+                            <span class="action__text--mobile" style="font-family:'Circular Std Book">Remove to favorites</span>
+                          <%}%>
                         </a>
 
                         <div class="sharedaddy sd-sharing-enabled">
@@ -771,19 +781,43 @@
 <script type='text/javascript' src='js/bookPreview/log-in.js'></script>
 <script type='text/javascript' src='js/bookPreview/scroll.js'></script>
 <script type='text/javascript' src='js/bookPreview/stars.js'></script>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script type="text/javascript" src="./firebaseKey.js"></script>
 <script type="text/javascript">
 $( ".addFave2" ).click(function() {
   <%if(user){%>
     if ( $( ".addFave2" ).attr("switch")=='on' ) {
+      var ref = firebase.database().ref();
+      ref.child('users').child('<%=user%>').once('value').then(function(snap){
+        var newSnap = snap.val();
+        var favorites = newSnap['favorites'].split(',');
+        var index = favorites.indexOf('<%=bookID%>');
+          if (favorites.indexOf('<%=bookID%>') > -1) {
+            favorites.splice(index, 1);
+          }
+        newSnap['favorites'] = favorites.join(',');
+        ref.child('users').child('<%=user%>').update(newSnap);
+      })
         $( ".addFave2" ).attr('switch', 'off');
         $('.myFave1').text('Add to favorites');
     } else {
+      var ref = firebase.database().ref();
+      ref.child('users').child('<%=user%>').once('value').then(function(snap){
+        var newSnap = snap.val();
+        if (newSnap['favorites']) {
+          newSnap['favorites'] = newSnap['favorites']+',<%=bookID%>'
+        }else {
+          newSnap['favorites'] = '<%=bookID%>'
+        }
+        ref.child('users').child('<%=user%>').update(newSnap);
+      })
         $( ".addFave2" ).attr('switch', 'on');
         $('.container10').css('display', 'unset').delay(1000).fadeOut('slow');
         $('.myFave1').text('Remove to favorites');
     }
-  <%}else{
-  }%>
+  <%}else{%>
+    document.getElementById('loginButton').click();
+  <%}%>
 });
 </script>
 <script type='text/javascript' src='js/bookPreview/trophy-cart.js'></script>
