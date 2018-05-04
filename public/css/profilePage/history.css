@@ -12,7 +12,7 @@
 }
 
 a:focus, a:hover {
-  color: #03773f;
+  color: #4A89DC;
 }
 
 .menu1 {
@@ -33,20 +33,20 @@ a:focus, a:hover {
   float: right;
 }
 
-.menu1 a, a {
+/*.menu1 a, a {
   cursor: pointer;
   color: #2e2e2e;
 }
 
 .menu1 a:hover {
-  color: #03773f;
+  color: #4A89DC;
   text-decoration: none;
   cursor: pointer;
-}
+}*/
 
 .menu1:hover {
   content: '';
-  border-bottom: 5px solid #03773f;
+  border-bottom: 5px solid #4A89DC;
 }
 
 .msg-container {
@@ -192,9 +192,9 @@ a:focus, a:hover {
 .btn {
   height: 44px;
   border: 0;
-  background: #03773f;
+  background: #4A89DC;
   color: #fff;
-  cursor: pointer;
+  /*cursor: pointer;*/
   outline: 0;
   padding: 13px 20px;
   -webkit-transition: opacity ease-in-out 0.15s, border-color ease-in-out 0.15s, background-color ease-in-out 0.15s, color ease-in-out 0.15s, box-shadow ease-in-out 0.2s;
@@ -228,7 +228,7 @@ a:focus, a:hover {
 
 .account_data {
   position: absolute;
-  background-color: #03773f;
+  background-color: #4A89DC;
   width: 100%;
   height: 100%;
 }
@@ -337,7 +337,7 @@ a:focus, a:hover {
 }
 
 .hade_link {
-  color: #03773f;
+  color: #4A89DC;
   font-weight: 600;
 }
 
@@ -369,7 +369,7 @@ a:focus, a:hover {
 }
 
 .tab.active {
-  border-bottom: 4px solid #03773f;
+  border-bottom: 4px solid #4A89DC;
   background-color: #fff;
 }
 
@@ -529,14 +529,14 @@ span.deposits + span.spent {
 }
 
 .sticky_date span {
-  color: #03773f;
+  /*color: #4A89DC;*/
 }
 
 .transaction {
   padding: 15px;
   min-height: 77px;
   font-size: 14px;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .transaction_container:before {
@@ -549,9 +549,9 @@ span.deposits + span.spent {
   margin: -1px auto;
 }
 
-.transaction:hover .transaction_container:before {
+/*.transaction:hover .transaction_container:before {
   border: 0px;
-}
+}*/
 
 .transaction_container {
   display: inline-block;
@@ -561,21 +561,21 @@ span.deposits + span.spent {
 /* .transaction:nth-child(odd) {
   background-color: #eeeef0;
 } */
-.transaction:hover {
+/*.transaction:hover {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
   z-index: 100;
-  background-color: #f8fcfa;
+  background-color: #a6c5ee45;
 }
 
 .transaction:hover:before {
   content: "_";
   position: absolute;
-  border-left: 6px solid #03773f;
+  border-left: 6px solid #4A89DC;
   top: 0px;
   left: 0px;
   height: 100%;
   color: rgba(255, 255, 255, 0);
-}
+}*/
 
 .transaction_container > div {
   padding-left: 0px;
@@ -598,7 +598,6 @@ span.deposits + span.spent {
 }
 
 .description span {
-  float: left;
   width: 100%;
 }
 
@@ -665,10 +664,10 @@ span.deposits + span.spent {
   border-radius: 50px;
 }
 
-.category_title:hover .category_text {
-  color: #03773f;
+/*.category_title:hover .category_text {
+  color: #4A89DC;
   text-decoration: underline;
-}
+}*/
 
 .category_text {
   display: block;
@@ -747,7 +746,7 @@ span.deposits + span.spent {
 }
 
 .category_edit:hover {
-  color: #03773f;
+  color: #4A89DC;
   background-color: #eaeaea;
 }
 
