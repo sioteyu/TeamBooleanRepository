@@ -29,8 +29,11 @@ exports.userPage = function(app){
 
   app.post('/login', function(req, res){
   	users.authenticate(req, res, function(){
-      users.getUser(req.session.user, function(data){
-        res.render('profilePage', {header:'Profile', user: req.session.user, userData: data, userPhoto:req.session.photo});
+      users.getUser(req.session.user, function(userData){
+        var favorites = userData['favorites'].split(',');
+        books.getMultipleBook(favorites, function(data) {
+          res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo});
+        });
       })
     });
   });
