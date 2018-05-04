@@ -376,48 +376,50 @@
                 </div>
 
                 <div class="grid" id="grid2" style="display:none;">
-                  <%for(var i = 0;i < favorites.bookData.length;++i){%>
-                    <div class="col-one-third">
-                      <div class="post-module" style="cursor:pointer">
-                        <div class="menu" id="t0" style="position:absolute; right:7px; margin-top:90px; z-index:3">
-                    			<a>Matthew Alviz<span class="icon octicon octicon-x"></span><span class="icon octicon octicon-check"></span></a>
-                    			<a>Anton Macrohon<span class="icon octicon octicon-x"></span><span class="icon octicon octicon-check"></span></a>
-                    			<a>Gelline Gruta <span class="icon octicon octicon-x"></span><span class="icon octicon octicon-check"></span></a>
-                    		</div>
-                          <!-- Thumbnail-->
-                          <div class="thumbnail">
-                            <div class="date" id='0' style="z-index: 1">
-                  								<div class="day" style="margin-top:10px"><i class="fa fa-user-plus"></i></div>
-                  							</div>
-                            <img src="uploads/<%=favorites.bookData[i].photo%>">
-                          </div>
-                          <!-- Post Content-->
-                          <div class="post-content" onclick="window.open('bookPreview.html','_blank');">
-                            <div class="category" style="top:-40px">Status: Borrowed</div>
-                            <h1 class="title" style="font-family:'Circular Std Book' !important"><%=favorites.bookData[i].title%></h1>
-                            <h2 class="sub_title" style="padding-bottom:0; color:black">By: <%=favorites.bookData[i].author%></h2>
+                  <%if(favorites.bookData){%>
+                    <%for(var i = 0;i < favorites.bookData.length;++i){%>
+                      <div class="col-one-third">
+                        <div class="post-module" style="cursor:pointer">
+                          <div class="menu" id="t0" style="position:absolute; right:7px; margin-top:90px; z-index:3">
+                      			<a>Matthew Alviz<span class="icon octicon octicon-x"></span><span class="icon octicon octicon-check"></span></a>
+                      			<a>Anton Macrohon<span class="icon octicon octicon-x"></span><span class="icon octicon octicon-check"></span></a>
+                      			<a>Gelline Gruta <span class="icon octicon octicon-x"></span><span class="icon octicon octicon-check"></span></a>
+                      		</div>
+                            <!-- Thumbnail-->
+                            <div class="thumbnail">
+                              <div class="date" id='0' style="z-index: 1">
+                    								<div class="day" style="margin-top:10px"><i class="fa fa-user-plus"></i></div>
+                    							</div>
+                              <img src="uploads/<%=favorites.bookData[i].photo%>">
+                            </div>
+                            <!-- Post Content-->
+                            <div class="post-content" onclick="window.open('bookPreview.html','_blank');">
+                              <div class="category" style="top:-40px">Status: Borrowed</div>
+                              <h1 class="title" style="font-family:'Circular Std Book' !important"><%=favorites.bookData[i].title%></h1>
+                              <h2 class="sub_title" style="padding-bottom:0; color:black">By: <%=favorites.bookData[i].author%></h2>
 
-                            <div class="c_info" style="padding-left:0">
-                              <!--<span id="c_stars" data-star="0"><span style="width: 48px;"></span></span>
-                              <div class="c_num">0 Stars</div>-->
-                                <div class="single-meta" style="justify-content:unset">
-                                    <a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
-                                      <meta itemprop="ratingValue" content="3.00">
-                                    <i data-alt="1" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="2" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-off-png" title="regular"></i>&nbsp;<i data-alt="5" class="star-off-png" title="regular"></i><input name="pixrating" type="hidden" value="3" readonly="">&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                                    <a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
+                              <div class="c_info" style="padding-left:0">
+                                <!--<span id="c_stars" data-star="0"><span style="width: 48px;"></span></span>
+                                <div class="c_num">0 Stars</div>-->
+                                  <div class="single-meta" style="justify-content:unset">
+                                      <a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
+                                        <meta itemprop="ratingValue" content="3.00">
+                                      <i data-alt="1" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="2" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-off-png" title="regular"></i>&nbsp;<i data-alt="5" class="star-off-png" title="regular"></i><input name="pixrating" type="hidden" value="3" readonly="">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                      <a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
+                                  </div>
                                 </div>
-                              </div>
 
-                              <!--<h2 class="sub_title">Fantasy</h2>-->
-                              <ul class="tags" style="padding-left:0;margin-top:20px;margin-bottom:71px">
-                                   <li><a style="color:white; margin-left:10px">Mystery</a></li>
-                                   <li><a style="color:white">Drama</a></li>
-                                </ul>
-                            <p class="description" style="text-align: justify; display: none; height: 149px; opacity: 1;">A boy learns on his eleventh birthday that he is the orphaned son of two powerful wizards. He is summoned from his life as an unwanted child to become a student at Hogwarts.</p>
-                            <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 3 comments</a></span></div>
+                                <!--<h2 class="sub_title">Fantasy</h2>-->
+                                <ul class="tags" style="padding-left:0;margin-top:20px;margin-bottom:71px">
+                                     <li><a style="color:white; margin-left:10px">Mystery</a></li>
+                                     <li><a style="color:white">Drama</a></li>
+                                  </ul>
+                              <p class="description" style="text-align: justify; display: none; height: 149px; opacity: 1;">A boy learns on his eleventh birthday that he is the orphaned son of two powerful wizards. He is summoned from his life as an unwanted child to become a student at Hogwarts.</p>
+                              <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 3 comments</a></span></div>
+                            </div>
                           </div>
-                        </div>
-                    </div>
+                      </div>
+                    <%}%>
                   <%}%>
 
                 </div>

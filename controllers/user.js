@@ -14,11 +14,14 @@ exports.userPage = function(app){
   app.get('/profile', function(req, res) {
     if (req.session.user) {
       users.getUser(req.session.user, function(userData){
-        var favorites = userData['favorites'].split(',');
-        books.getMultipleBook(favorites, function(data) {
-          console.log(data);
+        if(userData['favorites']){
+          var favorites = userData['favorites'].split(',');
+          books.getMultipleBook(favorites, function(data) {
             res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo});
-        });
+          });
+        }else{
+          res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: {}, userPhoto:req.session.photo});
+        }
 
       })
 
@@ -30,10 +33,15 @@ exports.userPage = function(app){
   app.post('/login', function(req, res){
   	users.authenticate(req, res, function(){
       users.getUser(req.session.user, function(userData){
-        var favorites = userData['favorites'].split(',');
-        books.getMultipleBook(favorites, function(data) {
-          res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo});
-        });
+        if(userData['favorites']){
+          var favorites = userData['favorites'].split(',');
+          books.getMultipleBook(favorites, function(data) {
+            res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo});
+          });
+        }else{
+          res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: {}, userPhoto:req.session.photo});
+        }
+
       })
     });
   });
