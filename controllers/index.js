@@ -52,6 +52,6 @@ exports.indexPage = function(app){
 
   app.post('/signup', function(req, res){
     users.addUser(req, res);
-    res.render('landingPage', { header: 'Home', user: req.session.user, userPhoto:req.session.photo});
+    res.redirect('http://localhost:3000');
   });
 }
