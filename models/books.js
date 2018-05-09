@@ -48,12 +48,13 @@ exports.searchBook = function(req, res){
   json['user'] = req.session.user;
     bookRef.on('value', function (snap) {
     	snap.forEach(function (childSnap) {
-        var child = childSnap.child('title').val().toLowerCase();;
+        var child = childSnap.child('title').val().toLowerCase();
         if (child.indexOf(query) !== -1) {
           json['data'].push(childSnap.val());
           json.data[json.data.length - 1].key = childSnap.key;
         }
   			});
+        console.log(Object.keys(json.data[0].comments).length);
         res.render('bookResult', json);
 		});
   }

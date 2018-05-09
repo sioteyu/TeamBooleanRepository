@@ -27,9 +27,10 @@ exports.authenticate = function(req, res, cb){
         req.session.user = childSnap.key;
         req.session.photo = childSnap.child('photo').val();
 				console.log("Login Sucess!!!");
-        cb()
+        cb(true)
 			}
 		});
+
 	});
 }
 exports.getUser = function(userID, cb){

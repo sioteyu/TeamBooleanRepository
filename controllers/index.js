@@ -21,15 +21,17 @@ exports.indexPage = function(app){
         data['favorite'] = 'off'
         if (req.session.user) {
           users.getUser(req.session.user, function(userData){
-            var favorites = userData['favorites'].split(',');
-            console.log(favorites);
-            for (var i = 0; i < favorites.length; i++) {
-              if(req.query['id'] == favorites[i]){
-                data['favorite'] = 'on';
-                break;
-              }else{
-                data['favorite'] = 'off';
+            if(userData['favorites']){
+              var favorites = userData['favorites'].split(',');
+              console.log(favorites);
+              for (var i = 0; i < favorites.length; i++) {
+                if(req.query['id'] == favorites[i]){
+                  data['favorite'] = 'on';
+                  break;
+                }
               }
+            }else{
+              data['favorite'] = 'off';
             }
           })
         }
@@ -50,6 +52,6 @@ exports.indexPage = function(app){
 
   app.post('/signup', function(req, res){
     users.addUser(req, res);
-    res.render('landingPage', { header: 'Home', user: req.session.user, userPhoto:req.session.photo});
+    res.redirect('http://localhost:3000');
   });
 }

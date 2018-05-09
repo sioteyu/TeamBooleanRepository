@@ -26,23 +26,27 @@ exports.userPage = function(app){
       })
 
     }else{
-      res.render('landingPage', { header: 'Home', user: req.session.user, userPhoto:req.session.photo});
+      res.redirect('http://localhost:3000/')
     }
   });
 
   app.post('/login', function(req, res){
-  	users.authenticate(req, res, function(){
-      users.getUser(req.session.user, function(userData){
-        if(userData['favorites']){
-          var favorites = userData['favorites'].split(',');
-          books.getMultipleBook(favorites, function(data) {
-            res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo});
-          });
-        }else{
-          res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: {}, userPhoto:req.session.photo});
-        }
+  	users.authenticate(req, res, function(status){
+      if(status){
+        users.getUser(req.session.user, function(userData){
+          if(userData['favorites']){
+            var favorites = userData['favorites'].split(',');
+            books.getMultipleBook(favorites, function(data) {
+              res.redirect('http://localhost:3000/profile');
+            });
+          }else{
+            res.redirect('http://localhost:3000/profile');
+          }
 
-      })
+        })
+      }else{
+        res.sendredirect('http://localhost:3000/')
+      }
     });
   });
 }
