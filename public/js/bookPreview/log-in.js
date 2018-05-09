@@ -55,3 +55,9 @@ $('.mssg2').click(function(){
   $('.login-form').css('display', 'unset');
   $('.form2 h1').text('Log-in');
 });
+
+$('#advertise').click(function(){
+  $('.here').css('display', 'unset');
+  $('.login-page2').css('display', 'unset');
+  $('#hey').css('overflow', 'hidden');
+});
