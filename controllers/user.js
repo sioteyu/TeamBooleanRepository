@@ -45,8 +45,16 @@ exports.userPage = function(app){
 
         })
       }else{
-        res.sendredirect('http://localhost:3000/')
+        res.redirect('http://localhost:3000/')
       }
     });
   });
+
+  app.get('/advertise', function(req, res){
+    if(req.session.user){
+      res.render('uploadPage', {header: 'Home', user: req.session.user, userPhoto:req.session.photo});
+    }else{
+      res.redirect('http://localhost:3000/')
+    }
+  })
 }
