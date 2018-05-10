@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/uploadPage/index.css">
+    <link rel="stylesheet" href="../public/css/uploadPage/search.css">
+  </head>
+  <body>
+    <div class="image-container set-full-height" style="background-image: url('../public/images/uploadPage/1.jpg')">
+
+	    <!--   Big container   -->
+	    <div class="container">
+	        <div class="row">
+		        <div class="col-sm-8 col-sm-offset-2">
+		            <!-- Wizard container -->
+		            <div class="wizard-container">
+		                <div class="card wizard-card" data-color="red" id="wizard">
+		                    <form action="" method="">
+		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+		                    	<div class="wizard-header">
+		                        	<h3 class="wizard-title" style="font-family:'Comfortaa', Helvetica, sans-serif">
+		                        		Advertise your book
+		                        	</h3>
+									<h5>Share your book. Help others. Earn from it.</h5>
+		                    	</div>
+								<div class="wizard-navigation">
+									<ul>
+			                            <li><a href="#details" data-toggle="tab">Book</a></li>
+			                            <li><a href="#captain" data-toggle="tab">Advertise</a></li>
+			                            <li><a href="#description" data-toggle="tab">Details</a></li>
+			                        </ul>
+								</div>
+
+		                        <div class="tab-content">
+		                            <div class="tab-pane" id="details">
+		                            	<div class="row">
+			                            	<div class="col-sm-12">
+			                                	<h4 class="info-text">What book do you want to advertise?</h4>
+			                            	</div>
+		                                	<div class="col-sm-6">
+                                        <div class="search-form" style="margin-top: 12%; margin-left: 55%;">
+                                          <input type="search" value="" placeholder="Search for a book..." class="search-input" style="margin-left:2%; width:75%">
+                                          <button type="submit" class="search-button">
+                                            <i class="material-icons">search</i>
+                                          </button>
+                                        </div>
+		                                	</div>
+		                            	</div>
+		                            </div>
+		                            <div class="tab-pane" id="captain">
+		                                <h4 class="info-text">What type of advertisement do you prefer? </h4>
+		                                <div class="row">
+		                                    <div class="col-sm-10 col-sm-offset-1">
+		                                        <div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this if you want to advertise your book for rent.">
+		                                                <input type="radio" name="job" value="Design">
+		                                                <div class="icon">
+		                                                    <i class="material-icons">transfer_within_a_station</i>
+		                                                </div>
+		                                                <h6>Rent</h6>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this if you want to advertise your book for sale.">
+		                                                <input type="radio" name="job" value="Code">
+		                                                <div class="icon">
+		                                                    <i class="material-icons">attach_money</i>
+		                                                </div>
+		                                                <h6>For Sale</h6>
+		                                            </div>
+		                                        </div>
+												<div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this if you want to advertise your book for other people to find.">
+		                                                <input type="radio" name="job" value="Code">
+		                                                <div class="icon">
+		                                                    <i class="material-icons">place</i>
+		                                                </div>
+		                                                <h6>For Show</h6>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                            <div class="tab-pane" id="description">
+		                                <div class="row">
+		                                    <h4 class="info-text"> Drop us a small description and your terms and agreements.</h4>
+		                                    <div class="col-sm-6 col-sm-offset-1">
+	                                    		<div class="form-group">
+		                                            <label>Description</label>
+		                                            <textarea class="form-control" placeholder="" rows="6"></textarea>
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-sm-4">
+		                                    	<div class="form-group">
+		                                            <label class="control-label">Example</label>
+		                                            <p class="description">"The book is at good quality. Willing to sell this for a low price. Message me."</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+	                        	<div class="wizard-footer">
+	                            	<div class="pull-right">
+	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
+	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
+	                                </div>
+	                                <div class="pull-left">
+	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+
+	                                </div>
+	                                <div class="clearfix"></div>
+	                        	</div>
+		                    </form>
+		                </div>
+		            </div> <!-- wizard container -->
+		        </div>
+	    	</div> <!-- row -->
+		</div> <!--  big container -->
+	</div>
+
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script type="text/javascript" src='../public/js/uploadPage/index.js'></script>
+</body>
+</html>
