@@ -6760,10 +6760,10 @@ ul.categories--widget a:hover {
 }
 @media only screen and (min-width: 1200px) {
 	.myflex__left {
-		width: calc(720px);
+		width: 100%;
 
-		flex-basis: 720px;
-		-ms-flex-preferred-size: 720px;
+		flex-basis: 100%;
+		-ms-flex-preferred-size: 100%;
 	}
 }
 
@@ -12632,7 +12632,6 @@ div.addon-description p {
 		margin-top: -15px;
 	}
 	.listing-sidebar--main .widget_listing_actions.widget_listing_actions:first-child {
-		margin-top: 25px;
 	}
 }
 .listing-sidebar--main .widget_listing_actions.widget_listing_actions + * {
