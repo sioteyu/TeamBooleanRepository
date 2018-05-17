@@ -457,6 +457,7 @@ body {
   text-decoration: none;
   opacity: 1;
   filter: Alpha(Opacity=100);
+  color:white
   /*IE7 fix*/
 }
 
@@ -570,8 +571,13 @@ body {
   background: #333;
 }
 
-.customNavigation .btn:hover {
-  background: #222;
+.customNavigation .btn:hover{
+  background: #5d9cec !important;
+  color:white !important;
+}
+
+.icon:hover{
+  color:white
 }
 
 .hoverfx {
