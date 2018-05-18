@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "theApp">
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="images/landingpage/BookHub_ico.png"/>
@@ -19,7 +19,7 @@
     <link rel='stylesheet' id='jquery-raty-style-css'  href='https://cdn.demos.pixelgrade.com/wp-content/plugins/comments-ratings/css/jquery.raty.css?ver=1518791654' type='text/css' media='' />
     <link rel='stylesheet' id='listable-style-css'  href='css/bookPreview/additional.css' type='text/css' media='all'/>
   </head>
-  <body style="overflow-x:hidden" id="hey">
+  <body style="overflow-x:hidden" id="hey" ng-controller = "theCtr">
     <div class="container-fluid splash" id="splash" style="padding-left: 0px; padding-right: 0px; height:630px;">
       <div class="container" style="padding-top: 0px;padding-bottom: 0px; height:630px">
         <div style="position:relative; z-index:2; color:white; height:100%; width:100%; background-image:url('images/landingpage/front.png'); background-size:cover">
@@ -39,29 +39,19 @@
             </span>
             <div class="in-wrap">
               <form class="" action="/search" method="get" id="searchForm">
-                <input type="text" name="searchItem" id="search-box" placeholder="What are you looking for?">
+                <input type="text" name="searchItem" id="search-box" placeholder="What are you looking for?" ng-change = "updateItems()" ng-model = "query" autocomplete="off">
               </form>
             </div>
           </div>
 
           <div class="search-results" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);top:70px;opacity:1">
-            <a class="result">
-              <div class="result__picture four-members" style="background-image:url('images/landingpage/book.png'); background-size:contain">
+            <a class="result" ng-repeat = "book in books" href="http://localhost:3000/bookPreview?id={{book.$id}}">
+              <div class="result__picture four-members" style="background-image:url('uploads/{{book.photo}}'); background-size:contain">
 
               </div>
               <div class="result__details">
-                Harry Potter and the Chamber of Secrets
-                <span class="result__subtitle">JK Rowling <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9733;&#9734;&#9734;</big> </span>
-              </div>
-            </a>
-
-            <a class="result" id="example-result">
-              <div class="result__picture four-members" style="background-image:url('images/landingpage/book.png'); background-size:contain">
-
-              </div>
-              <div class="result__details">
-                Harry Potter and the Sorcerer Stone
-                <span class="result__subtitle">JK Rowling <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9734;&#9734;&#9734;</big> </span>
+                {{book.title}}
+                <span class="result__subtitle">{{book.author}} <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9733;&#9734;&#9734;</big> </span>
               </div>
             </a>
           </div>

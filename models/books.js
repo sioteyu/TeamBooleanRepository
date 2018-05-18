@@ -54,7 +54,6 @@ exports.searchBook = function(req, res){
           json.data[json.data.length - 1].key = childSnap.key;
         }
   			});
-        console.log(Object.keys(json.data[0].comments).length);
         res.render('bookResult', json);
 		});
   }
