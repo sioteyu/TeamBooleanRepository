@@ -55,7 +55,7 @@ input#toggle:checked ~ .menu { display: none; }
 
 .menu a:hover > .octicon { color: #5d9cec; }
 
-.icon
+.menu .icon
 {
 	float: right;
 	margin-top: 10px;

@@ -26,9 +26,11 @@
 <link rel="stylesheet" href="css/bookPreview/tags.css">
 <link rel='stylesheet' id='jquery-raty-style-css'  href='https://cdn.demos.pixelgrade.com/wp-content/plugins/comments-ratings/css/jquery.raty.css?ver=1518791654' type='text/css' media='' />
 <link rel='stylesheet' id='listable-style-css'  href='css/bookPreview/additional.css' type='text/css' media='all'/>
+<link rel='stylesheet' href='css/bookPreview/carousel.css' type='text/css' media='all'/>
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 
-<body id='hey' class="page-template-default page page-id-12 wp-custom-logo page-listings listable" data-mapbox-token="pk.eyJ1IjoiZ2Vvcmdlb2xhcnUiLCJhIjoiY2lneTNtZ2VtMDBlNmtya3IzdHY0ZTl2biJ9.ZQPEMiJW_XQjJHUFRlioug" data-mapbox-style="mapbox.streets-basic">
+<body id='hey' class="page-template-default page page-id-12 wp-custom-logo page-listings listable" data-mapbox-token="pk.eyJ1IjoiZ2Vvcmdlb2xhcnUiLCJhIjoiY2lneTNtZ2VtMDBlNmtya3IzdHY0ZTl2biJ9.ZQPEMiJW_XQjJHUFRlioug" data-mapbox-style="mapbox.streets-basic" style="background-color:#f4f4f4; overflow:hidden">
 <div id="content" class="site-content js-header-height-padding-top">
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
@@ -43,13 +45,6 @@
 
 		<div class="search_jobs">
 						<input type="hidden" name="search_keywords" id="search_keywords" value=""/>
-
-			<div class="search_location">
-				<label for="search_location">Location</label>
-				<input type="text" name="search_location" id="search_location"
-				       placeholder="Location"
-				       value=""/>
-			</div>
 
 			<div class="select-categories">
 
@@ -77,26 +72,7 @@
 											</select>
 				</div>
 				<div class="active-tags"></div>
-			<div class="filter_wide filter_by_tag" style="font-family: 'Circular Std Book';">Filter by tag: <span class="filter_by_tag_cloud"></span></div><select  name='search_region' id='search_region' class='search_region' style="font-family: 'Circular Std Book';">
-	<option value='0'>All Regions</option>
-	<option class="level-0" value="171">NCR</option>
-	<option class="level-0" value="168">Ilocos Region</option>
-	<option class="level-0" value="172">CAR</option>
-	<option class="level-0" value="173">Cagayan Valley</option>
-	<option class="level-0" value="170">Central Luzon</option>
-	<option class="level-0" value="169">CALABARZON</option>
-	<option class="level-0" value="169">MIMAROPA</option>
-	<option class="level-0" value="169">Bicol Region</option>
-	<option class="level-0" value="169">Western Visayas</option>
-	<option class="level-0" value="169">Central Visayas</option>
-	<option class="level-0" value="169">Eastern Visayas</option>
-	<option class="level-0" value="169">Zamboanga Peninsula</option>
-	<option class="level-0" value="169">Northern Mindanao</option>
-	<option class="level-0" value="169">Davao Region</option>
-	<option class="level-0" value="169">SOCCSKSARGEN</option>
-	<option class="level-0" value="169">Caraga Region</option>
-	<option class="level-0" value="169">ARMM</option>
-</select>
+			<div class="filter_wide filter_by_tag" style="font-family: 'Circular Std Book';">Filter by tag: <span class="filter_by_tag_cloud"></span></div>
 		</div><!-- .search_jobs -->
 
 		<div class="mobile-buttons">
@@ -119,13 +95,69 @@
 
 
 <div class="grid list job_listings" style="background-color:#f4f4f4">
+
+	<div class="row" style="width:100%">
+
+  <div class="customNavigation" style="position:absolute; top:100px; right:0px">
+    <a class="btn gray prev" style="border: #5d9cec solid 1.5px; margin-right:15px"><i class="icon ion-ios-arrow-left" style="color:#5d9cec"></i></a>
+    <a class="btn gray next" style="border: #5d9cec solid 1.5px;"><i class="icon ion-ios-arrow-right" style="color:#5d9cec"></i></a>
+  </div>
+
+
+  <div id="slider-carousel" class="owl-carousel">
+			<%var i=0%>
+			<%for(i = 0; i < data.length; ++i){%>
+				<div class="item">
+				<div class="grid__item" onclick="window.open('/bookPreview?id=<%=data[i].key%>','_blank');">
+					<div class="column" style="cursor:pointer">
+							<div class="post-module">
+								<div class="thumbnail">
+									<div class="date">
+										<div class="day">7</div>
+										<div class="month">Copies</div>
+										<script type="text/javascript">
+											function replace(x){
+												document.getElementById(x).src = "/uploads/not-available.jpg";
+											}
+										</script>
+									</div><img id="<%=i%>" src="/uploads/<%=data[i].photo%>" onerror="replace('<%=i%>')"/>
+								</div>
+								<div class="post-content">
+									<h1 class="title" style="font-family: 'Circular Std Book' !important"><%=data[i].title%></h1>
+									<h2 class="sub_title" style="padding-bottom:0; color:black">By: <%=data[i].author%></h2>
+
+									<div class="c_info" style="padding-left:0">
+													<div class="single-meta" style="justify-content:unset">
+		                  			<a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
+		                    			<meta itemprop="ratingValue" content="3.00">
+		                  			<i data-alt="1" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="2" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-off-png" title="regular"></i>&nbsp;<i data-alt="5" class="star-off-png" title="regular"></i><input name="pixrating" type="hidden" value="3" readonly="">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+		                  			<a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
+		                </div>
+									</div>
+									<ul class="tags" style="padding-left:0;margin-top:20px;margin-bottom:71px">
+		                   <li><a style="color:white; margin-left:10px">Mystery</a></li>
+		                   <li><a style="color:white">Drama</a></li>
+		                </ul>
+									<p class="description"  id= black<%=i%> style="text-align:justify"><%=data[i].description%></p>
+									<div class="post-meta"><span class="timestamp"><i class="fa fa-compass"></i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> <%if(data[i].comments){%><%=Object.keys(data[i].comments).length%><%}else{%>0<%}%> comments</a></span></div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			<%}%>
+    </div>
+
+  </div>
+
+</div>
+
+	<!--
 	<%var i=0%>
 	<%for(i = 0; i < data.length; ++i){%>
 		<div class="grid__item" onclick="window.open('/bookPreview?id=<%=data[i].key%>','_blank');">
 			<div class="column" style="cursor:pointer">
-					<!-- Post-->
 					<div class="post-module">
-						<!-- Thumbnail-->
 						<div class="thumbnail">
 							<div class="date">
 								<div class="day">7</div>
@@ -137,15 +169,11 @@
 								</script>
 							</div><img id="<%=i%>" src="/uploads/<%=data[i].photo%>" onerror="replace('<%=i%>')"/>
 						</div>
-						<!-- Post Content-->
 						<div class="post-content">
-							<!--<div class="category">Check it out</div>-->
 							<h1 class="title" style="font-family: 'Circular Std Book' !important"><%=data[i].title%></h1>
 							<h2 class="sub_title" style="padding-bottom:0; color:black">By: <%=data[i].author%></h2>
 
 							<div class="c_info" style="padding-left:0">
-											<!--<span id="c_stars" data-star="0"><span style="width: 33px;"></span></span>
-											<div class="c_num">0 Stars</div>-->
 											<div class="single-meta" style="justify-content:unset">
                   			<a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
                     			<meta itemprop="ratingValue" content="3.00">
@@ -153,8 +181,6 @@
                   			<a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
                 </div>
 							</div>
-
-							<!--<h2 class="sub_title">Fantasy</h2>-->
 							<ul class="tags" style="padding-left:0;margin-top:20px;margin-bottom:71px">
                    <li><a style="color:white; margin-left:10px">Mystery</a></li>
                    <li><a style="color:white">Drama</a></li>
@@ -164,9 +190,9 @@
 						</div>
 					</div>
 				</div>
-		</div><!-- .grid__item -->
+		</div>
 	<%}%>
-</div><!-- .grid.list.job_listings -->
+</div> -->
 
 <svg class="loader" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
@@ -188,7 +214,7 @@
 </svg>
 
 <a class="load_more_jobs" href="#" style="display:none;"><strong>Load more listings</strong></a>	</div><!-- .myflex__left -->
-<div id="map" class="map myflex__right" style="top:100px"></div>
+<!--<div id="map" class="map myflex__right" style="top:100px"></div>-->
 </div><!-- .myflex -->
 </div>
 	</div><!-- .entry-content -->
@@ -428,44 +454,9 @@ var job_manager_ajax_filters = {"ajax_url":"\/listable\/jm-ajax\/%%endpoint%%\/"
 <script type='text/javascript' src='https://cdn.demos.pixelgrade.com/wp-content/plugins/woocommerce-social-login/assets/js/frontend/wc-social-login.min.js?ver=1518791655'></script>
 <script type='text/javascript' src='https://stats.wp.com/e-201809.js' async='async' defer='defer'></script>
 <script src="js/landingpage/cardView.js" type="text/javascript"></script>
-<script src="js/landingpage/cardView2.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08&sensor=true"></script>
-<script type="text/javascript" src="js/bookResult/gmaps.js"></script>
-<script type="text/javascript">
-	var map;
-	$(document).ready(function(){
-		map = new GMaps({
-			el: '#map',
-			lat: -12.043333,
-			lng: -77.028333,
-			zoomControl : true,
-			zoomControlOpt: {
-					style : 'SMALL',
-					position: 'TOP_LEFT'
-			},
-			panControl : false,
-			streetViewControl : false,
-			mapTypeControl: false,
-			overviewMapControl: false
-		});
-	});
-
-	function truncateText(selector, maxLength) {
-    var element = document.querySelector(selector),
-        truncated = element.innerText;
-
-    if (truncated.length > maxLength) {
-        truncated = truncated.substr(0,maxLength) + '...';
-    }
-    return truncated;
-}
-
-var max = <%=i%>
-
-for(i=0; i<=max; i++){
-document.querySelector('#black' + i).innerText = truncateText('#black' + i, 300);
-}
-</script>
+<!--<script src="js/landingpage/cardView2.js" type="text/javascript"></script>-->
 <script src="js/landingpage/index.js" type="text/javascript"></script>
+<script src="js/bookPreview/carousel.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 </body>
 </html>
