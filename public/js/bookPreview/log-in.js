@@ -58,15 +58,6 @@ $('.mssg2').click(function(){
   $('.form2 h1').text('Log-in');
 });
 
-setTimeout(function(){
-  $('.here').css('display', 'unset');
-  $('.login-page').css('display', 'unset');
-  $('.form2 h1').text('Enable Your Location');
-  $('#hey').css('overflow', 'hidden');
-  $('.register-form').css('display', 'none');
-  $('.login-form').css('display', 'none');
-  $('.locate').attr('style', 'display:unset')
-}, 300);
 
 $( ".searching" ).click(function() {
   $('.search-results').css('opacity', '1')

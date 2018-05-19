@@ -50,6 +50,12 @@ exports.userPage = function(app){
     });
   });
 
+  app.post('/addBook', function(req, res){
+    books.addBookFavorites(req, function(){
+      res.redirect('http://localhost/profile');
+    })
+  });
+
   app.get('/advertise', function(req, res){
     if(req.session.user){
       res.render('uploadPage', {header: 'Home', user: req.session.user, userPhoto:req.session.photo});

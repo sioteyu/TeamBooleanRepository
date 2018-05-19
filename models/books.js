@@ -79,3 +79,13 @@ exports.searchBook = function(req, res){
       });
     }
   }
+
+  exports.addBookFavorites = function(req, cb){
+      var availRef = ref.child('books').child(req.body.valuedID).child('availability');
+      availRef.push({
+        user:req.session.user,
+        type:req.body.job,
+        description:req.body.description
+      });
+      cb();
+  }

@@ -12,10 +12,12 @@ app.controller("theCtr", function($scope, $firebaseArray) {
   var ref = firebase.database().ref().child("books").orderByChild("title");
   var bookList = $firebaseArray(ref)
   $scope.updateItems = function(){
-    ref = firebase.database().ref().child("books").orderByChild("title").startAt($scope.query).endAt($scope.query+"\uf8ff");
+    ref = firebase.database().ref().child("books").orderByChild("title").startAt($scope.query.toLowerCase()).endAt($scope.query.toLowerCase()+"\uf8ff");
     var bookList = $firebaseArray(ref);
-    console.log(bookList);
     $scope.books = bookList;
+  }
+  $scope.changeVal = function(x){
+    document.getElementById('valuedID').value = x.$id
   }
   $scope.books = bookList;
 });

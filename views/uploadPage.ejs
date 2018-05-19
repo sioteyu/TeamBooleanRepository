@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "theApp" onload="getLocation()">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -18,7 +18,7 @@
       }
     </style>
   </head>
-  <body>
+  <body ng-controller = "theCtr">
     <div class="image-container set-full-height" style="background-image: url('/images/uploadPage/1.jpg')">
 
 	    <!--   Big container   -->
@@ -28,7 +28,7 @@
 		            <!-- Wizard container -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="red" id="wizard" style="margin-top:30px">
-		                    <form action="" method="">
+		                    <form action="/addBook" method="post" id="favForm">
 		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
 
 		                    	<div class="wizard-header">
@@ -53,31 +53,25 @@
 			                            	</div>
 		                                	<div class="col-sm-6">
                                         <div class="search-form" style="margin-top: 12%; margin-left: 55%;">
-                                          <input type="search" value="" placeholder="Search for a book..." class="search-input" style="margin-left:2%; width:75%">
+                                          <input type="search" value="" placeholder="Search for a book..." class="search-input" style="margin-left:2%; width:75%" ng-change = "updateItems()" ng-model = "query">
                                           <button type="submit" class="search-button">
                                             <i class="material-icons">search</i>
                                           </button>
                                         </div>
+                                        <input type="hidden" id="valuedID" name="valuedID" value="">
                                         <div class="search-results" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);opacity:1; width:90%; position:absolute; left:210px;">
-            <a class="result">
-              <div class="result__picture four-members" style="background-image:url('images/landingpage/book.png'); background-size:contain">
+                                          <a class="result" ng-repeat = "book in books" ng-click="changeVal(book)" onclick="document.getElementById('nxt').click()" id="">
 
-              </div>
-              <div class="result__details" style="text-align: left;">
-                Harry Potter and the Chamber of Secrets
-                <span class="result__subtitle">JK Rowling <span style="font-size:1em">|</span> <big style="color:#fd6b0d">★★★☆☆</big> </span>
-              </div>
-            </a>
+                                            <div class="result__picture four-members" style="background-image:url('uploads/{{book.photo}}'); background-size:contain">
 
-            <a class="result" id="example-result">
-              <div class="result__picture four-members" style="background-image:url('images/landingpage/book.png'); background-size:contain">
+                                            </div>
+                                            <div class="result__details">
+                                              {{book.title}}
+                                              <span class="result__subtitle">{{book.author}} <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9733;&#9734;&#9734;</big> </span>
+                                            </div>
+                                          </a>
 
-              </div>
-              <div class="result__details" style="text-align: left;">
-                Harry Potter and the Sorcerer Stone
-                <span class="result__subtitle">JK Rowling <span style="font-size:1em">|</span> <big style="color:#fd6b0d">★★☆☆☆</big> </span>
-              </div>
-            </a>
+
           </div>
 		                                	</div>
 		                            	</div>
@@ -88,7 +82,7 @@
 		                                    <div class="col-sm-10 col-sm-offset-1">
 		                                        <div class="col-sm-4">
 		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this if you want to advertise your book for rent.">
-		                                                <input type="radio" name="job" value="Design">
+		                                                <input type="radio" name="job" value="Rent">
 		                                                <div class="icon" style="margin:20px; margin-top:10px">
 		                                                    <i class="material-icons">transfer_within_a_station</i>
 		                                                </div>
@@ -97,7 +91,7 @@
 		                                        </div>
 		                                        <div class="col-sm-4">
 		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this if you want to advertise your book for sale.">
-		                                                <input type="radio" name="job" value="Code">
+		                                                <input type="radio" name="job" value="Sale">
 		                                                <div class="icon" style="margin:20px; margin-top:10px">
 		                                                    <i class="material-icons">attach_money</i>
 		                                                </div>
@@ -106,7 +100,7 @@
 		                                        </div>
 												<div class="col-sm-4">
 		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this if you want to advertise your book for other people to find.">
-		                                                <input type="radio" name="job" value="Code">
+		                                                <input type="radio" name="job" value="Show">
 		                                                <div class="icon" style="margin:20px; margin-top:10px">
 		                                                    <i class="material-icons">place</i>
 		                                                </div>
@@ -122,7 +116,7 @@
 		                                    <div class="col-sm-6 col-sm-offset-1">
 	                                    		<div class="form-group">
 		                                            <label>Description</label>
-		                                            <textarea class="form-control" placeholder="" rows="6"></textarea>
+		                                            <textarea class="form-control" placeholder="" rows="6" name="description"></textarea>
 		                                        </div>
 		                                    </div>
 		                                    <div class="col-sm-4">
@@ -136,8 +130,8 @@
 		                        </div>
 	                        	<div class="wizard-footer">
 	                            	<div class="pull-right">
-	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
-	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
+	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' id="nxt" />
+	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' onclick="document.getElementById('favForm').submit()"/>
 	                                </div>
 	                                <div class="pull-left">
 	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
