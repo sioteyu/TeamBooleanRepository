@@ -235,8 +235,8 @@
           <header class="entry-header" style="margin-top:100px; padding-top:0px; padding-bottom:0px">
             <div class="grid1" style="height:590px; padding-right:0; margin-left:7%">
 	              <article class="module desktop-3 tablet-4" style="background-color:white; height:500px; padding-left:50px;box-shadow:0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)">
-                  <h1 class="entry-title" itemprop="name" style="text-transform:unset;font-family:'Circular Std Book'; color:#333333; font-weight:700; font-size:3em">Harry Potter and the Philosopher Stone</h1>
-                <span class="entry-subtitle" itemprop="description" style="font-family: 'Circular Std Book'; font-size:1.3em; color:#333333">By: JK Rowling</span>
+                  <h1 class="entry-title" itemprop="name" style="text-transform:unset;font-family:'Circular Std Book'; color:#333333; font-weight:700; font-size:3em"><%=title%></h1>
+                <span class="entry-subtitle" itemprop="description" style="font-family: 'Circular Std Book'; font-size:1.3em; color:#333333">By: <%=author%></span>
 
                 <div class="single-meta" style="justify-content:unset">
                   <a href="#comments" class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" style="padding:0">
@@ -458,7 +458,7 @@
                               <!-- body container -->
                               <div class="card-media-body" num="1">
                                 <div class="card-media-body-top">
-                                  <span class="subtle"><%=availability[j].user%></span>
+                                  <span class="subtle" id="<%=j%>"><%=availability[j].user%></span>
                                 </div>
                                 <div class="single-meta" style="justify-content:unset">
                                   <a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
@@ -631,7 +631,7 @@
         lng: 121.019194,
         title: 'Marker with InfoWindow',
         infoWindow: {
-          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">Matthew Alviz</span>' + '<br>'
+          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">'+document.getElementById('0').innerHTML+'</span>' + '<br>'
           + '<div class=' + '"single-meta"' +  'style=' + '"justify-content:unset"' + '>'
             + '<a class=' + '"single-rating review_rate display-only"' + 'data-pixrating=' + '"3.00"' + 'itemprop=' + '"aggregateRating"' + 'id=' + '"special"' + 'itemtype=' + '"http://schema.org/AggregateRating"' + 'style=' + '"padding:0"' + 'title=' + '"regular"' + '>'
               + '<meta itemprop=' + '"ratingValue"' + 'content=' + '"3.00"' + '>'
