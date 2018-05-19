@@ -51,6 +51,9 @@
   				<p class="message"><a>Forgot password?</a></p>
   				<p class="message" style="margin-top:0">Not registered? <a class='mssg1'>Create an account</a></p>
   			</form>
+        <form class="locate" style="display:none">
+          <button onclick="getLocation()">allow location</button>
+        </form>
   		</div>
   	</div>
 
@@ -126,6 +129,22 @@
       function replace(x){
         document.getElementById(x).src = "/uploads/not-available.jpg";
       }
+    </script>
+    <script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function showPosition(position) {
+        var ba = "Latitude: " + position.coords.latitude +
+        "Longitude: " + position.coords.longitude;
+
+        alert(ba);
+    }
     </script>
   </body>
 </html>

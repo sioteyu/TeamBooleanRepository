@@ -6,6 +6,7 @@ $('.log-in').click(function(){
   $('.login-form').css('display', 'unset');
   $('.share-form').css('display', 'none');
   $('.form2 h1').text('Log-in');
+  $('.locate').css('display', 'none');
 });
 
 $('.sign-up').click(function(){
@@ -16,6 +17,7 @@ $('.sign-up').click(function(){
   $('.login-form').css('display', 'none');
   $('.share-form').css('display', 'none');
   $('.form2 h1').text('Sign-up');
+  $('.locate').css('display', 'none');
 });
 
 $('#share-this').click(function(){
@@ -56,8 +58,16 @@ $('.mssg2').click(function(){
   $('.form2 h1').text('Log-in');
 });
 
-$('#advertise').click(function(){
+setTimeout(function(){
   $('.here').css('display', 'unset');
-  $('.login-page2').css('display', 'unset');
+  $('.login-page').css('display', 'unset');
+  $('.form2 h1').text('Enable Your Location');
   $('#hey').css('overflow', 'hidden');
+  $('.register-form').css('display', 'none');
+  $('.login-form').css('display', 'none');
+  $('.locate').attr('style', 'display:unset')
+}, 300);
+
+$( ".searching" ).click(function() {
+  $('.search-results').css('opacity', '1')
 });
