@@ -52,7 +52,7 @@ exports.userPage = function(app){
 
   app.post('/addBook', function(req, res){
     books.addBookFavorites(req, function(){
-      res.redirect('http://localhost/profile');
+      res.redirect('http://localhost:3000/profile');
     })
   });
 

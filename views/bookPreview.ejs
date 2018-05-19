@@ -448,112 +448,36 @@
                         </div>
 
                         ​<div class="container5">
+                          <%for(var j = 0 ; j < availability.length ; ++j){%>
+                            <div class="card-media">
+                              <!-- media container -->
+                              <div class="card-media-object-container">
+                                <div class="card-media-object" style="background-image: url('images/bookPreview/sample3.png');"></div>
+                                <span class="card-media-object-tag subtle"><%=availability[j].type%></span>
+                              </div>
+                              <!-- body container -->
+                              <div class="card-media-body" num="1">
+                                <div class="card-media-body-top">
+                                  <span class="subtle"><%=availability[j].user%></span>
+                                </div>
+                                <div class="single-meta" style="justify-content:unset">
+                                  <a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
+                                    <meta itemprop="ratingValue" content="3.00">
+                                    <i data-alt="1" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="2" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-off-png" title="regular"></i>&nbsp;<i data-alt="5" class="star-off-png" title="regular"></i><input name="pixrating" type="hidden" value="3" readonly="">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                    <a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
+                                </div>
+                                <span class="card-media-body-heading"><%=availability[j].description%></span>
+                                <div class="card-media-body-supporting-bottom">
+                                  <span class="card-media-body-supporting-bottom-text subtle">HV Dela Costa Street, Makati City</span>
+                                </div>
+                                <div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
+                                  <!--<span class="card-media-body-supporting-bottom-text subtle">500 m away</span>-->
+                                  <a class="card-media-body-supporting-bottom-text card-media-link u-float-right">VIEW ROUTE</a>
+                                </div>
+                              </div>
+                            </div>
+                          <%}%>
 
-                          <div class="card-media">
-                            <!-- media container -->
-                            <div class="card-media-object-container">
-                              <div class="card-media-object" style="background-image: url('images/bookPreview/sample2.jpg');"></div>
-                              <span class="card-media-object-tag subtle">For Rent</span>
-                              <ul class="card-media-object-social-list">
-                                <li>
-                                  <img src="https://s10.postimg.org/3rjjbzcvd/profile_f.jpg" class="">
-                                </li>
-                                <li>
-                                  <img src="https://s16.postimg.org/b0j0djh79/profile_0_f.jpg" class="">
-                                </li>
-                                <li class="card-media-object-social-list-item-additional">
-                                  <span>+5</span>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- body container -->
-                            <div class="card-media-body" num="0">
-                              <div class="card-media-body-top">
-                                <span class="subtle">Matthew Alviz</span>
-                              </div>
-                              <div class="single-meta" style="justify-content:unset">
-                                <a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
-                                  <meta itemprop="ratingValue" content="3.00">
-                                  <i data-alt="1" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="2" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-off-png" title="regular"></i>&nbsp;<i data-alt="5" class="star-off-png" title="regular"></i><input name="pixrating" type="hidden" value="3" readonly="">&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                                  <a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
-                              </div>
-                              <span class="card-media-body-heading">Slightly scratched, Prefers meet-up rather than delivery.</span>
-                              <div class="card-media-body-supporting-bottom">
-                                <span class="card-media-body-supporting-bottom-text subtle">Salcedo Village, Makati City</span>
-                              </div>
-                              <div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
-                                <!--<span class="card-media-body-supporting-bottom-text subtle">1.2 km away</span>-->
-                                <a class="card-media-body-supporting-bottom-text card-media-link u-float-right">VIEW ROUTE</a>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="card-media">
-                            <!-- media container -->
-                            <div class="card-media-object-container">
-                              <div class="card-media-object" style="background-image: url('images/bookPreview/sample3.png');"></div>
-                              <span class="card-media-object-tag subtle">Advertised</span>
-                            </div>
-                            <!-- body container -->
-                            <div class="card-media-body" num="1">
-                              <div class="card-media-body-top">
-                                <span class="subtle">Makati Public lib</span>
-                              </div>
-                              <div class="single-meta" style="justify-content:unset">
-                                <a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
-                                  <meta itemprop="ratingValue" content="3.00">
-                                  <i data-alt="1" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="2" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-off-png" title="regular"></i>&nbsp;<i data-alt="5" class="star-off-png" title="regular"></i><input name="pixrating" type="hidden" value="3" readonly="">&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                                  <a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
-                              </div>
-                              <span class="card-media-body-heading">Limited Ed. Five copies on the shelf.</span>
-                              <div class="card-media-body-supporting-bottom">
-                                <span class="card-media-body-supporting-bottom-text subtle">HV Dela Costa Street, Makati City</span>
-                              </div>
-                              <div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
-                                <!--<span class="card-media-body-supporting-bottom-text subtle">500 m away</span>-->
-                                <a class="card-media-body-supporting-bottom-text card-media-link u-float-right">VIEW ROUTE</a>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="card-media">
-                            <!-- media container -->
-                            <div class="card-media-object-container">
-                              <div class="card-media-object" style="background-image: url('images/bookPreview/sample4.jpg');"></div>
-                              <span class="card-media-object-tag subtle">For Rent</span>
-                              <ul class="card-media-object-social-list">
-                                <li>
-                                  <img src="https://s10.postimg.org/3rjjbzcvd/profile_f.jpg" class="">
-                                </li>
-                                <li>
-                                  <img src="https://s16.postimg.org/b0j0djh79/profile_0_f.jpg" class="">
-                                </li>
-                                <li class="card-media-object-social-list-item-additional">
-                                  <span>+5</span>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- body container -->
-                            <div class="card-media-body" num="2">
-                              <div class="card-media-body-top">
-                                <span class="subtle">Anton Macrohon</span>
-                              </div>
-                              <div class="single-meta" style="justify-content:unset">
-                                <a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id="special" itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
-                                  <meta itemprop="ratingValue" content="3.00">
-                                  <i data-alt="1" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="2" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-off-png" title="regular"></i>&nbsp;<i data-alt="5" class="star-off-png" title="regular"></i><input name="pixrating" type="hidden" value="3" readonly="">&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                                  <a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
-                              </div>
-                              <span class="card-media-body-heading">Good quality. Prefers meet-up</span>
-                              <div class="card-media-body-supporting-bottom">
-                                <span class="card-media-body-supporting-bottom-text subtle">HV Dela Costa Street, Makati City</span>
-                              </div>
-                              <div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
-                                <!--<span class="card-media-body-supporting-bottom-text subtle">350 m away</span>-->
-                                <a class="card-media-body-supporting-bottom-text card-media-link u-float-right">VIEW ROUTE</a>
-                              </div>
-                            </div>
-                          </div>
                         </div>
                       </div>
 
@@ -787,34 +711,34 @@
 $( ".addFave2" ).click(function() {
   <%if(user){%>
     if ( $( ".addFave2" ).attr("switch")=='on' ) {
-      var ref = firebase.database().ref();
-      ref.child('users').child('<%=user%>').once('value').then(function(snap){
-        var newSnap = snap.val();
-        var favorites = newSnap['favorites'].split(',');
-        var index = favorites.indexOf('<%=bookID%>');
-          if (favorites.indexOf('<%=bookID%>') > -1) {
-            favorites.splice(index, 1);
-          }
-        newSnap['favorites'] = favorites.join(',');
-        ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
-          alert(error)
-        });
-      })
+      // var ref = firebase.database().ref();
+      // ref.child('users').child('<%=user%>').once('value').then(function(snap){
+      //   var newSnap = snap.val();
+      //   var favorites = newSnap['favorites'].split(',');
+      //   var index = favorites.indexOf('<%=bookID%>');
+      //     if (favorites.indexOf('<%=bookID%>') > -1) {
+      //       favorites.splice(index, 1);
+      //     }
+      //   newSnap['favorites'] = favorites.join(',');
+      //   ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
+      //     alert(error)
+      //   });
+      // })
         $( ".addFave2" ).attr('switch', 'off');
         $('.myFave1').text('Add to favorites');
     } else {
-      var ref = firebase.database().ref();
-      ref.child('users').child('<%=user%>').once('value').then(function(snap){
-        var newSnap = snap.val();
-        if (newSnap['favorites']) {
-          newSnap['favorites'] = newSnap['favorites']+',<%=bookID%>'
-        }else {
-          newSnap['favorites'] = '<%=bookID%>'
-        }
-        ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
-          alert(error)
-        });
-      })
+      // var ref = firebase.database().ref();
+      // ref.child('users').child('<%=user%>').once('value').then(function(snap){
+      //   var newSnap = snap.val();
+      //   if (newSnap['favorites']) {
+      //     newSnap['favorites'] = newSnap['favorites']+',<%=bookID%>'
+      //   }else {
+      //     newSnap['favorites'] = '<%=bookID%>'
+      //   }
+      //   ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
+      //     alert(error)
+      //   });
+      // })
         $( ".addFave2" ).attr('switch', 'on');
         $('.container10').css('display', 'unset').delay(1000).fadeOut('slow');
         $('.myFave1').text('Remove to favorites');

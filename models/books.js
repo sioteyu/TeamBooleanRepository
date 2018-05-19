@@ -83,9 +83,22 @@ exports.searchBook = function(req, res){
   exports.addBookFavorites = function(req, cb){
       var availRef = ref.child('books').child(req.body.valuedID).child('availability');
       availRef.push({
-        user:req.session.user,
+        user:req.session.name,
         type:req.body.job,
         description:req.body.description
       });
       cb();
+  }
+
+
+  exports.getAvails = function(query, data, cb){
+      var availRef = ref.child('books').child(query).child('availability');
+      data['availability'] = [];
+      availRef.on('value', function(snap){
+        snap.forEach(function (childSnap) {
+          data['availability'].push(childSnap.val());
+        });
+        console.log(data);
+        cb(data)
+      });
   }
