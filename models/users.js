@@ -2,7 +2,7 @@ var firebase = require('firebase');
 var singleton = require('../helpers/singleton.js');
 var config = singleton.config;
 var bucket = singleton.configAdmin
-firebase.initializeApp(config);
+firebase.initializeApp(config)
 
 var ref = firebase.app().database().ref();
 

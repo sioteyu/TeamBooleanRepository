@@ -781,7 +781,7 @@
 <script type='text/javascript' src='js/bookPreview/log-in.js'></script>
 <script type='text/javascript' src='js/bookPreview/scroll.js'></script>
 <script type='text/javascript' src='js/bookPreview/stars.js'></script>
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
 <script type="text/javascript" src="./firebaseKey.js"></script>
 <script type="text/javascript">
 $( ".addFave2" ).click(function() {
@@ -796,7 +796,9 @@ $( ".addFave2" ).click(function() {
             favorites.splice(index, 1);
           }
         newSnap['favorites'] = favorites.join(',');
-        ref.child('users').child('<%=user%>').update(newSnap);
+        ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
+          alert(error)
+        });
       })
         $( ".addFave2" ).attr('switch', 'off');
         $('.myFave1').text('Add to favorites');
@@ -809,7 +811,9 @@ $( ".addFave2" ).click(function() {
         }else {
           newSnap['favorites'] = '<%=bookID%>'
         }
-        ref.child('users').child('<%=user%>').update(newSnap);
+        ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
+          alert(error)
+        });
       })
         $( ".addFave2" ).attr('switch', 'on');
         $('.container10').css('display', 'unset').delay(1000).fadeOut('slow');
