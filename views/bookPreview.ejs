@@ -599,86 +599,6 @@
         overviewMapControl: false,
       });
 
-      map.addMarker({
-        lat: 14.561734,
-        lng: 121.019549,
-        title: 'Marker',
-        infoWindow: {
-          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">Matthew Alviz</span>' + '<br>'
-          + '<div class=' + '"single-meta"' +  'style=' + '"justify-content:unset"' + '>'
-            + '<a class=' + '"single-rating review_rate display-only"' + 'data-pixrating=' + '"3.00"' + 'itemprop=' + '"aggregateRating"' + 'id=' + '"special"' + 'itemtype=' + '"http://schema.org/AggregateRating"' + 'style=' + '"padding:0"' + 'title=' + '"regular"' + '>'
-              + '<meta itemprop=' + '"ratingValue"' + 'content=' + '"3.00"' + '>'
-              + '<i data-alt=' + '"1"' + 'class=' + '"star-on-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"2"' + ' class=' + '"star-on-png"'+ 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"3"' + 'class=' + '"star-on-png"'
-              + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"4"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"5"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i><input name=' + '"pixrating"'
-              + 'type=' + '"hidden"' + 'value=' + '"3"' + 'readonly=' + '""' + '>&nbsp;&nbsp;&nbsp;&nbsp;</a>'
-              + '<a class=' + '"listing-contact"' + 'style=' + '"color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em"' + '>3 Stars</a>'
-        +  '</div>'
-          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center; margin-top:20px' + '" num="'+'0"'+'>CONTACT ME</a>',
-        },click: function(e){
-          $('.card-media-body').each(function(){
-            if($(this).find('.card-media-body-top').find('.subtle').text() == 'Matthew Alviz'){
-              previous.removeAttr('style');
-              $(this).attr('style', 'border-right: 3px solid #5d9cec;');
-              previous = $(this);
-              return false;
-            }
-          });
-        }
-      });
-
-      map.addMarker({
-        lat: 14.563066,
-        lng: 121.019194,
-        title: 'Marker with InfoWindow',
-        infoWindow: {
-          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">'+document.getElementById('0').innerHTML+'</span>' + '<br>'
-          + '<div class=' + '"single-meta"' +  'style=' + '"justify-content:unset"' + '>'
-            + '<a class=' + '"single-rating review_rate display-only"' + 'data-pixrating=' + '"3.00"' + 'itemprop=' + '"aggregateRating"' + 'id=' + '"special"' + 'itemtype=' + '"http://schema.org/AggregateRating"' + 'style=' + '"padding:0"' + 'title=' + '"regular"' + '>'
-              + '<meta itemprop=' + '"ratingValue"' + 'content=' + '"3.00"' + '>'
-              + '<i data-alt=' + '"1"' + 'class=' + '"star-on-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"2"' + ' class=' + '"star-on-png"'+ 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"3"' + 'class=' + '"star-on-png"'
-              + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"4"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"5"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i><input name=' + '"pixrating"'
-              + 'type=' + '"hidden"' + 'value=' + '"3"' + 'readonly=' + '""' + '>&nbsp;&nbsp;&nbsp;&nbsp;</a>'
-              + '<a class=' + '"listing-contact"' + 'style=' + '"color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em"' + '>3 Stars</a>'
-        +  '</div>'
-          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center; margin-top:20px' + '" num="'+'0"'+'>CONTACT ME</a>',
-        },click: function(e){
-          $('.card-media-body').each(function(){
-            if($(this).find('.card-media-body-top').find('.subtle').text() == 'Makati Public lib'){
-              previous.removeAttr('style');
-              $(this).attr('style', 'border-right: 3px solid #5d9cec;');
-              previous = $(this);
-              return false;
-            }
-          });
-        }
-      });
-
-      map.addMarker({
-        lat: 14.561576,
-        lng: 121.017939,
-        title: 'Marker with InfoWindow',
-        infoWindow: {
-          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '">Matthew Alviz</span>' + '<br>'
-          + '<div class=' + '"single-meta"' +  'style=' + '"justify-content:unset"' + '>'
-            + '<a class=' + '"single-rating review_rate display-only"' + 'data-pixrating=' + '"3.00"' + 'itemprop=' + '"aggregateRating"' + 'id=' + '"special"' + 'itemtype=' + '"http://schema.org/AggregateRating"' + 'style=' + '"padding:0"' + 'title=' + '"regular"' + '>'
-              + '<meta itemprop=' + '"ratingValue"' + 'content=' + '"3.00"' + '>'
-              + '<i data-alt=' + '"1"' + 'class=' + '"star-on-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"2"' + ' class=' + '"star-on-png"'+ 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"3"' + 'class=' + '"star-on-png"'
-              + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"4"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i>&nbsp;<i data-alt=' + '"5"' + 'class=' + '"star-off-png"' + 'title=' + '"regular"' + '></i><input name=' + '"pixrating"'
-              + 'type=' + '"hidden"' + 'value=' + '"3"' + 'readonly=' + '""' + '>&nbsp;&nbsp;&nbsp;&nbsp;</a>'
-              + '<a class=' + '"listing-contact"' + 'style=' + '"color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em"' + '>3 Stars</a>'
-        +  '</div>'
-          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center; margin-top:20px' + '" num="'+'0"'+'>CONTACT ME</a>',
-        },click: function(e){
-          $('.card-media-body').each(function(){
-            if($(this).find('.card-media-body-top').find('.subtle').text() == 'Anton Macrohon'){
-              previous.removeAttr('style');
-              $(this).attr('style', 'border-right: 3px solid #5d9cec;');
-              previous = $(this);
-              return false;
-            }
-          });
-        }
-      });
 
       $('.card-media-body').click(function() {
         previous.removeAttr('style');
@@ -705,8 +625,6 @@
 <script type='text/javascript' src='js/bookPreview/log-in.js'></script>
 <script type='text/javascript' src='js/bookPreview/scroll.js'></script>
 <script type='text/javascript' src='js/bookPreview/stars.js'></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
-<script type="text/javascript" src="./firebaseKey.js"></script>
 <script type="text/javascript">
 $( ".addFave2" ).click(function() {
   <%if(user){%>
