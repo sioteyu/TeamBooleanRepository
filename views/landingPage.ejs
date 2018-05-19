@@ -38,13 +38,13 @@
               </select>
             </span>
             <div class="in-wrap">
-              <form class="" action="/search" method="get" id="searchForm">
+              <form class="searching" action="/search" method="get" id="searchForm">
                 <input type="text" name="searchItem" id="search-box" placeholder="What are you looking for?" ng-change = "updateItems()" ng-model = "query" autocomplete="off">
               </form>
             </div>
           </div>
 
-          <div class="search-results" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);top:70px;opacity:1">
+          <div class="search-results" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);top:70px;">
             <a class="result" ng-repeat = "book in books" href="http://localhost:3000/bookPreview?id={{book.$id}}">
               <div class="result__picture four-members" style="background-image:url('uploads/{{book.photo}}'); background-size:contain">
 
