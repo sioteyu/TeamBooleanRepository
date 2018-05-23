@@ -26,12 +26,11 @@ exports.authenticate = function(req, res, cb){
 					childSnap.child('password').val()===req.body.password.trim()){
         req.session.user = childSnap.key;
         req.session.photo = childSnap.child('photo').val();
-        req.session.name = childSnap.child('firstname').val() + " " + childSnap.child('lastname').val();;
-				console.log("Login Sucess!!!");
+        req.session.name = childSnap.child('firstname').val() + " " + childSnap.child('lastname').val();
+        req.session.authority = childSnap.child('userType').val();
         cb(true)
 			}
 		});
-
 	});
 }
 exports.getUser = function(userID, cb){

@@ -6,7 +6,7 @@ exports.userPage = function(app){
       if (err) {
         console.log(err);
       }else{
-        res.render('landingPage', { header: 'Home', user: '', userPhoto:''});
+        res.redirect('http://localhost:3000')
       }
     });
   });
@@ -32,20 +32,24 @@ exports.userPage = function(app){
 
   app.post('/login', function(req, res){
   	users.authenticate(req, res, function(status){
-      if(status){
-        users.getUser(req.session.user, function(userData){
-          if(userData['favorites']){
-            var favorites = userData['favorites'].split(',');
-            books.getMultipleBook(favorites, function(data) {
-              res.redirect('http://localhost:3000/profile');
-            });
-          }else{
-            res.redirect('http://localhost:3000/profile');
-          }
-
-        })
+      if (req.session.authority == 'admin') {
+        res.redirect('http://localhost:3000/admin')
       }else{
-        res.redirect('http://localhost:3000/')
+        if(status){
+          users.getUser(req.session.user, function(userData){
+            if(userData['favorites']){
+              var favorites = userData['favorites'].split(',');
+              books.getMultipleBook(favorites, function(data) {
+                res.redirect('http://localhost:3000/profile');
+              });
+            }else{
+              res.redirect('http://localhost:3000/profile');
+            }
+
+          })
+        }else{
+          res.redirect('http://localhost:3000/')
+        }
       }
     });
   });

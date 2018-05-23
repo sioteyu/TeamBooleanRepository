@@ -1,4 +1,5 @@
 <h1>User List</h1>
+<input type="text" class="form-control" placeholder="Search a user..." ng-change="updateUsers()" ng-model = "query">
 <table class="table">
   <tr>
     <th>Email</th>
@@ -6,12 +7,13 @@
     <th>Last Name</th>
     <th></th>
   </tr>
-  <%for(var i = 0;i < data.length;++i){%>
-  <tr>
-    <td><%=data[i].email%></td>
-    <td><%=data[i].firstname%></td>
-    <td><%=data[i].lastname%></td>
-    <td> <button type="button" class="btn btn-danger" name="button">Ban</button> </td>
+  <tr ng-repeat = "user in users">
+    <td>{{user.email}}</td>
+    <td>{{user.firstname}}</td>
+    <td>{{user.lastname}}</td>
+    <td>
+      <input type="button" class="btn btn-danger" name="id" value="Ban" ng-click="ban(user)" ng-if="user.isBanned == false">
+      <input type="button" class="btn btn-success" name="id" value="UnBan" ng-click="unBan(user)" ng-if="user.isBanned == true">
+    </td>
   </tr>
-  <%}%>
 </table>

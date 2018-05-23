@@ -1,0 +1,19 @@
+<h1>Book List</h1>
+<input type="text" class="form-control" placeholder="Search a book..." ng-change="updateItems()" ng-model = "query">
+<button type="button" class="btn btn-primary" name="button" onclick="window.location.replace('http://localhost:3000/add');">Add a book</button>
+<table class="table">
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Description</th>
+    <th>Genre</th>
+    <th></th>
+  </tr>
+  <tr ng-repeat = "book in books">
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.description}}</td>
+    <td>{{book.genre}}</td>
+    <td><a href="/edit" ng-click="editBook(book)">Edit</a> <a href="#" ng-click="deleteBook(book)">Delete</a> </td>
+  </tr>
+</table>
