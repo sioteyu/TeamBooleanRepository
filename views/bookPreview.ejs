@@ -448,6 +448,7 @@
                         </div>
 
                         ​<div class="container5">
+                          <%if(availability.length != 0){%>
                           <%for(var j = 0 ; j < availability.length ; ++j){%>
                             <div class="card-media">
                               <!-- media container -->
@@ -477,7 +478,11 @@
                               </div>
                             </div>
                           <%}%>
-
+                          <%}else{%>
+                            <div style="text-align:center; margin-top:50%">
+                              NO COPIES FOUND
+                            </div>
+                          <%}%>
                         </div>
                       </div>
 
