@@ -41,6 +41,7 @@
 									<ul>
 			                            <li><a href="#details" data-toggle="tab">Book</a></li>
 			                            <li><a href="#captain" data-toggle="tab">Advertise</a></li>
+                                  <li><a href="#where" data-toggle="tab">Location</a></li>
 			                            <li><a href="#description" data-toggle="tab">Details</a></li>
 			                        </ul>
 								</div>
@@ -73,6 +74,21 @@
 
 
           </div>
+		                                	</div>
+		                            	</div>
+		                            </div>
+                                <div class="tab-pane" id="where">
+		                            	<div class="row">
+			                            	<div class="col-sm-12">
+			                                	<h4 class="info-text">Where can we locate your book?</h4>
+			                            	</div>
+		                                	<div class="col-sm-6">
+                                        <div class="search-form" style="margin-top: 12%; margin-left: 55%;">
+                                          <input type="search" value="" placeholder="Enter Address" class="search-input" style="margin-left:2%; width:75%" id="locate">
+                                          <button type="submit" class="search-button">
+                                            <i class="material-icons">search</i>
+                                          </button>
+                                        </div>
 		                                	</div>
 		                            	</div>
 		                            </div>
@@ -150,5 +166,15 @@
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
   <script type="text/javascript" src='/js/uploadPage/index.js'></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOQKgQLsoRMCDQmvSpQSi5wrcaiBrB08&libraries=places&callback=initAutocomplete" async defer></script>
+  <script type="text/javascript">
+          var placeSearch, autocomplete;
+
+          function initAutocomplete() {
+            autocomplete = new google.maps.places.Autocomplete(
+                /** @type {!HTMLInputElement} */(document.getElementById('locate')),
+                {types: ['geocode'], componentRestrictions: {country: "ph"}});
+          }
+    </script>
 </body>
 </html>
