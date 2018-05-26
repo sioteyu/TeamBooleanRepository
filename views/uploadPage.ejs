@@ -84,7 +84,9 @@
 			                            	</div>
 		                                	<div class="col-sm-6">
                                         <div class="search-form" style="margin-top: 12%; margin-left: 55%;">
-                                          <input type="search" value="" placeholder="Enter Address" class="search-input" style="margin-left:2%; width:75%" id="locate">
+                                          <input type="search" value="" placeholder="Enter meetup location" class="search-input" style="margin-left:2%; width:75%" id="locate"  onchange="getAdress()">
+                                          <input type="hidden" name="longitude" value="" id="long">
+                                          <input type="hidden" name="latitude" value="" id="lat">
                                           <button type="submit" class="search-button">
                                             <i class="material-icons">search</i>
                                           </button>
@@ -146,7 +148,7 @@
 		                        </div>
 	                        	<div class="wizard-footer">
 	                            	<div class="pull-right">
-	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' id="nxt" />
+	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' id="nxt"/>
 	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' onclick="document.getElementById('favForm').submit()"/>
 	                                </div>
 	                                <div class="pull-left">
@@ -176,5 +178,20 @@
                 {types: ['geocode'], componentRestrictions: {country: "ph"}});
           }
     </script>
+    <script type="text/javascript">
+
+    function getAdress() {
+      var geocoder = new google.maps.Geocoder();
+      var address = document.getElementById("locate").value
+      geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          var latitude = results[0].geometry.location.lat();
+          var longitude = results[0].geometry.location.lng();
+          document.getElementById("long").value = longitude
+          document.getElementById("lat").value = latitude
+    }
+  });
+    }
+</script>
 </body>
 </html>

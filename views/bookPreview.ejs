@@ -505,6 +505,8 @@
 
                               <div class="comment-content" itemprop="reviewBody">
                                 <h3 class="pixrating_title"><%=comments.comments[i].title%></h3>
+                                <input name="submit" type="submit" id="submit" style="font-family:'Circular Std Book'" value="Edit Post" class="commention">
+                                <br>
                                 <div class="review_rate" data-pixrating="<%=comments.comments[0].rating%>"></div>
                                 <div class="comment-meta commentmetadata" itemprop="datePublished" content = "2015-11-06T17:12:39+0000">
                                   <a>
@@ -671,8 +673,12 @@ $( ".addFave2" ).click(function() {
   <%}%>
 });
 </script>
+<script type="text/javascript">
+$( ".commention" ).click(function() {
+  $(this).parent().text();
+});
+</script>
 <script type='text/javascript' src='js/bookPreview/trophy-cart.js'></script>
-
 <script src="js/landingpage/index.js" type="text/javascript"></script>
 
 </body>
