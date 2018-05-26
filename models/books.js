@@ -80,12 +80,15 @@ exports.searchBook = function(req, res){
     }
   }
 
-  exports.addBookFavorites = function(req, cb){
+  exports.advertiseBook = function(req, cb){
       var availRef = ref.child('books').child(req.body.valuedID).child('availability');
       availRef.push({
         user:req.session.name,
         type:req.body.job,
-        description:req.body.description
+        description:req.body.description,
+        longitude:req.body.longitude,
+        latitude:req.body.latitude,
+        address:req.body.address
       });
       cb();
   }
@@ -98,7 +101,6 @@ exports.searchBook = function(req, res){
         snap.forEach(function (childSnap) {
           data['availability'].push(childSnap.val());
         });
-        console.log(data);
         cb(data)
       });
   }

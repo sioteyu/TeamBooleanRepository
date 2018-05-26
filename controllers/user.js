@@ -54,8 +54,8 @@ exports.userPage = function(app){
     });
   });
 
-  app.post('/addBook', function(req, res){
-    books.addBookFavorites(req, function(){
+  app.post('/advertise', function(req, res){
+    books.advertiseBook(req, function(){
       res.render('success', {message:'Your book has been successfully advertised!', header: 'Home', user: req.session.user, userPhoto:req.session.photo});
     })
   });
