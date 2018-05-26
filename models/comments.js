@@ -60,7 +60,7 @@ exports.addComment = function(req, res, bookID){
     var commentsRef = ref.child('books').child(bookID).child('comments');
     var json = {};
     json['comments'] = [];
-    commentsRef.on('value', function (snap) {
+    commentsRef.once('value', function (snap) {
       snap.forEach(function (childSnap) {
         json['comments'].push(childSnap.val());
       });

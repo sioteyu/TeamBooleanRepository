@@ -20,7 +20,7 @@ exports.addUser = function(req, res){
 
 exports.authenticate = function(req, res, cb){
   var usersRef = ref.child('users');
-	usersRef.on('value', function (snap) {
+	usersRef.once('value', function (snap) {
 		snap.forEach(function (childSnap) {
 			if(childSnap.child('email').val()===req.body.email.trim()&&
 					childSnap.child('password').val()===req.body.password.trim()){
@@ -34,7 +34,7 @@ exports.authenticate = function(req, res, cb){
 	});
 }
 exports.getUser = function(userID, cb){
-  ref.child('users').child(userID).on('value', function(snap) {
+  ref.child('users').child(userID).once('value', function(snap) {
     cb(snap.val())
   })
 };

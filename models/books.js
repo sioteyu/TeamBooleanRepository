@@ -30,7 +30,7 @@ exports.getUsers = function(req, res) {
   var usersRef = ref.child('users');
   var json = {'title':'Admin', 'layout':'layouts/adminLayout', page:'users', user: req.session.user};
   json['data'] = [];
-  usersRef.on('value', function (snap) {
+  usersRef.once('value', function (snap) {
 		snap.forEach(function (childSnap) {
       json['data'].push(childSnap.val());
       json['userPhoto'] = req.session.photo;
@@ -46,7 +46,7 @@ exports.searchBook = function(req, res){
   json['data'] = [];
   json['userPhoto'] = req.session.photo;
   json['user'] = req.session.user;
-    bookRef.on('value', function (snap) {
+    bookRef.once('value', function (snap) {
     	snap.forEach(function (childSnap) {
         var child = childSnap.child('title').val().toLowerCase();
         if (child.indexOf(query) !== -1) {
@@ -60,7 +60,7 @@ exports.searchBook = function(req, res){
   exports.getBook = function(query, cb){
     var bookRef = ref.child('books');
 
-    bookRef.on('value', function (snap) {
+    bookRef.once('value', function (snap) {
       cb(snap.val()[query]);
     });
   }
@@ -94,7 +94,7 @@ exports.searchBook = function(req, res){
   exports.getAvails = function(query, data, cb){
       var availRef = ref.child('books').child(query).child('availability');
       data['availability'] = [];
-      availRef.on('value', function(snap){
+      availRef.once('value', function(snap){
         snap.forEach(function (childSnap) {
           data['availability'].push(childSnap.val());
         });

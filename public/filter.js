@@ -35,13 +35,11 @@ app.controller("theCtr", function($scope, $firebaseArray) {
   }
   $scope.ban = function(user){
     var temp = userList.$getRecord(user.$id)
-    temp.isBanned = true;
-    userList.$save(temp)
-  }
-
-  $scope.unBan = function(user){
-    var temp = userList.$getRecord(user.$id)
-    temp.isBanned = false;
+    if (temp.isBanned) {
+      temp.isBanned = false;
+    }else{
+      temp.isBanned = true;
+    }
     userList.$save(temp)
   }
   $scope.books = bookList;

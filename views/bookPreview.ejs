@@ -634,34 +634,34 @@
 $( ".addFave2" ).click(function() {
   <%if(user){%>
     if ( $( ".addFave2" ).attr("switch")=='on' ) {
-      // var ref = firebase.database().ref();
-      // ref.child('users').child('<%=user%>').once('value').then(function(snap){
-      //   var newSnap = snap.val();
-      //   var favorites = newSnap['favorites'].split(',');
-      //   var index = favorites.indexOf('<%=bookID%>');
-      //     if (favorites.indexOf('<%=bookID%>') > -1) {
-      //       favorites.splice(index, 1);
-      //     }
-      //   newSnap['favorites'] = favorites.join(',');
-      //   ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
-      //     alert(error)
-      //   });
-      // })
+      var ref = firebase.database().ref();
+      ref.child('users').child('<%=user%>').once('value').then(function(snap){
+        var newSnap = snap.val();
+        var favorites = newSnap['favorites'].split(',');
+        var index = favorites.indexOf('<%=bookID%>');
+          if (favorites.indexOf('<%=bookID%>') > -1) {
+            favorites.splice(index, 1);
+          }
+        newSnap['favorites'] = favorites.join(',');
+        ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
+          alert(error)
+        });
+      })
         $( ".addFave2" ).attr('switch', 'off');
         $('.myFave1').text('Add to favorites');
     } else {
-      // var ref = firebase.database().ref();
-      // ref.child('users').child('<%=user%>').once('value').then(function(snap){
-      //   var newSnap = snap.val();
-      //   if (newSnap['favorites']) {
-      //     newSnap['favorites'] = newSnap['favorites']+',<%=bookID%>'
-      //   }else {
-      //     newSnap['favorites'] = '<%=bookID%>'
-      //   }
-      //   ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
-      //     alert(error)
-      //   });
-      // })
+      var ref = firebase.database().ref();
+      ref.child('users').child('<%=user%>').once('value').then(function(snap){
+        var newSnap = snap.val();
+        if (newSnap['favorites']) {
+          newSnap['favorites'] = newSnap['favorites']+',<%=bookID%>'
+        }else {
+          newSnap['favorites'] = '<%=bookID%>'
+        }
+        ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
+          alert(error)
+        });
+      })
         $( ".addFave2" ).attr('switch', 'on');
         $('.container10').css('display', 'unset').delay(1000).fadeOut('slow');
         $('.myFave1').text('Remove to favorites');
