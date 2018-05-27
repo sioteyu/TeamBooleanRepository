@@ -44,6 +44,11 @@ $('.here').click(function(){
   $('.here').css('display', 'none');
   $('.login-page').css('display', 'none');
   $('#hey').css('overflow', 'auto');
+  $('#respond').attr('style', '');
+  $('#respond').find('form').find('#pixrating_title').attr('value', '');
+  $('#respond').find('form').find('.comment-form-comment').find('textarea').text('');
+  $('#respond').find('#commentform').find('.form-submit').find('#submit').attr('value', 'Submit your Review');
+  $('#respond').find('form').attr('action', '/comment');
 });
 
 $('.mssg1').click(function(){
