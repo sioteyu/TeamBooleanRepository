@@ -41,9 +41,9 @@ exports.indexPage = function(app){
         data['comments'] = json;
         data['userPhoto'] = req.session.photo;
         books.getAvails( req.query['id'], data, function(newData){
-          data = newData;
+          res.render('bookPreview', newData);
         })
-        res.render('bookPreview', data);
+
       });
     });
   });

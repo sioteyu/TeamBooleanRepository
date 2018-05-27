@@ -28,7 +28,7 @@
 		            <!-- Wizard container -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="red" id="wizard" style="margin-top:30px">
-		                    <form action="/addBook" method="post" id="favForm">
+		                    <form action="/advertise" method="post" id="favForm">
 		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
 
 		                    	<div class="wizard-header">
@@ -84,7 +84,7 @@
 			                            	</div>
 		                                	<div class="col-sm-6">
                                         <div class="search-form" style="margin-top: 12%; margin-left: 55%;">
-                                          <input type="search" value="" placeholder="Enter meetup location" class="search-input" style="margin-left:2%; width:75%" id="locate"  onchange="getAdress()">
+                                          <input type="search" name="address" value="" placeholder="Enter meetup location" class="search-input" style="margin-left:2%; width:75%" id="locate">
                                           <input type="hidden" name="longitude" value="" id="long">
                                           <input type="hidden" name="latitude" value="" id="lat">
                                           <button type="submit" class="search-button">
@@ -148,7 +148,7 @@
 		                        </div>
 	                        	<div class="wizard-footer">
 	                            	<div class="pull-right">
-	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' id="nxt"/>
+	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' id="nxt" onclick="getAdress()"/>
 	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' onclick="document.getElementById('favForm').submit()"/>
 	                                </div>
 	                                <div class="pull-left">
@@ -183,6 +183,7 @@
     function getAdress() {
       var geocoder = new google.maps.Geocoder();
       var address = document.getElementById("locate").value
+      console.log(address);
       geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
           var latitude = results[0].geometry.location.lat();

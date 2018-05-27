@@ -12,7 +12,7 @@
     "express": "^3.2.6",
     "express-ejs-layouts": "^2.3.1",
     "express-session": "^1.15.6",
-    "firebase": "^4.8.1",
+    "firebase": "^5.0.4",
     "firebase-admin": "^5.8.1",
     "formidable": "^1.1.1",
     "natural": "^0.5.6"

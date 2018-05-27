@@ -1,6 +1,6 @@
 var formidable = require('formidable');
 var books = require('../models/books.js');
-
+var users = require('../models/users.js');
 
 exports.adminPage = function(app){
 
@@ -51,5 +51,10 @@ exports.adminPage = function(app){
     res.render('admin/upload', {title:'Admin', layout:'layouts/adminLayout'});
   });
 
+  app.post('/status', function(req, res){
+    users.updateStatus(req.body.userID, function(){
+      res.redirect('http://localhost:3000/users')
+    })
+  });
 
 }

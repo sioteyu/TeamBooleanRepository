@@ -456,7 +456,7 @@
                                 <span class="card-media-object-tag subtle"><%=availability[j].type%></span>
                               </div>
                               <!-- body container -->
-                              <div class="card-media-body" num="1">
+                              <div class="card-media-body" num="<%=j%>">
                                 <div class="card-media-body-top">
                                   <span class="subtle" id="<%=j%>"><%=availability[j].user%></span>
                                 </div>
@@ -467,9 +467,6 @@
                                     <a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
                                 </div>
                                 <span class="card-media-body-heading"><%=availability[j].description%></span>
-                                <div class="card-media-body-supporting-bottom">
-                                  <span class="card-media-body-supporting-bottom-text subtle">HV Dela Costa Street, Makati City</span>
-                                </div>
                                 <div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
                                   <!--<span class="card-media-body-supporting-bottom-text subtle">500 m away</span>-->
                                   <a class="card-media-body-supporting-bottom-text card-media-link u-float-right">Check Me Out!</a>
@@ -607,7 +604,30 @@
         mapTypeControl: false,
         overviewMapControl: false,
       });
-
+      <%if(availability.length != 0){%>
+      <%for(var j = 0 ; j < availability.length ; ++j){%>
+        map.addMarker({
+        lat:<%=availability[j].latitude%>,
+        lng:<%=availability[j].longitude%>,
+        title:'<%=availability[j].type%>',
+        infoWindow: {
+          content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '"><%=availability[j].user%></span>' + '<br>'
+          + '</span>'
+          + '<br>'
+          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center' + '" num="'+'<%=j%>"'+'>BORROW</a>',
+        },click: function(e){
+          $('.card-media-body').each(function(){
+            if($(this).find('.card-media-body-top').find('.subtle').text() == '<%=availability[j].user%>'){
+              previous.removeAttr('style');
+              $(this).attr('style', 'border-right: 3px solid #5d9cec;');
+              previous = $(this);
+              return false;
+            }
+          });
+        }
+      });
+      <%}%>
+      <%}%>
 
       $('.card-media-body').click(function() {
         previous.removeAttr('style');
@@ -638,34 +658,34 @@
 $( ".addFave2" ).click(function() {
   <%if(user){%>
     if ( $( ".addFave2" ).attr("switch")=='on' ) {
-      // var ref = firebase.database().ref();
-      // ref.child('users').child('<%=user%>').once('value').then(function(snap){
-      //   var newSnap = snap.val();
-      //   var favorites = newSnap['favorites'].split(',');
-      //   var index = favorites.indexOf('<%=bookID%>');
-      //     if (favorites.indexOf('<%=bookID%>') > -1) {
-      //       favorites.splice(index, 1);
-      //     }
-      //   newSnap['favorites'] = favorites.join(',');
-      //   ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
-      //     alert(error)
-      //   });
-      // })
+      var ref = firebase.database().ref();
+      ref.child('users').child('<%=user%>').once('value').then(function(snap){
+        var newSnap = snap.val();
+        var favorites = newSnap['favorites'].split(',');
+        var index = favorites.indexOf('<%=bookID%>');
+          if (favorites.indexOf('<%=bookID%>') > -1) {
+            favorites.splice(index, 1);
+          }
+        newSnap['favorites'] = favorites.join(',');
+        ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
+          alert(error)
+        });
+      })
         $( ".addFave2" ).attr('switch', 'off');
         $('.myFave1').text('Add to favorites');
     } else {
-      // var ref = firebase.database().ref();
-      // ref.child('users').child('<%=user%>').once('value').then(function(snap){
-      //   var newSnap = snap.val();
-      //   if (newSnap['favorites']) {
-      //     newSnap['favorites'] = newSnap['favorites']+',<%=bookID%>'
-      //   }else {
-      //     newSnap['favorites'] = '<%=bookID%>'
-      //   }
-      //   ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
-      //     alert(error)
-      //   });
-      // })
+      var ref = firebase.database().ref();
+      ref.child('users').child('<%=user%>').once('value').then(function(snap){
+        var newSnap = snap.val();
+        if (newSnap['favorites']) {
+          newSnap['favorites'] = newSnap['favorites']+',<%=bookID%>'
+        }else {
+          newSnap['favorites'] = '<%=bookID%>'
+        }
+        ref.child('users').child('<%=user%>').child('favorites').set(newSnap.favorites).catch(function(error){
+          alert(error)
+        });
+      })
         $( ".addFave2" ).attr('switch', 'on');
         $('.container10').css('display', 'unset').delay(1000).fadeOut('slow');
         $('.myFave1').text('Remove to favorites');
