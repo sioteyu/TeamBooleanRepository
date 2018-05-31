@@ -19,29 +19,33 @@ exports.indexPage = function(app){
     books.getBook(req.query['id'], function(data){
       comments.getComments(req, res, req.query['id'], function(json){
         data['favorite'] = 'off'
-        if (req.session.user) {
-          users.getUser(req.session.user, function(userData){
-            if(userData['favorites']){
-              var favorites = userData['favorites'].split(',');
-              console.log(favorites);
-              for (var i = 0; i < favorites.length; i++) {
-                if(req.query['id'] == favorites[i]){
-                  data['favorite'] = 'on';
-                  break;
-                }
-              }
-            }else{
-              data['favorite'] = 'off';
-            }
-          })
-        }
+
         data['header'] = 'Book Preview';
         data['user'] = req.session.user;
         data['bookID'] = req.query['id'];
         data['comments'] = json;
         data['userPhoto'] = req.session.photo;
         books.getAvails( req.query['id'], data, function(newData){
-          res.render('bookPreview', newData);
+          if (req.session.user) {
+            users.getUser(req.session.user, function(userData){
+              if(userData['favorites']){
+                var favorites = userData['favorites'].split(',');
+                console.log(favorites);
+                for (var i = 0; i < favorites.length; i++) {
+                  if(req.query['id'] == favorites[i]){
+                    newData['favorite'] = 'on';
+                    console.log("on now");
+                    break;
+                  }
+                }
+              }else{
+                newData['favorite'] = 'off';
+              }
+              res.render('bookPreview', newData);
+            })
+          }else {
+            res.render('bookPreview', newData);
+          }
         })
 
       });
