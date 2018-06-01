@@ -6,6 +6,7 @@ var filter = require('../helpers/filter.js');
 var ref = firebase.app().database().ref();
 
 exports.upload = function(req, res){
+  console.log(req.body.genre);
   var bookRef = ref.child('books');
   console.log('./'+req.files.fileUploaded.path.replace('\\', '/'));
   bucket.upload('./'+req.files.fileUploaded.path.replace('\\', '/'), function(err, file) {
@@ -80,10 +81,27 @@ exports.searchBook = function(req, res){
     }
   }
 
+  exports.getMyBook = function(id, cb){
+    var bookRef = ref.child('books');
+    var json = {};
+    json['myBooks'] = [];
+    bookRef.once('value', function (snap) {
+      snap.forEach(function (childSnap) {
+        childSnap.child('availability').forEach(function (snapChild) {
+          if (snapChild.child('id').val() == id) {
+            json['myBooks'].push(childSnap.val())
+          }
+        })
+      })
+      cb(json)
+    })
+  }
+
   exports.advertiseBook = function(req, cb){
       var availRef = ref.child('books').child(req.body.valuedID).child('availability');
       availRef.push({
         user:req.session.name,
+        id:req.session.user,
         type:req.body.job,
         description:req.body.description,
         longitude:req.body.longitude,

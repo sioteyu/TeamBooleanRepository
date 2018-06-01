@@ -14,6 +14,6 @@
     <td>{{book.author}}</td>
     <td>{{book.description}}</td>
     <td>{{book.genre}}</td>
-    <td><a href="/edit" ng-click="editBook(book)">Edit</a> <a href="#" ng-click="deleteBook(book)">Delete</a> </td>
+    <td><a href="http://localhost:3000/edit?id={{book.$id}}">Edit</a> <a href="#" ng-click="deleteBook(book)">Delete</a> </td>
   </tr>
 </table>

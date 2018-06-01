@@ -39,7 +39,7 @@
             </span>
             <div class="in-wrap">
               <form class="searching" action="/search" method="get" id="searchForm">
-                <input type="text" name="searchItem" id="search-box" placeholder="What are you looking for?" ng-change = "updateItems()" ng-model = "query" autocomplete="off">
+                <input type="text" name="searchItem" id="search-box" placeholder="What are you looking for?" ng-change = "updateItems();updateUsers()" ng-model = "query" autocomplete="off">
               </form>
             </div>
           </div>
@@ -54,7 +54,7 @@
                 <span class="result__subtitle">{{book.author}} <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9733;&#9734;&#9734;</big> </span>
               </div>
             </a>
-            <a class="result" ng-repeat = "user in users" href="http://localhost:3000/view?id={{user.$id}}">
+            <a class="result" ng-repeat = "user in users" href="http://localhost:3000/view?id={{user.$id}}" ng-if = "user.userType != 'admin'">
               <div class="result__picture four-members" style="background-image:url('uploads/default.png'); background-size:contain">
 
               </div>

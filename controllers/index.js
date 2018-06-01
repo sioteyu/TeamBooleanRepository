@@ -30,11 +30,9 @@ exports.indexPage = function(app){
             users.getUser(req.session.user, function(userData){
               if(userData['favorites']){
                 var favorites = userData['favorites'].split(',');
-                console.log(favorites);
                 for (var i = 0; i < favorites.length; i++) {
                   if(req.query['id'] == favorites[i]){
                     newData['favorite'] = 'on';
-                    console.log("on now");
                     break;
                   }
                 }

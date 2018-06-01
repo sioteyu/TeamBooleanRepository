@@ -1,16 +1,16 @@
-<h1 class="text-center">Add a book</h1>
+<h1 class="text-center">Edit a book</h1>
 <form style="width:50%" class="center-block">
   <div class="form-group">
     <label>Title</label>
-    <input type="text" class="form-control" value="{{temp}}">
+    <input type="text" class="form-control" value="<%=title%>">
   </div>
   <div class="form-group">
     <label>Author</label>
-    <input type="password" class="form-control" value="{{temp.author}}">
+    <input type="text" class="form-control" value="<%=author%>">
   </div>
   <div class="form-group">
     <label>Description</label>
-    <textarea class="form-control" rows="3" value="{{temp.description}}"></textarea>
+    <textarea class="form-control" rows="3"><%=description%></textarea>
   </div>
   <div class="form-group">
     <label>Genre</label>

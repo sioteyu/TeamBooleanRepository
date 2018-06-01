@@ -31,7 +31,12 @@ exports.adminPage = function(app){
 
   app.get('/edit', function(req, res){
     if (req.session.authority == 'admin') {
-      res.render('admin/editBook', {title:'Admin', layout:'layouts/adminLayout'});
+      books.getBook(req.query['id'], function(value){
+        value['title'] = 'Admin'
+        value['layout'] = 'layouts/adminLayout'
+        res.render('admin/editBook', value);
+      })
+
     }else{
       res.redirect('http://localhost:3000/');
     }
@@ -48,7 +53,7 @@ exports.adminPage = function(app){
   app.post('/upload', function(req, res){
     var form = new formidable.IncomingForm();
     books.upload(req, res);
-    res.render('admin/upload', {title:'Admin', layout:'layouts/adminLayout'});
+    res.redirect('http://localhost:3000/books')
   });
 
   app.post('/status', function(req, res){

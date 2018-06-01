@@ -12,17 +12,23 @@ exports.userPage = function(app){
   });
 
   app.get('/profile', function(req, res) {
+    var json = {};
     if (req.session.user) {
       users.getUser(req.session.user, function(userData){
         if(userData['favorites']){
           var favorites = userData['favorites'].split(',');
           books.getMultipleBook(favorites, function(data) {
-            res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo});
+            books.getMyBook(req.session.user, function (mybooks) {
+              console.log(data);
+              res.render('profilePage', {header:'Profile', user: req.session.user, userData:userData, favorites:data, myBooks:mybooks, userPhoto:req.session.photo});
+            })
           });
         }else{
-          res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: {}, userPhoto:req.session.photo});
-        }
+          books.getMyBook(req.session.user, function (mybooks) {
+            res.render('profilePage', {header:'Profile', user: req.session.user, userData: userData, favorites: {}, myBooks:mybooks, userPhoto:req.session.photo});
 
+        })
+      }
       })
 
     }else{

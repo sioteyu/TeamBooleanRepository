@@ -1,40 +1,40 @@
 <h1 class="text-center">Add a book</h1>
-<form style="width:50%" class="center-block">
+<form style="width:50%" class="center-block" action="/upload" method="post" enctype="multipart/form-data">
   <div class="form-group">
-    <label for="exampleInputEmail1">Title</label>
-    <input type="email" class="form-control" id="exampleInputEmail1">
+    <label>Title</label>
+    <input type="text" class="form-control" name="title">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Author</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label>Author</label>
+    <input type="text" class="form-control" name="author">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Description</label>
-    <textarea class="form-control" rows="3"></textarea>
+    <label>Description</label>
+    <textarea class="form-control" rows="3" name="description"></textarea>
   </div>
   <div class="form-group">
     <label>Genre</label>
     <br>
     <label class="checkbox-inline">
-    <input type="checkbox" id="genre" value="Adventure"> Adventure
+    <input type="checkbox" name="genre" value="Adventure"> Adventure
     </label>
     <label class="checkbox-inline">
-    <input type="checkbox" id="genre" value="Fantasy"> Fantasy
+    <input type="checkbox" name="genre" value="Fantasy"> Fantasy
     </label>
     <label class="checkbox-inline">
-    <input type="checkbox" id="genre" value="Magic"> Magic
+    <input type="checkbox" name="genre" value="Magic"> Magic
     </label>
     <br>
     <label class="checkbox-inline">
-    <input type="checkbox" id="genre" value="Fiction"> Fiction
+    <input type="checkbox" name="genre" value="Fiction"> Fiction
     </label>
     <label class="checkbox-inline">
-    <input type="checkbox" id="genre" value="Children's Book"> Children's Book
+    <input type="checkbox" name="genre" value="Children's Book"> Children's Book
     </label>
   </div>
   <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
+    <label>File input</label>
+    <input type="file" accept="image/*" name="fileUploaded">
     <p class="help-block">Choose a book picture</p>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
