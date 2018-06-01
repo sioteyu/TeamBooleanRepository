@@ -30,6 +30,25 @@ exports.userPage = function(app){
     }
   });
 
+  app.get('/view', function(req, res){
+    if (req.session.user) {
+      users.getUser(req.query['id'], function(userData){
+        if(userData['favorites']){
+          var favorites = userData['favorites'].split(',');
+          books.getMultipleBook(favorites, function(data) {
+            res.render('otherProfile', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo});
+          });
+        }else{
+          res.render('otherProfile', {header:'Profile', user: req.session.user, userData: userData, favorites: {}, userPhoto:req.session.photo});
+        }
+
+      })
+
+    }else{
+      res.redirect('http://localhost:3000/')
+    }
+  });
+
   app.post('/login', function(req, res){
   	users.authenticate(req, res, function(status){
       if (req.session.authority == 'admin') {

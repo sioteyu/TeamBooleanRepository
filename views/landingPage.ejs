@@ -54,6 +54,15 @@
                 <span class="result__subtitle">{{book.author}} <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9733;&#9734;&#9734;</big> </span>
               </div>
             </a>
+            <a class="result" ng-repeat = "user in users" href="http://localhost:3000/view?id={{user.$id}}">
+              <div class="result__picture four-members" style="background-image:url('uploads/default.png'); background-size:contain">
+
+              </div>
+              <div class="result__details">
+                {{user.firstname}} {{user.lastname}}
+                <span class="result__subtitle">{{user.email}} <span style="font-size:1em">|</span> <big style="color:#fd6b0d">&#9733;&#9733;&#9733;&#9734;&#9734;</big> </span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
