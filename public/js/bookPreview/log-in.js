@@ -49,6 +49,7 @@ $('.here').click(function(){
   $('#respond').find('form').find('.comment-form-comment').find('textarea').text('');
   $('#respond').find('#commentform').find('.form-submit').find('#submit').attr('value', 'Submit your Review');
   $('#respond').find('form').attr('action', '/comment');
+  $('#respond2').attr('style', 'position:fixed;top:20%; z-index:1000; visibility:hidden');
 });
 
 $('.mssg1').click(function(){
