@@ -24,6 +24,13 @@
     <link rel='stylesheet' id='listable-style-css'  href='css/bookPreview/additional.css' type='text/css' media='all'/>
     <link rel="stylesheet" href="css/landingpage/index.css">
     <link rel="stylesheet" href="css/landingpage/search.css">
+    <link rel="stylesheet" href="css/bookPreview/filter.css">
+
+    <style>
+      .dudu:hover{
+        background-color: #f1f1f1;
+      }
+    </style>
   </head>
 
   <body id='hey' style="overflow-x:hidden">
@@ -127,14 +134,19 @@
           </div>
             <!-- Thumbnail-->
             <div class="thumbnail">
-              <div class="date" id='0' style="z-index: 1">
+              <!--<div class="date" id='0' style="z-index: 1">
                     <div class="day" style="margin-top:10px"><i class="fa fa-exclamation" aria-hidden="true"></i></div>
-                  </div>
+                  </div>-->
               <img src="uploads/<%=myBooks.myBooks[i].photo%>">
             </div>
             <!-- Post Content-->
-            <div class="post-content" onclick="window.open('bookPreview.html','_blank');">
-              <div class="category" style="top:-40px">Status: Borrowed</div>
+            <div class="post-content" >
+              <div class="category" style="top:-40px"><span class="test">Status: FOR RENT</span>&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-left" style="font-size:1em"></i>
+                <ul class="dropdown-menu" style="width: 100%; text-align: center; display: none;">
+                                <li id="male" class="dudu" style="color:black; margin-bottom:5px; padding:5px">Borrowed</li>
+                                <li id="female" class="dudu" style="color:black; margin-bottom:5px; padding:5px">FOR RENT</li>
+                </ul>
+              </div>
               <h1 class="title" style="font-family:'Circular Std Book' !important"><%=myBooks.myBooks[i].title%></h1>
               <h2 class="sub_title" style="padding-bottom:0; color:black">By: <%=myBooks.myBooks[i].author%></h2>
 
@@ -172,8 +184,8 @@
                   <img src="images/landingpage/sample.jpeg">
                 </div>
                 <!-- Post Content-->
-                <div class="post-content" onclick="window.open('bookPreview.html','_blank');">
-                  <div class="category" style="top:-40px">Borrowed from: Matthew Alviz</div>
+                <div class="post-content" >
+
                   <h1 class="title" style="font-family:'Circular Std Book' !important">Harry Potter and the Philosopher stone</h1>
                   <h2 class="sub_title" style="padding-bottom:0; color:black">By: JK Rowling</h2>
 
@@ -196,6 +208,10 @@
                   <p class="description" style="text-align: justify; display: none; height: 149px; opacity: 1;">A boy learns on his eleventh birthday that he is the orphaned son of two powerful wizards. He is summoned from his life as an unwanted child to become a student at Hogwarts.</p>
                   <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 3 comments</a></span></div>
                 </div>
+                <!--<div class="select" style="background-color: #5d9cec; border-bottom: solid #ececec;">
+                          <span style="font-size:1.5em; font-weight:600; color:white">Sort by: </span><span id="changeThis" style="font-size:1.5em; font-weight:600; color:white">Most Rated</span>
+                          <i class="fa fa-chevron-left"></i>
+                        </div>-->
               </div>
           </div>
 
@@ -213,8 +229,8 @@
                       <img src="images/landingpage/sample2.jpg">
                     </div>
                     <!-- Post Content-->
-                    <div class="post-content" onclick="window.open('bookPreview.html','_blank');">
-                      <div class="category" style="top:-40px">Borrowed from: Anton Macrohon</div>
+                    <div class="post-content" >
+                      <!--<div class="category" style="top:-40px">Borrowed from: Anton Macrohon &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-left" style="font-size:1em"></i></div>-->
                       <h1 class="title" style="font-family:'Circular Std Book' !important">Catcher in the Rye</h1>
                       <h2 class="sub_title" style="padding-bottom:0; color:black">By: David Leviathan</h2>
 
@@ -252,8 +268,8 @@
                         <img src="images/landingpage/sample3.jpg">
                       </div>
                       <!-- Post Content-->
-                      <div class="post-content" onclick="window.open('bookPreview.html','_blank');">
-                        <div class="category" style="top:-40px">Borrowed from: John Magbanua</div>
+                      <div class="post-content" >
+                        <!--<div class="category" style="top:-40px">Borrowed from: John Magbanua &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-left" style="font-size:1em"></i></div>-->
                         <h1 class="title" style="font-family:'Circular Std Book' !important">Every Day</h1>
                         <h2 class="sub_title" style="padding-bottom:0; color:black">By: David Leviathan</h2>
 
@@ -298,7 +314,7 @@
                               <img src="uploads/<%=favorites.bookData[i].photo%>">
                             </div>
                             <!-- Post Content-->
-                            <div class="post-content" onclick="window.open('bookPreview.html','_blank');">
+                            <div class="post-content" >
                               <div class="category" style="top:-40px">Status: Borrowed</div>
                               <h1 class="title" style="font-family:'Circular Std Book' !important"><%=favorites.bookData[i].title%></h1>
                               <h2 class="sub_title" style="padding-bottom:0; color:black">By: <%=favorites.bookData[i].author%></h2>
@@ -567,5 +583,15 @@
     <script type='text/javascript' src='js/bookPreview/log-in.js'></script>
     <script src="js/Profilepage/index.js" type="text/javascript"></script>
     <script src="js/Profilepage/Requests.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $('.category').click(function(){
+      $(this).parent().find('.dropdown-menu').toggle();
+    })
+
+    $('.dudu').click(function(){
+      var x = $(this).text();
+      $(this).parent().parent().find('.test').text('STATUS: ' + x);
+    })
+    </script>
   </body>
 </html>
