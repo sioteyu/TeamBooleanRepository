@@ -141,10 +141,12 @@
             </div>
             <!-- Post Content-->
             <div class="post-content" >
-              <div class="category" style="top:-40px"><span class="test">Status: FOR RENT</span>&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-left" style="font-size:1em"></i>
+              <div class="category" style="top:-40px"><span class="test">Status: FOR SALE</span>&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-left" style="font-size:1em"></i>
                 <ul class="dropdown-menu" style="width: 100%; text-align: center; display: none;">
                                 <li id="male" class="dudu" style="color:black; margin-bottom:5px; padding:5px">Borrowed</li>
-                                <li id="female" class="dudu" style="color:black; margin-bottom:5px; padding:5px">FOR RENT</li>
+                                <li id="female" class="dudu" style="color:black; margin-bottom:5px; padding:5px">Sold</li>
+                                <li id="female" class="dudu" style="color:black; margin-bottom:5px; padding:5px">FOR Rent</li>
+                                <li id="female" class="dudu" style="color:black; margin-bottom:5px; padding:5px">FOR Sale</li>
                 </ul>
               </div>
               <h1 class="title" style="font-family:'Circular Std Book' !important"><%=myBooks.myBooks[i].title%></h1>
@@ -589,7 +591,7 @@
     })
 
     $('.dudu').click(function(){
-      var x = $(this).text(); 
+      var x = $(this).text();
       $(this).parent().parent().find('.test').text('STATUS: ' + x);
     })
     </script>
