@@ -169,7 +169,7 @@
                      <li><a style="color:white">Drama</a></li>
                   </ul>
               <p class="description" style="text-align: justify; display: none; height: 149px; opacity: 1;">A boy learns on his eleventh birthday that he is the orphaned son of two powerful wizards. He is summoned from his life as an unwanted child to become a student at Hogwarts.</p>
-              <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> <%=Object.keys(myBooks.myBooks[i].comments).length%> comments</a></span></div>
+              <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> <%if(myBooks.myBooks[i].comments){%><%=Object.keys(myBooks.myBooks[i].comments).length%><%}else{%>0<%}%> comments</a></span></div>
             </div>
           </div>
       </div>
@@ -338,7 +338,7 @@
                                      <li><a style="color:white">Drama</a></li>
                                   </ul>
                               <p class="description" style="text-align: justify; display: none; height: 149px; opacity: 1;">A boy learns on his eleventh birthday that he is the orphaned son of two powerful wizards. He is summoned from his life as an unwanted child to become a student at Hogwarts.</p>
-                              <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> <%=Object.keys(favorites.bookData[i].comments).length%> comments</a></span></div>
+                              <div class="post-meta"><span class="timestamp"><i class="material-icons" style="font-size:inherit">directions</i> 280 m</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> <%if(favorites.bookData[i].comments){%><%=Object.keys(favorites.bookData[i].comments).length%><%}else{%>0<%}%> comments</a></span></div>
                             </div>
                           </div>
                       </div>
