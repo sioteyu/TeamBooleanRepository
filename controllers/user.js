@@ -42,10 +42,10 @@ exports.userPage = function(app){
         if(userData['favorites']){
           var favorites = userData['favorites'].split(',');
           books.getMultipleBook(favorites, function(data) {
-            res.render('otherProfile', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo});
+            res.render('otherProfile', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo, query:req.query['id']});
           });
         }else{
-          res.render('otherProfile', {header:'Profile', user: req.session.user, userData: userData, favorites: {}, userPhoto:req.session.photo});
+          res.render('otherProfile', {header:'Profile', user: req.session.user, userData: userData, favorites: {}, userPhoto:req.session.photo, query:req.query['id']});
         }
 
       })
@@ -91,5 +91,9 @@ exports.userPage = function(app){
     }else{
       res.redirect('http://localhost:3000/')
     }
+  })
+
+  app.post('/feedback', function (req, res) {
+
   })
 }
