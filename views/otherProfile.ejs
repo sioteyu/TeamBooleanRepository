@@ -596,11 +596,19 @@
     <script type="text/javascript">
       $('#thumbsup').click(function(){
         $('#thumbsdown').css('color', '#444444');
-        $(this).css('color', '#5d9cec');
+        $(this).css('color', '#23d160');
+
+        $('.here').css('display', 'unset');
+        $('#respond2').attr('style', 'position:fixed;top:20%; z-index:1000; visibility:unset');
+        $('#hey').css('overflow', 'auto');
       });
       $('#thumbsdown').click(function(){
         $('#thumbsup').css('color', '#444444');
-        $(this).css('color', '#5d9cec');
+        $(this).css('color', '#ff4d55');
+
+        $('.here').css('display', 'unset');
+        $('#respond2').attr('style', 'position:fixed;top:20%; z-index:1000; visibility:unset');
+        $('#hey').css('overflow', 'auto');
       });
       $('#edit-preferences').click(function(){
         $('.here').css('display', 'unset');

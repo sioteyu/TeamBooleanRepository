@@ -274,26 +274,19 @@
                     <div class="brand" style="background-color:#f6f6f6;; position:relative; z-index:5; width:70px; height:75px; margin-left:0px">
                       <img src="images/bookResult/sample1.png" alt="" style="width: 90px; height: 75px;">
                     </div>
+                    <p style="font-size:0.8em;  background:white; left:10%; width:80px; margin-left:5px">No.1 Book of 2018</p>
                   </article>
                   <article class="module desktop-3 tablet-4" style="padding:0; width:30%">
                     <div class="brand" style="background-color:#f6f6f6;; position:relative; z-index:5; width:70px; height:75px; margin-left:0px">
                       <img src="images/bookResult/sample2.png" alt="" style="width: 90px; height: 75px;">
                     </div>
+                    <p style="font-size:0.8em;  background:white; left:10%; width:80px">People choice awards 2k18</p>
                   </article>
                   <article class="module desktop-3 tablet-4" style="padding:0; width:30%">
                     <div class="brand" style="background-color:#f6f6f6;; position:relative; z-index:5; width:70px; height:75px; margin-left:0px">
-                      <img src="images/bookResult/sample3.png" alt="" style="width: 90px; height: 75px;">
+                      <img src="images/bookResult/sample3.png" alt="" style="width: 80px; height: 75px;">
                     </div>
-                  </article>
-                  <article class="module desktop-3 tablet-4" style="padding:0; width:30%">
-                    <div class="brand" style="background-color:#f6f6f6;; position:relative; z-index:5; width:70px; height:75px; margin-left:0px">
-                      <img src="images/bookResult/sample4.png" alt="" style="width: 90px; height: 75px;">
-                    </div>
-                  </article>
-                  <article class="module desktop-3 tablet-4" style="padding:0; width:30%">
-                    <div class="brand" style="background-color:#f6f6f6;; position:relative; z-index:5; width:70px; height:75px; margin-left:0px">
-                      <img src="images/bookResult/sample5.png" alt="" style="width: 90px; height: 75px;">
-                    </div>
+                    <p style="font-size:0.8em;  background:white; left:10%; width:80px">Top 5 Sci-fi Books</p>
                   </article>
                 </div>
               </article>
@@ -623,7 +616,7 @@
           content: '<span class="' + 'subtle"' + ' style=" font-weight: 600; margin-bottom:5px' + '"><%=availability[j].user%></span>' + '<br>'
           + '</span>'
           + '<br>'
-          + '<a class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center' + '" num="'+'<%=j%>"'+'>BORROW</a>',
+          + '<a href="mailto:webmaster@example.com" class="' + 'card-media-body-supporting-bottom-text card-media-link" style=" width:100%; text-align:center' + '" num="'+'<%=j%>"'+'>CONTACT ME</a>',
         },click: function(e){
           $('.card-media-body').each(function(){
             if($(this).find('.card-media-body-top').find('.subtle').text() == '<%=availability[j].user%>'){
