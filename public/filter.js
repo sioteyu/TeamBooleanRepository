@@ -42,7 +42,7 @@ app.controller("theCtr", function($scope, $firebaseArray) {
     }
     userList.$save(temp)
   }
-  $scope.addComment = function (id) {
+  $scope.addComment = function (id, name) {
     var d = new Date();
     commentRef = firebase.database().ref().child("users").child(id).child('comments')
     var currentDate = "";
@@ -90,7 +90,8 @@ app.controller("theCtr", function($scope, $firebaseArray) {
     commentRef.push({
       title:title,
       comment:comment,
-      date:currentDate
+      date:currentDate,
+      name:name
     })
   }
   $scope.books = bookList;
