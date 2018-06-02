@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "theApp">
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="images/landingpage/BookHub_ico.png"/>
@@ -52,13 +52,13 @@
     </style>
   </head>
 
-  <body id='hey' style="overflow-x:hidden">
+  <body id='hey' style="overflow-x:hidden" ng-controller = "theCtr">
     <div id="respond2" class="comment-respond" style="position:fixed;top:20%; z-index:1000; visibility:hidden">
-                        <form action="/feedback" method="post" id="commentform" class="comment-form" novalidate="">
+                        <form method="post" id="commentform" class="comment-form" novalidate="">
                           <input type="hidden" name="bookID" value="-L9IjYtqQ5mDjP8s2m-E">
                           <p class="review-title-form">
                             <label for="pixrating_title">Title of your feedback</label>
-                            <input type="text" id="pixrating_title" name="pixrating_title" value="" placeholder="Summarize your opinion or highlight an interesting detail" size="25">
+                            <input type="text" id="title" name="pixrating_title" value="" placeholder="Summarize your opinion or highlight an interesting detail" size="25">
                           </p>
 
                           <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked
@@ -71,7 +71,8 @@
 
 
                           <p class="form-submit" style="margin-top:30px">
-                            <input name="submit" type="submit" id="submit" style="font-family:'Circular Std Book'" value="Submit your Feedback">
+                            <input name="submit" type="submit" id="submit" style="font-family:'Circular Std Book'" value="Submit your Feedback" ng-click="addComment('<%=query%>')" onclick="closeWindow()">
+
                             <input type="hidden" name="comment_post_ID" value="128" id="comment_post_ID">
                             <input type="hidden" name="comment_parent" id="comment_parent" value="0">
                           </p>
@@ -628,6 +629,12 @@
         $('#respond2').find('#commentform').find('.form-submit').find('#submit').attr('value', 'Update your Feedback');
         $('#respond2').find('form').attr('action', '/updateComment');
       });
+    </script>
+    <script type="text/javascript">
+      function closeWindow() {
+        $('.here').css('display', 'none');
+        $('#respond2').attr('style', 'position:fixed;top:20%; z-index:1000; visibility:hidden');
+      }
     </script>
   </body>
 </html>

@@ -42,6 +42,57 @@ app.controller("theCtr", function($scope, $firebaseArray) {
     }
     userList.$save(temp)
   }
+  $scope.addComment = function (id) {
+    var d = new Date();
+    commentRef = firebase.database().ref().child("users").child(id).child('comments')
+    var currentDate = "";
+    switch (d.getMonth()) {
+      case 0:
+        currentDate = "January";
+        break;
+      case 1:
+        currentDate = "February";
+        break;
+      case 2:
+        currentDate = "March";
+        break;
+      case 3:
+        currentDate = "April";
+        break;
+      case 4:
+        currentDate = "May";
+        break;
+      case 5:
+        currentDate = "June";
+        break;
+      case 6:
+        currentDate = "July";
+        break;
+      case 7:
+        currentDate = "August";
+        break;
+      case 8:
+        currentDate = "September";
+        break;
+      case 9:
+        currentDate = "October";
+        break;
+      case 10:
+        currentDate = "November";
+        break;
+      case 11:
+        currentDate = "December";
+        break;
+    }
+    var title = document.querySelector('#title').value;
+    var comment = document.querySelector('#comment').value;
+    currentDate = currentDate + " " + d.getDate() + ", " + d.getFullYear();
+    commentRef.push({
+      title:title,
+      comment:comment,
+      date:currentDate
+    })
+  }
   $scope.books = bookList;
   $scope.users = userList;
 });
