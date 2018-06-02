@@ -52,7 +52,8 @@ exports.addComment = function(req, res, bookID){
     title: req.body.pixrating_title,
     body: req.body.comment,
     rating: req.body.pixrating,
-    date: currentDate
+    date: currentDate,
+    name: req.session.name
     });
   }
 

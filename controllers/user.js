@@ -39,13 +39,14 @@ exports.userPage = function(app){
   app.get('/view', function(req, res){
     if (req.session.user) {
       users.getUser(req.query['id'], function(userData){
+        console.log(userData);
         if(userData['favorites']){
           var favorites = userData['favorites'].split(',');
           books.getMultipleBook(favorites, function(data) {
-            res.render('otherProfile', {header:'Profile', user: req.session.user, userData: userData, favorites: data, userPhoto:req.session.photo, query:req.query['id']});
+            res.render('otherProfile', {header:'Profile', user: req.session.user, name:req.session.name, userData: userData, favorites: data, userPhoto:req.session.photo, query:req.query['id']});
           });
         }else{
-          res.render('otherProfile', {header:'Profile', user: req.session.user, userData: userData, favorites: {}, userPhoto:req.session.photo, query:req.query['id']});
+          res.render('otherProfile', {header:'Profile', user: req.session.user, name:req.session.name, userData: userData, favorites: {}, userPhoto:req.session.photo, query:req.query['id']});
         }
 
       })
