@@ -502,7 +502,7 @@
                               </header>
 
                               <div class="comment-content" itemprop="reviewBody">
-                                <input name="submit" type="submit" id="deletePost" style="font-family:'Circular Std Book'; float:right; color:#e57e7e; border:1px solid #e57e7e;" value="Delete Post" class="commention">
+                                <input name="submit" type="submit" class="deletePost" style="font-family:'Circular Std Book'; float:right; color:#e57e7e; border:1px solid #e57e7e;" value="Delete Post" class="commention">
                                 <input name="submit" type="submit" class="editPost" style="font-family:'Circular Std Book'; float:right; margin-right:20px" value="Edit Post" class="commention">
                                 <h3 class="pixrating_title"><%=comments.comments[i].title%></h3>
                                 <br>
@@ -715,6 +715,10 @@ $( ".editPost" ).click(function() {
   $('#respond').find('form').find('.comment-form-comment').find('textarea').text(x);
   $('#respond').find('#commentform').find('.form-submit').find('#submit').attr('value', 'Update your Review');
   $('#respond').find('form').attr('action', '/updateComment');
+});
+
+$('.deletePost').click(function(){
+  $(this).parent().parent().parent().attr('style', 'display:none');
 });
 </script>
 <script type='text/javascript' src='js/bookPreview/trophy-cart.js'></script>
