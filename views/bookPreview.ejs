@@ -143,8 +143,8 @@
                             <span class="action__text  myFave1" style="font-family:'Circular Std Book">Add to favorites</span>
                             <span class="action__text--mobile" style="font-family:'Circular Std Book">Add to favorites</span>
                           <%}else{%>
-                            <span class="action__text  myFave1" style="font-family:'Circular Std Book">Remove to favorites</span>
-                            <span class="action__text--mobile" style="font-family:'Circular Std Book">Remove to favorites</span>
+                            <span class="action__text  myFave1" style="font-family:'Circular Std Book">Remove from favorites</span>
+                            <span class="action__text--mobile" style="font-family:'Circular Std Book">Remove from favorites</span>
                           <%}%>
                         </a>
 
@@ -223,10 +223,16 @@
                   <a href="#upper"><h1 class="entry-title" itemprop="name" style="font-family:'Circular Std Book'; color:white; font-weight:700; color: #413d3d; padding-top:12px; font-size:1.2em; width:400px; cursor:pointer"><%=title%></h1></a>
 
                   <div class="single-meta" style="justify-content:unset">
-                  <a class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" id='special' itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
+                    <%var average = 0%>
+                    <%for(var i = 0;i < comments.comments.length;++i){%>
+                      <%average = average + parseInt(comments.comments[i].rating)%>
+                    <%}%>
+                    <%average = average/comments.comments.length%>
+                    <%average = Math.round(average);%>
+                  <a class="single-rating review_rate display-only" data-pixrating="<%=average%>" itemprop="aggregateRating" id='special' itemtype="http://schema.org/AggregateRating" style="padding:0" title="regular">
                     <meta itemprop="ratingValue" content="3.00">
                   <i data-alt="1" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="2" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="3" class="star-on-png" title="regular"></i>&nbsp;<i data-alt="4" class="star-off-png" title="regular"></i>&nbsp;<i data-alt="5" class="star-off-png" title="regular"></i><input name="pixrating" type="hidden" value="3" readonly=""></a>
-                  <a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em">3 Stars</a>
+                  <a class="listing-contact" style="color:#333333; padding-left:0px; padding-top:3px; font-size:0.8em"><%=average%> Stars</a>
                 </div>
                   </article>
           </div>
@@ -238,10 +244,10 @@
                 <span class="entry-subtitle" itemprop="description" style="font-family: 'Circular Std Book'; font-size:1.3em; color:#333333">By: <%=author%></span>
 
                 <div class="single-meta" style="justify-content:unset">
-                  <a href="#comments" class="single-rating review_rate display-only" data-pixrating="3.00" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" style="padding:0">
+                  <a href="#comments" class="single-rating review_rate display-only" data-pixrating="<%=average%>" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" style="padding:0">
                     <meta itemprop="ratingValue" content = "3.00">
                   </a>
-                  <a class="listing-contact" style="color:#333333">3 Stars</a>
+                  <a class="listing-contact" style="color:#333333"><%=average%> Stars</a>
                 </div>
                 <ul class="tags" style="padding-left:0;margin-top:20px;margin-bottom:71px">
                    <li><a style="color:white; margin-left:10px">Mystery</a></li>
@@ -256,7 +262,10 @@
 
                   <div class="stat">
                     <h4>Favorites</h4>
-                    <p><i class="fa fa-heart" style="padding:0; position:unset;color:#c55252"></i>+30</p>
+                    <p id="favs"><i class="fa fa-heart" style="padding:0; position:unset;color:#c55252"></i>+30</p>
+                    <script type="text/javascript">
+
+                    </script>
                   </div>
                 </div>
 
@@ -344,10 +353,10 @@
                           </span>
                           <%if(favorite == 'off'){%>
                             <span class="action__text  myFave1" style="font-family:'Circular Std Book">Add to favorites</span>
-                            <span class="action__text--mobile" style="font-family:'Circular Std Book">Add to favorites</span>
+                              <span class="action__text--mobile" style="font-family:'Circular Std Book">Add to favorites</span>
                           <%}else{%>
-                            <span class="action__text  myFave1" style="font-family:'Circular Std Book">Remove to favorites</span>
-                            <span class="action__text--mobile" style="font-family:'Circular Std Book">Remove to favorites</span>
+                            <span class="action__text  myFave1" style="font-family:'Circular Std Book">Remove from favorites</span>
+                            <span class="action__text--mobile" style="font-family:'Circular Std Book">Remove from favorites</span>
                           <%}%>
                         </a>
 
@@ -504,7 +513,7 @@
                                 <input name="submit" type="submit" class="editPost" style="font-family:'Circular Std Book'; float:right; margin-right:20px" value="Edit Post" class="commention">
                                 <h3 class="pixrating_title"><%=comments.comments[i].title%></h3>
                                 <br>
-                                <div class="editRating"><div class="review_rate" data-pixrating="<%=comments.comments[0].rating%>"></div></div>
+                                <div class="editRating"><div class="review_rate" data-pixrating="<%=comments.comments[i].rating%>"></div></div>
                                 <div class="comment-meta commentmetadata" itemprop="datePublished" content = "2015-11-06T17:12:39+0000">
                                   <a>
                                     <time pubdate datetime="2015-11-06T17:12:39+00:00">on <%=comments.comments[i].date%></time><br />
@@ -655,9 +664,12 @@
 <script type='text/javascript' src='js/bookPreview/scroll.js'></script>
 <script type='text/javascript' src='js/bookPreview/stars.js'></script>
 <script type="text/javascript">
+var counter = 30
 $( ".addFave2" ).click(function() {
   <%if(user){%>
     if ( $( ".addFave2" ).attr("switch")=='on' ) {
+      counter -= 1
+      document.getElementById('favs').innerHTML = '<i class="fa fa-heart" style="padding:0; position:unset;color:#c55252"></i>+' + counter
       var ref = firebase.database().ref();
       ref.child('users').child('<%=user%>').once('value').then(function(snap){
         var newSnap = snap.val();
@@ -674,6 +686,8 @@ $( ".addFave2" ).click(function() {
         $( ".addFave2" ).attr('switch', 'off');
         $('.myFave1').text('Add to favorites');
     } else {
+      counter += 1
+      document.getElementById('favs').innerHTML = '<i class="fa fa-heart" style="padding:0; position:unset;color:#c55252"></i>+' + counter
       var ref = firebase.database().ref();
       ref.child('users').child('<%=user%>').once('value').then(function(snap){
         var newSnap = snap.val();
